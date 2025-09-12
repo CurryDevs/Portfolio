@@ -184,6 +184,14 @@
     color: hsl(var(--text-muted));
   }
 
+  .text-brand-text {
+    color: hsl(var(--text));
+  }
+
+  .text-brand-text-muted {
+    color: hsl(var(--text-muted));
+  }
+
   /* Border utilities */
   .border-custom {
     border-color: hsl(var(--border));
@@ -263,6 +271,20 @@
 
 .animate-marquee {
   animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical 30s linear infinite;
 }
 
 /* Premium Enhanced Animations */

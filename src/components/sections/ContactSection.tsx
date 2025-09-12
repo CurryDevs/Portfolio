@@ -1,181 +1,109 @@
-import { useState } from "react";
-import { Send, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
-import { Card, CardContent } from "@/components/ui/card";
-import { useToast } from "@/hooks/use-toast";
-
-const budgetOptions = ["< $2k", "$2k–$5k", "$5k–$15k", "$15k+"];
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 export function ContactSection() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you within one business day.",
-    });
-    
-    setIsSubmitting(false);
-    
-    // Reset form
-    const form = e.target as HTMLFormElement;
-    form.reset();
-  };
+  const contactInfo = [
+    {
+      icon: MapPin,
+      title: "Our Location",
+      content: "Remote • India",
+      subContent: "Available worldwide",
+    },
+    {
+      icon: Mail,
+      title: "Email Address",
+      content: "hello@currydevs.com",
+      subContent: "We reply within 24 hours",
+    },
+    {
+      icon: Phone,
+      title: "Phone Number",
+      content: "+91 000 000 0000",
+      subContent: "Mon-Fri 9AM-6PM IST",
+    },
+    {
+      icon: MessageCircle,
+      title: "How Can We Help?",
+      content: "Tell us your problem",
+      subContent: "We will get back to you ASAP",
+    },
+  ];
 
   return (
     <section id="contact" className="py-24 lg:py-32 bg-gradient-primary">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-h2 text-brand-text mb-6">Tell us about your project</h2>
-            <p className="text-lg text-brand-text-muted">
-              We reply within one business day. Let's build something amazing together.
-            </p>
+        <div className="text-center mb-16">
+          <div className="text-eyebrow animate-fade-in stagger-1">CONTACT US</div>
+          <h2 className="text-h2 text-brand-text mb-6 animate-slide-up stagger-2">
+            Let&apos;s Solve This Together
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {contactInfo.map((item, index) => (
+                <div
+                  key={index}
+                  className={`group p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-smooth hover-lift animate-scale-in stagger-${index + 3}`}
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <item.icon className="h-6 w-6 text-brand-text" />
+                    <h3 className="text-lg font-semibold text-brand-text">{item.title}</h3>
+                  </div>
+                  <p className="text-brand-text">{item.content}</p>
+                  <p className="text-sm text-brand-text-muted mt-1">{item.subContent}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-6">
-              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <Mail className="h-8 w-8 text-brand-accent-primary mb-4" />
-                  <h3 className="text-lg font-semibold text-brand-text mb-2">Email Us</h3>
-                  <p className="text-brand-text-muted mb-4">
-                    Prefer email? Drop us a line and we'll respond quickly.
-                  </p>
-                  <a 
-                    href="mailto:hello@currydevs.com"
-                    className="text-brand-accent-primary hover:text-brand-text transition-colors font-medium"
-                  >
-                    hello@currydevs.com
-                  </a>
-                </CardContent>
-              </Card>
-
-              <div className="text-sm text-brand-text-muted space-y-2">
-                <p>🌏 Remote • India</p>
-                <p>⚡ Quick turnaround times</p>
-                <p>🔒 Your data stays private</p>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm shadow-strong">
-                <CardContent className="p-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="name" className="text-brand-text">Name *</Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          required
-                          className="bg-white/10 border-white/20 text-brand-text placeholder:text-brand-text-muted focus:ring-white/30"
-                          placeholder="Your name"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email" className="text-brand-text">Email *</Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          className="bg-white/10 border-white/20 text-brand-text placeholder:text-brand-text-muted focus:ring-white/30"
-                          placeholder="you@company.com"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="company" className="text-brand-text">Company</Label>
-                        <Input
-                          id="company"
-                          name="company"
-                          className="bg-white/10 border-white/20 text-brand-text placeholder:text-brand-text-muted focus:ring-white/30"
-                          placeholder="Your company"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="budget" className="text-brand-text">Budget</Label>
-                        <Select name="budget">
-                          <SelectTrigger className="bg-white/10 border-white/20 text-brand-text">
-                            <SelectValue placeholder="Select budget range" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {budgetOptions.map((option) => (
-                              <SelectItem key={option} value={option}>
-                                {option}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message" className="text-brand-text">Message *</Label>
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm shadow-strong animate-slide-up stagger-7">
+            <CardContent className="p-8">
+              <h2 className="text-2xl font-bold text-brand-text mb-8">Send us a Message</h2>
+              <form className="space-y-6">
+                {["name", "email", "message"].map((field) => (
+                  <div key={field} className="transition-smooth">
+                    <label
+                      htmlFor={field}
+                      className="text-sm font-medium text-brand-text mb-2 block"
+                    >
+                      {field.charAt(0).toUpperCase() + field.slice(1)}*
+                    </label>
+                    {field === "message" ? (
                       <Textarea
-                        id="message"
-                        name="message"
+                        id={field}
+                        name={field}
+                        placeholder={`Enter your ${field}`}
                         required
-                        rows={5}
-                        className="bg-white/10 border-white/20 text-brand-text placeholder:text-brand-text-muted focus:ring-white/30 resize-none"
-                        placeholder="Tell us about your project, goals, and timeline..."
+                        className="bg-white/10 border-white/20 text-brand-text placeholder:text-brand-text-muted min-h-[160px] focus:ring-white/30 transition-smooth resize-none"
                       />
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Button 
-                        type="submit" 
-                        variant="hero" 
-                        size="lg" 
-                        disabled={isSubmitting}
-                        className="flex-1"
-                      >
-                        {isSubmitting ? (
-                          <>Sending...</>
-                        ) : (
-                          <>
-                            <Send className="h-4 w-4 mr-2" />
-                            Send Message
-                          </>
-                        )}
-                      </Button>
-                      <Button 
-                        type="button" 
-                        variant="hero-secondary" 
-                        size="lg" 
-                        asChild
-                      >
-                        <a href="mailto:hello@currydevs.com">
-                          <Mail className="h-4 w-4 mr-2" />
-                          Email Us
-                        </a>
-                      </Button>
-                    </div>
-
-                    <p className="text-xs text-brand-text-muted">
-                      We only use your info to contact you back. No spam, ever.
-                    </p>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+                    ) : (
+                      <Input
+                        id={field}
+                        name={field}
+                        type={field === "email" ? "email" : "text"}
+                        placeholder={`Enter your ${field}`}
+                        required
+                        className="bg-white/10 border-white/20 text-brand-text placeholder:text-brand-text-muted focus:ring-white/30 transition-smooth"
+                      />
+                    )}
+                  </div>
+                ))}
+                <Button
+                  type="submit"
+                  variant="hero"
+                  size="lg"
+                  className="w-full hover-lift hover-glow"
+                >
+                  Send Message
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
