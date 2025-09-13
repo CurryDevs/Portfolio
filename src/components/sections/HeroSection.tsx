@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { AnimatedText } from "@/components/ui/AnimatedText";
+import { AnimatedText } from "@/components/ui/animatedText";
 
 const avatars = [
   "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
