@@ -4,6 +4,165 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+
+/*  Case Study Page Styles */
+
+@layer base {
+  :root {
+    /* Core Colors - Dark Theme */
+    --backgroundCS: 0 0% 3%;
+    --foregroundCS: 0 0% 95%;
+
+    /* Card & Surface Colors */
+    --cardCS: 0 0% 6%;
+    --card-foregroundCS: 0 0% 90%;
+
+    --popoverCS: 0 0% 8%;
+    --popover-foregroundCS: 0 0% 95%;
+
+    /* Brand Colors */
+    --primaryCS: 0 0% 100%;
+    --primary-foregroundCS: 0 0% 3%;
+
+    --secondaryCS: 0 0% 10%;
+    --secondary-foregroundCS: 0 0% 85%;
+
+    /* Accent - Pure White for highlights */
+    --accentCS: 0 0% 100%;
+    --accent-foregroundCS: 0 0% 0%;
+
+    /* Interactive Elements */
+    --mutedCS: 0 0% 12%;
+    --muted-foregroundCS: 0 0% 60%;
+
+    --destructiveCS: 0 84% 60%;
+    --destructive-foregroundCS: 0 0% 98%;
+
+    --borderCS: 0 0% 15%;
+    --inputCS: 0 0% 12%;
+    --ringCS: 0 0% 100%;
+
+    /* Design System Extensions */
+    --surfaceCS: 0 0% 8%;
+    --surface-elevatedCS: 0 0% 12%;
+    
+    /* Text Hierarchy */
+    --text-primaryCS: 0 0% 95%;
+    --text-secondaryCS: 0 0% 70%;
+    --text-mutedCS: 0 0% 50%;
+    
+    /* Gradients */
+    --gradient-primaryCS: linear-gradient(135deg, hsl(var(--backgroundCS)), hsl(var(--surfaceCS)));
+    --gradient-surfaceCS: linear-gradient(135deg, hsl(var(--cardCS)), hsl(var(--secondaryCS)));
+    --gradient-accentCS: linear-gradient(135deg, hsl(var(--accentCS)), hsl(var(--card-foregroundCS)));
+    
+    /* Shadows & Effects */
+    --shadow-neumorphicCS: 
+      20px 20px 60px hsl(var(--backgroundCS) / 0.5),
+      -20px -20px 60px hsl(var(--surfaceCS) / 0.1);
+    --shadow-elevationCS: 0 25px 50px -12px hsl(var(--backgroundCS) / 0.6);
+    --shadow-accentCS: 0 0 50px hsl(var(--accentCS) / 0.3);
+    
+    /* Animation Timing */
+    --transition-smoothCS: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounceCS: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radiusCS: 1rem;
+
+    --sidebar-backgroundCS: 0 0% 98%;
+    --sidebar-foregroundCS: 240 5.3% 26.1%;
+    --sidebar-primaryCS: 240 5.9% 10%;
+    --sidebar-primary-foregroundCS: 0 0% 98%;
+    --sidebar-accentCS: 240 4.8% 95.9%;
+    --sidebar-accent-foregroundCS: 240 5.9% 10%;
+    --sidebar-borderCS: 220 13% 91%;
+    --sidebar-ringCS: 217.2 91.2% 59.8%;
+  }
+
+  /* Light mode fallback - case study is designed for dark theme */
+  .light {
+    --backgroundCS: 0 0% 3%;
+    --foregroundCS: 0 0% 95%;
+  }
+}
+
+
+@layer components {
+  /* Typography Scale */
+  .text-hero {
+    @apply text-6xl md:text-8xl font-bold tracking-tight;
+  }
+
+  .text-section-title {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+
+  .text-body-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  /* Neumorphic Elements */
+  .neumorphic {
+    background: var(--gradient-surfaceCS);
+    box-shadow: var(--shadow-neumorphicCS);
+    border: 1px solid hsl(var(--borderCS));
+  }
+
+  .neumorphic-inset {
+    background: hsl(var(--surfaceCS));
+    box-shadow: 
+      inset 10px 10px 20px hsl(var(--backgroundCS) / 0.3),
+      inset -10px -10px 20px hsl(var(--surfaceCS) / 0.1);
+  }
+
+  /* Glass Effect */
+  .glass {
+    background: hsl(var(--cardCS) / 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--borderCS) / 0.2);
+  }
+
+  /* Interactive Animations */
+  .hover-lift {
+    transition: var(--transition-smoothCS);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-elevationCS);
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-accentCS);
+  }
+
+  /* Counter Animation */
+  @keyframes counter-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .animate-counter {
+    animation: counter-up 0.6s ease-out;
+  }
+
+  /* Parallax Scroll */
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
+
+
+/*  Case Study Page Ends */
+
+
+
+
+
 /* CurryDevs Design System - Dark minimalist aesthetic */
 
 @layer base {

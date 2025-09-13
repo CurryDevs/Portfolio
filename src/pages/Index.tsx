@@ -11,6 +11,7 @@ import { TechSection } from "@/components/sections/TechSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Code, Palette, Rocket } from "lucide-react";
+import CaseStudy from "@/components/CaseStudy";
 
 const Index = () => {
   const projectData = [
@@ -42,6 +43,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-brand-bg">
+      <CaseStudy />
       <AdvancedHeader />
       <main>
         <HeroSection />
