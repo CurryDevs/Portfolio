@@ -158,7 +158,7 @@ const ProjectFeatureSection = ({
     return (
         <section
             ref={containerRef}
-            className={cn("py-24 lg:py-32 bg-gradient-primary", className)}
+            className={cn("py-24 lg:py-32", className)}
             id="projects"
         >
             <div className="container-custom">

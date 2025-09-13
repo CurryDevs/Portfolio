@@ -44,10 +44,6 @@ const techCategories = [
 export function TechSection() {
   return (
     <section id="tech" className="py-24 lg:py-32 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-pink-500/5"></div>
-      <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
 
       <div className="container-custom relative z-10">
         <div className="text-center mb-20">

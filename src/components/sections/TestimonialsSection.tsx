@@ -225,18 +225,11 @@ export function TestimonialsSection() {
       <div className="absolute bottom-20 right-10 w-24 h-24 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-xl animate-float stagger-3"></div>
 
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-h2 text-brand-text mb-6 animate-slide-up">
-            What People Are Saying
-          </h2>
-          <p className="text-lg text-brand-text-muted max-w-2xl mx-auto animate-fade-in stagger-2">
-            Don't just take our word for it. Here's what{" "}
-            <span className="bg-gradient-to-r from-brand-accent-primary to-white bg-clip-text text-transparent">
-              real people
-            </span>{" "}
-            are saying about{" "}
-            <span className="text-brand-accent-primary font-semibold">CurryDevs</span>
-          </p>
+        <div className="relative z-10 flex flex-col items-center justify-center">
+        <span className="mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-2xl text-transparent">
+          Testimonials
+        </span>
+        <h2 className="mb-8 text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">Let's hear from our Clients</h2>
         </div>
 
         <div className="relative mt-6 max-h-[600px] overflow-hidden">

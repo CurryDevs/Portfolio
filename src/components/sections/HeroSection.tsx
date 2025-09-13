@@ -11,7 +11,7 @@ const avatars = [
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-primary">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden ">
       <div className="relative z-10 container-custom text-center py-20 pt-40">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Main heading */}
