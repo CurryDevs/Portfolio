@@ -3,7 +3,7 @@ import LogoSlider from "@/components/ui/logo-slider";
 
 const LogoThree = () => {
     const companies = [
-        { name: "TechCorp", icon: "🔷", color: "from-blue-500 to-blue-600" },
+        { name: "CurryDevs", icon: "🍛", color: "from-gray-900 to-black", isSpecial: true },
         { name: "InnovateHub", icon: "⚡", color: "from-yellow-500 to-orange-500" },
         { name: "DataFlow", icon: "📊", color: "from-green-500 to-emerald-500" },
         { name: "CloudVision", icon: "☁️", color: "from-cyan-500 to-blue-500" },

@@ -8,6 +8,7 @@ import {
     ModalTrigger,
 } from "./animated-modal";
 import { motion } from "framer-motion";
+import { LiquidButton } from "./liquid-glass-button";
 
 export function StartProjectModal() {
     const projectImages = [
@@ -20,13 +21,8 @@ export function StartProjectModal() {
 
     return (
         <Modal>
-            <ModalTrigger className="bg-white text-black flex justify-center group/modal-btn px-4 py-2 rounded-md border border-gray-200 shadow-sm">
-                <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
-                    Book a Call
-                </span>
-                <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-black z-20">
-                    📞
-                </div>
+            <ModalTrigger className="text-brand-text hover:text-brand-accent-primary transition-smooth font-medium cursor-pointer">
+                Book a Call
             </ModalTrigger>
             <ModalBody>
                 <ModalContent>

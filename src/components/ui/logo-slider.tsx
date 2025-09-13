@@ -6,6 +6,7 @@ interface Company {
     name: string;
     icon: string;
     color: string;
+    isSpecial?: boolean;
 }
 
 interface LogoCarouselProps {
@@ -102,10 +103,32 @@ const LogoSlider: React.FC<LogoCarouselProps> = ({
                                         exit="exit"
                                         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 ml-[-50px]"
                                     >
-                                        <div className={`w-20 h-20 bg-gradient-to-br ${logo.color} rounded-xl flex flex-col items-center justify-center text-white shadow-lg border border-white/20 hover:scale-105 transition-transform duration-200`}>
-                                            <div className="text-2xl mb-1">{logo.icon}</div>
-                                            <div className="text-xs font-semibold text-center leading-tight">{logo.name.slice(0, 8)}</div>
-                                        </div>
+                                        {logo.isSpecial ? (
+                                            // Special CurryDevs styling
+                                            <div className={`w-28 h-28 bg-gradient-to-br ${logo.color} rounded-xl flex flex-col items-center justify-center text-white shadow-xl border-2 border-white/50 hover:scale-105 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
+                                                <div className="absolute inset-0 bg-black/10 backdrop-blur-[1px] rounded-xl"></div>
+                                                <div className="relative z-10 flex flex-col items-center justify-center h-full px-2">
+                                                    <div className="text-center">
+                                                        <div className="text-xs font-light tracking-wider text-white/90 mb-0.5">CURRY</div>
+                                                        <div className="text-lg font-black tracking-tight text-white bg-white/20 px-2 py-0.5 rounded backdrop-blur-sm">
+                                                            DEVS
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            // Regular company styling
+                                            <div className={`w-24 h-24 bg-gradient-to-br ${logo.color} rounded-xl flex flex-col items-center justify-center text-white shadow-xl border border-white/30 hover:scale-105 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
+                                                {/* Background blur overlay for better text visibility */}
+                                                <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px] rounded-xl"></div>
+                                                <div className="relative z-10 flex flex-col items-center justify-center h-full">
+                                                    <div className="text-2xl mb-1 drop-shadow-lg">{logo.icon}</div>
+                                                    <div className="text-xs font-bold text-center leading-tight px-1 text-white drop-shadow-md bg-black/30 rounded-md py-0.5 backdrop-blur-sm">
+                                                        {logo.name.slice(0, 10)}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
                                     </motion.div>
                                 ))}
                             </AnimatePresence>
