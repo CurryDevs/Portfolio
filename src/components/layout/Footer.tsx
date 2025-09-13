@@ -1,104 +1,123 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Twitter, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AnimationContainer } from "@/components/ui/animation-container";
+import CurryDevsLogo from "@/assets/CurryDevs_Transparent.png";
 
-const footerLinks = {
-  About: [
-    { name: "Our Story", href: "/about" },
-    { name: "Team", href: "/about#team" },
-    { name: "Careers", href: "/careers" },
-  ],
-  Services: [
-    { name: "Web Development", href: "/services#web-dev" },
-    { name: "Design Systems", href: "/services#design-systems" },
-    { name: "E-commerce", href: "/services#ecommerce" },
-  ],
-  Resources: [
-    { name: "Blog", href: "/blog" },
-    { name: "Case Studies", href: "/#case-studies" },
-    { name: "Process", href: "/#process" },
-  ],
-  Contact: [
-    { name: "Start a Project", href: "#contact" },
-    { name: "hello@currydevs.com", href: "mailto:hello@currydevs.com" },
-    { name: "Remote • India", href: "#" },
-  ],
-};
-
-const socialLinks = [
-  { name: "GitHub", href: "https://github.com/currydevs", icon: Github },
-  { name: "Twitter", href: "https://x.com/currydevs", icon: Twitter },
-  { name: "LinkedIn", href: "https://linkedin.com/company/currydevs", icon: Linkedin },
+const footerLink = [
+    {
+        name: "About",
+        link: "#about",
+    },
+    {
+        name: "Services",
+        link: "#services",
+    },
+    {
+        name: "Work",
+        link: "#case-studies",
+    },
+    {
+        name: "Contact",
+        link: "#contact",
+    },
+    {
+        name: "Privacy Policy",
+        link: "#privacy",
+    },
 ];
 
-export function Footer() {
-  return (
-    <footer className="relative mt-32 bg-gradient-primary border-t border-white/10 animate-fade-in">
-      {/* Glow effect */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+const Footer = () => {
+    const currentYear = new Date().getFullYear();
 
-      <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {Object.entries(footerLinks).map(([title, links], index) => (
-            <div key={title} className={`animate-slide-up stagger-${index + 1}`}>
-              <h3 className="text-lg font-semibold text-brand-text mb-4">{title}</h3>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-brand-text-muted hover:text-brand-text transition-smooth hover-lift"
-                    >
-                      {link.name}
+    return (
+        <footer className="relative border-t border-border py-0.5 px-4 sm:px-6 lg:px-8 w-full max-w-6xl mx-auto">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-foreground rounded-full"></div>
+
+            <div className="flex flex-col items-center space-y-1 md:flex-row md:justify-between md:space-y-0">
+                <AnimationContainer delay={0.2} className="mt-0 md:mt-0">
+                    <a href="/" className="flex items-center">
+                        <img
+                            src={CurryDevsLogo}
+                            alt="CurryDevs Logo"
+                            className="h-24 w-auto object-cover hover:scale-105 transition-transform duration-300"
+                            style={{ clipPath: 'inset(15% 0 15% 0)' }}
+                        />
                     </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+                </AnimationContainer>
 
-        {/* Newsletter */}
-        <div className="border-t border-white/10 pt-12 mb-12 animate-slide-up stagger-5">
-          <div className="max-w-md">
-            <h3 className="text-lg font-semibold text-brand-text mb-2">Stay Updated</h3>
-            <p className="text-brand-text-muted mb-4">Get the latest on web development trends and our work.</p>
-            <div className="flex gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-brand-text placeholder:text-brand-text-muted focus:outline-none focus:ring-2 focus:ring-white/20 transition-smooth hover-glow"
-              />
-              <Button variant="premium" className="hover-lift hover-glow">Subscribe</Button>
-            </div>
-          </div>
-        </div>
+                <AnimationContainer className="w-full md:w-auto">
+                    <nav className="flex flex-wrap justify-center gap-4 text-center md:justify-end">
+                        {footerLink.map((item) => (
+                            <a
+                                key={item.name}
+                                href={item.link}
+                                className="text-sm leading-5 text-muted-foreground hover:text-foreground transition-colors font-medium"
+                            >
+                                {item.name}
+                            </a>
+                        ))}
+                    </nav>
+                </AnimationContainer>
 
-        {/* Bottom section */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10">
-          <div className="flex items-center mb-4 md:mb-0">
-            <div className="text-lg font-bold text-brand-text mr-4">
-              CurryDevs
+                <AnimationContainer
+                    delay={0.1}
+                    className="flex justify-center space-x-4"
+                >
+                    <Button variant="ghost" size="icon" asChild>
+                        <a
+                            href="https://x.com/CurryDevs_co"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span className="sr-only">Twitter</span>
+                            <Twitter className="h-5 w-5" />
+                        </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                        <a
+                            href="https://linkedin.com/company/currydevs"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span className="sr-only">LinkedIn</span>
+                            <Linkedin className="h-5 w-5" />
+                        </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                        <a
+                            href="https://www.instagram.com/currydevs.co/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span className="sr-only">Instagram</span>
+                            <Instagram className="h-5 w-5" />
+                        </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                        <a
+                            href="https://github.com/currydevs"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span className="sr-only">Github</span>
+                            <Github className="h-5 w-5" />
+                        </a>
+                    </Button>
+                </AnimationContainer>
             </div>
-            <p className="text-sm text-brand-text-muted">
-              © 2024 CurryDevs. All rights reserved.
-            </p>
-          </div>
 
-          <div className="flex items-center space-x-4">
-            {socialLinks.map((social, index) => (
-              <a
-                key={social.name}
-                href={social.href}
-                className={`text-brand-text-muted hover:text-brand-text transition-smooth p-2 rounded-lg hover:bg-white/5 hover-lift hover-rotate animate-scale-in`}
-                style={{ animationDelay: `${0.7 + index * 0.1}s` }}
-                aria-label={social.name}
-              >
-                <social.icon className="h-5 w-5" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+            <AnimationContainer
+                delay={0.6}
+                className="mt-0.5 border-t border-border/40 pt-0.5 px-4 sm:px-6 lg:px-8"
+            >
+                <div className="flex justify-center">
+                    <p className="text-xs leading-4 text-muted-foreground text-center">
+                        &copy; {currentYear} All rights reserved.
+                    </p>
+                </div>
+            </AnimationContainer>
+        </footer>
+    );
+};
+
+export default Footer;

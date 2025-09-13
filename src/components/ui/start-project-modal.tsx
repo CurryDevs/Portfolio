@@ -3,7 +3,7 @@
 export function StartProjectModal() {
     const openCalendlyInNewTab = () => {
         // Open Calendly in a new tab
-        window.open('https://calendly.com/currydevs-co/30min', '_blank');
+        window.open('https://calendly.com/currydevs/30min', '_blank');
     };
 
     return (
