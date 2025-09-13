@@ -2,12 +2,11 @@ import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
 import Footer from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import LogoThree from "@/components/sections/LogoThree";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
+import ServicesSection from "@/components/sections/ServicesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import ProjectFeatureSection from "@/components/sections/ProjectFeatureSection";
 import { StatsSection } from "@/components/sections/StatsSection";
-import { TechSection } from "@/components/sections/TechSection";
+import { ProjectSection } from "@/components/sections/ProjectSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Code, Palette, Rocket } from "lucide-react";
@@ -46,12 +45,12 @@ const Index = () => {
       <AdvancedHeader />
       <main>
         <HeroSection />
+        <ProjectSection />
         <ProjectFeatureSection data={projectData} />
         <LogoThree />
         {/* <AboutSection /> */}
         <StatsSection />
         <ServicesSection />
-        <TechSection />
         <ProcessSection />
         <TestimonialsSection />
         <FAQSection />
