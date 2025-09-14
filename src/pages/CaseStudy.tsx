@@ -1,7 +1,7 @@
 import HeroSection from "@/components/case-study/HeroSection";
 import ProjectDetails from "@/components/case-study/ProjectDetails";
 import TechStack from "@/components/case-study/TechStack";
-import Results from "@/components/case-study/Results";
+// import Results from "@/components/case-study/Results";
 import Gallery from "@/components/case-study/Gallery";
 import Footer from "@/components/layout/Footer";
 import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
@@ -24,7 +24,7 @@ const CaseStudy = () => {
         <HeroSection {...project.components.HeroSection}/>
         <ProjectDetails {...project.components.ProjectDetails}/>
         <TechStack techStack={project.components.TechStack}/>
-        <Results {...project.components.Results}/>
+        {/* <Results {...project.components.Results}/> */}
         <Gallery />
       </main>
       <div className="mt-10">
