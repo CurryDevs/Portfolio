@@ -1,13 +1,28 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/ui/animatedText";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
-const avatars = [
-  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face",
+const people = [
+  {
+    id: 1,
+    name: "Kshitij Singh Bisht",
+    designation: "Co-Founder | Software Engineer",
+    image:
+      "/kshitij.jpg",
+  },
+  {
+    id: 2,
+    name: "Mohit Singh",
+    designation: "Co-Founder | Software Engineer",
+    image:
+      "mohit.jpg",
+  },
+  {
+    id: 3,
+    name: "Gautam Gupta",
+    designation: "Co-Founder | Software Engineer",
+    image:"/gautam.png"  },
 ];
 
 export function HeroSection() {
@@ -35,33 +50,27 @@ export function HeroSection() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in stagger-3">
-              <Button className="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5">
-                Explore Collection
+              <Button
+                className="bg-black text-white border border-white hover:bg-white hover:text-black hover:border-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Projects
               </Button>
               <Button
-                variant="outline"
-                className="border-gray-300 text-brand-text hover:bg-white/10 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5"
+                className="bg-white text-black border border-black hover:bg-black hover:text-white hover:border-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5"
               >
-                Unlock Unlimited Access
+                Book a Call with Currydevs
               </Button>
             </div>
 
             {/* Trust indicators */}
             <div className="space-y-6 animate-fade-in stagger-4">
               <p className="text-sm text-brand-text-muted">
-                Trusted by Founders and Entrepreneurs from all over the world.
+                Meet our passionate Co-Founders leading the way.
               </p>
 
-              {/* Avatars */}
-              <div className="flex justify-center items-center gap-2 mb-8">
-                {avatars.map((avatar, index) => (
-                  <img
-                    key={index}
-                    src={avatar}
-                    alt={`User ${index + 1}`}
-                    className="w-10 h-10 rounded-full border-2 border-white/20 -ml-2 first:ml-0 hover:scale-110 transition-transform duration-200"
-                  />
-                ))}
+              {/* Animated Avatars with Tooltip */}
+              <div className="flex justify-center items-center mb-8">
+                <AnimatedTooltip items={people} />
               </div>
             </div>
           </div>
