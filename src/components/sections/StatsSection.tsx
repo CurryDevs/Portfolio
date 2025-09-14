@@ -13,9 +13,9 @@ interface StatsData {
 
 const statsData: StatsData[] = [
   {
-    value: "20+",
+    value: "19+",
     label: "Projects Completed",
-    numericValue: 20,
+    numericValue: 19,
     suffix: "+",
   },
   { value: "3+", label: "Years of Experience", numericValue: 3, suffix: "+" },

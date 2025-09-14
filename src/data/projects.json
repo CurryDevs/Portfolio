@@ -1,15 +1,15 @@
 [
   {
-    "id": "item-1",
+    "id": "interlynk",
     "components": {
       "HeroSection": {
         "category": "Case Study",
-        "headline": { "h1": "Redesigning the Future of", "h2":  "Digital Commerce"},
+        "headline": { "h1": "Redesigning the Future of", "h2":  "Interlynk"},
         "subtitle": "A complete transformation of an e-commerce platform that increased conversion rates by 340% and delivered exceptional user experiences across all touchpoints.",
         "cta": [
           {
             "label": "View Live Project",
-            "url": "https://www.shadcnblocks.com"
+            "url": "https://interlynk.vercel.app/"
           },
           {
             "label": "Explore Process",
@@ -159,16 +159,16 @@
   },
   
   {
-    "id": "item-2",
+    "id": "brevix",
     "components": {
       "HeroSection": {
         "category": "Case Study",
-        "headline": { "h1": "Redesigning the Future of", "h2":  "E Commerce"},
+        "headline": { "h1": "Redesigning the Future of", "h2":  "Brevix"},
         "subtitle": "A complete transformation of an e-commerce platform that increased conversion rates by 340% and delivered exceptional user experiences across all touchpoints.",
         "cta": [
           {
             "label": "View Live Project",
-            "url": "https://www.shadcnblocks.com"
+            "url": "https://propellent-eight.vercel.app/"
           },
           {
             "label": "Explore Process",
@@ -318,16 +318,16 @@
   },
 
   {
-    "id": "item-3",
+    "id": "torque-craft",
     "components": {
       "HeroSection": {
         "category": "Case Study",
-        "headline": { "h1": "Redesigning the Future of", "h2":  "M Commerce"},
+        "headline": { "h1": "Redesigning the Future of", "h2":  "Torque Craft"},
         "subtitle": "A complete transformation of an e-commerce platform that increased conversion rates by 340% and delivered exceptional user experiences across all touchpoints.",
         "cta": [
           {
             "label": "View Live Project",
-            "url": "https://www.shadcnblocks.com"
+            "url": "https://torque-craft.vercel.app/"
           },
           {
             "label": "Explore Process",

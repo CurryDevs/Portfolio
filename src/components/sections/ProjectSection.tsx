@@ -21,7 +21,7 @@ interface ProjectSectionProps {
 const ProjectSection = ({
   items = [
     {
-      id: "item-1",
+      id: "interlynk",
       title: "Build Modern UIs",
       summary:
         "Create stunning user interfaces with our comprehensive design system.",
@@ -30,7 +30,7 @@ const ProjectSection = ({
         "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80&sat=-100",
     },
     {
-      id: "item-2",
+      id: "brevix",
       title: "Computer Vision Technology",
       summary:
         "Powerful image recognition and processing capabilities that allow AI systems to analyze, understand, and interpret visual information from the world.",
@@ -39,7 +39,7 @@ const ProjectSection = ({
         "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80&sat=-100",
     },
     {
-      id: "item-3",
+      id: "torque-craft",
       title: "Machine Learning Automation",
       summary:
         "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",

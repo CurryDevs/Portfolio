@@ -15,6 +15,7 @@ const menuItems = [
 function DemoNavbar() {
     const [menuState, setMenuState] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,7 +35,7 @@ function DemoNavbar() {
                     className={cn(
                         'mx-auto mt-2 max-w-6xl pr-6 pl-3 transition-all duration-300 lg:px-12',
                         isScrolled &&
-                        'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5'
+                        'bg-background/50 max-w-4xl rounded-2xl border border border-white/30 border-[1px] backdrop-blur-lg lg:px-5'
                     )}
                 >
                     <div className="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-1">
@@ -60,12 +61,24 @@ function DemoNavbar() {
                         <div className="absolute inset-0 m-auto hidden size-fit lg:block">
                             <ul className="flex gap-8 text-sm">
                                 {menuItems.map((item, index) => (
-                                    <li key={index}>
+                                    <li 
+                                        key={index} 
+                                        className="relative"
+                                        onMouseEnter={() => setHoveredItem(index)}
+                                        onMouseLeave={() => setHoveredItem(null)}
+                                    >
                                         <a
                                             href={item.href}
-                                            className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                                            className="relative text-accent-foreground block duration-150 group"
                                         >
                                             <span>{item.name}</span>
+                                            <span 
+                                                className={cn(
+                                                    "pointer-events-none absolute left-1/2 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-primary to-primary/60 transition-all duration-300 origin-center rounded-full -translate-x-1/2",
+                                                    hoveredItem === index && "w-full left-0 translate-x-0",
+                                                    hoveredItem !== null && hoveredItem !== index && "opacity-0"
+                                                )}
+                                            />
                                         </a>
                                     </li>
                                 ))}
