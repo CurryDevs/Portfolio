@@ -29,7 +29,7 @@ function DemoNavbar() {
         <header>
             <nav
                 data-state={menuState && 'active'}
-                className="fixed group z-20 w-full px-2"
+                className="fixed group z-[100] w-full px-2"
             >
                 <div
                     className={cn(
@@ -43,7 +43,7 @@ function DemoNavbar() {
                             <a
                                 href="/"
                                 aria-label="home"
-                                className="flex items-center space-x-2"
+                                className="flex items-center space-x-2 cursor-pointer"
                             >
                                 <DemoLogo />
                             </a>

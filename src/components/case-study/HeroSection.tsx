@@ -89,7 +89,7 @@ const HeroSection = ({ category, headline, subtitle, cta }: HeroSectionProps) =>
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
       {/* Three.js Stars Background */}
       <div ref={mountRef} className="absolute inset-0 z-0" style={{ pointerEvents: 'none' }} />
 
