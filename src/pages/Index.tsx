@@ -1,5 +1,5 @@
 import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
-import FooterOne from "@/components/layout/FooterOne";
+import Footer from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import LogoThree from "@/components/sections/LogoThree";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -11,6 +11,8 @@ import { TechSection } from "@/components/sections/TechSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Code, Palette, Rocket } from "lucide-react";
+import CaseStudy from "@/components/CaseStudy";
+import FAQSection from "@/components/sections/FAQSection";
 
 const Index = () => {
   const projectData = [
@@ -42,6 +44,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-brand-bg">
+      <CaseStudy />
       <AdvancedHeader />
       <main>
         <HeroSection />
@@ -53,10 +56,11 @@ const Index = () => {
         <TechSection />
         <ProcessSection />
         <TestimonialsSection />
+        <FAQSection />
         <ContactSection />
       </main>
       <div className="mt-10">
-        <FooterOne />
+        <Footer />
       </div>
     </div>
   );

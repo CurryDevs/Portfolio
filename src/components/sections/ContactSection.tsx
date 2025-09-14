@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-black">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 lg:py-32">
       <div className="container-custom px-4 sm:px-6">
         <div className="mx-auto max-w-5xl">
           <ContactCard
