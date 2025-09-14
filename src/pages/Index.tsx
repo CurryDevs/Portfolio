@@ -47,7 +47,7 @@ const Index = () => {
         <HeroSection />
         <ProjectSection />
         <ProjectFeatureSection data={projectData} />
-        <LogoThree />
+        {/* <LogoThree /> */}
         {/* <AboutSection /> */}
         <StatsSection />
         <ServicesSection />
