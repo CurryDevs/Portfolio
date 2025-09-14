@@ -107,8 +107,8 @@ export function StatsSection() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <div className="relative z-10 flex flex-col items-center justify-center">
-            <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-l text-transparent">
-              DELIVERING
+            <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-xl text-transparent">
+              CHASING
             </span>
             <h2 className="mb-8 text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
               Exceptional Results
