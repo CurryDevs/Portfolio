@@ -262,20 +262,19 @@ const TechStack = ({techStack}) => {
               animation: 'tech-carousel 30s linear infinite',
             }}
           >
-            {loopIcons.map((tech, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col items-center justify-center min-w-[90px]"
-              >
-                {/* Only the icon, no circle */}
-                <div className="mb-2">
-                  {tech.svg}
+            {loopIcons.map((tech, idx) => {
+              const Icon = iconMap[tech.icon];
+              return (
+                <div key={idx} className="flex flex-col items-center justify-center min-w-[90px]">
+                  <div className="mb-2">
+                    {Icon && <Icon className="h-8 w-8 text-accentCS" />}
+                  </div>
+                  <span className="text-xs text-text-secondary font-medium" style={{color: '#fff'}}>
+                    {tech.name}
+                  </span>
                 </div>
-                <span className="text-xs text-text-secondary font-medium" style={{color: '#fff'}}>
-                  {tech.name}
-                </span>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
