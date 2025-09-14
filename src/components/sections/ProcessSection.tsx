@@ -3,7 +3,16 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { ArrowRight, CheckCircle2, Circle, Clock, Lightbulb, Code, Rocket, Users } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Circle,
+  Clock,
+  Lightbulb,
+  Code,
+  Rocket,
+  Users,
+} from "lucide-react";
 
 interface ProcessStep {
   title: string;
@@ -32,7 +41,8 @@ const processData: ProcessStep[] = [
   },
   {
     title: "Design & Prototyping",
-    description: "Creating beautiful, user-centered designs and interactive prototypes",
+    description:
+      "Creating beautiful, user-centered designs and interactive prototypes",
     status: "in-progress",
     phase: "Phase 2",
     progress: 75,
@@ -111,13 +121,14 @@ export function ProcessSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-h2 text-brand-text mb-6 animate-slide-up">
-            How We Work
-          </h2>
-          <p className="text-lg text-brand-text-muted max-w-2xl mx-auto animate-fade-in stagger-2">
-            Follow our proven process as we transform your ideas into exceptional digital experiences.
-            Each phase is carefully crafted to ensure success.
-          </p>
+          <div className="relative z-10 flex flex-col items-center justify-center">
+            <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-xl text-transparent">
+              OUR PROCESS
+            </span>
+            <h2 className="mb-8 text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+              What our Client Experiences
+            </h2>
+          </div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -133,12 +144,13 @@ export function ProcessSection() {
               {/* Timeline line */}
               <div className="absolute left-0 top-0 bottom-0 w-px bg-white/10 -ml-4 hidden md:block">
                 <div
-                  className={`w-3 h-3 rounded-full -ml-[6px] mt-8 ${step.status === "completed"
+                  className={`w-3 h-3 rounded-full -ml-[6px] mt-8 ${
+                    step.status === "completed"
                       ? "bg-green-400"
                       : step.status === "in-progress"
-                        ? "bg-blue-400"
-                        : "bg-gray-400"
-                    }`}
+                      ? "bg-blue-400"
+                      : "bg-gray-400"
+                  }`}
                 />
               </div>
 
@@ -149,12 +161,14 @@ export function ProcessSection() {
                       <div className="p-2 rounded-lg bg-white/10 text-brand-text">
                         {step.icon}
                       </div>
-                      <h3 className="text-xl font-semibold text-brand-text">{step.title}</h3>
+                      <h3 className="text-xl font-semibold text-brand-text">
+                        {step.title}
+                      </h3>
                       <Badge
                         variant="secondary"
                         className={getStatusColor(step.status)}
                       >
-                        {step.status.replace('-', ' ')}
+                        {step.status.replace("-", " ")}
                       </Badge>
                     </div>
                     <p className="text-brand-text-muted mb-4 leading-relaxed">

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, X, Maximize2, Smartphone, Monitor } from "lucide-react";
+import FullPreview from "./FullPreview";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [viewMode, setViewMode] = useState<'desktop' | 'mobile'>('desktop');
+  const [viewMode, setViewMode] = useState<'desktop' | 'mobile' | 'full'>('desktop');
 
   // Mock image data - in real project these would be actual screenshots
   const images = [
@@ -69,11 +70,11 @@ const Gallery = () => {
 
   const navigateImage = (direction: 'prev' | 'next') => {
     if (selectedImage === null) return;
-    
-    const newIndex = direction === 'prev' 
+
+    const newIndex = direction === 'prev'
       ? (selectedImage - 1 + images.length) % images.length
       : (selectedImage + 1) % images.length;
-    
+
     setSelectedImage(newIndex);
   };
 
@@ -85,30 +86,38 @@ const Gallery = () => {
           <h2 className="text-section-title mb-6 animate-fade-in">
             Project <span className="text-accentCS">Gallery</span>
           </h2>
-          <p className="text-body-large text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in" style={{animationDelay: '0.2s'}}>
+          <p className="text-body-large text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Explore the complete transformation through interactive previews of key pages and features.
           </p>
 
           {/* View Toggle */}
-          <div className="inline-flex items-center p-1 rounded-full neumorphic-inset animate-fade-in" style={{animationDelay: '0.4s'}}>
+          <div className="inline-flex items-center p-1 rounded-full neumorphic-inset animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <button
+              onClick={() => setViewMode('full')}
+              className={`flex items-center px-4 py-2 rounded-full transition-all ${viewMode === 'full'
+                ? 'bg-accent text-accentCS-foreground'
+                : 'text-text-secondary hover:text-text-primary'
+                }`}
+            >
+              <Maximize2 className="h-4 w-4 mr-2" />
+              Full Preview
+            </button>
             <button
               onClick={() => setViewMode('desktop')}
-              className={`flex items-center px-4 py-2 rounded-full transition-all ${
-                viewMode === 'desktop' 
-                  ? 'bg-accent text-accentCS-foreground' 
-                  : 'text-text-secondary hover:text-text-primary'
-              }`}
+              className={`flex items-center px-4 py-2 rounded-full transition-all ${viewMode === 'desktop'
+                ? 'bg-accent text-accentCS-foreground'
+                : 'text-text-secondary hover:text-text-primary'
+                }`}
             >
               <Monitor className="h-4 w-4 mr-2" />
               Desktop
             </button>
             <button
               onClick={() => setViewMode('mobile')}
-              className={`flex items-center px-4 py-2 rounded-full transition-all ${
-                viewMode === 'mobile' 
-                  ? 'bg-accent text-accentCS-foreground' 
-                  : 'text-text-secondary hover:text-text-primary'
-              }`}
+              className={`flex items-center px-4 py-2 rounded-full transition-all ${viewMode === 'mobile'
+                ? 'bg-accent text-accentCS-foreground'
+                : 'text-text-secondary hover:text-text-primary'
+                }`}
             >
               <Smartphone className="h-4 w-4 mr-2" />
               Mobile
@@ -116,54 +125,61 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {images.map((image, index) => (
-            <div 
-              key={image.id}
-              className="group relative overflow-hidden rounded-2xl neumorphic hover-lift cursor-pointer animate-scale-in"
-              style={{animationDelay: `${0.1 * index}s`}}
-              onClick={() => openLightbox(index)}
-            >
-              {/* Image Container */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-surface">
-                {/* Placeholder for actual image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-surface to-surface-elevated flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-                      <Maximize2 className="h-8 w-8 text-accentCS" />
+        {/* Gallery Grid or Full Preview */}
+        {viewMode === 'full' ? (
+          <FullPreview />
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {images.map((image, index) => (
+              <div
+                key={image.id}
+                className="group relative overflow-hidden rounded-2xl neumorphic hover-lift cursor-pointer animate-scale-in"
+                style={{ animationDelay: `${0.1 * index}s` }}
+                onClick={() => openLightbox(index)}
+              >
+                {/* Image Container */}
+                <div className="relative aspect-[4/3] overflow-hidden bg-surface">
+                  {/* Placeholder for actual image */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-surface to-surface-elevated flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <Maximize2 className="h-8 w-8 text-accentCS" />
+                      </div>
+                      <p className="text-text-secondary font-medium">{image.title}</p>
+                      <p className="text-sm text-text-muted mt-1">
+                        {viewMode === 'desktop' && 'Desktop View'}
+                        {viewMode === 'mobile' && 'Mobile View'}
+                      </p>
                     </div>
-                    <p className="text-text-secondary font-medium">{image.title}</p>
-                    <p className="text-sm text-text-muted mt-1">{viewMode === 'desktop' ? 'Desktop View' : 'Mobile View'}</p>
+                  </div>
+
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <Maximize2 className="h-8 w-8 mx-auto mb-2" />
+                      <p className="font-medium">View Full Size</p>
+                    </div>
+                  </div>
+
+                  {/* Category Badge */}
+                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full glass text-sm font-medium text-accentCS">
+                    {image.category}
                   </div>
                 </div>
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <Maximize2 className="h-8 w-8 mx-auto mb-2" />
-                    <p className="font-medium">View Full Size</p>
-                  </div>
-                </div>
-
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full glass text-sm font-medium text-accentCS">
-                  {image.category}
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-accentCS transition-colors">
+                    {image.title}
+                  </h3>
+                  <p className="text-text-secondary text-sm">
+                    {image.description}
+                  </p>
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-accentCS transition-colors">
-                  {image.title}
-                </h3>
-                <p className="text-text-secondary text-sm">
-                  {image.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* Lightbox Modal */}
         {selectedImage !== null && (

@@ -33,7 +33,7 @@ const faqData: FAQItemType[] = [
 
 const FAQSection: React.FC = () => {
   return (
-    <section className="min-h-screen relative overflow-hidden bg-background px-4 py-12 text-foreground">
+    <section className="relative overflow-hidden bg-background px-4 py-12 text-foreground">
       <div className="relative z-10 flex flex-col items-center justify-center">
         <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-l text-transparent">
           LET'S ANSWER YOUR QUESTIONS
