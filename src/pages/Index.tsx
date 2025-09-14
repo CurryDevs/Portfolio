@@ -26,7 +26,7 @@ const Index = () => {
       title: "Lightning Fast",
       content:
         "Rapid project delivery and seamless handover. We ensure your solution is launched quickly, with zero bottlenecks and instant readiness for your team.",
-      image: "/src/assets/lightning-fast.png",
+      image: "/lightning-fast.png",
       icon: <Rocket className="size-6 text-brand-text" />,
     },
     {
