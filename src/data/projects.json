@@ -1,0 +1,478 @@
+[
+  {
+    "id": "item-1",
+    "components": {
+      "HeroSection": {
+        "category": "Case Study",
+        "headline": { "h1": "Redesigning the Future of", "h2":  "Digital Commerce"},
+        "subtitle": "A complete transformation of an e-commerce platform that increased conversion rates by 340% and delivered exceptional user experiences across all touchpoints.",
+        "cta": [
+          {
+            "label": "View Live Project",
+            "url": "https://www.shadcnblocks.com"
+          },
+          {
+            "label": "Explore Process",
+            "url": "#process"
+          }
+        ]
+      },
+      "ProjectDetails": {
+        "headline": "Transforming Digital Experiences",
+        "summary": "A comprehensive redesign project that redefined user experience standards and delivered measurable business impact.",
+        "client": { "name": "Fortune 500 E-commerce", "description": "A leading retail company looking to modernize their digital presence and improve customer engagement across all platforms."},
+        "duration": {"length": "6 Months", "description": "Intensive design and development sprint from initial research to final launch and optimization."},
+        "timeline": {"timeframe": "Q1 2024", "description": "Strategic planning, rapid prototyping, and agile development delivered on schedule and within budget."},
+        "challenge": [
+          "Outdated user interface causing high bounce rates",
+          "Limited mobile optimization",
+          "Slow checkout process",
+          "Low accessibility compliance"
+        ],
+        "solution": [
+          "Modern UI/UX overhaul",
+          "Mobile-first responsive design",
+          "Streamlined checkout flow",
+          "Accessibility improvements"
+        ]
+      },
+      "Results": {
+        "summary": "The redesign delivered exceptional results that exceeded all expectations and transformed TechFlow Commerce into an industry leader.",
+        "resultCompany": "Beyond the numbers, here's what we accomplished for TechFlow Commerce",
+        "metrics": [
+          {
+            "icon": "TrendingUp",
+            "label": "Conversion Rate Increase",
+            "value": 340,
+            "suffix": "%",
+            "description": "From 2.1% to 9.2% across all devices"
+          },
+          {
+            "icon": "Users",
+            "label": "User Satisfaction",
+            "value": 89,
+            "suffix": "%",
+            "description": "Based on post-launch user surveys"
+          },
+          {
+            "icon": "Clock",
+            "label": "Faster Checkout",
+            "value": 73,
+            "suffix": "%",
+            "description": "Average checkout time reduced to 1.8 minutes"
+          },
+          {
+            "icon": "Star",
+            "label": "Mobile Revenue Growth",
+            "value": 156,
+            "suffix": "%",
+            "description": "Mobile sales now account for 68% of total revenue"
+          }
+        ],
+        "achievements": [
+          "Reduced cart abandonment rate by 52%",
+          "Increased average order value by 23%",
+          "Improved page load speeds by 4.2 seconds",
+          "Achieved 98% accessibility compliance",
+          "Implemented in 6 months, 2 weeks ahead of schedule",
+          "Generated $2.3M additional revenue in first quarter"
+        ],
+        "cta": "Ready to achieve similar results? Let's discuss your project."
+      },
+      "TechStack": {
+        "frontend": [
+            { "name": "React 18", "icon": "SiReact" },
+            { "name": "TypeScript", "icon": "SiTypescript" },
+            { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
+            { "name": "Framer Motion", "icon": "SiFramer" },
+            { "name": "PWA", "icon": "MdInstallMobile" }
+        ],
+        "mobile": [
+            { "name": "React Native", "icon": "SiReact" },
+            { "name": "Expo", "icon": "SiExpo" }
+        ],
+        "backend": [
+            { "name": "Node.js", "icon": "FaNodeJs" },
+            { "name": "Express", "icon": "SiExpress" },
+            { "name": "PostgreSQL", "icon": "SiPostgresql" },
+            { "name": "Redis", "icon": "SiRedis" }
+        ],
+        "devops": [
+            { "name": "AWS", "icon": "FaAws" },
+            { "name": "Docker", "icon": "FaDocker" },
+            { "name": "Kubernetes", "icon": "SiKubernetes" },
+            { "name": "CloudFront", "icon": "SiAmazonwebservices" }
+        ],
+        "tools": [
+            { "name": "Figma", "icon": "FaFigma" },
+            { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
+            { "name": "Mixpanel", "icon": "SiMixpanel" },
+            { "name": "Hotjar", "icon": "SiHotjar" }
+        ],
+        "security": [
+            { "name": "OAuth 2.0", "icon": "SiAuth0" },
+            { "name": "JWT", "icon": "SiJsonwebtokens" },
+            { "name": "SSL/TLS", "icon": "SiSst" },
+            { "name": "Rate Limiting", "icon": "MdSpeed" }
+        ]
+        },
+      "Gallery": {
+        "images": [
+          {
+            "title": "Homepage Redesign",
+            "description": "Clean, modern landing page with improved navigation and hero section",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Homepage"
+          },
+          {
+            "title": "Product Catalog",
+            "description": "Intuitive product browsing with advanced filtering and search",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Catalog"
+          },
+          {
+            "title": "Checkout Process",
+            "description": "Streamlined 2-step checkout with progress indicators",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Checkout"
+          },
+          {
+            "title": "User Dashboard",
+            "description": "Personalized user experience with order history and preferences",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Account"
+          },
+          {
+            "title": "Mobile App",
+            "description": "Native mobile experience with offline capabilities",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Mobile"
+          }
+        ]
+      }
+    }
+  },
+  
+  {
+    "id": "item-2",
+    "components": {
+      "HeroSection": {
+        "category": "Case Study",
+        "headline": { "h1": "Redesigning the Future of", "h2":  "E Commerce"},
+        "subtitle": "A complete transformation of an e-commerce platform that increased conversion rates by 340% and delivered exceptional user experiences across all touchpoints.",
+        "cta": [
+          {
+            "label": "View Live Project",
+            "url": "https://www.shadcnblocks.com"
+          },
+          {
+            "label": "Explore Process",
+            "url": "#process"
+          }
+        ]
+      },
+      "ProjectDetails": {
+        "headline": "Transforming Digital Experiences",
+        "summary": "A comprehensive redesign project that redefined user experience standards and delivered measurable business impact.",
+        "client": { "name": "Fortune 500 E-commerce", "description": "A leading retail company looking to modernize their digital presence and improve customer engagement across all platforms."},
+        "duration": {"length": "6 Months", "description": "Intensive design and development sprint from initial research to final launch and optimization."},
+        "timeline": {"timeframe": "Q1 2024", "description": "Strategic planning, rapid prototyping, and agile development delivered on schedule and within budget."},
+        "challenge": [
+          "Outdated user interface causing high bounce rates",
+          "Limited mobile optimization",
+          "Slow checkout process",
+          "Low accessibility compliance"
+        ],
+        "solution": [
+          "Modern UI/UX overhaul",
+          "Mobile-first responsive design",
+          "Streamlined checkout flow",
+          "Accessibility improvements"
+        ]
+      },
+      "Results": {
+        "summary": "The redesign delivered exceptional results that exceeded all expectations and transformed TechFlow Commerce into an industry leader.",
+        "resultCompany": "Beyond the numbers, here's what we accomplished for TechFlow Commerce",
+        "metrics": [
+          {
+            "icon": "TrendingUp",
+            "label": "Conversion Rate Increase",
+            "value": 340,
+            "suffix": "%",
+            "description": "From 2.1% to 9.2% across all devices"
+          },
+          {
+            "icon": "Users",
+            "label": "User Satisfaction",
+            "value": 89,
+            "suffix": "%",
+            "description": "Based on post-launch user surveys"
+          },
+          {
+            "icon": "Clock",
+            "label": "Faster Checkout",
+            "value": 73,
+            "suffix": "%",
+            "description": "Average checkout time reduced to 1.8 minutes"
+          },
+          {
+            "icon": "Star",
+            "label": "Mobile Revenue Growth",
+            "value": 156,
+            "suffix": "%",
+            "description": "Mobile sales now account for 68% of total revenue"
+          }
+        ],
+        "achievements": [
+          "Reduced cart abandonment rate by 52%",
+          "Increased average order value by 23%",
+          "Improved page load speeds by 4.2 seconds",
+          "Achieved 98% accessibility compliance",
+          "Implemented in 6 months, 2 weeks ahead of schedule",
+          "Generated $2.3M additional revenue in first quarter"
+        ],
+        "cta": "Ready to achieve similar results? Let's discuss your project."
+      },
+      "TechStack": {
+        "frontend": [
+            { "name": "React 18", "icon": "SiReact" },
+            { "name": "TypeScript", "icon": "SiTypescript" },
+            { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
+            { "name": "Framer Motion", "icon": "SiFramer" },
+            { "name": "PWA", "icon": "MdInstallMobile" }
+        ],
+        "mobile": [
+            { "name": "React Native", "icon": "SiReact" },
+            { "name": "Expo", "icon": "SiExpo" }
+        ],
+        "backend": [
+            { "name": "Node.js", "icon": "FaNodeJs" },
+            { "name": "Express", "icon": "SiExpress" },
+            { "name": "PostgreSQL", "icon": "SiPostgresql" },
+            { "name": "Redis", "icon": "SiRedis" }
+        ],
+        "devops": [
+            { "name": "AWS", "icon": "FaAws" },
+            { "name": "Docker", "icon": "FaDocker" },
+            { "name": "Kubernetes", "icon": "SiKubernetes" },
+            { "name": "CloudFront", "icon": "SiAmazonwebservices" }
+        ],
+        "tools": [
+            { "name": "Figma", "icon": "FaFigma" },
+            { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
+            { "name": "Mixpanel", "icon": "SiMixpanel" },
+            { "name": "Hotjar", "icon": "SiHotjar" }
+        ],
+        "security": [
+            { "name": "OAuth 2.0", "icon": "SiAuth0" },
+            { "name": "JWT", "icon": "SiJsonwebtokens" },
+            { "name": "SSL/TLS", "icon": "SiSst" },
+            { "name": "Rate Limiting", "icon": "MdSpeed" }
+        ]
+        },
+      "Gallery": {
+        "images": [
+          {
+            "title": "Homepage Redesign",
+            "description": "Clean, modern landing page with improved navigation and hero section",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Homepage"
+          },
+          {
+            "title": "Product Catalog",
+            "description": "Intuitive product browsing with advanced filtering and search",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Catalog"
+          },
+          {
+            "title": "Checkout Process",
+            "description": "Streamlined 2-step checkout with progress indicators",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Checkout"
+          },
+          {
+            "title": "User Dashboard",
+            "description": "Personalized user experience with order history and preferences",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Account"
+          },
+          {
+            "title": "Mobile App",
+            "description": "Native mobile experience with offline capabilities",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Mobile"
+          }
+        ]
+      }
+    }
+  },
+
+  {
+    "id": "item-3",
+    "components": {
+      "HeroSection": {
+        "category": "Case Study",
+        "headline": { "h1": "Redesigning the Future of", "h2":  "M Commerce"},
+        "subtitle": "A complete transformation of an e-commerce platform that increased conversion rates by 340% and delivered exceptional user experiences across all touchpoints.",
+        "cta": [
+          {
+            "label": "View Live Project",
+            "url": "https://www.shadcnblocks.com"
+          },
+          {
+            "label": "Explore Process",
+            "url": "#process"
+          }
+        ]
+      },
+      "ProjectDetails": {
+        "headline": "Transforming Digital Experiences",
+        "summary": "A comprehensive redesign project that redefined user experience standards and delivered measurable business impact.",
+        "client": { "name": "Fortune 500 E-commerce", "description": "A leading retail company looking to modernize their digital presence and improve customer engagement across all platforms."},
+        "duration": {"length": "6 Months", "description": "Intensive design and development sprint from initial research to final launch and optimization."},
+        "timeline": {"timeframe": "Q1 2024", "description": "Strategic planning, rapid prototyping, and agile development delivered on schedule and within budget."},
+        "challenge": [
+          "Outdated user interface causing high bounce rates",
+          "Limited mobile optimization",
+          "Slow checkout process",
+          "Low accessibility compliance"
+        ],
+        "solution": [
+          "Modern UI/UX overhaul",
+          "Mobile-first responsive design",
+          "Streamlined checkout flow",
+          "Accessibility improvements"
+        ]
+      },
+      "Results": {
+        "summary": "The redesign delivered exceptional results that exceeded all expectations and transformed TechFlow Commerce into an industry leader.",
+        "resultCompany": "Beyond the numbers, here's what we accomplished for TechFlow Commerce",
+        "metrics": [
+          {
+            "icon": "TrendingUp",
+            "label": "Conversion Rate Increase",
+            "value": 340,
+            "suffix": "%",
+            "description": "From 2.1% to 9.2% across all devices"
+          },
+          {
+            "icon": "Users",
+            "label": "User Satisfaction",
+            "value": 89,
+            "suffix": "%",
+            "description": "Based on post-launch user surveys"
+          },
+          {
+            "icon": "Clock",
+            "label": "Faster Checkout",
+            "value": 73,
+            "suffix": "%",
+            "description": "Average checkout time reduced to 1.8 minutes"
+          },
+          {
+            "icon": "Star",
+            "label": "Mobile Revenue Growth",
+            "value": 156,
+            "suffix": "%",
+            "description": "Mobile sales now account for 68% of total revenue"
+          }
+        ],
+        "achievements": [
+          "Reduced cart abandonment rate by 52%",
+          "Increased average order value by 23%",
+          "Improved page load speeds by 4.2 seconds",
+          "Achieved 98% accessibility compliance",
+          "Implemented in 6 months, 2 weeks ahead of schedule",
+          "Generated $2.3M additional revenue in first quarter"
+        ],
+        "cta": "Ready to achieve similar results? Let's discuss your project."
+      },
+      "TechStack": {
+        "frontend": [
+            { "name": "React 18", "icon": "SiReact" },
+            { "name": "TypeScript", "icon": "SiTypescript" },
+            { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
+            { "name": "Framer Motion", "icon": "SiFramer" },
+            { "name": "PWA", "icon": "MdInstallMobile" }
+        ],
+        "mobile": [
+            { "name": "React Native", "icon": "SiReact" },
+            { "name": "Expo", "icon": "SiExpo" }
+        ],
+        "backend": [
+            { "name": "Node.js", "icon": "FaNodeJs" },
+            { "name": "Express", "icon": "SiExpress" },
+            { "name": "PostgreSQL", "icon": "SiPostgresql" },
+            { "name": "Redis", "icon": "SiRedis" }
+        ],
+        "devops": [
+            { "name": "AWS", "icon": "FaAws" },
+            { "name": "Docker", "icon": "FaDocker" },
+            { "name": "Kubernetes", "icon": "SiKubernetes" },
+            { "name": "CloudFront", "icon": "SiAmazonwebservices" }
+        ],
+        "tools": [
+            { "name": "Figma", "icon": "FaFigma" },
+            { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
+            { "name": "Mixpanel", "icon": "SiMixpanel" },
+            { "name": "Hotjar", "icon": "SiHotjar" }
+        ],
+        "security": [
+            { "name": "OAuth 2.0", "icon": "SiAuth0" },
+            { "name": "JWT", "icon": "SiJsonwebtokens" },
+            { "name": "SSL/TLS", "icon": "SiSst" },
+            { "name": "Rate Limiting", "icon": "MdSpeed" }
+        ]
+        },
+      "Gallery": {
+        "images": [
+          {
+            "title": "Homepage Redesign",
+            "description": "Clean, modern landing page with improved navigation and hero section",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Homepage"
+          },
+          {
+            "title": "Product Catalog",
+            "description": "Intuitive product browsing with advanced filtering and search",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Catalog"
+          },
+          {
+            "title": "Checkout Process",
+            "description": "Streamlined 2-step checkout with progress indicators",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Checkout"
+          },
+          {
+            "title": "User Dashboard",
+            "description": "Personalized user experience with order history and preferences",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Account"
+          },
+          {
+            "title": "Mobile App",
+            "description": "Native mobile experience with offline capabilities",
+            "desktop": "/api/placeholder/1200/800",
+            "mobile": "/api/placeholder/400/800",
+            "category": "Mobile"
+          }
+        ]
+      }
+    }
+  }
+]

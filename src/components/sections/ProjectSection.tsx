@@ -2,6 +2,7 @@
 
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface GalleryItem {
   id: string;
@@ -163,8 +164,8 @@ const ProjectSection = ({
                 className="flex-shrink-0"
                 style={{ width: `calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 24 / itemsPerView}px)` }}
               >
-                <a
-                  href="/case-studies"
+                <Link
+                  to={`/case-studies/${item.id}`}
                   className="group flex flex-col justify-between cursor-pointer"
                 >
                   <div>
@@ -190,7 +191,7 @@ const ProjectSection = ({
                     Read more{" "}
                     <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                   </div>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

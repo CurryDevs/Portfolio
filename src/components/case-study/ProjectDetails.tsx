@@ -1,7 +1,17 @@
 import { Calendar, Clock, Target, Zap } from "lucide-react";
 import { ScrollAnimateWrapper, useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const ProjectDetails = () => {
+type ProjectDetailsProps = {
+  headline?: string;
+  summary?: string;
+  client: { name: string; description: string };
+  duration: { length: string; description: string };
+  timeline: { timeframe: string; description: string };
+  challenge: string[];
+  solution: string[];
+}
+
+const ProjectDetails = ({headline, summary, client, duration, timeline, challenge, solution}: ProjectDetailsProps) => {
   useScrollAnimation();
   
   return (
@@ -40,12 +50,11 @@ const ProjectDetails = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">Client</h3>
-                  <p className="text-text-secondary">Fortune 500 E-commerce</p>
+                  <p className="text-text-secondary">{client.name}</p>
                 </div>
               </div>
               <p className="text-text-secondary leading-relaxed">
-                A leading retail company looking to modernize their digital presence 
-                and improve customer engagement across all platforms.
+                {client.description}
               </p>
             </div>
 
@@ -57,12 +66,11 @@ const ProjectDetails = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">Duration</h3>
-                  <p className="text-text-secondary">6 Months</p>
+                  <p className="text-text-secondary">{duration.length}</p>
                 </div>
               </div>
               <p className="text-text-secondary leading-relaxed">
-                Intensive design and development sprint from initial research 
-                to final launch and optimization.
+                {duration.description}
               </p>
             </div>
 
@@ -74,12 +82,11 @@ const ProjectDetails = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">Timeline</h3>
-                  <p className="text-text-secondary">Q1 2024</p>
+                  <p className="text-text-secondary">{timeline.description}</p>
                 </div>
               </div>
               <p className="text-text-secondary leading-relaxed">
-                Strategic planning, rapid prototyping, and agile development 
-                delivered on schedule and within budget.
+                {timeline.description}
               </p>
             </div>
           </ScrollAnimateWrapper>
@@ -95,22 +102,12 @@ const ProjectDetails = () => {
                 <h3 className="text-2xl font-bold text-foreground">The Challenge</h3>
               </div>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-white/50 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-text-secondary">Outdated user interface causing high bounce rates</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-white/50 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-text-secondary">Poor mobile experience affecting conversions</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-white/50 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-text-secondary">Complex checkout process losing customers</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-white/50 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-text-secondary">Inconsistent brand experience across platforms</p>
-                </div>
+                {challenge.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white/50 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-text-secondary">{item}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -123,22 +120,12 @@ const ProjectDetails = () => {
                 <h3 className="text-2xl font-bold text-foreground">The Solution</h3>
               </div>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-text-secondary">Modern, intuitive interface with improved navigation</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-text-secondary">Mobile-first responsive design optimized for all devices</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-text-secondary">Streamlined one-click checkout with multiple payment options</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-text-secondary">Cohesive design system ensuring brand consistency</p>
-                </div>
+                {solution.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-text-secondary">{item}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </ScrollAnimateWrapper>
