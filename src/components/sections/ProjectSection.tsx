@@ -18,8 +18,6 @@ interface ProjectSectionProps {
 }
 
 const ProjectSection = ({
-  heading = "Gallery",
-  demoUrl = "https://www.shadcnblocks.com",
   items = [
     {
       id: "item-1",

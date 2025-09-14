@@ -243,7 +243,7 @@ export function TestimonialsSection() {
         </div>
 
         <div className="relative mt-6 max-h-[600px] overflow-hidden">
-          <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
+          <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-3">
             {Array(Math.ceil(testimonials.length / 3))
               .fill(0)
               .map((_, i) => (
