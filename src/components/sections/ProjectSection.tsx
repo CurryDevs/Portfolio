@@ -2,6 +2,8 @@
 
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 
 import { Button } from "@/components/ui/button";
 import {
@@ -149,9 +151,8 @@ const ProjectSection = ({
           <CarouselContent className="-mr-4 ml-8 2xl:ml-[max(8rem,calc(50vw-700px+1rem))] 2xl:mr-[max(0rem,calc(50vw-700px-1rem))]">
             {items.map((item) => (
               <CarouselItem key={item.id} className="pl-4 md:max-w-[452px]">
-                <a
-                  href="/case-studies"
-                  className="group flex flex-col justify-between cursor-pointer"
+                <Link
+                  to={`/case-studies/${item.id}`} className="group flex flex-col justify-between cursor-pointer"
                 >
                   <div>
                     <div className="flex aspect-[3/2] overflow-clip rounded-xl">
@@ -176,7 +177,7 @@ const ProjectSection = ({
                     Read more{" "}
                     <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                   </div>
-                </a>
+                </Link>
               </CarouselItem>
             ))}
           </CarouselContent>

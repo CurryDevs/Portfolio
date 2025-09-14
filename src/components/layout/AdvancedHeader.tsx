@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { StartProjectModal } from "@/components/ui/start-project-modal";
 import { MenuIcon, X } from "lucide-react";
 import CurryDevsLogo from "@/assets/CurryDevs_Transparent.png";
+import { Link } from "react-router-dom";
 
 export function AdvancedHeader() {
     return (
@@ -33,14 +34,14 @@ function Navbar({ className }: { className?: string }) {
                 <div className="relative z-10 flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <a href="#home" className="flex items-center hover:scale-105 transition-transform duration-300">
+                        <Link to="/" className="flex items-center hover:scale-105 transition-transform duration-300">
                             <img
                                 src={CurryDevsLogo}
                                 alt="CurryDevs Logo"
                                 className="h-8 sm:h-10 lg:h-12 w-auto object-contain"
                                 style={{ clipPath: 'inset(15% 0 15% 0)' }}
                             />
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Desktop Navigation Items */}
