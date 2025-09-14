@@ -66,7 +66,10 @@ export function TestimonialCard({
         <img
           width={40}
           height={40}
-          src={img || "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"}
+          src={
+            img ||
+            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"
+          }
           alt={name}
           className="size-10 rounded-full ring-2 ring-white/20 ring-offset-2 ring-offset-transparent object-cover"
         />
@@ -88,8 +91,8 @@ const testimonials = [
       <p>
         Working with CurryDevs has revolutionized our design process.{" "}
         <Highlight>
-          Their reusable, animated components make it easy to deliver cutting-edge
-          designs.
+          Their reusable, animated components make it easy to deliver
+          cutting-edge designs.
         </Highlight>{" "}
         A must-have for any design team.
       </p>
@@ -146,8 +149,8 @@ const testimonials = [
       <p>
         CurryDevs' animations and design elements have elevated our fintech
         app's user experience.{" "}
-        <Highlight>The feedback on our new design is phenomenal.</Highlight> It's
-        a game-changer for user-centric applications.
+        <Highlight>The feedback on our new design is phenomenal.</Highlight>{" "}
+        It's a game-changer for user-centric applications.
       </p>
     ),
   },
@@ -159,7 +162,9 @@ const testimonials = [
       <p>
         CurryDevs' component library has simplified web development for our
         logistics dashboard.{" "}
-        <Highlight>Building custom layouts has never been this efficient.</Highlight>
+        <Highlight>
+          Building custom layouts has never been this efficient.
+        </Highlight>
       </p>
     ),
   },
@@ -183,8 +188,8 @@ const testimonials = [
     img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face",
     description: (
       <p>
-        CurryDevs' beautifully crafted components have completely transformed our
-        fashion storefront.{" "}
+        CurryDevs' beautifully crafted components have completely transformed
+        our fashion storefront.{" "}
         <Highlight>Customers love the dynamic shopping experience.</Highlight>
       </p>
     ),
@@ -195,8 +200,8 @@ const testimonials = [
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
     description: (
       <p>
-        CurryDevs has made it easy to create user-friendly, accessible interfaces
-        for our healthcare apps.{" "}
+        CurryDevs has made it easy to create user-friendly, accessible
+        interfaces for our healthcare apps.{" "}
         <Highlight>It's a crucial part of our design system.</Highlight>
       </p>
     ),
@@ -219,28 +224,26 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-24 lg:py-32 relative overflow-hidden">
+    <section
+      id="testimonials"
+      className="py-24 lg:py-32 relative overflow-hidden"
+    >
       {/* Background decorations */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-2xl animate-float"></div>
       <div className="absolute bottom-20 right-10 w-24 h-24 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-xl animate-float stagger-3"></div>
 
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-h2 text-brand-text mb-6 animate-slide-up">
-            What People Are Saying
+        <div className="relative z-10 flex flex-col items-center justify-center">
+          <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-xl text-transparent">
+            TESTIMONIALS
+          </span>
+          <h2 className="mb-8 text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+            Let's hear from our Clients
           </h2>
-          <p className="text-lg text-brand-text-muted max-w-2xl mx-auto animate-fade-in stagger-2">
-            Don't just take our word for it. Here's what{" "}
-            <span className="bg-gradient-to-r from-brand-accent-primary to-white bg-clip-text text-transparent">
-              real people
-            </span>{" "}
-            are saying about{" "}
-            <span className="text-brand-accent-primary font-semibold">CurryDevs</span>
-          </p>
         </div>
 
         <div className="relative mt-6 max-h-[600px] overflow-hidden">
-          <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
+          <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-3">
             {Array(Math.ceil(testimonials.length / 3))
               .fill(0)
               .map((_, i) => (

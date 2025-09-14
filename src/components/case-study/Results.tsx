@@ -1,95 +1,57 @@
 import { useState, useEffect } from "react";
 import { TrendingUp, Users, Clock, Star } from "lucide-react";
 
-const Results = () => {
+type Metric = {
+  icon: string; // You could make this more specific if you want (e.g., a union of possible icon names)
+  label: string;
+  value: number;
+  suffix: string;
+  description: string;
+};
+
+type ResultsProps = {
+  summary?: string;
+  resultCompany?: string;
+  metrics: Metric[];
+  achievements: String[]
+  cta: string;
+};
+
+
+// Map icon string to actual component
+const iconMap = { TrendingUp, Users, Clock, Star };
+
+const Results = ({ summary, resultCompany, metrics, achievements, cta }: ResultsProps) => {
   const [isVisible, setIsVisible] = useState(false);
-
-  const metrics = [
-    {
-      icon: TrendingUp,
-      value: 340,
-      suffix: "%",
-      label: "Conversion Rate Increase",
-      description: "From 2.1% to 9.2% across all devices",
-      color: "accent"
-    },
-    {
-      icon: Users,
-      value: 89,
-      suffix: "%",
-      label: "User Satisfaction",
-      description: "Based on post-launch user surveys",
-      color: "accent"
-    },
-    {
-      icon: Clock,
-      value: 73,
-      suffix: "%",
-      label: "Faster Checkout",
-      description: "Average checkout time reduced to 1.8 minutes",
-      color: "accent"
-    },
-    {
-      icon: Star,
-      value: 156,
-      suffix: "%",
-      label: "Mobile Revenue Growth",
-      description: "Mobile sales now account for 68% of total revenue",
-      color: "accent"
-    }
-  ];
-
-  const achievements = [
-    "Reduced cart abandonment rate by 52%",
-    "Increased average order value by 23%",
-    "Improved page load speeds by 4.2 seconds",
-    "Achieved 98% accessibility compliance",
-    "Implemented in 6 months, 2 weeks ahead of schedule",
-    "Generated $2.3M additional revenue in first quarter"
-  ];
 
   // Counter animation hook
   const useCounter = (end: number, duration: number = 2000) => {
     const [count, setCount] = useState(0);
-
     useEffect(() => {
       if (!isVisible) return;
-
       let startTime: number;
       let animationFrame: number;
-
       const animate = (currentTime: number) => {
         if (!startTime) startTime = currentTime;
         const progress = Math.min((currentTime - startTime) / duration, 1);
-        
         setCount(Math.floor(progress * end));
-
         if (progress < 1) {
           animationFrame = requestAnimationFrame(animate);
         }
       };
-
       animationFrame = requestAnimationFrame(animate);
       return () => cancelAnimationFrame(animationFrame);
     }, [isVisible, end, duration]);
-
     return count;
   };
 
-  // Intersection observer to trigger animations
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
       { threshold: 0.3 }
     );
-
     const element = document.getElementById('results-section');
     if (element) observer.observe(element);
-
     return () => observer.disconnect();
   }, []);
 
@@ -102,17 +64,15 @@ const Results = () => {
             Measurable <span className="text-accentCS">Impact</span>
           </h2>
           <p className="text-body-large text-text-secondary max-w-3xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>
-            The redesign delivered exceptional results that exceeded all expectations 
-            and transformed TechFlow Commerce into an industry leader.
+            {summary}
           </p>
         </div>
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {metrics.map((metric, index) => {
-            const IconComponent = metric.icon;
+            const IconComponent = iconMap[metric.icon];
             const animatedValue = useCounter(metric.value, 2500 + index * 200);
-            
             return (
               <div 
                 key={metric.label}
@@ -121,9 +81,8 @@ const Results = () => {
               >
                 {/* Icon */}
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 border border-accent/20 mb-6 group-hover:bg-accent/20 transition-colors">
-                  <IconComponent className="h-8 w-8 text-accentCS" />
+                  {IconComponent && <IconComponent className="h-8 w-8 text-accentCS" />}
                 </div>
-
                 {/* Value */}
                 <div className="mb-4">
                   <span className="text-5xl font-bold text-text-primary">
@@ -133,17 +92,14 @@ const Results = () => {
                     {metric.suffix}
                   </span>
                 </div>
-
                 {/* Label */}
                 <h3 className="text-lg font-semibold text-text-primary mb-2">
                   {metric.label}
                 </h3>
-
                 {/* Description */}
                 <p className="text-sm text-text-secondary">
                   {metric.description}
                 </p>
-
                 {/* Progress Bar */}
                 <div className="mt-4 h-1 bg-surface rounded-full overflow-hidden">
                   <div 
@@ -166,10 +122,9 @@ const Results = () => {
               Key Achievements
             </h3>
             <p className="text-text-secondary">
-              Beyond the numbers, here's what we accomplished for TechFlow Commerce
+              {resultCompany}
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {achievements.map((achievement, index) => (
               <div 
@@ -191,7 +146,7 @@ const Results = () => {
           <div className="inline-flex items-center px-8 py-4 rounded-full glass hover-glow">
             <Star className="h-5 w-5 text-accentCS mr-2" />
             <span className="text-text-primary font-semibold">
-              Ready to achieve similar results? Let's discuss your project.
+              {cta}
             </span>
           </div>
         </div>

@@ -1,9 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import * as THREE from "three";
 
-const HeroSection = () => {
+type HeroSectionProps = {
+  category: string;
+  headline: {h1: string; h2: string};
+  subtitle: string;
+  cta: { label: string; url: string }[];
+};
+
+const HeroSection = ({ category, headline, subtitle, cta }: HeroSectionProps) => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -81,7 +89,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
       {/* Three.js Stars Background */}
       <div ref={mountRef} className="absolute inset-0 z-0" style={{ pointerEvents: 'none' }} />
 
@@ -103,44 +111,48 @@ const HeroSection = () => {
       <div className="relative z-20 text-center px-6 max-w-6xl mx-auto">
         {/* Project Category */}
         <div className="inline-flex items-center px-4 py-2 rounded-full glass mb-8 animate-fade-in">
-          <span className="text-sm font-medium text-foreground">Case Study</span>
+          <span className="text-sm font-medium text-foreground">{category}</span>
         </div>
 
         {/* Main Headline */}
         <h1 className="text-hero mb-8 animate-fade-in" style={{animationDelay: '0.2s'}}>
           <span className="block text-text-secondary text-2xl md:text-3xl font-normal mb-4">
-            Redesigning the Future of
+            {headline.h1}
           </span>
           <span className="bg-gradient-to-r from-foreground via-white to-foreground bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto]">
-            Digital Commerce
+            {headline.h2}
           </span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-body-large text-text-secondary max-w-3xl mx-auto mb-12 animate-fade-in" style={{animationDelay: '0.4s'}}>
-          A complete transformation of an e-commerce platform that increased conversion rates by 340% 
-          and delivered exceptional user experiences across all touchpoints.
+          {subtitle}
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{animationDelay: '0.6s'}}>
-          <Button 
-            size="lg" 
-            className="group bg-white text-black hover:bg-white/90 hover-lift hover-glow px-8 py-4 text-lg font-semibold"
-          >
-            View Live Project
-            <ExternalLink className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="group bg-transparent border-white/30 text-white hover:bg-white hover:text-black px-8 py-4 text-lg hover-lift"
-          >
-            Explore Process
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          {cta.map((ct, index) => (
+            <a
+              key={index}
+              href={ct.url}
+              target={ct.url.startsWith("http") ? "_blank" : undefined} // external links open in new tab
+            >
+              <Button
+                size="lg"
+                variant={index === 0 ? "default" : "outline"} // styling based on order
+                className="group px-8 py-4 text-lg font-semibold hover-lift"
+              >
+                {ct.label}
+                {index === 0 ? (
+                  <ExternalLink className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                ) : (
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                )}
+              </Button>
+            </a>
+          ))}
         </div>
+
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">

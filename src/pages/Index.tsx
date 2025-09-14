@@ -1,59 +1,53 @@
 import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
 import Footer from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
-import LogoThree from "@/components/sections/LogoThree";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
+import ServicesSection from "@/components/sections/ServicesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import ProjectFeatureSection from "@/components/sections/ProjectFeatureSection";
 import { StatsSection } from "@/components/sections/StatsSection";
-import { TechSection } from "@/components/sections/TechSection";
+import { ProjectSection } from "@/components/sections/ProjectSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Code, Palette, Rocket } from "lucide-react";
-import CaseStudy from "@/components/CaseStudy";
 import FAQSection from "@/components/sections/FAQSection";
 
 const Index = () => {
   const projectData = [
     {
       id: 1,
-      title: "1. Discovery & Planning",
+      title: "Responsive Design",
       content:
-        "We start by understanding your vision, goals, and requirements. Through detailed discussions and research, we create a comprehensive project roadmap that aligns with your business objectives.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center",
+        "Flawless experiences across all devices and screen sizes. Your site adapts perfectly, whether on mobile, tablet, or desktop.",
+      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80&sat=-100", // B&W, multiple devices
       icon: <Code className="size-6 text-brand-text" />,
     },
     {
       id: 2,
-      title: "2. Design & Development",
+      title: "Lightning Fast",
       content:
-        "Our team crafts beautiful, user-centric designs and transforms them into high-performance, scalable applications using the latest technologies and best practices.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center",
-      icon: <Palette className="size-6 text-brand-text" />,
+        "Rapid project delivery and seamless handover. We ensure your solution is launched quickly, with zero bottlenecks and instant readiness for your team.",
+      image: "/lightning-fast.png",
+      icon: <Rocket className="size-6 text-brand-text" />,
     },
     {
       id: 3,
-      title: "3. Launch & Optimization",
+      title: "Custom Solutions",
       content:
-        "We deploy your project with careful attention to performance, security, and user experience. Post-launch, we provide ongoing support and optimization to ensure continued success.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center",
-      icon: <Rocket className="size-6 text-brand-text" />,
+        "Tailor-made frontend solutions to match your unique requirements. We build exactly what your business needs, no compromises.",
+      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80&sat=-100", // B&W, team collaboration workspace
+      icon: <Palette className="size-6 text-brand-text" />,
     },
   ];
 
   return (
     <div className="min-h-screen bg-brand-bg">
-      <CaseStudy />
       <AdvancedHeader />
       <main>
         <HeroSection />
+        <ProjectSection />
         <ProjectFeatureSection data={projectData} />
-        <LogoThree />
-        {/* <AboutSection /> */}
         <StatsSection />
         <ServicesSection />
-        <TechSection />
         <ProcessSection />
         <TestimonialsSection />
         <FAQSection />
