@@ -47,7 +47,13 @@ const Results = ({ summary, resultCompany, metrics, achievements, cta }: Results
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
       { threshold: 0.3 }
     );
     const element = document.getElementById('results-section');
