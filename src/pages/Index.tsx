@@ -1,7 +1,6 @@
 import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
 import Footer from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
-import LogoThree from "@/components/sections/LogoThree";
 import ServicesSection from "@/components/sections/ServicesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import ProjectFeatureSection from "@/components/sections/ProjectFeatureSection";
@@ -47,8 +46,6 @@ const Index = () => {
         <HeroSection />
         <ProjectSection />
         <ProjectFeatureSection data={projectData} />
-        {/* <LogoThree /> */}
-        {/* <AboutSection /> */}
         <StatsSection />
         <ServicesSection />
         <ProcessSection />
