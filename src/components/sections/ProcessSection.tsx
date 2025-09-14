@@ -122,10 +122,10 @@ export function ProcessSection() {
           className="text-center mb-16"
         >
           <div className="relative z-10 flex flex-col items-center justify-center">
-            <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-xl text-transparent">
+            <span className="mb-2 text-center block bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
               OUR PROCESS
             </span>
-            <h2 className="mb-8 text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+            <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
               What our Client Experiences
             </h2>
           </div>
@@ -144,13 +144,12 @@ export function ProcessSection() {
               {/* Timeline line */}
               <div className="absolute left-0 top-0 bottom-0 w-px bg-white/10 -ml-4 hidden md:block">
                 <div
-                  className={`w-3 h-3 rounded-full -ml-[6px] mt-8 ${
-                    step.status === "completed"
+                  className={`w-3 h-3 rounded-full -ml-[6px] mt-8 ${step.status === "completed"
                       ? "bg-green-400"
                       : step.status === "in-progress"
-                      ? "bg-blue-400"
-                      : "bg-gray-400"
-                  }`}
+                        ? "bg-blue-400"
+                        : "bg-gray-400"
+                    }`}
                 />
               </div>
 

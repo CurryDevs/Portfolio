@@ -33,7 +33,7 @@ const Footer = () => {
         <footer className="relative border-t border-border py-0.5 px-4 sm:px-6 lg:px-8 w-full max-w-6xl mx-auto">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-foreground rounded-full"></div>
 
-            <div className="flex flex-col items-center space-y-1 md:flex-row md:justify-between md:space-y-0">
+            <div className="flex  flex-col gap-4 items-center space-y-1 [@media(min-width:800px)]:flex-row  md:justify-between md:space-y-0">
                 <AnimationContainer delay={0.2} className="mt-0 md:mt-0">
                     <a href="/" className="flex items-center">
                         <img
@@ -108,7 +108,7 @@ const Footer = () => {
 
             <AnimationContainer
                 delay={0.6}
-                className="mt-0.5 border-t border-border/40 pt-0.5 px-4 sm:px-6 lg:px-8"
+                className="my-7  border-t border-border/40 pt-0.5 px-4 sm:px-6 lg:px-8"
             >
                 <div className="flex justify-center">
                     <p className="text-xs leading-4 text-muted-foreground text-center">

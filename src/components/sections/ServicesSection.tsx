@@ -45,7 +45,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 
@@ -73,7 +73,7 @@ const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid w-full auto-rows-[22rem] grid-cols-3 gap-4",
+        "grid w-full auto-rows-[14rem] sm:auto-rows-[18rem] md:auto-rows-[22rem] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4",
         className
       )}
     >
@@ -198,10 +198,10 @@ function ServicesSection() {
   return (
     <div className="container mx-auto px-4">
       <div className="relative z-10 flex flex-col items-center justify-center">
-        <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-xl text-transparent">
+        <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
           OUR SERVICES
         </span>
-        <h2 className="mb-16 text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+        <h2 className="mb-16 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
           Digital Solutions
         </h2>
       </div>

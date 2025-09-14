@@ -54,8 +54,8 @@ const LineProgress: React.FC<{
         ? "h-full"
         : "w-full"
       : position === "left" || position === "right"
-      ? "h-0"
-      : "w-0"
+        ? "h-0"
+        : "w-0"
   );
 
   return (
@@ -79,13 +79,13 @@ const ProjectCard: React.FC<{
   collapseDelay: number;
 }> = ({ project, isActive, onClick, collapseDelay }) => (
   <Card
-    className="relative mr-8 grid h-full max-w-60 shrink-0 items-start justify-center py-4 last:mr-0 bg-white/5 border-white/10 hover:bg-white/10 transition-smooth cursor-pointer"
+    className="relative mr-4 grid h-full w-56 sm:w-60 md:w-64 shrink-0 items-start justify-center py-3 px-2 sm:py-4 sm:px-4 last:mr-0 bg-white/5 border-white/10 hover:bg-white/10 transition-smooth cursor-pointer"
     onClick={onClick}
     style={{ scrollSnapAlign: "center" }}
   >
     <LineProgress position="top" isActive={isActive} duration={collapseDelay} />
-    <h2 className="text-xl font-bold text-brand-text">{project.title}</h2>
-    <p className="mx-0 max-w-sm text-balance text-sm text-brand-text-muted">
+    <h2 className="text-base sm:text-lg md:text-xl font-bold text-brand-text">{project.title}</h2>
+    <p className="mx-0 max-w-xs sm:max-w-sm text-balance text-xs sm:text-sm text-brand-text-muted">
       {project.content}
     </p>
   </Card>
@@ -166,10 +166,10 @@ const ProjectFeatureSection = ({
     >
       <div className="container-custom">
         <div className="relative z-10 flex flex-col items-center justify-center">
-          <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-xl text-transparent">
+          <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
             BENEFITS
           </span>
-          <h2 className="mb-8 text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+          <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
             Delivering more than promises.
           </h2>
         </div>

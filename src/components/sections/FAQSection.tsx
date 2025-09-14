@@ -35,10 +35,10 @@ const FAQSection: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-background px-4 py-12 text-foreground">
       <div className="relative z-10 flex flex-col items-center justify-center">
-        <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-l text-transparent">
+        <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-l text-transparent">
           LET'S ANSWER YOUR QUESTIONS
         </span>
-        <h2 className="mb-8 text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">Frequently Asked Questions</h2>
+        <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">Frequently Asked Questions</h2>
         <span className="absolute -top-[350px] left-[50%] z-0 h-[500px] w-[600px] -translate-x-[50%] rounded-full bg-gradient-to-r from-primary/10 to-primary/5 blur-3xl" />
       </div>
       <div className="mx-auto mt-12 max-w-3xl">

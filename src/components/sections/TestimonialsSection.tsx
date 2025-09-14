@@ -234,10 +234,10 @@ export function TestimonialsSection() {
 
       <div className="container-custom">
         <div className="relative z-10 flex flex-col items-center justify-center">
-          <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-xl text-transparent">
+          <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
             TESTIMONIALS
           </span>
-          <h2 className="mb-8 text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+          <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
             Let's hear from our Clients
           </h2>
         </div>
