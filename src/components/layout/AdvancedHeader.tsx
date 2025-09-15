@@ -35,7 +35,7 @@ function DemoNavbar() {
                     className={cn(
                         'mx-auto mt-2 max-w-6xl pr-6 pl-3 transition-all duration-300 lg:px-12',
                         isScrolled &&
-                        'bg-background/50 max-w-4xl rounded-2xl border border border-white/30 border-[1px] backdrop-blur-lg lg:px-5'
+                        'bg-background/50 max-w-4xl rounded-2xl border-white/30 border-[1px] backdrop-blur-lg lg:px-5'
                     )}
                 >
                     <div className="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-1">
