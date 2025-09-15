@@ -16,8 +16,8 @@ const HeroSection = ({ category, headline, subtitle, cta }: HeroSectionProps) =>
       <div className="text-center px-6 max-w-6xl mx-auto pt-[14rem]">
         {/* Project Category */}
 
-        <div className="inline-flex items-center px-4 py-2 rounded-full glass mb-8 animate-fade-in">
-          <span className="text-sm font-medium text-neutral-800 dark:text-neutral-200">{category}</span>
+        <div className="inline-flex items-center px-4 py-2 bg-black rounded-full glass mb-8 animate-fade-in">
+          <span className="text-sm font-thin text-white dark:text-neutral-200">{category}</span>
         </div>
 
         {/* Main Headline */}
@@ -25,7 +25,7 @@ const HeroSection = ({ category, headline, subtitle, cta }: HeroSectionProps) =>
           <span className="block text-neutral-800 dark:text-neutral-200 text-2xl md:text-3xl font-normal mb-4">
             {headline.h1}
           </span>
-          <span className="bg-gradient-to-r from-neutral-800 via-white to-neutral-800 bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto] dark:from-neutral-200 dark:via-white dark:to-neutral-200">
+          <span className="text-5xl md:text-7xl lg:text-8xl bg-gradient-to-r from-neutral-800 via-white to-neutral-800 bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto] dark:from-neutral-200 dark:via-white dark:to-neutral-200">
             {headline.h2}
           </span>
         </h1>
