@@ -73,8 +73,6 @@ const ProjectDetails = ({ headline, summary, client, duration, timeline, challen
                 {duration.description}
               </p>
             </div>
-
-            {/* Timeline */}
             <div className="glass p-4 sm:p-6 md:p-8 rounded-2xl hover-lift">
               <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                 <div className="w-9 h-9 sm:w-12 sm:h-12 bg-white/10 rounded-xl flex items-center justify-center">
