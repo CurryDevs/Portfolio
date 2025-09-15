@@ -12,9 +12,6 @@ const FullPreview = () => {
                     className="w-full h-auto object-top object-cover"
                     style={{ minHeight: 400, background: '#18181b' }}
                 />
-                <div className="absolute top-4 left-4 bg-accentCS text-accentCS-foreground px-4 py-1 rounded-full text-xs font-semibold shadow">
-                    Full Page Screenshot
-                </div>
             </div>
             {/* Details Section */}
             <div className="max-w-3xl w-full bg-surface/80 rounded-2xl p-8 neumorphic mb-4 text-center">
