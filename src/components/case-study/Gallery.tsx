@@ -1,28 +1,39 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, X, Maximize2, Smartphone, Monitor } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  X,
+  Maximize2,
+  Smartphone,
+  Monitor,
+} from "lucide-react";
 import FullPreview from "./FullPreview";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [viewMode, setViewMode] = useState<'desktop' | 'mobile' | 'full'>('desktop');
+  const [viewMode, setViewMode] = useState<"desktop" | "mobile" | "full">(
+    "desktop"
+  );
 
   // Mock image data - in real project these would be actual screenshots
   const images = [
     {
       id: 1,
       title: "Homepage Redesign",
-      description: "Clean, modern landing page with improved navigation and hero section",
+      description:
+        "Clean, modern landing page with improved navigation and hero section",
       desktop: "/api/placeholder/1200/800",
       mobile: "/api/placeholder/400/800",
-      category: "Homepage"
+      category: "Homepage",
     },
     {
       id: 2,
       title: "Product Catalog",
-      description: "Intuitive product browsing with advanced filtering and search",
+      description:
+        "Intuitive product browsing with advanced filtering and search",
       desktop: "/api/placeholder/1200/800",
       mobile: "/api/placeholder/400/800",
-      category: "Catalog"
+      category: "Catalog",
     },
     {
       id: 3,
@@ -30,15 +41,16 @@ const Gallery = () => {
       description: "Streamlined 2-step checkout with progress indicators",
       desktop: "/api/placeholder/1200/800",
       mobile: "/api/placeholder/400/800",
-      category: "Checkout"
+      category: "Checkout",
     },
     {
       id: 4,
       title: "User Dashboard",
-      description: "Personalized user experience with order history and preferences",
+      description:
+        "Personalized user experience with order history and preferences",
       desktop: "/api/placeholder/1200/800",
       mobile: "/api/placeholder/400/800",
-      category: "Account"
+      category: "Account",
     },
     {
       id: 5,
@@ -46,34 +58,36 @@ const Gallery = () => {
       description: "Native mobile experience with offline capabilities",
       desktop: "/api/placeholder/1200/800",
       mobile: "/api/placeholder/400/800",
-      category: "Mobile"
+      category: "Mobile",
     },
     {
       id: 6,
       title: "Admin Panel",
-      description: "Comprehensive admin dashboard for content and order management",
+      description:
+        "Comprehensive admin dashboard for content and order management",
       desktop: "/api/placeholder/1200/800",
       mobile: "/api/placeholder/400/800",
-      category: "Admin"
-    }
+      category: "Admin",
+    },
   ];
 
   const openLightbox = (index: number) => {
     setSelectedImage(index);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const closeLightbox = () => {
     setSelectedImage(null);
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
   };
 
-  const navigateImage = (direction: 'prev' | 'next') => {
+  const navigateImage = (direction: "prev" | "next") => {
     if (selectedImage === null) return;
 
-    const newIndex = direction === 'prev'
-      ? (selectedImage - 1 + images.length) % images.length
-      : (selectedImage + 1) % images.length;
+    const newIndex =
+      direction === "prev"
+        ? (selectedImage - 1 + images.length) % images.length
+        : (selectedImage + 1) % images.length;
 
     setSelectedImage(newIndex);
   };
@@ -83,44 +97,52 @@ const Gallery = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <h2 className="text-section-title text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6 animate-fade-in">
-            Project <span className="text-accentCS">Gallery</span>
-          </h2>
-          <p className="text-body-large text-base sm:text-lg text-text-secondary max-w-2xl sm:max-w-3xl mx-auto mb-6 sm:mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Explore the complete transformation through interactive previews of key pages and features.
-          </p>
+          <div className="relative z-10 flex flex-col items-center justify-center">
+            <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
+              PROOF-OF-WORK
+            </span>
+            <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+              Project Gallery
+            </h2>
+          </div>
 
           {/* View Toggle */}
-          <div className="inline-flex flex-wrap items-center p-0.5 sm:p-1 rounded-full neumorphic-inset animate-fade-in gap-0.5 sm:gap-1" style={{ animationDelay: '0.4s' }}>
+          <div
+            className="inline-flex flex-wrap items-center p-0.5 sm:p-1 rounded-full neumorphic-inset animate-fade-in gap-0.5 sm:gap-1"
+            style={{ animationDelay: "0.4s" }}
+          >
             <button
-              onClick={() => setViewMode('full')}
-              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === 'full'
-                ? 'bg-accent text-accentCS-foreground shadow-sm'
-                : 'text-text-secondary hover:text-text-primary'
-                }`}
-              style={{ minWidth: '0', minHeight: '0' }}
+              onClick={() => setViewMode("full")}
+              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${
+                viewMode === "full"
+                  ? "bg-accent text-accentCS-foreground shadow-sm"
+                  : "text-text-secondary hover:text-text-primary"
+              }`}
+              style={{ minWidth: "0", minHeight: "0" }}
             >
               <Maximize2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
               Full Preview
             </button>
             <button
-              onClick={() => setViewMode('desktop')}
-              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === 'desktop'
-                ? 'bg-accent text-accentCS-foreground shadow-sm'
-                : 'text-text-secondary hover:text-text-primary'
-                }`}
-              style={{ minWidth: '0', minHeight: '0' }}
+              onClick={() => setViewMode("desktop")}
+              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${
+                viewMode === "desktop"
+                  ? "bg-accent text-accentCS-foreground shadow-sm"
+                  : "text-text-secondary hover:text-text-primary"
+              }`}
+              style={{ minWidth: "0", minHeight: "0" }}
             >
               <Monitor className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
               Desktop
             </button>
             <button
-              onClick={() => setViewMode('mobile')}
-              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === 'mobile'
-                ? 'bg-accent text-accentCS-foreground shadow-sm'
-                : 'text-text-secondary hover:text-text-primary'
-                }`}
-              style={{ minWidth: '0', minHeight: '0' }}
+              onClick={() => setViewMode("mobile")}
+              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${
+                viewMode === "mobile"
+                  ? "bg-accent text-accentCS-foreground shadow-sm"
+                  : "text-text-secondary hover:text-text-primary"
+              }`}
+              style={{ minWidth: "0", minHeight: "0" }}
             >
               <Smartphone className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
               Mobile
@@ -129,7 +151,7 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid or Full Preview */}
-        {viewMode === 'full' ? (
+        {viewMode === "full" ? (
           <FullPreview />
         ) : (
           <div className="grid grid-cols-1 min-[461px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-2 xs:gap-3 sm:gap-5 md:gap-8">
@@ -148,10 +170,12 @@ const Gallery = () => {
                       <div className="w-8 h-8 xs:w-9 xs:h-9 sm:w-12 sm:h-12 bg-accent/20 rounded-md xs:rounded-lg sm:rounded-xl flex items-center justify-center mb-1.5 xs:mb-2 sm:mb-3 mx-auto">
                         <Maximize2 className="h-4 w-4 xs:h-5 xs:w-5 sm:h-7 sm:w-7 text-accentCS" />
                       </div>
-                      <p className="text-text-secondary font-medium text-[0.75rem] xs:text-xs sm:text-base">{image.title}</p>
+                      <p className="text-text-secondary font-medium text-[0.75rem] xs:text-xs sm:text-base">
+                        {image.title}
+                      </p>
                       <p className="text-[0.65rem] xs:text-xs sm:text-sm text-text-muted mt-0.5 xs:mt-1">
-                        {viewMode === 'desktop' && 'Desktop View'}
-                        {viewMode === 'mobile' && 'Mobile View'}
+                        {viewMode === "desktop" && "Desktop View"}
+                        {viewMode === "mobile" && "Mobile View"}
                       </p>
                     </div>
                   </div>
@@ -160,7 +184,9 @@ const Gallery = () => {
                   <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="text-center text-white">
                       <Maximize2 className="h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8 mx-auto mb-1.5 xs:mb-2 sm:mb-2" />
-                      <p className="font-medium text-[0.8rem] xs:text-xs sm:text-base">View Full Size</p>
+                      <p className="font-medium text-[0.8rem] xs:text-xs sm:text-base">
+                        View Full Size
+                      </p>
                     </div>
                   </div>
 
@@ -172,10 +198,10 @@ const Gallery = () => {
 
                 {/* Content */}
                 <div className="p-1.5 xs:p-2 sm:p-4">
-                  <h3 className="text-xs xs:text-sm sm:text-lg font-semibold text-text-primary mb-0.5 xs:mb-1 sm:mb-2 group-hover:text-accentCS transition-colors">
+                  <h3 className="text-md xs:text-lg sm:text-xl font-semibold text-text-primary mb-0.5 xs:mb-1 sm:mb-2 group-hover:text-accentCS transition-colors">
                     {image.title}
                   </h3>
-                  <p className="text-text-secondary text-[0.7rem] xs:text-xs sm:text-sm">
+                  <p className="text-text-secondary font-thin text-xs sm:text-sm md:text-base">
                     {image.description}
                   </p>
                 </div>
@@ -197,14 +223,14 @@ const Gallery = () => {
 
             {/* Navigation */}
             <button
-              onClick={() => navigateImage('prev')}
+              onClick={() => navigateImage("prev")}
               className="absolute left-2 sm:left-6 top-1/2 transform -translate-y-1/2 p-2 sm:p-3 rounded-full glass hover-glow text-text-primary z-10"
             >
               <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
 
             <button
-              onClick={() => navigateImage('next')}
+              onClick={() => navigateImage("next")}
               className="absolute right-2 sm:right-6 top-1/2 transform -translate-y-1/2 p-2 sm:p-3 rounded-full glass hover-glow text-text-primary z-10"
             >
               <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
