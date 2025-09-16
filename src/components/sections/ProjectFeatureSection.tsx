@@ -72,25 +72,6 @@ const LineProgress: React.FC<{
   );
 };
 
-const ProjectCard: React.FC<{
-  project: ProjectItem;
-  isActive: boolean;
-  onClick: () => void;
-  collapseDelay: number;
-}> = ({ project, isActive, onClick, collapseDelay }) => (
-  <Card
-    className="relative mr-4 grid h-full w-56 sm:w-60 md:w-64 shrink-0 items-start justify-center py-3 px-2 sm:py-4 sm:px-4 last:mr-0 bg-white/5 border-white/10 hover:bg-white/10 transition-smooth cursor-pointer"
-    onClick={onClick}
-    style={{ scrollSnapAlign: "center" }}
-  >
-    <LineProgress position="top" isActive={isActive} duration={collapseDelay} />
-    <h2 className="text-base sm:text-lg md:text-xl font-bold text-brand-text">{project.title}</h2>
-    <p className="mx-0 max-w-xs sm:max-w-sm text-balance text-xs sm:text-sm text-brand-text-muted">
-      {project.content}
-    </p>
-  </Card>
-);
-
 const ProjectFeatureSection = ({
   collapseDelay = 5000,
   ltr = false,
@@ -99,7 +80,6 @@ const ProjectFeatureSection = ({
   className,
 }: ProjectFeaturesProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(-1);
-  const carouselRef = useRef<HTMLUListElement>(null);
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, amount: 0.5 });
 
@@ -131,7 +111,7 @@ const ProjectFeatureSection = ({
           key={currentIndex}
           src={currentProject.image}
           alt={currentProject.title}
-          className="aspect-auto size-full rounded-xl border border-white/10 object-cover object-left-top p-1 shadow-strong"
+          className="aspect-auto size-full rounded-xl border border-white/10 object-cover object-center p-1 shadow-strong"
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.98 }}
@@ -161,10 +141,11 @@ const ProjectFeatureSection = ({
   return (
     <section
       ref={containerRef}
-      className={cn("py-24 lg:py-32", className)}
+      className={cn("py-20 sm:py-28", className)}
       id="projects"
     >
       <div className="container-custom">
+        {/* Section Header */}
         <div className="relative z-10 flex flex-col items-center justify-center">
           <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
             BENEFITS
@@ -174,77 +155,64 @@ const ProjectFeatureSection = ({
           </h2>
         </div>
 
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto my-12 grid h-full items-center gap-10 lg:grid-cols-2">
-            <div
-              className={cn(
-                "order-1 hidden lg:flex",
-                ltr ? "lg:order-2 lg:justify-end" : "justify-start"
-              )}
-            >
-              <Accordion
-                type="single"
-                value={`item-${currentIndex}`}
-                onValueChange={(value) =>
-                  setCurrentIndex(Number(value.split("-")[1]))
-                }
-                className="w-full"
-              >
-                {data.map((item, index) => (
-                  <AccordionItem
-                    key={item.id}
-                    value={`item-${index}`}
-                    className="relative mb-8 last:mb-0 border-b-0"
-                  >
-                    <LineProgress
-                      position={linePosition}
-                      isActive={currentIndex === index}
-                      duration={collapseDelay}
-                    />
-                    <div className="relative flex items-center gap-4 p-2">
-                      {item.icon && (
-                        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/10">
-                          {item.icon}
-                        </div>
-                      )}
-                      <div className="flex-1">
-                        <AccordionTrigger className="py-2 hover:no-underline text-brand-text">
-                          <h3 className="text-xl font-bold">{item.title}</h3>
-                        </AccordionTrigger>
-                        <AccordionContent className="text-brand-text-muted">
-                          {item.content}
-                        </AccordionContent>
-                      </div>
-                    </div>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-
-            <div
-              className={cn(
-                "h-[350px] min-h-[200px] w-auto",
-                ltr && "lg:order-1"
-              )}
-            >
-              <MediaContent />
-            </div>
-
-            <ul
-              ref={carouselRef}
-              className="flex snap-x snap-mandatory flex-nowrap overflow-x-auto py-10 lg:hidden [-ms-overflow-style:none] [-webkit-mask-image:linear-gradient(90deg,transparent,black_20%,white_80%,transparent)] [mask-image:linear-gradient(90deg,transparent,black_20%,white_80%,transparent)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-              style={{ padding: "50px calc(50%)" }}
+        {/* Grid Content (same layout for all sizes) */}
+        <div className="mx-auto my-12 grid h-full items-center gap-10 lg:grid-cols-2">
+          {/* Accordion (kept for all screen sizes) */}
+          <div
+            className={cn(
+              "order-1 flex w-full",
+              ltr ? "lg:order-2 lg:justify-end" : "justify-start"
+            )}
+          >
+            <Accordion
+              type="single"
+              value={`item-${currentIndex}`}
+              onValueChange={(value) =>
+                setCurrentIndex(Number(value.split("-")[1]))
+              }
+              className="w-full"
             >
               {data.map((item, index) => (
-                <ProjectCard
+                <AccordionItem
                   key={item.id}
-                  project={item}
-                  isActive={currentIndex === index}
-                  onClick={() => setCurrentIndex(index)}
-                  collapseDelay={collapseDelay}
-                />
+                  value={`item-${index}`}
+                  className="relative mb-6 last:mb-0 border-b-0"
+                >
+                  <LineProgress
+                    position={linePosition}
+                    isActive={currentIndex === index}
+                    duration={collapseDelay}
+                  />
+                  <div className="relative flex items-start gap-3 p-2 sm:gap-4 sm:p-3">
+                    {item.icon && (
+                      <div className="flex size-9 sm:size-10 shrink-0 items-center justify-center rounded-full bg-white/10">
+                        {item.icon}
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <AccordionTrigger className="py-1 sm:py-2 hover:no-underline text-brand-text">
+                        <h3 className="text-base sm:text-lg md:text-xl font-bold">
+                          {item.title}
+                        </h3>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-xs sm:text-sm md:text-base text-brand-text-muted">
+                        {item.content}
+                      </AccordionContent>
+                    </div>
+                  </div>
+                </AccordionItem>
               ))}
-            </ul>
+            </Accordion>
+          </div>
+
+          {/* Media Content (resizes responsively) */}
+          <div
+            className={cn(
+              "h-[220px] sm:h-[280px] md:h-[350px] w-full",
+              ltr && "lg:order-1"
+            )}
+          >
+            <MediaContent />
           </div>
         </div>
       </div>
