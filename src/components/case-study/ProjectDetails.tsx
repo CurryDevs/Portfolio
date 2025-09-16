@@ -2,6 +2,7 @@ import { Calendar, Clock, Target, Zap } from "lucide-react";
 import { ScrollAnimateWrapper, useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 type ProjectDetailsProps = {
+  title?: string;
   headline?: string;
   summary?: string;
   client: { name: string; description: string };
@@ -11,7 +12,7 @@ type ProjectDetailsProps = {
   solution: string[];
 }
 
-const ProjectDetails = ({ headline, summary, client, duration, timeline, challenge, solution }: ProjectDetailsProps) => {
+const ProjectDetails = ({ title, headline, summary, client, duration, timeline, challenge, solution }: ProjectDetailsProps) => {
   useScrollAnimation();
 
   return (
@@ -27,16 +28,14 @@ const ProjectDetails = ({ headline, summary, client, duration, timeline, challen
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <ScrollAnimateWrapper id="details-header" className="text-center mb-10 md:mb-16 lg:mb-20">
-          <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full glass mb-4 sm:mb-6">
-            <span className="text-xs sm:text-sm font-medium text-foreground">Project Overview</span>
-          </div>
-          <h2 className="text-xl sm:text-2xl md:text-section-title text-foreground mb-3 sm:mb-6">
-            Transforming Digital Experiences
+        <div className="relative z-10 flex flex-col items-center justify-center">
+          <span className="uppercase mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
+            {title}
+          </span>
+          <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+            Project Overview
           </h2>
-          <p className="text-sm sm:text-base md:text-body-large text-text-secondary max-w-md sm:max-w-2xl md:max-w-3xl mx-auto">
-            A comprehensive redesign project that redefined user experience standards
-            and delivered measurable business impact.
-          </p>
+        </div>
         </ScrollAnimateWrapper>
 
         <div className="grid gap-8 md:gap-14 lg:gap-20 items-center grid-cols-1 lg:grid-cols-2">
@@ -53,7 +52,7 @@ const ProjectDetails = ({ headline, summary, client, duration, timeline, challen
                   <p className="text-xs sm:text-sm text-text-secondary">{client.name}</p>
                 </div>
               </div>
-              <p className="text-xs sm:text-sm md:text-base text-text-secondary leading-relaxed">
+              <p className="text-sm sm:text-md md:text-base text-text-secondary leading-relaxed">
                 {client.description}
               </p>
             </div>
@@ -69,7 +68,7 @@ const ProjectDetails = ({ headline, summary, client, duration, timeline, challen
                   <p className="text-xs sm:text-sm text-text-secondary">{duration.length}</p>
                 </div>
               </div>
-              <p className="text-xs sm:text-sm md:text-base text-text-secondary leading-relaxed">
+              <p className="text-sm sm:text-md md:text-base text-text-secondary leading-relaxed">
                 {duration.description}
               </p>
             </div>
@@ -80,10 +79,10 @@ const ProjectDetails = ({ headline, summary, client, duration, timeline, challen
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold text-foreground">Timeline</h3>
-                  <p className="text-xs sm:text-sm text-text-secondary">{timeline.description}</p>
+                  <p className="text-xs sm:text-sm text-text-secondary">{timeline.timeframe}</p>
                 </div>
               </div>
-              <p className="text-xs sm:text-sm md:text-base text-text-secondary leading-relaxed">
+              <p className="text-sm sm:text-md md:text-base text-text-secondary leading-relaxed">
                 {timeline.description}
               </p>
             </div>
@@ -103,7 +102,7 @@ const ProjectDetails = ({ headline, summary, client, duration, timeline, challen
                 {challenge.map((item, index) => (
                   <div key={index} className="flex items-start gap-2 sm:gap-3">
                     <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
-                    <p className="text-xs sm:text-sm md:text-base text-text-secondary">{item}</p>
+                    <p className="text-sm sm:text-md md:text-base text-text-secondary">{item}</p>
                   </div>
                 ))}
               </div>
@@ -115,13 +114,13 @@ const ProjectDetails = ({ headline, summary, client, duration, timeline, challen
                 <div className="w-7 h-7 sm:w-8 sm:h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
                   <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
                 </div>
-                <h3 className="text-lg sm:text-2xl font-bold text-foreground">The Solution</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">The Solution</h3>
               </div>
               <div className="space-y-3 sm:space-y-4">
                 {solution.map((item, index) => (
                   <div key={index} className="flex items-start gap-2 sm:gap-3">
                     <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-green-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
-                    <p className="text-xs sm:text-sm md:text-base text-text-secondary">{item}</p>
+                    <p className="text-sm sm:text-md md:text-base text-text-secondary">{item}</p>
                   </div>
                 ))}
               </div>
