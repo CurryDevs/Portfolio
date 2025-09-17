@@ -103,18 +103,7 @@ function Navbar() {
                                 <StartProjectModal />
                             </div>
 
-                            {/* LinkedIn Icon */}
-                            <div className="flex items-center gap-4">
-                                <a
-                                    href="https://www.linkedin.com/company/currydevs"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-muted-foreground hover:text-accent-foreground transition-colors duration-300"
-                                    aria-label="LinkedIn"
-                                >
-                                    <Linkedin className="w-6 h-6" />
-                                </a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
