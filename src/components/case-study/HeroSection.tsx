@@ -13,7 +13,7 @@ const HeroSection = ({ category, headline, subtitle, cta }: HeroSectionProps) =>
 
   return (
     <LampContainer>
-      <div className="text-center px-6 max-w-6xl mx-auto pt-[14rem]">
+      <div id="project-overview" className="text-center px-6 max-w-6xl mx-auto pt-[14rem]">
         {/* Project Category */}
 
         {/* <div className="inline-flex items-center px-4 py-2 bg-black rounded-full glass mb-8 animate-fade-in">
@@ -50,7 +50,7 @@ const HeroSection = ({ category, headline, subtitle, cta }: HeroSectionProps) =>
             </Button>
           </a>
         )}
-        
+
       </div>
     </LampContainer>
   );

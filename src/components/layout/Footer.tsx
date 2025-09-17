@@ -3,7 +3,12 @@ import { Button } from "@/components/ui/button";
 import { AnimationContainer } from "@/components/ui/animation-container";
 import CurryDevsLogo from "@/assets/CurryDevs_Transparent.png";
 
-const footerLink = [
+export type SectionLink = {
+    name: string;
+    link: string;
+};
+
+const defaultFooterLink: SectionLink[] = [
     {
         name: "Home",
         link: "#home",
@@ -26,9 +31,8 @@ const footerLink = [
     },
 ];
 
-const Footer = () => {
+const Footer = ({ sectionLinks }: { sectionLinks?: SectionLink[] }) => {
     const currentYear = new Date().getFullYear();
-
     return (
         <footer className="relative border-t border-border py-0.5 px-4 sm:px-6 lg:px-8 w-full max-w-6xl mx-auto">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-foreground rounded-full"></div>
@@ -47,7 +51,7 @@ const Footer = () => {
 
                 <AnimationContainer className="w-full md:w-auto">
                     <nav className="flex flex-wrap justify-center gap-4 text-center md:justify-end">
-                        {footerLink.map((item) => (
+                        {(sectionLinks && sectionLinks.length > 0 ? sectionLinks : defaultFooterLink).map((item) => (
                             <a
                                 key={item.name}
                                 href={item.link}
