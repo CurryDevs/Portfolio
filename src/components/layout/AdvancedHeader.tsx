@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Linkedin } from 'lucide-react'; // Add Linkedin icon from lucide-react
 import { cn } from '@/lib/utils';
 import CurryDevsLogo from '@/assets/CurryDevs_Transparent.png';
 import { StartProjectModal } from '@/components/ui/start-project-modal';
@@ -101,6 +101,19 @@ function Navbar() {
                             </div>
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                                 <StartProjectModal />
+                            </div>
+
+                            {/* LinkedIn Icon */}
+                            <div className="flex items-center gap-4">
+                                <a
+                                    href="https://www.linkedin.com/company/currydevs"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-muted-foreground hover:text-accent-foreground transition-colors duration-300"
+                                    aria-label="LinkedIn"
+                                >
+                                    <Linkedin className="w-6 h-6" />
+                                </a>
                             </div>
                         </div>
                     </div>
