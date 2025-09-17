@@ -28,6 +28,11 @@ const people = [
 export function HeroSection() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
+  const openCalendlyInNewTab = () => {
+    // Open Calendly in a new tab
+    window.open("https://calendly.com/currydevs/30min", "_blank");
+  };
+
   useEffect(() => {
     const checkScreen = () => setIsSmallScreen(window.innerWidth < 375);
     checkScreen();
@@ -59,15 +64,11 @@ export function HeroSection() {
 
             {/* CTAs */}
             <div className="flex flex-col min-[240px]:flex-row gap-4 justify-center items-center animate-scale-in stagger-3">
-              <Button
-                className="bg-black text-white border border-white hover:bg-white hover:text-black hover:border-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5"
-              >
+              <Button className="bg-black text-white border border-white hover:bg-white hover:text-black hover:border-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5">
                 Projects
               </Button>
-              <Button
-                className="bg-white text-black border border-black hover:bg-black hover:text-white hover:border-white max-[375px]:px-8 max-[410px]:px-4 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5"
-              >
-                {isSmallScreen ? "Call Us" : "Book a Call with Currydevs"}
+              <Button onClick={openCalendlyInNewTab} className="bg-white text-black border border-black hover:bg-black hover:text-white hover:border-white max-[375px]:px-8 max-[410px]:px-4 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5">
+                {isSmallScreen ? "Book a Call" : "Book a Call with Currydevs"}
               </Button>
             </div>
 

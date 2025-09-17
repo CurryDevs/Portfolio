@@ -46,7 +46,7 @@ export function ContactCard({
                     <h1 className="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
                         {title}
                     </h1>
-                    <p className="text-gray-400 max-w-xl text-sm sm:text-base lg:text-lg leading-relaxed">
+                    <p className="text-gray-400 max-w-xl text-sm xs:text-base sm:text-lg lg:text-xl leading-relaxed">
                         {description}
                     </p>
                     <div className="space-y-4 sm:space-y-6">
@@ -82,8 +82,8 @@ function ContactInfo({
                 <Icon className="h-5 w-5 text-black" />
             </div>
             <div className="flex-1 pt-1">
-                <p className="font-semibold text-white text-base mb-1">{label}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{value}</p>
+                <p className="font-semibold text-white text-sm xs:text-base sm:text-lg lg:text-xl mb-1">{label}</p>
+                <p className="text-gray-400 text-sm xs:text-base sm:text-lg lg:text-xl leading-relaxed">{value}</p>
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -86,35 +87,35 @@ const ProjectSection = ({
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const maxIndex = Math.max(0, items.length - itemsPerView);
 
   const goNext = () => {
-    setCurrentIndex(prev => Math.min(prev + 1, maxIndex));
+    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
   };
 
   const goPrev = () => {
-    setCurrentIndex(prev => Math.max(prev - 1, 0));
+    setCurrentIndex((prev) => Math.max(prev - 1, 0));
   };
 
   const handleCardClick = (e: React.MouseEvent, itemId: string) => {
     e.preventDefault();
-    window.location.href = '/case-studies';
+    window.location.href = "/case-studies";
   };
 
   const canGoPrev = currentIndex > 0;
   const canGoNext = currentIndex < maxIndex;
 
   return (
-    <section className="py-32">
+    <section id="case-studies" className="py-32">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="relative z-10 flex flex-col items-center justify-center text-center mb-12">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center mb-0 sm:mb-12">
           <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
             CASE STUDIES
           </span>
@@ -124,15 +125,32 @@ const ProjectSection = ({
         </div>
 
         <div className="flex justify-between items-center mb-8">
-          <div></div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-center"
+          >
+            <a
+              href={"/case-studies"}
+              target={"_blank"}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary border border-white/10 text-white hover:font-semibold rounded-2xl hover:shadow-glow hover:cursor-pointer hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm hover-lift"
+            >
+              See All
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </motion.div>
           <div className="flex gap-2">
             <button
               onClick={goPrev}
               disabled={!canGoPrev}
               className={`flex h-14 w-14 items-center justify-center rounded-full shadow-lg border-2 transition-colors duration-200
-                ${canGoPrev
-                  ? 'bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95'
-                  : 'bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60'}
+                ${
+                  canGoPrev
+                    ? "bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95"
+                    : "bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60"
+                }
               `}
               aria-label="Previous projects"
             >
@@ -142,9 +160,11 @@ const ProjectSection = ({
               onClick={goNext}
               disabled={!canGoNext}
               className={`flex h-14 w-14 items-center justify-center rounded-full shadow-lg border-2 transition-colors duration-200
-                ${canGoNext
-                  ? 'bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95'
-                  : 'bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60'}
+                ${
+                  canGoNext
+                    ? "bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95"
+                    : "bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60"
+                }
               `}
               aria-label="Next projects"
             >
@@ -156,13 +176,19 @@ const ProjectSection = ({
         <div className="overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out gap-6"
-            style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
+            style={{
+              transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
+            }}
           >
             {items.map((item) => (
               <div
                 key={item.id}
                 className="flex-shrink-0"
-                style={{ width: `calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 24 / itemsPerView}px)` }}
+                style={{
+                  width: `calc(${100 / itemsPerView}% - ${
+                    ((itemsPerView - 1) * 24) / itemsPerView
+                  }px)`,
+                }}
               >
                 <Link
                   to={`/case-studies/${item.id}`}
