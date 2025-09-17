@@ -24,13 +24,10 @@ interface ProcessStep {
   icon: React.ReactNode;
 }
 
-const processData: ProcessStep[] = [
+const processData: Omit<ProcessStep, "status" | "phase" | "progress">[] = [
   {
     title: "Discovery & Planning",
     description: "Understanding your vision and creating a strategic roadmap",
-    status: "completed",
-    phase: "Phase 1",
-    progress: 100,
     icon: <Lightbulb className="w-6 h-6" />,
     tasks: [
       "Requirements gathering",
@@ -43,9 +40,6 @@ const processData: ProcessStep[] = [
     title: "Design & Prototyping",
     description:
       "Creating beautiful, user-centered designs and interactive prototypes",
-    status: "in-progress",
-    phase: "Phase 2",
-    progress: 75,
     icon: <Users className="w-6 h-6" />,
     tasks: [
       "User experience design",
@@ -57,9 +51,6 @@ const processData: ProcessStep[] = [
   {
     title: "Development & Testing",
     description: "Building robust, scalable solutions with modern technologies",
-    status: "upcoming",
-    phase: "Phase 3",
-    progress: 0,
     icon: <Code className="w-6 h-6" />,
     tasks: [
       "Frontend development",
@@ -71,9 +62,6 @@ const processData: ProcessStep[] = [
   {
     title: "Launch & Support",
     description: "Deploying your solution and providing ongoing maintenance",
-    status: "upcoming",
-    phase: "Phase 4",
-    progress: 0,
     icon: <Rocket className="w-6 h-6" />,
     tasks: [
       "Production deployment",
@@ -84,158 +72,243 @@ const processData: ProcessStep[] = [
   },
 ];
 
-const getStatusColor = (status: ProcessStep["status"]) => {
-  switch (status) {
-    case "completed":
-      return "bg-green-500/10 text-green-400 border-green-500/20";
-    case "in-progress":
-      return "bg-blue-500/10 text-blue-400 border-blue-500/20";
-    case "upcoming":
-      return "bg-gray-500/10 text-gray-400 border-gray-500/20";
-  }
-};
-
-const getStatusIcon = (status: ProcessStep["status"]) => {
-  switch (status) {
-    case "completed":
-      return <CheckCircle2 className="w-4 h-4 text-green-400" />;
-    case "in-progress":
-      return <Clock className="w-4 h-4 text-blue-400" />;
-    case "upcoming":
-      return <Circle className="w-4 h-4 text-gray-400" />;
-  }
-};
-
 export function ProcessSection() {
   const openCalendlyInNewTab = () => {
-    // Open Calendly in a new tab
     window.open("https://calendly.com/currydevs/30min", "_blank");
   };
 
-  return (
-    <section id="process" className="py-24 lg:py-32 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-2xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-24 h-24 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-xl animate-float stagger-3"></div>
+  // Animation variants for rolled paper effect
+  const paperRollVariants = {
+    hidden: {
+      opacity: 0,
+      rotateX: 90,
+      transformOrigin: "top center",
+      y: -50
+    },
+    visible: {
+      opacity: 1,
+      rotateX: 0,
+      y: 0,
+      transition: {
+        type: 'spring',
+        damping: 18,
+        mass: 0.7,
+        stiffness: 120,
+        bounce: 0.15,
+        duration: 0.6
+      } as any
+    }
+  };
 
+  const bounceInVariants = {
+    hidden: {
+      opacity: 0,
+      y: -30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        damping: 14,
+        mass: 0.7,
+        stiffness: 120,
+        bounce: 0.15,
+        duration: 0.5
+      } as any
+    }
+  };
+
+  const cardBounceInVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        damping: 16,
+        mass: 0.7,
+        stiffness: 120,
+        bounce: 0.15,
+        duration: 0.5
+      } as any
+    }
+  };
+
+  const ctaBounceInVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        damping: 14,
+        mass: 0.7,
+        stiffness: 120,
+        bounce: 0.15,
+        duration: 0.5,
+        delay: 0.5
+      } as any
+    }
+  };
+
+  return (
+    <section id="process" className="py-12 sm:py-20 md:py-24 lg:py-32 relative overflow-hidden">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-10 sm:mb-14 md:mb-16">
           <div className="relative z-10 flex flex-col items-center justify-center mb-0 sm:mb-8 md:mb-12">
-            <span className="mb-2 text-center block bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
-              OUR PROCESS
-            </span>
-            <h2 className="mb-0 sm:mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+            <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
+            OUR PROCESS
+          </span>
+            <h2 className="mb-0 sm:mb-8 text-center text-4xl sm:text-5xl md:text-6xl font-bold text-gray-100">
               What our Client Experiences
             </h2>
           </div>
-        </motion.div>
+        </div>
 
-        <div className="max-w-4xl mx-auto">
-          {processData.map((step, index) => (
+        {/* Banner style process steps */}
+        <div className="w-full flex flex-col md:flex-row justify-center items-stretch gap-6 md:gap-8 max-w-6xl mx-auto">
+          {processData.map((step, idx) => (
             <motion.div
               key={step.title}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="mb-8 relative"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+              variants={cardBounceInVariants}
+              transition={{ delay: idx * 0.2 }}
+              className={`relative flex-1 flex flex-col items-center justify-between min-w-[220px] max-w-[320px] w-full mx-auto md:mx-0`}
             >
-              {/* Timeline line */}
-              <div className="absolute left-0 top-0 bottom-0 w-px bg-white/10 -ml-4 hidden md:block">
-                <div
-                  className={`w-3 h-3 rounded-full -ml-[6px] mt-8 ${
-                    step.status === "completed"
-                      ? "bg-green-400"
-                      : step.status === "in-progress"
-                      ? "bg-blue-400"
-                      : "bg-gray-400"
-                  }`}
-                />
-              </div>
+              {/* Step number circle */}
+              <motion.div
+                className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-br from-[#232326] to-[#18181b] flex items-center justify-center text-2xl font-bold text-gray-200 shadow-md border-2 border-[#232326] z-20"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                {idx + 1}
+              </motion.div>
 
-              <Card className="p-6 ml-4 hover:shadow-xl transition-all duration-300 bg-white/5 border-white/10 backdrop-blur-sm hover-lift hover-glow">
-                <div className="flex flex-col md:flex-row gap-4 mb-6">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="p-2 rounded-lg bg-white/10 text-brand-text">
-                        {step.icon}
-                      </div>
-                      <h3 className="text-xl font-semibold text-brand-text">
-                        {step.title}
-                      </h3>
-                      <Badge
-                        variant="secondary"
-                        className={getStatusColor(step.status)}
-                      >
-                        {step.status.replace("-", " ")}
-                      </Badge>
-                    </div>
-                    <p className="text-brand-text-muted mb-4 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-brand-text-muted">
-                    {getStatusIcon(step.status)}
-                    <span className="font-medium">{step.phase}</span>
-                  </div>
-                </div>
+              {/* Paper roll container with curling effect */}
+              <motion.div
+                className="w-full flex flex-col items-center rounded-b-[2.5rem] rounded-tr-2xl rounded-tl-2xl pt-12 pb-10 px-6 bg-gradient-to-b from-[#232326] via-[#18181b] to-[#101012] shadow-lg relative overflow-hidden"
+                style={{ clipPath: 'polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%)' }}
+                variants={paperRollVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ delay: idx * 0.3, duration: 1.2 }}
+              >
+                {/* Paper curl effect at the top */}
+                <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-[#2c2c30] to-[#232326] opacity-80 rounded-t-lg rounded-tr-2xl rounded-tl-2xl"></div>
 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Progress
-                      value={step.progress}
-                      className="h-2 flex-1 bg-white/10"
-                    />
-                    <span className="text-sm text-brand-text-muted w-12 font-medium">
-                      {step.progress}%
-                    </span>
-                  </div>
+                {/* Title & description */}
+                <motion.h3
+                  className="mt-4 mb-3 text-lg font-bold text-gray-100 text-center break-words whitespace-normal w-full"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                  variants={bounceInVariants}
+                  transition={{ delay: idx * 0.2 + 0.4, duration: 1.1 }}
+                >
+                  {step.title}
+                </motion.h3>
+                <motion.p
+                  className="text-gray-300 text-center text-sm mb-5 break-words whitespace-normal w-full"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                  variants={bounceInVariants}
+                  transition={{ delay: idx * 0.2 + 0.5, duration: 1.1 }}
+                >
+                  {step.description}
+                </motion.p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {step.tasks.map((task, taskIndex) => (
-                      <motion.div
-                        key={task}
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: taskIndex * 0.1 }}
-                        className="flex items-center gap-2 text-sm text-brand-text-muted hover:text-brand-text transition-colors"
-                      >
-                        <ArrowRight className="w-4 h-4 text-brand-accent-primary flex-shrink-0" />
-                        <span>{task}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </Card>
+                {/* Tasks list */}
+                <ul className="list-none p-0 m-0 flex flex-col gap-2 mb-8 w-full">
+                  {step.tasks.map((task, taskIdx) => (
+                    <motion.li
+                      key={task}
+                      className="flex items-start gap-2 text-gray-300 text-xs justify-center break-words whitespace-normal w-full"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: false, amount: 0.2 }}
+                      variants={bounceInVariants}
+                      transition={{ delay: idx * 0.2 + 0.6 + (taskIdx * 0.1), duration: 1.1 }}
+                    >
+                      <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-left">{task}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+
+                {/* Icon at bottom */}
+                <motion.div
+                  className="mt-auto flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-[#232326] to-[#18181b] text-3xl text-gray-300 shadow-md"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                  variants={bounceInVariants}
+                  transition={{
+                    delay: idx * 0.2 + 0.9,
+                    duration: 1.1,
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 10
+                  }}
+                  whileHover={{
+                    rotate: 10,
+                    scale: 1.1,
+                    transition: { type: "spring", stiffness: 400, damping: 10 }
+                  }}
+                >
+                  {step.icon}
+                </motion.div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
 
         {/* Call to action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center mt-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={ctaBounceInVariants}
+          className="text-center mt-10 sm:mt-14 md:mt-16"
         >
-          <p className="text-brand-text-muted mb-6">
+          <motion.p
+            className="text-xs sm:text-sm md:text-base text-brand-text-muted mb-4 sm:mb-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            variants={bounceInVariants}
+            transition={{ delay: 0.9, duration: 1.1 }}
+          >
             Ready to start your project with our proven process?
-          </p>
-          <a
+          </motion.p>
+          <motion.a
             onClick={openCalendlyInNewTab}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary border border-white/10 text-white rounded-2xl hover:shadow-glow hover:cursor-pointer hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm hover-lift"
+            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#232326] via-[#18181b] to-[#101012] text-gray-100 font-semibold rounded-xl sm:rounded-2xl shadow-md border border-gray-700 hover:shadow-lg hover:cursor-pointer transition-all duration-300"
+            whileHover={{
+              scale: 1.05,
+              y: -2,
+              transition: { type: "spring", stiffness: 400, damping: 10 }
+            }}
+            whileTap={{ scale: 0.98 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            variants={bounceInVariants}
+            transition={{ delay: 1.1, duration: 1.1 }}
           >
             Start Your Project
-            <ArrowRight className="w-4 h-4" />
-          </a>
+            <ArrowRight className="w-4 h-4 text-gray-300" />
+          </motion.a>
         </motion.div>
       </div>
     </section>
