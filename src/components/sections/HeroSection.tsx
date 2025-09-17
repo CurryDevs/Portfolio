@@ -10,18 +10,21 @@ const people = [
     name: "Kshitij Singh Bisht",
     designation: "Co-Founder | Software Engineer",
     image: "/kshitij.jpg",
+    linkedin: "https://www.linkedin.com/in/kshitijsinghbisht/",
   },
   {
     id: 2,
     name: "Mohit Singh",
     designation: "Co-Founder | Software Engineer",
     image: "mohit.jpg",
+    linkedin: "https://www.linkedin.com/in/mohit-singh-95a883225/",
   },
   {
     id: 3,
     name: "Gautam Gupta",
     designation: "Co-Founder | Software Engineer",
     image: "/gautam.png",
+    linkedin: "https://www.linkedin.com/in/gautam-gupta-gg24",
   },
 ];
 

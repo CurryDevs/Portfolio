@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, useTransform, AnimatePresence, useMotionValue, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Linkedin } from "lucide-react";
 
 export const AnimatedTooltip = ({
     items,
@@ -11,6 +12,7 @@ export const AnimatedTooltip = ({
         name: string;
         designation: string;
         image: string;
+        linkedin?: string;
     }[];
     className?: string;
 }) => {
@@ -64,7 +66,14 @@ export const AnimatedTooltip = ({
                                 <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px" />
                                 <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px" />
                                 <div className="font-bold text-background relative z-30 text-base">
-                                    {item.name}
+                                    <span className="flex items-center gap-2">
+                                        {item.name}
+                                        {item.linkedin && (
+                                            <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
+                                                <Linkedin className="w-4 h-4 text-blue-600 hover:text-blue-800 transition" />
+                                            </a>
+                                        )}
+                                    </span>
                                 </div>
                                 <div className="text-muted-foreground text-xs">
                                     {item.designation}
