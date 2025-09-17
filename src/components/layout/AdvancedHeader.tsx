@@ -6,13 +6,12 @@ import CurryDevsLogo from '@/assets/CurryDevs_Transparent.png';
 import { StartProjectModal } from '@/components/ui/start-project-modal';
 
 const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Solution', href: '#link' },
-    { name: 'Pricing', href: '#link' },
-    { name: 'About', href: '#link' },
+    { name: 'Benefits', href: '#benefits' },
+    { name: 'Case Studies', href: 'case-studies' },
+    { name: 'Services', href: '#services' },
 ];
 
-function DemoNavbar() {
+function Navbar() {
     const [menuState, setMenuState] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [hoveredItem, setHoveredItem] = useState<number | null>(null);
@@ -45,7 +44,7 @@ function DemoNavbar() {
                                 aria-label="home"
                                 className="flex items-center space-x-2 cursor-pointer"
                             >
-                                <DemoLogo />
+                                <Logo />
                             </a>
 
                             <button
@@ -69,7 +68,7 @@ function DemoNavbar() {
                                     >
                                         <a
                                             href={item.href}
-                                            className="relative text-accent-foreground block duration-150 group"
+                                            className="relative text-accent-foreground block duration-150 group text-xs xs:text-sm sm:text-base"
                                         >
                                             <span>{item.name}</span>
                                             <span 
@@ -111,7 +110,7 @@ function DemoNavbar() {
     );
 }
 
-function DemoLogo({ className }: { className?: string }) {
+function Logo({ className }: { className?: string }) {
     return (
         <img
             src={CurryDevsLogo}
@@ -124,6 +123,6 @@ function DemoLogo({ className }: { className?: string }) {
 
 export function AdvancedHeader() {
     return (
-        <DemoNavbar />
+        <Navbar />
     );
 }

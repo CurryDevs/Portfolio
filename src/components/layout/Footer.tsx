@@ -5,24 +5,24 @@ import CurryDevsLogo from "@/assets/CurryDevs_Transparent.png";
 
 const footerLink = [
     {
-        name: "About",
-        link: "#about",
+        name: "Home",
+        link: "#home",
     },
     {
         name: "Services",
         link: "#services",
     },
     {
-        name: "Work",
+        name: "Projects",
         link: "#case-studies",
     },
     {
-        name: "Contact",
-        link: "#contact",
+        name: "Benefits",
+        link: "#benefits",
     },
     {
-        name: "Privacy Policy",
-        link: "#privacy",
+        name: "FAQs",
+        link: "#faqs",
     },
 ];
 
@@ -51,7 +51,7 @@ const Footer = () => {
                             <a
                                 key={item.name}
                                 href={item.link}
-                                className="text-sm leading-5 text-muted-foreground hover:text-foreground transition-colors font-medium"
+                                className="text-sm sm:text-base leading-5 text-muted-foreground hover:text-foreground transition-colors font-thin hover:font-semibold"
                             >
                                 {item.name}
                             </a>
@@ -70,7 +70,7 @@ const Footer = () => {
                             rel="noopener noreferrer"
                         >
                             <span className="sr-only">Twitter</span>
-                            <Twitter className="h-5 w-5" />
+                            <Twitter className="sm:!h-5 sm:!w-5" />
                         </a>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
@@ -80,7 +80,7 @@ const Footer = () => {
                             rel="noopener noreferrer"
                         >
                             <span className="sr-only">LinkedIn</span>
-                            <Linkedin className="h-5 w-5" />
+                            <Linkedin className="sm:!h-5 sm:!w-5" />
                         </a>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
@@ -90,7 +90,7 @@ const Footer = () => {
                             rel="noopener noreferrer"
                         >
                             <span className="sr-only">Instagram</span>
-                            <Instagram className="h-5 w-5" />
+                            <Instagram className="sm:!h-5 sm:!w-5" />
                         </a>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
@@ -100,7 +100,7 @@ const Footer = () => {
                             rel="noopener noreferrer"
                         >
                             <span className="sr-only">Github</span>
-                            <Github className="h-5 w-5" />
+                            <Github className="sm:!h-5 sm:!w-5" />
                         </a>
                     </Button>
                 </AnimationContainer>
@@ -111,8 +111,8 @@ const Footer = () => {
                 className="my-7  border-t border-border/40 pt-0.5 px-4 sm:px-6 lg:px-8"
             >
                 <div className="flex justify-center">
-                    <p className="text-xs leading-4 text-muted-foreground text-center">
-                        &copy; {currentYear} All rights reserved.
+                    <p className="text-xs sm:text-sm leading-4 text-muted-foreground text-center">
+                        &copy; {currentYear} CurryDevs. All rights reserved.
                     </p>
                 </div>
             </AnimationContainer>

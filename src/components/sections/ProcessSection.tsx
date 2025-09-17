@@ -107,6 +107,11 @@ const getStatusIcon = (status: ProcessStep["status"]) => {
 };
 
 export function ProcessSection() {
+  const openCalendlyInNewTab = () => {
+    // Open Calendly in a new tab
+    window.open("https://calendly.com/currydevs/30min", "_blank");
+  };
+
   return (
     <section id="process" className="py-24 lg:py-32 relative overflow-hidden">
       {/* Background decorations */}
@@ -121,11 +126,11 @@ export function ProcessSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <div className="relative z-10 flex flex-col items-center justify-center">
+          <div className="relative z-10 flex flex-col items-center justify-center mb-0 sm:mb-8 md:mb-12">
             <span className="mb-2 text-center block bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
               OUR PROCESS
             </span>
-            <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+            <h2 className="mb-0 sm:mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
               What our Client Experiences
             </h2>
           </div>
@@ -144,12 +149,13 @@ export function ProcessSection() {
               {/* Timeline line */}
               <div className="absolute left-0 top-0 bottom-0 w-px bg-white/10 -ml-4 hidden md:block">
                 <div
-                  className={`w-3 h-3 rounded-full -ml-[6px] mt-8 ${step.status === "completed"
+                  className={`w-3 h-3 rounded-full -ml-[6px] mt-8 ${
+                    step.status === "completed"
                       ? "bg-green-400"
                       : step.status === "in-progress"
-                        ? "bg-blue-400"
-                        : "bg-gray-400"
-                    }`}
+                      ? "bg-blue-400"
+                      : "bg-gray-400"
+                  }`}
                 />
               </div>
 
@@ -224,8 +230,8 @@ export function ProcessSection() {
             Ready to start your project with our proven process?
           </p>
           <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary border border-white/10 text-white rounded-2xl hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm hover-lift"
+            onClick={openCalendlyInNewTab}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary border border-white/10 text-white rounded-2xl hover:shadow-glow hover:cursor-pointer hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm hover-lift"
           >
             Start Your Project
             <ArrowRight className="w-4 h-4" />

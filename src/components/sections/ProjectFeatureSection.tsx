@@ -142,15 +142,15 @@ const ProjectFeatureSection = ({
     <section
       ref={containerRef}
       className={cn("py-20 sm:py-28", className)}
-      id="projects"
+      id="benefits"
     >
       <div className="container-custom">
         {/* Section Header */}
-        <div className="relative z-10 flex flex-col items-center justify-center">
+        <div className="relative z-10 flex flex-col items-center justify-center mb-0 sm:mb-12">
           <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
             BENEFITS
           </span>
-          <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+          <h2 className="mb-0 sm:mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
             Delivering more than promises.
           </h2>
         </div>

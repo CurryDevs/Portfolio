@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 export function ContactSection() {
   return (
     <section id="contact" className="mb-18 py-12 sm:py-16 md:py-20 md:scale-[0.9] max-[678px]: scale-[0.85]">
-      <div className="mb-8 relative z-10 flex flex-col items-center justify-center ">
+      <div className="mb-8 relative z-10 flex flex-col items-center justify-center mb-0 sm:mb-8 md:mb-12">
         <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
           STILL
         </span>
@@ -42,7 +42,7 @@ export function ContactSection() {
           >
             <form action="" className="w-full space-y-3 sm:space-y-4">
               <div className="flex flex-col gap-1.5 sm:gap-2">
-                <Label className="text-white font-medium text-sm sm:text-base">
+                <Label className="text-white font-medium text-sm xs:text-base sm:text-lg lg:text-xl">
                   Name
                 </Label>
                 <Input
@@ -52,7 +52,7 @@ export function ContactSection() {
                 />
               </div>
               <div className="flex flex-col gap-1.5 sm:gap-2">
-                <Label className="text-white font-medium text-sm sm:text-base">
+                <Label className="text-white font-medium text-sm xs:text-base sm:text-lg lg:text-xl">
                   Email
                 </Label>
                 <Input
@@ -62,7 +62,7 @@ export function ContactSection() {
                 />
               </div>
               <div className="flex flex-col gap-1.5 sm:gap-2">
-                <Label className="text-white font-medium text-sm sm:text-base">
+                <Label className="text-white font-medium text-sm xs:text-base sm:text-lg lg:text-xl">
                   Phone
                 </Label>
                 <Input
@@ -72,7 +72,7 @@ export function ContactSection() {
                 />
               </div>
               <div className="flex flex-col gap-1.5 sm:gap-2">
-                <Label className="text-white font-medium text-sm sm:text-base">
+                <Label className="text-white font-medium text-sm xs:text-base sm:text-lg lg:text-xl">
                   Message
                 </Label>
                 <Textarea
@@ -81,7 +81,7 @@ export function ContactSection() {
                 />
               </div>
               <Button
-                className="w-full bg-white text-black border-2 border-white hover:bg-black hover:text-white transition-all duration-300 font-bold h-10 sm:h-11 text-sm sm:text-base"
+                className="w-full bg-white text-black border-2 border-white hover:bg-black hover:text-white transition-all duration-300 font-bold h-10 sm:h-11 text-sm xs:text-base sm:text-lg lg:text-xl"
                 type="button"
               >
                 Submit
