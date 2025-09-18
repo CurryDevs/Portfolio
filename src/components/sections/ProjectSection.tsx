@@ -1,10 +1,10 @@
 "use client";
 
-import {ProjectCard} from "@/components/layout/ProjectCard";
+import { ProjectCard } from "@/components/layout/ProjectCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
 
 interface GalleryItem {
   id: string;
@@ -105,10 +105,7 @@ const ProjectSection = ({
     setCurrentIndex((prev) => Math.max(prev - 1, 0));
   };
 
-  const handleCardClick = (e: React.MouseEvent, itemId: string) => {
-    e.preventDefault();
-    window.location.href = "/case-studies";
-  };
+
 
   const canGoPrev = currentIndex > 0;
   const canGoNext = currentIndex < maxIndex;
@@ -174,25 +171,22 @@ const ProjectSection = ({
 
         <div className="overflow-hidden">
           <div
-            className="flex transition-transform duration-500 ease-in-out gap-6"
+            className="flex transition-transform duration-500 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
             }}
           >
-
             {items.map((item) => (
               <div
                 key={item.id}
-                className="flex-shrink-0"
+                className="flex-shrink-0 px-3"
                 style={{
-                  width: `calc(${100 / itemsPerView}% - ${((itemsPerView - 1) * 24) / itemsPerView
-                    }px)`,
+                  width: `${100 / itemsPerView}%`,
                 }}
               >
                 <ProjectCard {...item} />
               </div>
             ))}
-
           </div>
         </div>
       </div>
