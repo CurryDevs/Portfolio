@@ -1,5 +1,6 @@
 "use client";
 
+import {ProjectCard} from "@/components/layout/ProjectCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -146,10 +147,9 @@ const ProjectSection = ({
               onClick={goPrev}
               disabled={!canGoPrev}
               className={`flex h-14 w-14 items-center justify-center rounded-full shadow-lg border-2 transition-colors duration-200
-                ${
-                  canGoPrev
-                    ? "bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95"
-                    : "bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60"
+                ${canGoPrev
+                  ? "bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95"
+                  : "bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60"
                 }
               `}
               aria-label="Previous projects"
@@ -160,10 +160,9 @@ const ProjectSection = ({
               onClick={goNext}
               disabled={!canGoNext}
               className={`flex h-14 w-14 items-center justify-center rounded-full shadow-lg border-2 transition-colors duration-200
-                ${
-                  canGoNext
-                    ? "bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95"
-                    : "bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60"
+                ${canGoNext
+                  ? "bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95"
+                  : "bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60"
                 }
               `}
               aria-label="Next projects"
@@ -180,46 +179,20 @@ const ProjectSection = ({
               transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
             }}
           >
+
             {items.map((item) => (
               <div
                 key={item.id}
                 className="flex-shrink-0"
                 style={{
-                  width: `calc(${100 / itemsPerView}% - ${
-                    ((itemsPerView - 1) * 24) / itemsPerView
-                  }px)`,
+                  width: `calc(${100 / itemsPerView}% - ${((itemsPerView - 1) * 24) / itemsPerView
+                    }px)`,
                 }}
               >
-                <Link
-                  to={`/case-studies/${item.id}`}
-                  className="group flex flex-col justify-between cursor-pointer"
-                >
-                  <div>
-                    <div className="flex aspect-[3/2] overflow-clip rounded-xl">
-                      <div className="flex-1">
-                        <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mb-2 line-clamp-3 break-words pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl">
-                    {item.title}
-                  </div>
-                  <div className="mb-8 line-clamp-2 text-sm text-muted-foreground md:mb-12 md:text-base lg:mb-9">
-                    {item.summary}
-                  </div>
-                  <div className="flex items-center text-sm">
-                    Read more{" "}
-                    <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </Link>
+                <ProjectCard {...item} />
               </div>
             ))}
+
           </div>
         </div>
       </div>
