@@ -1,9 +1,10 @@
 "use client";
 
+import { ProjectCard } from "@/components/layout/ProjectCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
 
 interface GalleryItem {
   id: string;
@@ -104,17 +105,14 @@ const ProjectSection = ({
     setCurrentIndex((prev) => Math.max(prev - 1, 0));
   };
 
-  const handleCardClick = (e: React.MouseEvent, itemId: string) => {
-    e.preventDefault();
-    window.location.href = "/case-studies";
-  };
+
 
   const canGoPrev = currentIndex > 0;
   const canGoNext = currentIndex < maxIndex;
 
   return (
     <section id="case-studies" className="py-32">
-      <div className="container mx-auto px-6 max-w-6xl">
+      <div className="container mx-auto px-4 max-w-6xl">
         <div className="relative z-10 flex flex-col items-center justify-center text-center mb-0 sm:mb-12">
           <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
             CASE STUDIES
@@ -186,34 +184,7 @@ const ProjectSection = ({
                   width: `${100 / itemsPerView}%`,
                 }}
               >
-                <Link
-                  to={`/case-studies/${item.id}`}
-                  className="group flex flex-col h-full cursor-pointer"
-                >
-                  <div className="flex-grow">
-                    <div className="flex aspect-[3/2] overflow-clip rounded-xl">
-                      <div className="flex-1">
-                        <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mb-2 line-clamp-1 pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl whitespace-nowrap overflow-hidden text-ellipsis">
-                      {item.title}
-                    </div>
-                    <div className="mb-8 line-clamp-2 text-sm text-muted-foreground md:mb-12 md:text-base lg:mb-9">
-                      {item.summary}
-                    </div>
-                  </div>
-                  <div className="flex items-center text-sm mt-auto">
-                    Read more{" "}
-                    <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </Link>
+                <ProjectCard {...item} />
               </div>
             ))}
           </div>

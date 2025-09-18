@@ -1,33 +1,56 @@
 import HeroSection from "@/components/case-study/HeroSection";
 import ProjectDetails from "@/components/case-study/ProjectDetails";
 import TechStack from "@/components/case-study/TechStack";
-// import Results from "@/components/case-study/Results";
 import Gallery from "@/components/case-study/Gallery";
 import Footer from "@/components/layout/Footer";
 import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
 
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import data from "@/data/projects.json";
+import { useEffect } from "react";
 
-const CaseStudy = () => {
+export type SectionLink = {
+  name: string;
+  link: string;
+};
 
+const CaseStudy = ({ scrollTo }: { scrollTo?: string }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (scrollTo) {
+      const el = document.getElementById(scrollTo);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [scrollTo, location]);
   const { id } = useParams();
   const project = data.find((item) => item.id === id);
 
-  if (!project) return <div className="text-center mt-20 text-red-500">Project not found</div>;
+  if (!project)
+    return (
+      <div className="text-center mt-20 text-red-500">Project not found</div>
+    );
 
-  // Build sectionLinks based on present sections
-  const sectionLinks = [];
-  if (project.components.HeroSection) {
-    sectionLinks.push({ name: "Project Overview", link: "#project-overview" });
-  }
-  if (project.components.TechStack) {
-    sectionLinks.push({ name: "Tech Stack", link: "#tech-stack" });
-  }
-  if (project.components.Gallery) {
-    sectionLinks.push({ name: "Project Gallery", link: "#project-gallery" });
-  }
-  // Add more sections as needed
+  const footerLink: SectionLink[] = [
+    {
+      name: "Home",
+      link: `/case-studies/${id}/`,
+    },
+    {
+      name: "Overview",
+      link: `/case-studies/${id}/project-overview`,
+    },
+    {
+      name: "Technology",
+      link: `/case-studies/${id}/tech-stack`,
+    },
+    {
+      name: "Gallery",
+      link: `/case-studies/${id}/project-gallery`,
+    },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -36,11 +59,10 @@ const CaseStudy = () => {
         <HeroSection {...project.components.HeroSection} />
         <ProjectDetails {...project.components.ProjectDetails} />
         <TechStack techStack={project.components.TechStack} />
-        {/* <Results {...project.components.Results}/> */}
         <Gallery />
       </main>
       <div className="mt-10">
-        <Footer sectionLinks={sectionLinks} />
+        <Footer sectionLinks={footerLink} />
       </div>
     </div>
   );
