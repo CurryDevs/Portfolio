@@ -16,7 +16,7 @@ const ProjectDetails = ({ title, headline, summary, client, duration, timeline, 
   useScrollAnimation();
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-2 sm:px-4 md:px-6 relative overflow-hidden">
+    <section id="project-details" className="py-16 md:py-24 lg:py-32 px-2 sm:px-4 md:px-6 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="w-full h-full" style={{
@@ -28,14 +28,14 @@ const ProjectDetails = ({ title, headline, summary, client, duration, timeline, 
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <ScrollAnimateWrapper id="details-header" className="text-center mb-10 md:mb-16 lg:mb-20">
-        <div className="relative z-10 flex flex-col items-center justify-center">
-          <span className="uppercase mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
-            {title}
-          </span>
-          <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
-            Project Overview
-          </h2>
-        </div>
+          <div className="relative z-10 flex flex-col items-center justify-center">
+            <span className="uppercase mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
+              {title}
+            </span>
+            <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+              Project Overview
+            </h2>
+          </div>
         </ScrollAnimateWrapper>
 
         <div className="grid gap-8 md:gap-14 lg:gap-20 items-center grid-cols-1 lg:grid-cols-2">

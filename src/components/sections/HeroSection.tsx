@@ -10,18 +10,27 @@ const people = [
     name: "Kshitij Singh Bisht",
     designation: "Co-Founder | Software Engineer",
     image: "/kshitij.jpg",
+    portfolio: "https://kshitijbisht.vercel.app/",
+    github: "https://github.com/hailex798/",
+    linkedIn: "https://www.linkedin.com/in/kshitijsinghbisht/",
   },
   {
     id: 2,
     name: "Mohit Singh",
     designation: "Co-Founder | Software Engineer",
     image: "mohit.jpg",
+    portfolio: "https://mohitsinghgarryportfolio.vercel.app/",
+    github: "https://github.com/mohitsinghgarry/",
+    linkedIn: "https://www.linkedin.com/in/mohit-singh-95a883225/",
   },
   {
     id: 3,
     name: "Gautam Gupta",
     designation: "Co-Founder | Software Engineer",
     image: "/gautam.png",
+    portfolio: "https://gautamgupta24.netlify.app/",
+    github: "https://github.com/24-gautam/",
+    linkedIn: "https://www.linkedin.com/in/gautam-gupta-gg24/",
   },
 ];
 
@@ -67,7 +76,10 @@ export function HeroSection() {
               <Button className="bg-black text-white border border-white hover:bg-white hover:text-black hover:border-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5">
                 Projects
               </Button>
-              <Button onClick={openCalendlyInNewTab} className="bg-white text-black border border-black hover:bg-black hover:text-white hover:border-white max-[375px]:px-8 max-[410px]:px-4 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5">
+              <Button
+                onClick={openCalendlyInNewTab}
+                className="bg-white text-black border border-black hover:bg-black hover:text-white hover:border-white max-[375px]:px-8 max-[410px]:px-4 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5"
+              >
                 {isSmallScreen ? "Book a Call" : "Book a Call with Currydevs"}
               </Button>
             </div>

@@ -93,7 +93,7 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-20 px-2 sm:py-28 sm:px-4 md:py-32 md:px-6 bg-surface/30">
+    <section id="project-gallery" className="py-20 px-2 sm:py-28 sm:px-4 md:py-32 md:px-6 bg-surface/30">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
@@ -113,11 +113,10 @@ const Gallery = () => {
           >
             <button
               onClick={() => setViewMode("full")}
-              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${
-                viewMode === "full"
+              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === "full"
                   ? "bg-accent text-accentCS-foreground shadow-sm"
                   : "text-text-secondary hover:text-text-primary"
-              }`}
+                }`}
               style={{ minWidth: "0", minHeight: "0" }}
             >
               <Maximize2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
@@ -125,11 +124,10 @@ const Gallery = () => {
             </button>
             <button
               onClick={() => setViewMode("desktop")}
-              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${
-                viewMode === "desktop"
+              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === "desktop"
                   ? "bg-accent text-accentCS-foreground shadow-sm"
                   : "text-text-secondary hover:text-text-primary"
-              }`}
+                }`}
               style={{ minWidth: "0", minHeight: "0" }}
             >
               <Monitor className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
@@ -137,11 +135,10 @@ const Gallery = () => {
             </button>
             <button
               onClick={() => setViewMode("mobile")}
-              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${
-                viewMode === "mobile"
+              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === "mobile"
                   ? "bg-accent text-accentCS-foreground shadow-sm"
                   : "text-text-secondary hover:text-text-primary"
-              }`}
+                }`}
               style={{ minWidth: "0", minHeight: "0" }}
             >
               <Smartphone className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
