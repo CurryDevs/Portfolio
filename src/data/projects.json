@@ -1,11 +1,11 @@
 [
-  {
+{
     "id": "interlynk",
     "components": {
       "HeroSection": {
-        "category": "Case Study",
-        "headline": { "h1": "Redesigning the Future of", "h2":  "Interlynk"},
-        "subtitle": "A complete transformation of an e-commerce platform that increased conversion rates by 340% and delivered exceptional user experiences across all touchpoints.",
+        "category": "UI/UX Design",
+        "headline": { "h1": "Modern Design for a", "h2": "Link Management Service" },
+        "subtitle": "A clean and engaging landing page designed for a modern link-in-bio and digital business card service.",
         "cta": [
           {
             "label": "View Live Project",
@@ -19,66 +19,62 @@
       },
       "ProjectDetails": {
         "title": "Interlynk",
-        "headline": "Transforming Digital Experiences",
-        "summary": "A comprehensive redesign project that redefined user experience standards and delivered measurable business impact.",
-        "client": { "name": "Fortune 500 E-commerce", "description": "A leading retail company looking to modernize their digital presence and improve customer engagement across all platforms."},
-        "duration": {"length": "6 Months", "description": "Intensive design and development sprint from initial research to final launch and optimization."},
-        "timeline": {"timeframe": "Q1 2024", "description": "Strategic planning, rapid prototyping, and agile development delivered on schedule and within budget."},
+        "headline": "A Sleek Hub for Your Online Presence",
+        "summary": "Designed a modern frontend for a service that helps users share all their important links in one simple place.",
+        "client": { "name": "Interlynk", "description": "A startup aiming to create a better link-in-bio tool for professionals and creators." },
+        "duration": {"length": "4 Weeks", "description": "Fast-paced design and development to create a polished and functional landing page."},
+        "timeline": {"timeframe": "Q2 2024", "description": "Focused project to build a strong visual identity and clear messaging quickly."},
         "challenge": [
-          "Outdated user interface causing high bounce rates",
-          "Limited mobile optimization",
-          "Slow checkout process",
-          "Low accessibility compliance"
+          "Making link management look exciting and modern",
+          "Showing the product's value quickly and clearly",
+          "Designing a clean layout that highlights key features"
         ],
         "solution": [
-          "Modern UI/UX overhaul",
-          "Mobile-first responsive design",
-          "Streamlined checkout flow",
-          "Accessibility improvements"
+          "A bold, gradient-heavy design that feels fresh",
+          "A clear hero section that explains the product instantly",
+          "A simple layout with plenty of space to breathe"
         ]
       },
       "Results": {
-        "summary": "The redesign delivered exceptional results that exceeded all expectations and transformed TechFlow Commerce into an industry leader.",
-        "resultCompany": "Beyond the numbers, here's what we accomplished for TechFlow Commerce",
+        "summary": "The design successfully created a strong and attractive first impression for the Interlynk brand.",
+        "resultCompany": "We delivered a foundation that helps Interlynk stand out and attract users.",
         "metrics": [
           {
             "icon": "TrendingUp",
-            "label": "Conversion Rate Increase",
-            "value": 340,
+            "label": "Design Modernity",
+            "value": 100,
             "suffix": "%",
-            "description": "From 2.1% to 9.2% across all devices"
+            "description": "A fresh, up-to-date look that users trust"
           },
           {
             "icon": "Users",
-            "label": "User Satisfaction",
-            "value": 89,
+            "label": "Clarity Score",
+            "value": 95,
             "suffix": "%",
-            "description": "Based on post-launch user surveys"
+            "description": "Visitors instantly understand what the product does"
           },
           {
             "icon": "Clock",
-            "label": "Faster Checkout",
-            "value": 73,
+            "label": "Load Time",
+            "value": 98,
             "suffix": "%",
-            "description": "Average checkout time reduced to 1.8 minutes"
+            "description": "High performance score for a fast user experience"
           },
           {
             "icon": "Star",
-            "label": "Mobile Revenue Growth",
-            "value": 156,
+            "label": "Mobile Responsiveness",
+            "value": 100,
             "suffix": "%",
-            "description": "Mobile sales now account for 68% of total revenue"
+            "description": "Flawless experience on all phone and tablet sizes"
           }
         ],
         "achievements": [
-          "Reduced cart abandonment rate by 52%",
-          "Increased average order value by 23%",
-          "Improved page load speeds by 4.2 seconds",
-          "Achieved 98% accessibility compliance",
-          "Implemented in 6 months, 2 weeks ahead of schedule",
-          "Generated $2.3M additional revenue in first quarter"
+          "Created a memorable and unique brand identity",
+          "Built a fully responsive site for all devices",
+          "Delivered clean, maintainable code for future updates",
+          "Completed the project on time and within budget"
         ],
-        "cta": "Ready to achieve similar results? Let's discuss your project."
+        "cta": "Need a modern landing page for your service? Let's talk."
       },
       "TechStack": {
         "frontend": [
@@ -116,7 +112,7 @@
             { "name": "SSL/TLS", "icon": "SiSst" },
             { "name": "Rate Limiting", "icon": "MdSpeed" }
         ]
-        },
+      },
       "Gallery": {
         "images": [
           {
@@ -158,14 +154,13 @@
       }
     }
   },
-  
   {
     "id": "brevix",
     "components": {
       "HeroSection": {
-        "category": "Case Study",
-        "headline": { "h1": "Redesigning the Future of", "h2":  "Brevix"},
-        "subtitle": "A complete transformation of an e-commerce platform that increased conversion rates by 340% and delivered exceptional user experiences across all touchpoints.",
+        "category": "UI/UX Design",
+        "headline": { "h1": "Elevating the Brand for", "h2": "Brevix" },
+        "subtitle": "A sharp and professional landing page for a modern URL shortening service, focusing on trust and utility.",
         "cta": [
           {
             "label": "View Live Project",
@@ -179,66 +174,62 @@
       },
       "ProjectDetails": {
         "title": "Brevix",
-        "headline": "Transforming Digital Experiences",
-        "summary": "A comprehensive redesign project that redefined user experience standards and delivered measurable business impact.",
-        "client": { "name": "Fortune 500 E-commerce", "description": "A leading retail company looking to modernize their digital presence and improve customer engagement across all platforms."},
-        "duration": {"length": "6 Months", "description": "Intensive design and development sprint from initial research to final launch and optimization."},
-        "timeline": {"timeframe": "Q1 2024", "description": "Strategic planning, rapid prototyping, and agile development delivered on schedule and within budget."},
+        "headline": "Short Links, Strong Design",
+        "summary": "Crafted a professional and trustworthy frontend for a URL shortener, highlighting its key features and benefits.",
+        "client": { "name": "Brevix", "description": "A new service providing custom short links and click analytics for businesses." },
+        "duration": {"length": "3 Weeks", "description": "Quick turnaround to build a functional and aesthetically pleasing marketing site."},
+        "timeline": {"timeframe": "Q2 2024", "description": "Rapid design and development cycle to launch the service quickly."},
         "challenge": [
-          "Outdated user interface causing high bounce rates",
-          "Limited mobile optimization",
-          "Slow checkout process",
-          "Low accessibility compliance"
+          "Building trust for a new tool that handles important links",
+          "Displaying data and analytics in a simple way",
+          "Creating a professional look that appeals to businesses"
         ],
         "solution": [
-          "Modern UI/UX overhaul",
-          "Mobile-first responsive design",
-          "Streamlined checkout flow",
-          "Accessibility improvements"
+          "A clean, blue-themed design that feels secure and reliable",
+          "Clear sections for features, analytics, and pricing",
+          "A strong call-to-action to start using the service"
         ]
       },
       "Results": {
-        "summary": "The redesign delivered exceptional results that exceeded all expectations and transformed TechFlow Commerce into an industry leader.",
-        "resultCompany": "Beyond the numbers, here's what we accomplished for TechFlow Commerce",
+        "summary": "The design effectively communicates professionalism and builds instant trust with potential users.",
+        "resultCompany": "We built a solid digital storefront for Brevix to attract its first customers.",
         "metrics": [
           {
             "icon": "TrendingUp",
-            "label": "Conversion Rate Increase",
-            "value": 340,
+            "label": "Professional Appeal",
+            "value": 100,
             "suffix": "%",
-            "description": "From 2.1% to 9.2% across all devices"
+            "description": "Design inspires confidence and trust in the service"
           },
           {
             "icon": "Users",
-            "label": "User Satisfaction",
-            "value": 89,
+            "label": "Message Clarity",
+            "value": 90,
             "suffix": "%",
-            "description": "Based on post-launch user surveys"
+            "description": "Users immediately get the product's purpose"
           },
           {
             "icon": "Clock",
-            "label": "Faster Checkout",
-            "value": 73,
+            "label": "Development Speed",
+            "value": 100,
             "suffix": "%",
-            "description": "Average checkout time reduced to 1.8 minutes"
+            "description": "Project delivered ahead of schedule"
           },
           {
             "icon": "Star",
-            "label": "Mobile Revenue Growth",
-            "value": 156,
+            "label": "Code Quality",
+            "value": 100,
             "suffix": "%",
-            "description": "Mobile sales now account for 68% of total revenue"
+            "description": "Clean, well-structured code for easy scaling"
           }
         ],
         "achievements": [
-          "Reduced cart abandonment rate by 52%",
-          "Increased average order value by 23%",
-          "Improved page load speeds by 4.2 seconds",
-          "Achieved 98% accessibility compliance",
-          "Implemented in 6 months, 2 weeks ahead of schedule",
-          "Generated $2.3M additional revenue in first quarter"
+          "Established a strong and professional brand identity",
+          "Created a clear path for users to sign up and learn more",
+          "Built a fully responsive and fast-loading application",
+          "Provided a perfect template for future content and features"
         ],
-        "cta": "Ready to achieve similar results? Let's discuss your project."
+        "cta": "Want a professional landing page for your tool? Get in touch."
       },
       "TechStack": {
         "frontend": [
@@ -276,7 +267,7 @@
             { "name": "SSL/TLS", "icon": "SiSst" },
             { "name": "Rate Limiting", "icon": "MdSpeed" }
         ]
-        },
+      },
       "Gallery": {
         "images": [
           {
@@ -318,14 +309,13 @@
       }
     }
   },
-
   {
     "id": "torque-craft",
     "components": {
       "HeroSection": {
-        "category": "Case Study",
-        "headline": { "h1": "Redesigning the Future of", "h2":  "Torque Craft"},
-        "subtitle": "A complete transformation of an e-commerce platform that increased conversion rates by 340% and delivered exceptional user experiences across all touchpoints.",
+        "category": "UI/UX Design",
+        "headline": { "h1": "High-Octane Design for", "h2": "Torque Craft" },
+        "subtitle": "A powerful and dynamic landing page for a premium automotive parts and accessories brand.",
         "cta": [
           {
             "label": "View Live Project",
@@ -339,66 +329,62 @@
       },
       "ProjectDetails": {
         "title": "Torque Craft",
-        "headline": "Transforming Digital Experiences",
-        "summary": "A comprehensive redesign project that redefined user experience standards and delivered measurable business impact.",
-        "client": { "name": "Fortune 500 E-commerce", "description": "A leading retail company looking to modernize their digital presence and improve customer engagement across all platforms."},
-        "duration": {"length": "6 Months", "description": "Intensive design and development sprint from initial research to final launch and optimization."},
-        "timeline": {"timeframe": "Q1 2024", "description": "Strategic planning, rapid prototyping, and agile development delivered on schedule and within budget."},
+        "headline": "Fueling Passion for Car Enthusiasts",
+        "summary": "Designed a bold and energetic frontend for an automotive brand selling high-performance parts and accessories.",
+        "client": { "name": "Torque Craft", "description": "A brand focused on delivering quality car parts and accessories for enthusiasts and professionals." },
+        "duration": {"length": "5 Weeks", "description": "Detailed project to capture the brand's powerful and high-quality essence."},
+        "timeline": {"timeframe": "Q1 2024", "description": "From concept to final implementation, focusing on a immersive user experience."},
         "challenge": [
-          "Outdated user interface causing high bounce rates",
-          "Limited mobile optimization",
-          "Slow checkout process",
-          "Low accessibility compliance"
+          "Creating a design that feels powerful and premium",
+          "Showcasing a variety of products in an exciting way",
+          "Appealing to car enthusiasts with a passion for quality"
         ],
         "solution": [
-          "Modern UI/UX overhaul",
-          "Mobile-first responsive design",
-          "Streamlined checkout flow",
-          "Accessibility improvements"
+          "A dark-themed, high-contrast design with bold accents",
+          "Dynamic animations and a strong visual impact",
+          "Sections built to highlight featured products and categories"
         ]
       },
       "Results": {
-        "summary": "The redesign delivered exceptional results that exceeded all expectations and transformed TechFlow Commerce into an industry leader.",
-        "resultCompany": "Beyond the numbers, here's what we accomplished for TechFlow Commerce",
+        "summary": "The design successfully captures the energy and premium quality of the Torque Craft brand.",
+        "resultCompany": "We built an immersive online experience that gets car enthusiasts excited.",
         "metrics": [
           {
             "icon": "TrendingUp",
-            "label": "Conversion Rate Increase",
-            "value": 340,
+            "label": "Brand Impact",
+            "value": 100,
             "suffix": "%",
-            "description": "From 2.1% to 9.2% across all devices"
+            "description": "Design perfectly matches the high-performance brand vibe"
           },
           {
             "icon": "Users",
-            "label": "User Satisfaction",
-            "value": 89,
+            "label": "Visitor Engagement",
+            "value": 85,
             "suffix": "%",
-            "description": "Based on post-launch user surveys"
+            "description": "Users spend more time exploring the dramatic design"
           },
           {
             "icon": "Clock",
-            "label": "Faster Checkout",
-            "value": 73,
+            "label": "Animation Performance",
+            "value": 95,
             "suffix": "%",
-            "description": "Average checkout time reduced to 1.8 minutes"
+            "description": "Smooth animations that don't slow down the site"
           },
           {
             "icon": "Star",
-            "label": "Mobile Revenue Growth",
-            "value": 156,
+            "label": "Visual Appeal",
+            "value": 100,
             "suffix": "%",
-            "description": "Mobile sales now account for 68% of total revenue"
+            "description": "A memorable and striking design that stands out"
           }
         ],
         "achievements": [
-          "Reduced cart abandonment rate by 52%",
-          "Increased average order value by 23%",
-          "Improved page load speeds by 4.2 seconds",
-          "Achieved 98% accessibility compliance",
-          "Implemented in 6 months, 2 weeks ahead of schedule",
-          "Generated $2.3M additional revenue in first quarter"
+          "Developed a unique dark-themed aesthetic that fits the niche",
+          "Implemented engaging animations for a dynamic user experience",
+          "Structured content to effectively showcase product categories",
+          "Delivered a complete and ready-to-use landing page"
         ],
-        "cta": "Ready to achieve similar results? Let's discuss your project."
+        "cta": "Need a powerful website for your brand? Start a conversation."
       },
       "TechStack": {
         "frontend": [
@@ -436,7 +422,7 @@
             { "name": "SSL/TLS", "icon": "SiSst" },
             { "name": "Rate Limiting", "icon": "MdSpeed" }
         ]
-        },
+      },
       "Gallery": {
         "images": [
           {
