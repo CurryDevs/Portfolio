@@ -25,13 +25,13 @@ const HeroSection = ({ category, headline, subtitle, cta }: HeroSectionProps) =>
           <span className="block text-neutral-800 dark:text-neutral-200 text-xl min-[460px]:text-2xl sm:text-3xl font-normal mb-4">
             {headline.h1}
           </span>
-          <span className="text-6xl min-[460px]:text-8xl md:text-10xl lg:text-12xl bg-gradient-to-r from-neutral-800 via-white to-neutral-800 bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto] dark:from-neutral-200 dark:via-white dark:to-neutral-200">
+          <span className="text-6xl min-[500px]:text-8xl md:text-10xl lg:text-12xl bg-gradient-to-r from-neutral-800 via-white to-neutral-800 bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto] dark:from-neutral-200 dark:via-white dark:to-neutral-200">
             {headline.h2}
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-sm min-[460px]:text-lg sm:text-xl text-body-large text-white max-w-3xl mx-auto mb-12 mt-32 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <p className="text-sm min-[460px]:text-lg sm:text-xl text-body-large text-white max-w-3xl mx-auto mb-12 mt-18 sm:mt-24  animate-fade-in" style={{ animationDelay: '0.4s' }}>
           {subtitle}
         </p>
 
