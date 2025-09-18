@@ -4,11 +4,12 @@ import { Menu, X, Linkedin } from 'lucide-react'; // Add Linkedin icon from luci
 import { cn } from '@/lib/utils';
 import CurryDevsLogo from '@/assets/CurryDevs_Transparent.png';
 import { StartProjectModal } from '@/components/ui/start-project-modal';
+import { Link } from "react-router-dom";
 
 const menuItems = [
-    { name: 'Benefits', href: '#benefits' },
-    { name: 'Case Studies', href: 'case-studies' },
-    { name: 'Services', href: '#services' },
+    { name: 'Benefits', href: '/benefits' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Services', href: '/services' },
 ];
 
 function Navbar() {
@@ -66,8 +67,8 @@ function Navbar() {
                                         onMouseEnter={() => setHoveredItem(index)}
                                         onMouseLeave={() => setHoveredItem(null)}
                                     >
-                                        <a
-                                            href={item.href}
+                                        <Link
+                                            to={item.href}
                                             className="relative text-accent-foreground block duration-150 group text-xs xs:text-sm sm:text-base"
                                         >
                                             <span>{item.name}</span>
@@ -78,7 +79,7 @@ function Navbar() {
                                                     hoveredItem !== null && hoveredItem !== index && "opacity-0"
                                                 )}
                                             />
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

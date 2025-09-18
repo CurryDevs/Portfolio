@@ -10,8 +10,20 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Code, Palette, Rocket } from "lucide-react";
 import FAQSection from "@/components/sections/FAQSection";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-const Index = () => {
+const Index = ({ scrollTo }: { scrollTo?: string }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (scrollTo) {
+      const el = document.getElementById(scrollTo);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [scrollTo, location]);
   const projectData = [
     {
       id: 1,
