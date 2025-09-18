@@ -2,6 +2,7 @@ import { Instagram, Twitter, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimationContainer } from "@/components/ui/animation-container";
 import CurryDevsLogo from "@/assets/CurryDevs_Transparent.png";
+import { Link } from "react-router-dom";
 
 export type SectionLink = {
     name: string;
@@ -11,23 +12,23 @@ export type SectionLink = {
 const defaultFooterLink: SectionLink[] = [
     {
         name: "Home",
-        link: "#home",
+        link: "/",
     },
     {
         name: "Services",
-        link: "#services",
+        link: "/services",
     },
     {
         name: "Projects",
-        link: "#case-studies",
+        link: "/case-studies",
     },
     {
         name: "Benefits",
-        link: "#benefits",
+        link: "/benefits",
     },
     {
         name: "FAQs",
-        link: "#faqs",
+        link: "/faqs",
     },
 ];
 
@@ -52,13 +53,13 @@ const Footer = ({ sectionLinks }: { sectionLinks?: SectionLink[] }) => {
                 <AnimationContainer className="w-full md:w-auto">
                     <nav className="flex flex-wrap justify-center gap-4 text-center md:justify-end">
                         {(sectionLinks && sectionLinks.length > 0 ? sectionLinks : defaultFooterLink).map((item) => (
-                            <a
+                            <Link
                                 key={item.name}
-                                href={item.link}
+                                to={item.link}
                                 className="text-sm sm:text-base leading-5 text-muted-foreground hover:text-foreground transition-colors font-thin hover:font-semibold"
                             >
                                 {item.name}
-                            </a>
+                            </Link>
                         ))}
                     </nav>
                 </AnimationContainer>
