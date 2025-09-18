@@ -9,7 +9,13 @@ import {
 } from "lucide-react";
 import FullPreview from "./FullPreview";
 
-const Gallery = () => {
+type GalleryProps = {
+  caseStudy: string;
+  livePreview: string;
+  desktop: { title: string; description: string; url: string; category: string; }[];
+};
+
+const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [viewMode, setViewMode] = useState<"desktop" | "mobile" | "full">(
     "desktop"
@@ -149,7 +155,7 @@ const Gallery = () => {
 
         {/* Gallery Grid or Full Preview */}
         {viewMode === "full" ? (
-          <FullPreview />
+          <FullPreview livePreview={livePreview}/>
         ) : (
           <div className="grid grid-cols-1 min-[461px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-2 xs:gap-3 sm:gap-5 md:gap-8">
             {images.map((image, index) => (

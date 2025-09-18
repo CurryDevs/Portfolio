@@ -1,10 +1,13 @@
 [
-{
+  {
     "id": "interlynk",
     "components": {
       "HeroSection": {
         "category": "UI/UX Design",
-        "headline": { "h1": "Modern Design for a", "h2": "Link Management Service" },
+        "headline": {
+          "h1": "Modern Design for a",
+          "h2": "Link Management Service"
+        },
         "subtitle": "A clean and engaging landing page designed for a modern link-in-bio and digital business card service.",
         "cta": [
           {
@@ -21,9 +24,18 @@
         "title": "Interlynk",
         "headline": "A Sleek Hub for Your Online Presence",
         "summary": "Designed a modern frontend for a service that helps users share all their important links in one simple place.",
-        "client": { "name": "Interlynk", "description": "A startup aiming to create a better link-in-bio tool for professionals and creators." },
-        "duration": {"length": "4 Weeks", "description": "Fast-paced design and development to create a polished and functional landing page."},
-        "timeline": {"timeframe": "Q2 2024", "description": "Focused project to build a strong visual identity and clear messaging quickly."},
+        "client": {
+          "name": "Interlynk",
+          "description": "A startup aiming to create a better link-in-bio tool for professionals and creators."
+        },
+        "duration": {
+          "length": "4 Weeks",
+          "description": "Fast-paced design and development to create a polished and functional landing page."
+        },
+        "timeline": {
+          "timeframe": "Q2 2024",
+          "description": "Focused project to build a strong visual identity and clear messaging quickly."
+        },
         "challenge": [
           "Making link management look exciting and modern",
           "Showing the product's value quickly and clearly",
@@ -78,76 +90,142 @@
       },
       "TechStack": {
         "frontend": [
-            { "name": "React 18", "icon": "SiReact" },
-            { "name": "TypeScript", "icon": "SiTypescript" },
-            { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-            { "name": "Framer Motion", "icon": "SiFramer" },
-            { "name": "PWA", "icon": "MdInstallMobile" }
+          {
+            "name": "React 18",
+            "icon": "SiReact"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "SiTypescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "SiTailwindcss"
+          },
+          {
+            "name": "Framer Motion",
+            "icon": "SiFramer"
+          },
+          {
+            "name": "PWA",
+            "icon": "MdInstallMobile"
+          }
         ],
         "mobile": [
-            { "name": "React Native", "icon": "SiReact" },
-            { "name": "Expo", "icon": "SiExpo" }
+          {
+            "name": "React Native",
+            "icon": "SiReact"
+          },
+          {
+            "name": "Expo",
+            "icon": "SiExpo"
+          }
         ],
         "backend": [
-            { "name": "Node.js", "icon": "FaNodeJs" },
-            { "name": "Express", "icon": "SiExpress" },
-            { "name": "PostgreSQL", "icon": "SiPostgresql" },
-            { "name": "Redis", "icon": "SiRedis" }
+          {
+            "name": "Node.js",
+            "icon": "FaNodeJs"
+          },
+          {
+            "name": "Express",
+            "icon": "SiExpress"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "SiPostgresql"
+          },
+          {
+            "name": "Redis",
+            "icon": "SiRedis"
+          }
         ],
         "devops": [
-            { "name": "AWS", "icon": "FaAws" },
-            { "name": "Docker", "icon": "FaDocker" },
-            { "name": "Kubernetes", "icon": "SiKubernetes" },
-            { "name": "CloudFront", "icon": "SiAmazonwebservices" }
+          {
+            "name": "AWS",
+            "icon": "FaAws"
+          },
+          {
+            "name": "Docker",
+            "icon": "FaDocker"
+          },
+          {
+            "name": "Kubernetes",
+            "icon": "SiKubernetes"
+          },
+          {
+            "name": "CloudFront",
+            "icon": "SiAmazonwebservices"
+          }
         ],
         "tools": [
-            { "name": "Figma", "icon": "FaFigma" },
-            { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
-            { "name": "Mixpanel", "icon": "SiMixpanel" },
-            { "name": "Hotjar", "icon": "SiHotjar" }
+          {
+            "name": "Figma",
+            "icon": "FaFigma"
+          },
+          {
+            "name": "Google Analytics",
+            "icon": "SiGoogleanalytics"
+          },
+          {
+            "name": "Mixpanel",
+            "icon": "SiMixpanel"
+          },
+          {
+            "name": "Hotjar",
+            "icon": "SiHotjar"
+          }
         ],
         "security": [
-            { "name": "OAuth 2.0", "icon": "SiAuth0" },
-            { "name": "JWT", "icon": "SiJsonwebtokens" },
-            { "name": "SSL/TLS", "icon": "SiSst" },
-            { "name": "Rate Limiting", "icon": "MdSpeed" }
+          {
+            "name": "OAuth 2.0",
+            "icon": "SiAuth0"
+          },
+          {
+            "name": "JWT",
+            "icon": "SiJsonwebtokens"
+          },
+          {
+            "name": "SSL/TLS",
+            "icon": "SiSst"
+          },
+          {
+            "name": "Rate Limiting",
+            "icon": "MdSpeed"
+          }
         ]
       },
       "Gallery": {
-        "images": [
+        "caseStudy": "",
+        "livePreview": "/case-study/full-preview/interlynk.jpeg",
+        "desktop": [
           {
             "title": "Homepage Redesign",
             "description": "Clean, modern landing page with improved navigation and hero section",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Homepage"
           },
           {
             "title": "Product Catalog",
             "description": "Intuitive product browsing with advanced filtering and search",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Catalog"
           },
           {
             "title": "Checkout Process",
             "description": "Streamlined 2-step checkout with progress indicators",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Checkout"
           },
           {
             "title": "User Dashboard",
             "description": "Personalized user experience with order history and preferences",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Account"
           },
           {
             "title": "Mobile App",
             "description": "Native mobile experience with offline capabilities",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Mobile"
           }
         ]
@@ -159,7 +237,10 @@
     "components": {
       "HeroSection": {
         "category": "UI/UX Design",
-        "headline": { "h1": "Elevating the Brand for", "h2": "Brevix" },
+        "headline": {
+          "h1": "Elevating the Brand for",
+          "h2": "Brevix"
+        },
         "subtitle": "A sharp and professional landing page for a modern URL shortening service, focusing on trust and utility.",
         "cta": [
           {
@@ -176,9 +257,18 @@
         "title": "Brevix",
         "headline": "Short Links, Strong Design",
         "summary": "Crafted a professional and trustworthy frontend for a URL shortener, highlighting its key features and benefits.",
-        "client": { "name": "Brevix", "description": "A new service providing custom short links and click analytics for businesses." },
-        "duration": {"length": "3 Weeks", "description": "Quick turnaround to build a functional and aesthetically pleasing marketing site."},
-        "timeline": {"timeframe": "Q2 2024", "description": "Rapid design and development cycle to launch the service quickly."},
+        "client": {
+          "name": "Brevix",
+          "description": "A new service providing custom short links and click analytics for businesses."
+        },
+        "duration": {
+          "length": "3 Weeks",
+          "description": "Quick turnaround to build a functional and aesthetically pleasing marketing site."
+        },
+        "timeline": {
+          "timeframe": "Q2 2024",
+          "description": "Rapid design and development cycle to launch the service quickly."
+        },
         "challenge": [
           "Building trust for a new tool that handles important links",
           "Displaying data and analytics in a simple way",
@@ -233,76 +323,142 @@
       },
       "TechStack": {
         "frontend": [
-            { "name": "React 18", "icon": "SiReact" },
-            { "name": "TypeScript", "icon": "SiTypescript" },
-            { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-            { "name": "Framer Motion", "icon": "SiFramer" },
-            { "name": "PWA", "icon": "MdInstallMobile" }
+          {
+            "name": "React 18",
+            "icon": "SiReact"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "SiTypescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "SiTailwindcss"
+          },
+          {
+            "name": "Framer Motion",
+            "icon": "SiFramer"
+          },
+          {
+            "name": "PWA",
+            "icon": "MdInstallMobile"
+          }
         ],
         "mobile": [
-            { "name": "React Native", "icon": "SiReact" },
-            { "name": "Expo", "icon": "SiExpo" }
+          {
+            "name": "React Native",
+            "icon": "SiReact"
+          },
+          {
+            "name": "Expo",
+            "icon": "SiExpo"
+          }
         ],
         "backend": [
-            { "name": "Node.js", "icon": "FaNodeJs" },
-            { "name": "Express", "icon": "SiExpress" },
-            { "name": "PostgreSQL", "icon": "SiPostgresql" },
-            { "name": "Redis", "icon": "SiRedis" }
+          {
+            "name": "Node.js",
+            "icon": "FaNodeJs"
+          },
+          {
+            "name": "Express",
+            "icon": "SiExpress"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "SiPostgresql"
+          },
+          {
+            "name": "Redis",
+            "icon": "SiRedis"
+          }
         ],
         "devops": [
-            { "name": "AWS", "icon": "FaAws" },
-            { "name": "Docker", "icon": "FaDocker" },
-            { "name": "Kubernetes", "icon": "SiKubernetes" },
-            { "name": "CloudFront", "icon": "SiAmazonwebservices" }
+          {
+            "name": "AWS",
+            "icon": "FaAws"
+          },
+          {
+            "name": "Docker",
+            "icon": "FaDocker"
+          },
+          {
+            "name": "Kubernetes",
+            "icon": "SiKubernetes"
+          },
+          {
+            "name": "CloudFront",
+            "icon": "SiAmazonwebservices"
+          }
         ],
         "tools": [
-            { "name": "Figma", "icon": "FaFigma" },
-            { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
-            { "name": "Mixpanel", "icon": "SiMixpanel" },
-            { "name": "Hotjar", "icon": "SiHotjar" }
+          {
+            "name": "Figma",
+            "icon": "FaFigma"
+          },
+          {
+            "name": "Google Analytics",
+            "icon": "SiGoogleanalytics"
+          },
+          {
+            "name": "Mixpanel",
+            "icon": "SiMixpanel"
+          },
+          {
+            "name": "Hotjar",
+            "icon": "SiHotjar"
+          }
         ],
         "security": [
-            { "name": "OAuth 2.0", "icon": "SiAuth0" },
-            { "name": "JWT", "icon": "SiJsonwebtokens" },
-            { "name": "SSL/TLS", "icon": "SiSst" },
-            { "name": "Rate Limiting", "icon": "MdSpeed" }
+          {
+            "name": "OAuth 2.0",
+            "icon": "SiAuth0"
+          },
+          {
+            "name": "JWT",
+            "icon": "SiJsonwebtokens"
+          },
+          {
+            "name": "SSL/TLS",
+            "icon": "SiSst"
+          },
+          {
+            "name": "Rate Limiting",
+            "icon": "MdSpeed"
+          }
         ]
       },
       "Gallery": {
-        "images": [
+        "caseStudy": "",
+        "livePreview": "/case-study/full-preview/brevix.jpeg",
+        "desktop": [
           {
             "title": "Homepage Redesign",
             "description": "Clean, modern landing page with improved navigation and hero section",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Homepage"
           },
           {
             "title": "Product Catalog",
             "description": "Intuitive product browsing with advanced filtering and search",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Catalog"
           },
           {
             "title": "Checkout Process",
             "description": "Streamlined 2-step checkout with progress indicators",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Checkout"
           },
           {
             "title": "User Dashboard",
             "description": "Personalized user experience with order history and preferences",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Account"
           },
           {
             "title": "Mobile App",
             "description": "Native mobile experience with offline capabilities",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Mobile"
           }
         ]
@@ -314,7 +470,10 @@
     "components": {
       "HeroSection": {
         "category": "UI/UX Design",
-        "headline": { "h1": "High-Octane Design for", "h2": "Torque Craft" },
+        "headline": {
+          "h1": "High-Octane Design for",
+          "h2": "Torque Craft"
+        },
         "subtitle": "A powerful and dynamic landing page for a premium automotive parts and accessories brand.",
         "cta": [
           {
@@ -331,9 +490,18 @@
         "title": "Torque Craft",
         "headline": "Fueling Passion for Car Enthusiasts",
         "summary": "Designed a bold and energetic frontend for an automotive brand selling high-performance parts and accessories.",
-        "client": { "name": "Torque Craft", "description": "A brand focused on delivering quality car parts and accessories for enthusiasts and professionals." },
-        "duration": {"length": "5 Weeks", "description": "Detailed project to capture the brand's powerful and high-quality essence."},
-        "timeline": {"timeframe": "Q1 2024", "description": "From concept to final implementation, focusing on a immersive user experience."},
+        "client": {
+          "name": "Torque Craft",
+          "description": "A brand focused on delivering quality car parts and accessories for enthusiasts and professionals."
+        },
+        "duration": {
+          "length": "5 Weeks",
+          "description": "Detailed project to capture the brand's powerful and high-quality essence."
+        },
+        "timeline": {
+          "timeframe": "Q1 2024",
+          "description": "From concept to final implementation, focusing on a immersive user experience."
+        },
         "challenge": [
           "Creating a design that feels powerful and premium",
           "Showcasing a variety of products in an exciting way",
@@ -388,76 +556,142 @@
       },
       "TechStack": {
         "frontend": [
-            { "name": "React 18", "icon": "SiReact" },
-            { "name": "TypeScript", "icon": "SiTypescript" },
-            { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-            { "name": "Framer Motion", "icon": "SiFramer" },
-            { "name": "PWA", "icon": "MdInstallMobile" }
+          {
+            "name": "React 18",
+            "icon": "SiReact"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "SiTypescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "SiTailwindcss"
+          },
+          {
+            "name": "Framer Motion",
+            "icon": "SiFramer"
+          },
+          {
+            "name": "PWA",
+            "icon": "MdInstallMobile"
+          }
         ],
         "mobile": [
-            { "name": "React Native", "icon": "SiReact" },
-            { "name": "Expo", "icon": "SiExpo" }
+          {
+            "name": "React Native",
+            "icon": "SiReact"
+          },
+          {
+            "name": "Expo",
+            "icon": "SiExpo"
+          }
         ],
         "backend": [
-            { "name": "Node.js", "icon": "FaNodeJs" },
-            { "name": "Express", "icon": "SiExpress" },
-            { "name": "PostgreSQL", "icon": "SiPostgresql" },
-            { "name": "Redis", "icon": "SiRedis" }
+          {
+            "name": "Node.js",
+            "icon": "FaNodeJs"
+          },
+          {
+            "name": "Express",
+            "icon": "SiExpress"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "SiPostgresql"
+          },
+          {
+            "name": "Redis",
+            "icon": "SiRedis"
+          }
         ],
         "devops": [
-            { "name": "AWS", "icon": "FaAws" },
-            { "name": "Docker", "icon": "FaDocker" },
-            { "name": "Kubernetes", "icon": "SiKubernetes" },
-            { "name": "CloudFront", "icon": "SiAmazonwebservices" }
+          {
+            "name": "AWS",
+            "icon": "FaAws"
+          },
+          {
+            "name": "Docker",
+            "icon": "FaDocker"
+          },
+          {
+            "name": "Kubernetes",
+            "icon": "SiKubernetes"
+          },
+          {
+            "name": "CloudFront",
+            "icon": "SiAmazonwebservices"
+          }
         ],
         "tools": [
-            { "name": "Figma", "icon": "FaFigma" },
-            { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
-            { "name": "Mixpanel", "icon": "SiMixpanel" },
-            { "name": "Hotjar", "icon": "SiHotjar" }
+          {
+            "name": "Figma",
+            "icon": "FaFigma"
+          },
+          {
+            "name": "Google Analytics",
+            "icon": "SiGoogleanalytics"
+          },
+          {
+            "name": "Mixpanel",
+            "icon": "SiMixpanel"
+          },
+          {
+            "name": "Hotjar",
+            "icon": "SiHotjar"
+          }
         ],
         "security": [
-            { "name": "OAuth 2.0", "icon": "SiAuth0" },
-            { "name": "JWT", "icon": "SiJsonwebtokens" },
-            { "name": "SSL/TLS", "icon": "SiSst" },
-            { "name": "Rate Limiting", "icon": "MdSpeed" }
+          {
+            "name": "OAuth 2.0",
+            "icon": "SiAuth0"
+          },
+          {
+            "name": "JWT",
+            "icon": "SiJsonwebtokens"
+          },
+          {
+            "name": "SSL/TLS",
+            "icon": "SiSst"
+          },
+          {
+            "name": "Rate Limiting",
+            "icon": "MdSpeed"
+          }
         ]
       },
       "Gallery": {
-        "images": [
+        "caseStudy": "",
+        "livePreview": "/case-study/full-preview/torque.jpeg",
+        "desktop": [
           {
             "title": "Homepage Redesign",
             "description": "Clean, modern landing page with improved navigation and hero section",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Homepage"
           },
           {
             "title": "Product Catalog",
             "description": "Intuitive product browsing with advanced filtering and search",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Catalog"
           },
           {
             "title": "Checkout Process",
             "description": "Streamlined 2-step checkout with progress indicators",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Checkout"
           },
           {
             "title": "User Dashboard",
             "description": "Personalized user experience with order history and preferences",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Account"
           },
           {
             "title": "Mobile App",
             "description": "Native mobile experience with offline capabilities",
-            "desktop": "/api/placeholder/1200/800",
-            "mobile": "/api/placeholder/400/800",
+            "url": "/api/placeholder/1200/800",
             "category": "Mobile"
           }
         ]

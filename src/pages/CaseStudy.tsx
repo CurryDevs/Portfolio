@@ -59,7 +59,7 @@ const CaseStudy = ({ scrollTo }: { scrollTo?: string }) => {
         <HeroSection {...project.components.HeroSection} />
         <ProjectDetails {...project.components.ProjectDetails} />
         <TechStack techStack={project.components.TechStack} />
-        <Gallery />
+        <Gallery {...project.components.Gallery} />
       </main>
       <div className="mt-10">
         <Footer sectionLinks={footerLink} />
