@@ -5,15 +5,26 @@ import Gallery from "@/components/case-study/Gallery";
 import Footer from "@/components/layout/Footer";
 import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
 
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import data from "@/data/projects.json";
+import { useEffect } from "react";
 
 export type SectionLink = {
   name: string;
   link: string;
 };
 
-const CaseStudy = () => {
+const CaseStudy = ({ scrollTo }: { scrollTo?: string }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (scrollTo) {
+      const el = document.getElementById(scrollTo);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [scrollTo, location]);
   const { id } = useParams();
   const project = data.find((item) => item.id === id);
 
@@ -25,19 +36,19 @@ const CaseStudy = () => {
   const footerLink: SectionLink[] = [
     {
       name: "Home",
-      link: "/project-overview",
+      link: `/case-studies/${id}/`,
     },
     {
       name: "Overview",
-      link: "/project-details",
+      link: `/case-studies/${id}/project-overview`,
     },
     {
       name: "Technology",
-      link: "/tech-stack",
+      link: `/case-studies/${id}/tech-stack`,
     },
     {
       name: "Gallery",
-      link: "/project-gallery",
+      link: `/case-studies/${id}/project-gallery`,
     },
   ];
 
