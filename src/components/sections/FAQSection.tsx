@@ -42,7 +42,7 @@ const faqData: FAQItemType[] = [
   {
     question: "How do we communicate during the project?",
     answer:
-      "We stay in touch through email, chat, or project management tools like Trello or Notion. For discussions and updates, we can also connect through Google Meet or regular calls, along with scheduling demos to keep you involved throughout the process.",
+      "We stay in touch through Email, Whatsapp, Google Meeet & project management tool like Notion. For discussions and updates, we can also connect through Google Meet or regular calls, along with scheduling demos to keep you involved throughout the process.",
   },
   {
     question: "How can I reach out or get started?",
