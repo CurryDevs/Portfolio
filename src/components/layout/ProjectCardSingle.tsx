@@ -222,7 +222,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                             </motion.div>
                         </motion.div>
 
-                        {/* Description with Reveal Animation */}
+                        {/* Description */}
                         <motion.p
                             className="text-muted-foreground leading-relaxed text-sm line-clamp-2"
                             initial={{ height: 0, opacity: 0 }}
@@ -232,7 +232,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                             {project.summary}
                         </motion.p>
 
-                        {/* Tech Stack with Individual Animations */}
+                        {/* Tech Stack */}
                         <div className="flex flex-wrap gap-2">
                             {project.techStack.slice(0, 4).map((tech, index) => (
                                 <motion.span
@@ -266,9 +266,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                             )}
                         </div>
 
-                        {/* CTA with Magnetic Effect */}
+                        {/* CTA always at bottom */}
                         <motion.div
-                            className="pt-4 border-t border-foreground/10"
+                            className="pt-4 border-t border-foreground/10 mt-auto"
                             whileHover="hover"
                         >
                             <motion.div
