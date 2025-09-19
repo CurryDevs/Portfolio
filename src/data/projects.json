@@ -91,12 +91,28 @@
       "TechStack": {
         "frontend": [
           {
-            "name": "React 18",
+            "name": "Vite",
+            "icon": "SiVite"
+          },
+          {
+            "name": "React",
             "icon": "SiReact"
           },
           {
             "name": "TypeScript",
             "icon": "SiTypescript"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "SiJavascript"
+          },
+          {
+            "name": "HTML5",
+            "icon": "SiHtml5"
+          },
+          {
+            "name": "CSS3",
+            "icon": "SiCss3"
           },
           {
             "name": "Tailwind CSS",
@@ -105,56 +121,6 @@
           {
             "name": "Framer Motion",
             "icon": "SiFramer"
-          },
-          {
-            "name": "PWA",
-            "icon": "MdInstallMobile"
-          }
-        ],
-        "mobile": [
-          {
-            "name": "React Native",
-            "icon": "SiReact"
-          },
-          {
-            "name": "Expo",
-            "icon": "SiExpo"
-          }
-        ],
-        "backend": [
-          {
-            "name": "Node.js",
-            "icon": "FaNodeJs"
-          },
-          {
-            "name": "Express",
-            "icon": "SiExpress"
-          },
-          {
-            "name": "PostgreSQL",
-            "icon": "SiPostgresql"
-          },
-          {
-            "name": "Redis",
-            "icon": "SiRedis"
-          }
-        ],
-        "devops": [
-          {
-            "name": "AWS",
-            "icon": "FaAws"
-          },
-          {
-            "name": "Docker",
-            "icon": "FaDocker"
-          },
-          {
-            "name": "Kubernetes",
-            "icon": "SiKubernetes"
-          },
-          {
-            "name": "CloudFront",
-            "icon": "SiAmazonwebservices"
           }
         ],
         "tools": [
@@ -167,30 +133,14 @@
             "icon": "SiGoogleanalytics"
           },
           {
-            "name": "Mixpanel",
-            "icon": "SiMixpanel"
-          },
-          {
             "name": "Hotjar",
             "icon": "SiHotjar"
           }
         ],
         "security": [
           {
-            "name": "OAuth 2.0",
-            "icon": "SiAuth0"
-          },
-          {
-            "name": "JWT",
-            "icon": "SiJsonwebtokens"
-          },
-          {
             "name": "SSL/TLS",
             "icon": "SiSst"
-          },
-          {
-            "name": "Rate Limiting",
-            "icon": "MdSpeed"
           }
         ]
       },
@@ -336,106 +286,36 @@
       "TechStack": {
         "frontend": [
           {
-            "name": "React 18",
-            "icon": "SiReact"
+            "name": "Vite",
+            "icon": "SiVite"
           },
           {
             "name": "TypeScript",
             "icon": "SiTypescript"
           },
           {
-            "name": "Tailwind CSS",
-            "icon": "SiTailwindcss"
+            "name": "JavaScript",
+            "icon": "SiJavascript"
           },
           {
-            "name": "Framer Motion",
-            "icon": "SiFramer"
+            "name": "HTML5",
+            "icon": "SiHtml5"
           },
           {
-            "name": "PWA",
-            "icon": "MdInstallMobile"
-          }
-        ],
-        "mobile": [
-          {
-            "name": "React Native",
-            "icon": "SiReact"
-          },
-          {
-            "name": "Expo",
-            "icon": "SiExpo"
-          }
-        ],
-        "backend": [
-          {
-            "name": "Node.js",
-            "icon": "FaNodeJs"
-          },
-          {
-            "name": "Express",
-            "icon": "SiExpress"
-          },
-          {
-            "name": "PostgreSQL",
-            "icon": "SiPostgresql"
-          },
-          {
-            "name": "Redis",
-            "icon": "SiRedis"
-          }
-        ],
-        "devops": [
-          {
-            "name": "AWS",
-            "icon": "FaAws"
-          },
-          {
-            "name": "Docker",
-            "icon": "FaDocker"
-          },
-          {
-            "name": "Kubernetes",
-            "icon": "SiKubernetes"
-          },
-          {
-            "name": "CloudFront",
-            "icon": "SiAmazonwebservices"
+            "name": "CSS3",
+            "icon": "SiCss3"
           }
         ],
         "tools": [
           {
             "name": "Figma",
             "icon": "FaFigma"
-          },
-          {
-            "name": "Google Analytics",
-            "icon": "SiGoogleanalytics"
-          },
-          {
-            "name": "Mixpanel",
-            "icon": "SiMixpanel"
-          },
-          {
-            "name": "Hotjar",
-            "icon": "SiHotjar"
           }
         ],
         "security": [
           {
-            "name": "OAuth 2.0",
-            "icon": "SiAuth0"
-          },
-          {
-            "name": "JWT",
-            "icon": "SiJsonwebtokens"
-          },
-          {
             "name": "SSL/TLS",
             "icon": "SiSst"
-          },
-          {
-            "name": "Rate Limiting",
-            "icon": "MdSpeed"
           }
         ]
       },
@@ -588,12 +468,32 @@
       "TechStack": {
         "frontend": [
           {
-            "name": "React 18",
+            "name": "Astro",
+            "icon": "SiAstro"
+          },
+          {
+            "name": "MDX",
+            "icon": "SiMdx"
+          },
+          {
+            "name": "React",
             "icon": "SiReact"
           },
           {
             "name": "TypeScript",
             "icon": "SiTypescript"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "SiJavascript"
+          },
+          {
+            "name": "HTML5",
+            "icon": "SiHtml5"
+          },
+          {
+            "name": "CSS3",
+            "icon": "SiCss3"
           },
           {
             "name": "Tailwind CSS",
@@ -602,56 +502,6 @@
           {
             "name": "Framer Motion",
             "icon": "SiFramer"
-          },
-          {
-            "name": "PWA",
-            "icon": "MdInstallMobile"
-          }
-        ],
-        "mobile": [
-          {
-            "name": "React Native",
-            "icon": "SiReact"
-          },
-          {
-            "name": "Expo",
-            "icon": "SiExpo"
-          }
-        ],
-        "backend": [
-          {
-            "name": "Node.js",
-            "icon": "FaNodeJs"
-          },
-          {
-            "name": "Express",
-            "icon": "SiExpress"
-          },
-          {
-            "name": "PostgreSQL",
-            "icon": "SiPostgresql"
-          },
-          {
-            "name": "Redis",
-            "icon": "SiRedis"
-          }
-        ],
-        "devops": [
-          {
-            "name": "AWS",
-            "icon": "FaAws"
-          },
-          {
-            "name": "Docker",
-            "icon": "FaDocker"
-          },
-          {
-            "name": "Kubernetes",
-            "icon": "SiKubernetes"
-          },
-          {
-            "name": "CloudFront",
-            "icon": "SiAmazonwebservices"
           }
         ],
         "tools": [
@@ -664,30 +514,14 @@
             "icon": "SiGoogleanalytics"
           },
           {
-            "name": "Mixpanel",
-            "icon": "SiMixpanel"
-          },
-          {
             "name": "Hotjar",
             "icon": "SiHotjar"
           }
         ],
         "security": [
           {
-            "name": "OAuth 2.0",
-            "icon": "SiAuth0"
-          },
-          {
-            "name": "JWT",
-            "icon": "SiJsonwebtokens"
-          },
-          {
             "name": "SSL/TLS",
             "icon": "SiSst"
-          },
-          {
-            "name": "Rate Limiting",
-            "icon": "MdSpeed"
           }
         ]
       },
