@@ -10,32 +10,47 @@ type FAQItemType = {
 
 const faqData: FAQItemType[] = [
   {
-    question: "What is web development?",
+    question: "What services do you offer?",
     answer:
-      "Web development is the process of building and maintaining websites. It involves a combination of client-side and server-side programming, database management, and other web-related technologies.",
+      "We provide end-to-end development services including frontend, backend, and full-stack web development. We also work on UI/UX design, API integrations, and custom solutions tailored to your business needs.",
   },
   {
-    question: "What programming languages are essential for web development?",
+    question: "How does the project process work?",
     answer:
-      "Essential languages for web development include HTML, CSS, and JavaScript for front-end development. For back-end development, popular languages include Python, Ruby, PHP, Java, and Node.js.",
+      "We start by understanding your requirements and goals. Then we create a project roadmap, break it into milestones, and share regular progress updates. You’ll be involved in every stage to ensure the final product matches your vision.",
   },
   {
-    question:
-      "What's the difference between front-end and back-end development?",
+    question: "How long does a project usually take?",
     answer:
-      "Front-end development focuses on the user interface and user experience of a website, while back-end development deals with server-side logic, databases, and application integration.",
+      "It depends on the complexity and scope. Small projects like landing pages or portfolio websites can take 1–2 weeks, while larger web applications may take 1–3 months. We’ll give you a clear timeline after discussing your requirements.",
   },
   {
-    question: "How long does it typically take to develop a website?",
+    question: "What is your pricing model?",
     answer:
-      "The time to develop a website can vary greatly depending on its complexity. A simple static website might take a few days, while a complex web application could take several months or even years.",
+      "We offer flexible pricing based on the project scope. For small projects, we usually charge a fixed price. For larger or ongoing work, we provide milestone-based payments. We’ll give you a detailed estimate before starting.",
   },
   {
-    question: "What is responsive web design?",
+    question: "Do you provide ongoing support after project delivery?",
     answer:
-      "Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. It ensures that websites are accessible and visually appealing across different platforms.",
+      "Yes, we provide post-launch support, maintenance, and updates to ensure your product runs smoothly. We can also set up a long-term support plan if you need continuous improvements.",
+  },
+  {
+    question: "Can you work with existing projects or codebases?",
+    answer:
+      "Absolutely. We can help improve, optimize, or extend existing applications. We’ll review the current codebase and suggest the best approach before starting.",
+  },
+  {
+    question: "How do we communicate during the project?",
+    answer:
+      "We stay in touch through email, chat, or project management tools like Trello or Notion. For discussions and updates, we can also connect through Google Meet or regular calls, along with scheduling demos to keep you involved throughout the process.",
+  },
+  {
+    question: "How can I reach out or get started?",
+    answer:
+      "You’re welcome to reach out anytime! You can easily book a free consultation call using the button at the top right corner of our website. This helps us understand your needs and guide you through the best way to move forward.",
   },
 ];
+
 
 const FAQSection: React.FC = () => {
   return (
