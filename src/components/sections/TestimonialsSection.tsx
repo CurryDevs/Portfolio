@@ -84,143 +84,145 @@ export function TestimonialCard({
 
 const testimonials = [
   {
-    name: "Alex Rivera",
-    role: "UI/UX Lead at InnovateTech",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
+    name: "Varun Mehta",
+    role: "UI/UX Lead at DesignWorks",
+    img: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=40&h=40&fit=crop&crop=face",
     description: (
       <p>
-        Working with CurryDevs has revolutionized our design process.{" "}
+        CurryDevs completely changed how we approach design.{" "}
         <Highlight>
-          Their reusable, animated components make it easy to deliver
-          cutting-edge designs.
+          Their reusable, animated components made our workflows smoother and
+          more creative.
         </Highlight>{" "}
-        A must-have for any design team.
+        Truly a game-changer for design teams.
       </p>
     ),
   },
   {
-    name: "Samantha Lee",
-    role: "Frontend Engineer at NextGen Solutions",
-    img: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
+    name: "Suhani Sharma",
+    role: "Frontend Engineer at CodeSphere",
+    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=40&h=40&fit=crop&crop=face",
     description: (
       <p>
-        CurryDevs' templates have drastically improved our development speed.{" "}
+        Our development speed skyrocketed with CurryDevs’ templates.{" "}
         <Highlight>
-          We've reduced project timelines by 70%, delivering high-quality UIs
-          effortlessly.
+          Project timelines were cut in half while maintaining top quality.
         </Highlight>{" "}
-        Highly recommend them to fellow developers.
+        Couldn’t recommend them more.
       </p>
     ),
   },
   {
     name: "Raj Patel",
     role: "Founder at Startup Studio",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+    img: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=40&h=40&fit=crop&crop=face",
     description: (
       <p>
-        As a startup founder, I need tools that help us grow fast without
-        sacrificing quality. CurryDevs' stunning designs and simple integration
-        have made them an essential part of our workflow.{" "}
-        <Highlight>Our clients love our modern interfaces.</Highlight>
-      </p>
-    ),
-  },
-  {
-    name: "Emily Chen",
-    role: "Product Designer at Global Systems",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face",
-    description: (
-      <p>
-        CurryDevs' prebuilt components have made it so easy to create intuitive
-        and compliant designs.{" "}
+        As a startup, speed and quality are critical. CurryDevs delivered both.{" "}
         <Highlight>
-          It's perfect for tackling complex workflows with style.
+          Our clients instantly noticed the modern and polished interfaces.
         </Highlight>{" "}
-        A must-have for any product designer.
+        Essential for any growing business.
       </p>
     ),
   },
   {
-    name: "Michael Brown",
-    role: "Creative Director at FinTech Innovations",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face",
-    description: (
-      <p>
-        CurryDevs' animations and design elements have elevated our fintech
-        app's user experience.{" "}
-        <Highlight>The feedback on our new design is phenomenal.</Highlight>{" "}
-        It's a game-changer for user-centric applications.
-      </p>
-    ),
-  },
-  {
-    name: "Linda Wu",
-    role: "Web Developer at LogiChain Solutions",
+    name: "Ananya Gupta",
+    role: "Product Designer at BrightApps",
     img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=40&h=40&fit=crop&crop=face",
     description: (
       <p>
-        CurryDevs' component library has simplified web development for our
-        logistics dashboard.{" "}
+        CurryDevs made it effortless to design intuitive experiences.{" "}
         <Highlight>
-          Building custom layouts has never been this efficient.
+          Their prebuilt components save time and look stunning in production.
+        </Highlight>{" "}
+        Perfect for tackling complex projects.
+      </p>
+    ),
+  },
+  {
+    name: "Praneeth Reddy",
+    role: "Creative Director at FinEdge",
+    img: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=40&h=40&fit=crop&crop=face",
+    description: (
+      <p>
+        Our fintech platform’s user experience has improved massively.{" "}
+        <Highlight>
+          The smooth animations and clean UI have received incredible feedback.
+        </Highlight>{" "}
+        CurryDevs exceeded expectations.
+      </p>
+    ),
+  },
+  {
+    name: "Khushi Agarwal",
+    role: "Web Developer at LogiChain",
+    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face",
+    description: (
+      <p>
+        Building dashboards has never been easier.{" "}
+        <Highlight>
+          CurryDevs’ component library made our logistics platform efficient and
+          beautiful.
         </Highlight>
       </p>
     ),
   },
   {
-    name: "Carlos Gomez",
-    role: "Digital Marketing Specialist at EcoTech",
+    name: "Aman Joshi",
+    role: "Marketing Specialist at EcoRise",
     img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=40&h=40&fit=crop&crop=face",
     description: (
       <p>
-        CurryDevs' responsive designs have helped us create marketing sites that
-        look amazing on every device.{" "}
+        Thanks to CurryDevs, our marketing sites look flawless on every device.{" "}
         <Highlight>
-          It's revolutionized how we approach branding online.
+          It has completely changed the way we approach online branding.
         </Highlight>
       </p>
     ),
   },
   {
     name: "Aisha Khan",
-    role: "E-commerce Product Manager at FashionForward",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face",
+    role: "E-commerce Manager at TrendHive",
+    img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=40&h=40&fit=crop&crop=face",
     description: (
       <p>
-        CurryDevs' beautifully crafted components have completely transformed
-        our fashion storefront.{" "}
-        <Highlight>Customers love the dynamic shopping experience.</Highlight>
-      </p>
-    ),
-  },
-  {
-    name: "Tom Chen",
-    role: "Healthcare App Designer at HealthTech Solutions",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
-    description: (
-      <p>
-        CurryDevs has made it easy to create user-friendly, accessible
-        interfaces for our healthcare apps.{" "}
-        <Highlight>It's a crucial part of our design system.</Highlight>
-      </p>
-    ),
-  },
-  {
-    name: "Sofia Patel",
-    role: "EdTech Founder at EduSafe Innovations",
-    img: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=40&h=40&fit=crop&crop=face",
-    description: (
-      <p>
-        CurryDevs' education-focused templates have doubled our platform's
-        usability.{" "}
+        Our fashion storefront was completely transformed.{" "}
         <Highlight>
-          It's tailor-made for addressing student and teacher needs.
+          Customers love the sleek, dynamic shopping experience CurryDevs
+          created.
+        </Highlight>
+      </p>
+    ),
+  },
+  {
+    name: "David Kim",
+    role: "Healthcare App Designer at MediTech",
+    img: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=40&h=40&fit=crop&crop=face",
+    description: (
+      <p>
+        CurryDevs helped us build healthcare apps that are{" "}
+        <Highlight>user-friendly, accessible, and reliable.</Highlight> Their
+        work is now part of our design system.
+      </p>
+    ),
+  },
+  {
+    name: "Sparsh Jain",
+    role: "EdTech Founder at Learnify",
+    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=40&h=40&fit=crop&crop=face",
+    description: (
+      <p>
+        CurryDevs doubled our platform’s usability with education-focused
+        designs.{" "}
+        <Highlight>
+          Teachers and students alike love the intuitive interface.
         </Highlight>
       </p>
     ),
   },
 ];
+
 
 export function TestimonialsSection() {
   return (
