@@ -7,10 +7,10 @@ export interface Project {
     id: string;
     title: string;
     client: string;
-    techStack: string[];
     summary: string;
-    url: string;    
     image: string;
+    url: string;
+    techStack: string[];
 }
 
 interface ProjectCardProps {
@@ -150,11 +150,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                             alt={`${project.title} showcase`}
                             className={`w-full h-full object-cover transition-all duration-700 ${imageLoaded ? 'opacity-100' : 'opacity-0'
                                 }`}
-                            style={{
-                                filter: isHovered
-                                    ? 'grayscale(0%) contrast(1.1) brightness(1.1) saturate(0.1)'
-                                    : 'grayscale(100%) contrast(1.2) brightness(0.9)',
-                            }}
                             onLoad={() => setImageLoaded(true)}
                             animate={{
                                 scale: isHovered ? 1.05 : 1,
@@ -187,9 +182,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     </div>
 
                     {/* Content Section with Micro-animations */}
-                    <div className=" p-8 flex flex-col justify-between h-full">
+                    <div className="p-8 space-y-6">
                         {/* Header with Staggered Animation */}
-                        <div  className="space-y-6">
                         <motion.div
                             className="space-y-2"
                             initial="hidden"
@@ -230,7 +224,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
                         {/* Description with Reveal Animation */}
                         <motion.p
-                            className="text-muted-foreground leading-relaxed text-sm line-clamp-3"
+                            className="text-muted-foreground leading-relaxed text-sm line-clamp-2"
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             transition={{ delay: 0.2, duration: 0.6 }}
@@ -270,7 +264,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                                     +{project.techStack.length - 4}
                                 </motion.span>
                             )}
-                        </div>
                         </div>
 
                         {/* CTA with Magnetic Effect */}
