@@ -1,6 +1,6 @@
 import {
   SiReact, SiTypescript, SiTailwindcss, SiFramer, SiExpo, SiExpress, SiPostgresql, SiRedis,
-  SiKubernetes, SiAmazonwebservices, SiGoogleanalytics, SiMixpanel, SiHotjar, SiAuth0, SiJsonwebtokens, SiSst, SiAstro, SiMdx, SiJavascript, SiHtml5, SiCss3, 
+  SiKubernetes, SiAmazonwebservices, SiGoogleanalytics, SiMixpanel, SiHotjar, SiAuth0, SiJsonwebtokens, SiSst
 } from "react-icons/si";
 import { FaNodeJs, FaAws, FaDocker, FaFigma } from "react-icons/fa";
 import { MdInstallMobile, MdSpeed } from "react-icons/md";
@@ -9,7 +9,7 @@ import { MdInstallMobile, MdSpeed } from "react-icons/md";
 const iconMap = {
   SiReact, SiTypescript, SiTailwindcss, SiFramer, SiExpo, FaNodeJs, SiExpress, SiPostgresql, SiRedis,
   FaAws, FaDocker, SiKubernetes, SiAmazonwebservices, FaFigma, SiGoogleanalytics, SiMixpanel, SiHotjar,
-  SiAuth0, SiJsonwebtokens, SiSst, MdInstallMobile, MdSpeed,SiAstro, SiMdx, SiJavascript, SiHtml5, SiCss3
+  SiAuth0, SiJsonwebtokens, SiSst, MdInstallMobile, MdSpeed
 };
 
 const TechStack = ({ techStack }) => {
