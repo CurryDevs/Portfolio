@@ -4,7 +4,7 @@ import { ProjectCard } from "@/components/layout/ProjectCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
+import items from "@/data/caseStudy.json";
 
 interface GalleryItem {
   id: string;
@@ -15,60 +15,13 @@ interface GalleryItem {
 }
 
 interface ProjectSectionProps {
-  heading?: string;
-  demoUrl?: string;
   items?: GalleryItem[];
 }
 
-const ProjectSection = ({
-  items = [
-    {
-      id: "interlynk",
-      title: "Build Modern UIs",
-      summary:
-        "Create stunning user interfaces with our comprehensive design system.",
-      url: "#",
-      image:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80&sat=-100",
-    },
-    {
-      id: "brevix",
-      title: "Computer Vision Technology",
-      summary:
-        "Powerful image recognition and processing capabilities that allow AI systems to analyze, understand, and interpret visual information from the world.",
-      url: "#",
-      image:
-        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80&sat=-100",
-    },
-    {
-      id: "torque-craft",
-      title: "Machine Learning Automation",
-      summary:
-        "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",
-      url: "#",
-      image:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80&sat=-100",
-    },
-    {
-      id: "item-4",
-      title: "Predictive Analytics",
-      summary:
-        "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
-      url: "#",
-      image:
-        "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80&sat=-100",
-    },
-    {
-      id: "item-5",
-      title: "Neural Network Architecture",
-      summary:
-        "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-      url: "#",
-      image:
-        "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80&sat=-100",
-    },
-  ],
-}: ProjectSectionProps) => {
+const ProjectSection = ({ items: propItems = items }: ProjectSectionProps) => {
+  // Use propItems if provided, otherwise fall back to imported JSON
+  const displayItems = propItems || items;
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
 
@@ -95,7 +48,7 @@ const ProjectSection = ({
     };
   }, []);
 
-  const maxIndex = Math.max(0, items.length - itemsPerView);
+  const maxIndex = Math.max(0, displayItems.length - itemsPerView);
 
   const goNext = () => {
     setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
@@ -104,8 +57,6 @@ const ProjectSection = ({
   const goPrev = () => {
     setCurrentIndex((prev) => Math.max(prev - 1, 0));
   };
-
-
 
   const canGoPrev = currentIndex > 0;
   const canGoNext = currentIndex < maxIndex;
@@ -144,9 +95,10 @@ const ProjectSection = ({
               onClick={goPrev}
               disabled={!canGoPrev}
               className={`flex h-14 w-14 items-center justify-center rounded-full shadow-lg border-2 transition-colors duration-200
-                ${canGoPrev
-                  ? "bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95"
-                  : "bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60"
+                ${
+                  canGoPrev
+                    ? "bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95"
+                    : "bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60"
                 }
               `}
               aria-label="Previous projects"
@@ -157,9 +109,10 @@ const ProjectSection = ({
               onClick={goNext}
               disabled={!canGoNext}
               className={`flex h-14 w-14 items-center justify-center rounded-full shadow-lg border-2 transition-colors duration-200
-                ${canGoNext
-                  ? "bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95"
-                  : "bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60"
+                ${
+                  canGoNext
+                    ? "bg-accent text-accentCS-foreground border-accent hover:bg-accent/90 hover:scale-105 active:scale-95"
+                    : "bg-muted text-muted-foreground border-muted cursor-not-allowed opacity-60"
                 }
               `}
               aria-label="Next projects"
@@ -176,7 +129,7 @@ const ProjectSection = ({
               transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
             }}
           >
-            {items.map((item) => (
+            {displayItems.map((item) => (
               <div
                 key={item.id}
                 className="flex-shrink-0 px-3"
