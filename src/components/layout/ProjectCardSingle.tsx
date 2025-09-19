@@ -154,19 +154,19 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                             animate={{
                                 scale: isHovered ? 1.05 : 1,
                             }}
-                            transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+                            transition={{ duration: 0.1, ease: "easeInOut" }}
                         />
 
                         {/* Dynamic Overlay */}
-                        <motion.div
+                        {/* <motion.div
                             className="absolute inset-0"
                             animate={{
                                 background: isHovered
-                                    ? 'linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%)'
+                                    ? ''
                                     : 'linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%)'
                             }}
                             transition={{ duration: 0.5 }}
-                        />
+                        /> */}
 
                         {/* Floating Corner Element */}
                         <motion.div

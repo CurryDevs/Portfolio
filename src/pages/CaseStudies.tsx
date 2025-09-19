@@ -90,7 +90,7 @@ const CaseStudies = ({ items: propItems = projects }: ProjectsProps) => {
         </div>
       </main>
 
-      <div className="mt-10">
+      <div className="mt-40">
         <Footer />
       </div>
     </div>

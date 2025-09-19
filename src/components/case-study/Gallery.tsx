@@ -7,6 +7,7 @@ import {
   Smartphone,
   Monitor,
 } from "lucide-react";
+import React from "react";
 import FullPreview from "./FullPreview";
 
 type GalleryProps = {
@@ -20,6 +21,24 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
   const [viewMode, setViewMode] = useState<"desktop" | "mobile" | "full">(
     "full"
   );
+
+  // Keyboard navigation for lightbox
+  React.useEffect(() => {
+    if (selectedImage === null) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        navigateImage('prev');
+      } else if (e.key === 'ArrowRight') {
+        navigateImage('next');
+      } else if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedImage]);
 
   const openLightbox = (index: number) => {
     setSelectedImage(index);
