@@ -18,7 +18,7 @@ type GalleryProps = {
 const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [viewMode, setViewMode] = useState<"desktop" | "mobile" | "full">(
-    "desktop"
+    "full"
   );
 
   // Mock image data - in real project these would be actual screenshots

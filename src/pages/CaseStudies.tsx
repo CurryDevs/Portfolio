@@ -1,11 +1,10 @@
 import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
-import { ProjectSection } from "@/components/sections/ProjectSection";
+import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import Footer from "@/components/layout/Footer";
 import { useEffect, useState } from "react";
 import { ProjectCard } from "@/components/layout/ProjectCardSingle";
 
 const CaseStudies = () => {
-
   const items = [
     {
       id: "interlynk",
@@ -66,7 +65,7 @@ const CaseStudies = () => {
   useEffect(() => {
     const handleResize = () => {
       // Keep 1 item per row for all screen sizes
-      setItemsPerView(1); 
+      setItemsPerView(1);
 
       // Reset index on resize to avoid empty spaces
       setCurrentIndex(0);
@@ -89,29 +88,31 @@ const CaseStudies = () => {
     <div className="min-h-screen">
       <AdvancedHeader />
       <main>
-        
         <section id="case-studies" className="py-32 bg-background relative">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-    <div className="flex flex-col gap-y-20">
-      <div className="mb-12 text-center">
-  <h2 className="text-4xl font-bold tracking-tight text-foreground">Case Studies</h2>
-  <p className="mt-2 text-muted-foreground text-lg max-w-2xl mx-auto">
-    A selection of projects showcasing our technical expertise.
-  </p>
-</div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="flex flex-col gap-y-20">
+              <div className="relative z-10 flex flex-col items-center justify-center">
+                {/* <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
+                  CASE STUDIES
+                </span> */}
+                <div className="inline-flex items-center px-4 py-2 bg-black rounded-full glass mb-8 animate-fade-in">
+                  <LiquidButton className="z-10 -translate-x-1/2 -translate-y-1/2">
+                    CASE STUDIES
+                  </LiquidButton>
+                </div>
+                <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+                  Client Projects
+                </h2>
+              </div>
 
-      {items.map((item) => (
-        <div
-          key={item.id}
-          className="flex-shrink-0 w-full"
-        >
-          <ProjectCard project={item} />
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+              {items.map((item) => (
+                <div key={item.id} className="flex-shrink-0 w-full">
+                  <ProjectCard project={item} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
       <div className="mt-10">
         <Footer />
