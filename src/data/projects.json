@@ -484,7 +484,8 @@
             "description": "Native mobile experience with offline capabilities",
             "url": "/case-study/desktop-view/brevix/faq.png",
             "category": "FAQ"
-          },          {
+          },
+          {
             "id": 7,
             "title": "CTA + Footer",
             "description": "Native mobile experience with offline capabilities",
@@ -697,49 +698,85 @@
           {
             "id": 1,
             "title": "Homepage Design",
-            "description": "Clean, modern landing page with improved navigation and hero section",
-            "url": "/case-study/desktop-view/brevix/header.png",
+            "description": "Clean, modern landing page with improved navigation, hero section, and brand-focused visuals.",
+            "url": "/case-study/desktop-view/torque/header.png",
             "category": "Homepage"
           },
           {
             "id": 2,
-            "title": "Benefits",
-            "description": "Intuitive product browsing with advanced filtering and search",
-            "url": "/case-study/desktop-view/brevix/benefits.png",
-            "category": "Catalog"
+            "title": "Insights",
+            "description": "Engaging insights section highlighting key industry updates and product knowledge.",
+            "url": "/case-study/desktop-view/torque/insights.png",
+            "category": "Insights"
           },
           {
             "id": 3,
-            "title": "Features Overvie",
-            "description": "Streamlined 2-step checkout with progress indicators",
-            "url": "/case-study/desktop-view/brevix/features.png",
-            "category": "Features"
+            "title": "Products",
+            "description": "Well-structured product listing page with clear categorization and filters.",
+            "url": "/case-study/desktop-view/torque/product.png",
+            "category": "Products"
           },
           {
             "id": 4,
-            "title": "Extended Features",
-            "description": "Streamlined 2-step checkout with progress indicators",
-            "url": "/case-study/desktop-view/brevix/features2.png",
-            "category": "Features"
+            "title": "Product Specification",
+            "description": "Detailed product specification layout providing technical details in a structured format.",
+            "url": "/case-study/desktop-view/torque/blog.png",
+            "category": "Product Details"
           },
           {
             "id": 5,
-            "title": "Results",
-            "description": "Native mobile experience with offline capabilities",
-            "url": "/case-study/desktop-view/brevix/result.png",
-            "category": "Results"
+            "title": "Product Description",
+            "description": "Comprehensive product description page with visuals, features, and benefits.",
+            "url": "/case-study/desktop-view/torque/result.png",
+            "category": "Product Details"
           },
           {
             "id": 6,
-            "title": "FAQ Section",
-            "description": "Native mobile experience with offline capabilities",
-            "url": "/case-study/desktop-view/brevix/faq.png",
-            "category": "FAQ"
-          },          {
+            "title": "Single Product Section",
+            "description": "Dedicated single product view with clear call-to-actions and focused design.",
+            "url": "/case-study/desktop-view/torque/singleProduct.png",
+            "category": "Product Details"
+          },
+          {
             "id": 7,
-            "title": "CTA + Footer",
-            "description": "Native mobile experience with offline capabilities",
-            "url": "/case-study/desktop-view/brevix/ctaFooter.png",
+            "title": "BluePrint Section",
+            "description": "Showcasing the blueprint or process flow with diagrams and structured design.",
+            "url": "/case-study/desktop-view/torque/blueprints.png",
+            "category": "Process"
+          },
+          {
+            "id": 8,
+            "title": "Blogs",
+            "description": "Well-organized blog section with featured posts, categories, and modern typography.",
+            "url": "/case-study/desktop-view/torque/blog.png",
+            "category": "Blogs"
+          },
+          {
+            "id": 9,
+            "title": "Services Section",
+            "description": "Clear and attractive services layout highlighting offerings and value propositions.",
+            "url": "/case-study/desktop-view/torque/services.png",
+            "category": "Services"
+          },
+          {
+            "id": 10,
+            "title": "Contact Us",
+            "description": "User-friendly contact page with forms, details, and location information.",
+            "url": "/case-study/desktop-view/torque/contact.png",
+            "category": "Contact"
+          },
+          {
+            "id": 11,
+            "title": "Result Section",
+            "description": "Impactful results section showcasing outcomes, metrics, and success stories.",
+            "url": "/case-study/desktop-view/torque/result.png",
+            "category": "Results"
+          },
+          {
+            "id": 12,
+            "title": "Footer",
+            "description": "Clean footer design with navigation, social links, and quick access to resources.",
+            "url": "/case-study/desktop-view/torque/footer.png",
             "category": "Footer"
           }
         ]

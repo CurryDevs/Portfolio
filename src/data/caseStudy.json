@@ -53,7 +53,7 @@
     },
     {
         "id": "item-5",
-        "title": "Neural Network Architecture",
+        "title": "Neural Network",
         "techStack": [
             "Python",
             "PyTorch",
