@@ -101,12 +101,12 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
         {viewMode === "full" ? (
           <FullPreview livePreview={livePreview} />
         ) : (
-          <div className="grid grid-cols-1 min-[461px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-2 xs:gap-3 sm:gap-5 md:gap-8">
+          <div className="grid grid-cols-1 min-[461px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-5 md:gap-8 px-3 xs:px-4 sm:px-0">
             {desktop.map((image, index) => (
               <div
                 key={image.id}
-                className="group relative overflow-hidden rounded-md xs:rounded-lg sm:rounded-xl neumorphic hover-lift cursor-pointer animate-scale-in"
-                style={{ animationDelay: `${0.1 * index}s` }}
+                className="group relative overflow-hidden rounded-lg sm:rounded-xl neumorphic hover-lift cursor-pointer animate-scale-in"
+                style={{ animationDelay: `${0.1 * index}s`, maxWidth: '420px', margin: '0 auto' }}
                 onClick={() => openLightbox(index)}
               >
                 {/* Image Container */}
@@ -130,8 +130,8 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
                 </div>
 
                 {/* Content */}
-                <div className="p-1.5 xs:p-2 sm:p-4">
-                  <h3 className="text-md xs:text-lg sm:text-xl font-semibold text-text-primary mb-0.5 xs:mb-1 sm:mb-2 group-hover:text-accentCS transition-colors">
+                <div className="px-3 py-2 sm:p-4">
+                  <h3 className="text-base xs:text-lg sm:text-xl font-semibold text-text-primary mb-1 sm:mb-2 group-hover:text-accentCS transition-colors">
                     {image.title}
                   </h3>
                   <p className="text-text-secondary font-thin text-xs sm:text-sm md:text-base">
