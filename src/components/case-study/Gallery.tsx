@@ -20,7 +20,7 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
   const [viewMode, setViewMode] = useState<"desktop" | "mobile" | "full">(
     "full"
   );
-  
+
   const openLightbox = (index: number) => {
     setSelectedImage(index);
     document.body.style.overflow = "hidden";
@@ -64,8 +64,8 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
             <button
               onClick={() => setViewMode("full")}
               className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === "full"
-                  ? "bg-accent text-accentCS-foreground shadow-sm"
-                  : "text-text-secondary hover:text-text-primary"
+                ? "bg-accent text-accentCS-foreground shadow-sm"
+                : "text-text-secondary hover:text-text-primary"
                 }`}
               style={{ minWidth: "0", minHeight: "0" }}
             >
@@ -75,8 +75,8 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
             <button
               onClick={() => setViewMode("desktop")}
               className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === "desktop"
-                  ? "bg-accent text-accentCS-foreground shadow-sm"
-                  : "text-text-secondary hover:text-text-primary"
+                ? "bg-accent text-accentCS-foreground shadow-sm"
+                : "text-text-secondary hover:text-text-primary"
                 }`}
               style={{ minWidth: "0", minHeight: "0" }}
             >
@@ -86,8 +86,8 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
             <button
               onClick={() => setViewMode("mobile")}
               className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === "mobile"
-                  ? "bg-accent text-accentCS-foreground shadow-sm"
-                  : "text-text-secondary hover:text-text-primary"
+                ? "bg-accent text-accentCS-foreground shadow-sm"
+                : "text-text-secondary hover:text-text-primary"
                 }`}
               style={{ minWidth: "0", minHeight: "0" }}
             >
@@ -99,7 +99,7 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
 
         {/* Gallery Grid or Full Preview */}
         {viewMode === "full" ? (
-          <FullPreview livePreview={livePreview}/>
+          <FullPreview livePreview={livePreview} />
         ) : (
           <div className="grid grid-cols-1 min-[461px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-2 xs:gap-3 sm:gap-5 md:gap-8">
             {desktop.map((image, index) => (
@@ -112,23 +112,9 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
                 {/* Image Container */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-surface">
                   <img src={image.url} alt={image.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-surface to-surface-elevated flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-8 h-8 xs:w-9 xs:h-9 sm:w-12 sm:h-12 bg-accent/20 rounded-md xs:rounded-lg sm:rounded-xl flex items-center justify-center mb-1.5 xs:mb-2 sm:mb-3 mx-auto">
-                        <Maximize2 className="h-4 w-4 xs:h-5 xs:w-5 sm:h-7 sm:w-7 text-accentCS" />
-                      </div>
-                      <p className="text-text-secondary font-medium text-[0.75rem] xs:text-xs sm:text-base">
-                        {image.title}
-                      </p>
-                      <p className="text-[0.65rem] xs:text-xs sm:text-sm text-text-muted mt-0.5 xs:mt-1">
-                        {viewMode === "desktop" && "Desktop View"}
-                        {viewMode === "mobile" && "Mobile View"}
-                      </p>
-                    </div>
-                  </div>
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-accent/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="text-center text-white">
                       <Maximize2 className="h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8 mx-auto mb-1.5 xs:mb-2 sm:mb-2" />
                       <p className="font-medium text-[0.8rem] xs:text-xs sm:text-base">
@@ -159,61 +145,64 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
 
         {/* Lightbox Modal */}
         {selectedImage !== null && (
-          <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-lg flex items-center justify-center p-1 xs:p-2 sm:p-4">
-            {/* Close Button */}
-            <button
-              onClick={closeLightbox}
-              className="absolute top-2 right-2 sm:top-6 sm:right-6 p-2 sm:p-3 rounded-full glass hover-glow text-text-primary z-10"
-            >
-              <X className="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
-
-            {/* Navigation */}
-            <button
-              onClick={() => navigateImage("prev")}
-              className="absolute left-2 sm:left-6 top-1/2 transform -translate-y-1/2 p-2 sm:p-3 rounded-full glass hover-glow text-text-primary z-10"
-            >
-              <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
-
-            <button
-              onClick={() => navigateImage("next")}
-              className="absolute right-2 sm:right-6 top-1/2 transform -translate-y-1/2 p-2 sm:p-3 rounded-full glass hover-glow text-text-primary z-10"
-            >
-              <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
-
-            {/* Image Container */}
-            <div className="w-full max-w-xs xs:max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-6xl max-h-[80vh] relative">
-              <div className="neumorphic p-2 xs:p-4 sm:p-8 rounded-2xl sm:rounded-3xl">
-                {/* Image Placeholder */}
-                <div className="aspect-[16/10] bg-surface rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 sm:w-24 sm:h-24 bg-accent/20 rounded-2xl sm:rounded-3xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
-                      <Monitor className="h-8 w-8 sm:h-12 sm:w-12 text-accentCS" />
-                    </div>
-                    <h3 className="text-lg sm:text-2xl font-bold text-text-primary mb-1 sm:mb-2">
-                      {desktop[selectedImage].title}
-                    </h3>
-                    <p className="text-text-secondary text-xs sm:text-base">
-                      {desktop[selectedImage].description}
-                    </p>
-                  </div>
+          <div
+            className="fixed inset-0 z-50 bg-background/95 backdrop-blur-lg flex items-center justify-center pt-16 sm:pt-24 p-2 sm:p-4 overflow-y-auto"
+            onClick={(e) => {
+              // Only close if clicking the overlay, not the modal content
+              if (e.target === e.currentTarget) {
+                closeLightbox();
+              }
+            }}
+          >
+            {/* Image Container - responsive and centered */}
+            <div className="w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl max-h-[80vh] relative flex items-center justify-center">
+              <div className="neumorphic p-2 xs:p-3 sm:p-4 md:p-6 md:pt-2 rounded-xl sm:rounded-xl md:rounded-xl w-full flex flex-col items-center justify-center shadow-xl border border-accent/10 relative"
+                onClick={e => e.stopPropagation()}>
+                {/* Close Button - minimal top spacing */}
+                <div className="w-full flex justify-end items-center mb-0">
+                  <button
+                    onClick={closeLightbox}
+                    className="p-2 rounded-full glass hover-glow text-text-primary z-10"
+                    style={{ marginTop: 0 }}
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
                 </div>
-
-                {/* Image Info */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
-                  <div>
-                    <h3 className="text-base sm:text-xl font-semibold text-text-primary">
-                      {desktop[selectedImage].title}
-                    </h3>
-                    <p className="text-text-secondary text-xs sm:text-base">
-                      {desktop[selectedImage].description}
-                    </p>
-                  </div>
-                  <div className="text-text-muted text-xs sm:text-sm">
+                {/* Actual Image Display - restored previous image sizing */}
+                <div className="aspect-[16/10] bg-surface rounded-lg sm:rounded-xl md:rounded-2xl flex items-center justify-center mb-2 sm:mb-4 overflow-hidden w-full">
+                  <img
+                    src={desktop[selectedImage].url}
+                    alt={desktop[selectedImage].title}
+                    className="w-full h-auto max-h-[35vh] xs:max-h-[40vh] sm:max-h-[45vh] md:max-h-[50vh] object-contain rounded-lg sm:rounded-xl md:rounded-2xl"
+                    style={{ maxWidth: '100%' }}
+                  />
+                </div>
+                {/* Title and Description - centered, responsive */}
+                <div className="w-full text-center mb-2 sm:mb-4 px-1 xs:px-2">
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-text-primary mb-1">
+                    {desktop[selectedImage].title}
+                  </h3>
+                  <p className="text-text-secondary text-xs xs:text-sm sm:text-base md:text-lg">
+                    {desktop[selectedImage].description}
+                  </p>
+                </div>
+                {/* Navigation - below text, centered for mobile/tablet */}
+                <div className="w-full flex flex-row items-center justify-center gap-4 mb-2 sm:mb-4">
+                  <button
+                    onClick={() => navigateImage('prev')}
+                    className="p-2 sm:p-3 rounded-full glass hover-glow text-text-primary"
+                  >
+                    <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+                  </button>
+                  <span className="text-text-muted text-xs xs:text-sm sm:text-base">
                     {selectedImage + 1} of {desktop.length}
-                  </div>
+                  </span>
+                  <button
+                    onClick={() => navigateImage('next')}
+                    className="p-2 sm:p-3 rounded-full glass hover-glow text-text-primary"
+                  >
+                    <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+                  </button>
                 </div>
               </div>
             </div>
