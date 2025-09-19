@@ -89,6 +89,9 @@
         "cta": "Need a modern landing page for your service? Let's talk."
       },
       "TechStack": {
+        "mobile": [],
+        "backend": [],
+        "devops": [],
         "frontend": [
           {
             "name": "Vite",
@@ -284,6 +287,9 @@
         "cta": "Want a professional landing page for your tool? Get in touch."
       },
       "TechStack": {
+        "mobile": [],
+        "backend": [],
+        "devops": [],
         "frontend": [
           {
             "name": "Vite",
@@ -466,6 +472,9 @@
         "cta": "Need a powerful website for your brand? Start a conversation."
       },
       "TechStack": {
+        "mobile": [],
+        "backend": [],
+        "devops": [],
         "frontend": [
           {
             "name": "Astro",
