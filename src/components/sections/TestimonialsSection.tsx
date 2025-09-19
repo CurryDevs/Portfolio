@@ -84,7 +84,7 @@ export function TestimonialCard({
 
 const testimonials = [
   {
-    name: "Varun Mehta",
+    name: "Aisha Verma",
     role: "UI/UX Lead at DesignWorks",
     img: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=40&h=40&fit=crop&crop=face",
     description: (
@@ -182,7 +182,7 @@ const testimonials = [
     ),
   },
   {
-    name: "Aisha Khan",
+    name: "Varun Mehta",
     role: "E-commerce Manager at TrendHive",
     img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=40&h=40&fit=crop&crop=face",
     description: (
