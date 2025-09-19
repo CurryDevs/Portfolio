@@ -199,33 +199,45 @@
         "livePreview": "/case-study/full-preview/interlynk.jpeg",
         "desktop": [
           {
-            "title": "Homepage Redesign",
+            "id": 1,
+            "title": "Homepage Design",
             "description": "Clean, modern landing page with improved navigation and hero section",
-            "url": "/api/placeholder/1200/800",
+            "url": "/case-study/desktop-view/interlynk/header.png",
             "category": "Homepage"
           },
           {
-            "title": "Product Catalog",
+            "id": 2,
+            "title": "About Us",
             "description": "Intuitive product browsing with advanced filtering and search",
-            "url": "/api/placeholder/1200/800",
+            "url": "/case-study/desktop-view/interlynk/aboutUs.png",
             "category": "Catalog"
           },
           {
-            "title": "Checkout Process",
+            "id": 3,
+            "title": "Features Overview ",
             "description": "Streamlined 2-step checkout with progress indicators",
-            "url": "/api/placeholder/1200/800",
+            "url": "/case-study/desktop-view/interlynk/features.png",
             "category": "Checkout"
           },
           {
-            "title": "User Dashboard",
+            "id": 4,
+            "title": "Services",
             "description": "Personalized user experience with order history and preferences",
-            "url": "/api/placeholder/1200/800",
+            "url": "/case-study/desktop-view/interlynk/services.png",
             "category": "Account"
           },
           {
-            "title": "Mobile App",
+            "id": 5,
+            "title": "Benefits",
             "description": "Native mobile experience with offline capabilities",
-            "url": "/api/placeholder/1200/800",
+            "url": "/case-study/desktop-view/interlynk/benefits.png",
+            "category": "Mobile"
+          },
+          {
+            "id": 6,
+            "title": "Footer",
+            "description": "Native mobile experience with offline capabilities",
+            "url": "/case-study/desktop-view/interlynk/footer.png",
             "category": "Mobile"
           }
         ]
@@ -432,34 +444,52 @@
         "livePreview": "/case-study/full-preview/brevix.jpeg",
         "desktop": [
           {
-            "title": "Homepage Redesign",
+            "id": 1,
+            "title": "Homepage Design",
             "description": "Clean, modern landing page with improved navigation and hero section",
-            "url": "/api/placeholder/1200/800",
+            "url": "/case-study/desktop-view/brevix/header.png",
             "category": "Homepage"
           },
           {
-            "title": "Product Catalog",
+            "id": 2,
+            "title": "Benefits",
             "description": "Intuitive product browsing with advanced filtering and search",
-            "url": "/api/placeholder/1200/800",
+            "url": "/case-study/desktop-view/brevix/benefits.png",
             "category": "Catalog"
           },
           {
-            "title": "Checkout Process",
+            "id": 3,
+            "title": "Features Overvie",
             "description": "Streamlined 2-step checkout with progress indicators",
-            "url": "/api/placeholder/1200/800",
-            "category": "Checkout"
+            "url": "/case-study/desktop-view/brevix/features.png",
+            "category": "Features"
           },
           {
-            "title": "User Dashboard",
-            "description": "Personalized user experience with order history and preferences",
-            "url": "/api/placeholder/1200/800",
-            "category": "Account"
+            "id": 4,
+            "title": "Extended Features",
+            "description": "Streamlined 2-step checkout with progress indicators",
+            "url": "/case-study/desktop-view/brevix/features2.png",
+            "category": "Features"
           },
           {
-            "title": "Mobile App",
+            "id": 5,
+            "title": "Results",
             "description": "Native mobile experience with offline capabilities",
-            "url": "/api/placeholder/1200/800",
-            "category": "Mobile"
+            "url": "/case-study/desktop-view/brevix/result.png",
+            "category": "Results"
+          },
+          {
+            "id": 6,
+            "title": "FAQ Section",
+            "description": "Native mobile experience with offline capabilities",
+            "url": "/case-study/desktop-view/brevix/faq.png",
+            "category": "FAQ"
+          },          {
+            "id": 7,
+            "title": "CTA + Footer",
+            "description": "Native mobile experience with offline capabilities",
+            "url": "/case-study/desktop-view/brevix/ctaFooter.png",
+            "category": "Footer"
           }
         ]
       }

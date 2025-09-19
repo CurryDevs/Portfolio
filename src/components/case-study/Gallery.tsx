@@ -12,7 +12,7 @@ import FullPreview from "./FullPreview";
 type GalleryProps = {
   caseStudy: string;
   livePreview: string;
-  desktop: { title: string; description: string; url: string; category: string; }[];
+  desktop: { id: number; title: string; description: string; url: string; category: string; }[];
 };
 
 const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
@@ -20,63 +20,7 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
   const [viewMode, setViewMode] = useState<"desktop" | "mobile" | "full">(
     "full"
   );
-
-  // Mock image data - in real project these would be actual screenshots
-  const images = [
-    {
-      id: 1,
-      title: "Homepage Redesign",
-      description:
-        "Clean, modern landing page with improved navigation and hero section",
-      desktop: "/api/placeholder/1200/800",
-      mobile: "/api/placeholder/400/800",
-      category: "Homepage",
-    },
-    {
-      id: 2,
-      title: "Product Catalog",
-      description:
-        "Intuitive product browsing with advanced filtering and search",
-      desktop: "/api/placeholder/1200/800",
-      mobile: "/api/placeholder/400/800",
-      category: "Catalog",
-    },
-    {
-      id: 3,
-      title: "Checkout Process",
-      description: "Streamlined 2-step checkout with progress indicators",
-      desktop: "/api/placeholder/1200/800",
-      mobile: "/api/placeholder/400/800",
-      category: "Checkout",
-    },
-    {
-      id: 4,
-      title: "User Dashboard",
-      description:
-        "Personalized user experience with order history and preferences",
-      desktop: "/api/placeholder/1200/800",
-      mobile: "/api/placeholder/400/800",
-      category: "Account",
-    },
-    {
-      id: 5,
-      title: "Mobile App",
-      description: "Native mobile experience with offline capabilities",
-      desktop: "/api/placeholder/1200/800",
-      mobile: "/api/placeholder/400/800",
-      category: "Mobile",
-    },
-    {
-      id: 6,
-      title: "Admin Panel",
-      description:
-        "Comprehensive admin dashboard for content and order management",
-      desktop: "/api/placeholder/1200/800",
-      mobile: "/api/placeholder/400/800",
-      category: "Admin",
-    },
-  ];
-
+  
   const openLightbox = (index: number) => {
     setSelectedImage(index);
     document.body.style.overflow = "hidden";
@@ -92,8 +36,8 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
 
     const newIndex =
       direction === "prev"
-        ? (selectedImage - 1 + images.length) % images.length
-        : (selectedImage + 1) % images.length;
+        ? (selectedImage - 1 + desktop.length) % desktop.length
+        : (selectedImage + 1) % desktop.length;
 
     setSelectedImage(newIndex);
   };
@@ -158,7 +102,7 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
           <FullPreview livePreview={livePreview}/>
         ) : (
           <div className="grid grid-cols-1 min-[461px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-2 xs:gap-3 sm:gap-5 md:gap-8">
-            {images.map((image, index) => (
+            {desktop.map((image, index) => (
               <div
                 key={image.id}
                 className="group relative overflow-hidden rounded-md xs:rounded-lg sm:rounded-xl neumorphic hover-lift cursor-pointer animate-scale-in"
@@ -167,7 +111,7 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
               >
                 {/* Image Container */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-surface">
-                  {/* Placeholder for actual image */}
+                  <img src={image.url} alt={image.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-br from-surface to-surface-elevated flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-8 h-8 xs:w-9 xs:h-9 sm:w-12 sm:h-12 bg-accent/20 rounded-md xs:rounded-lg sm:rounded-xl flex items-center justify-center mb-1.5 xs:mb-2 sm:mb-3 mx-auto">
@@ -249,10 +193,10 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
                       <Monitor className="h-8 w-8 sm:h-12 sm:w-12 text-accentCS" />
                     </div>
                     <h3 className="text-lg sm:text-2xl font-bold text-text-primary mb-1 sm:mb-2">
-                      {images[selectedImage].title}
+                      {desktop[selectedImage].title}
                     </h3>
                     <p className="text-text-secondary text-xs sm:text-base">
-                      {images[selectedImage].description}
+                      {desktop[selectedImage].description}
                     </p>
                   </div>
                 </div>
@@ -261,14 +205,14 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
                   <div>
                     <h3 className="text-base sm:text-xl font-semibold text-text-primary">
-                      {images[selectedImage].title}
+                      {desktop[selectedImage].title}
                     </h3>
                     <p className="text-text-secondary text-xs sm:text-base">
-                      {images[selectedImage].description}
+                      {desktop[selectedImage].description}
                     </p>
                   </div>
                   <div className="text-text-muted text-xs sm:text-sm">
-                    {selectedImage + 1} of {images.length}
+                    {selectedImage + 1} of {desktop.length}
                   </div>
                 </div>
               </div>
