@@ -62,7 +62,7 @@ const ProjectSection = ({ items: propItems = items }: ProjectSectionProps) => {
   const canGoNext = currentIndex < maxIndex;
 
   return (
-    <section id="case-studies" className="py-32">
+    <section id="project-section" className="py-32">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="relative z-10 flex flex-col items-center justify-center text-center mb-0 sm:mb-12">
           <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
