@@ -20,7 +20,7 @@ const defaultFooterLink: SectionLink[] = [
     },
     {
         name: "Projects",
-        link: "/case-studies",
+        link: "/project",
     },
     {
         name: "Benefits",
