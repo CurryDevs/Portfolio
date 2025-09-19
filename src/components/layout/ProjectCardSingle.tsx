@@ -7,9 +7,10 @@ export interface Project {
     id: string;
     title: string;
     client: string;
-    description: string;
-    image: string;
     techStack: string[];
+    summary: string;
+    url: string;    
+    image: string;
 }
 
 interface ProjectCardProps {
@@ -185,9 +186,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                         </motion.div>
                     </div>
 
-                    {/* Content Section */}
-                    <div className="p-8 flex flex-col flex-1 space-y-6">
+                    {/* Content Section with Micro-animations */}
+                    <div className=" p-8 flex flex-col justify-between h-full">
                         {/* Header with Staggered Animation */}
+                        <div  className="space-y-6">
                         <motion.div
                             className="space-y-2"
                             initial="hidden"
@@ -233,7 +235,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                             animate={{ height: "auto", opacity: 1 }}
                             transition={{ delay: 0.2, duration: 0.6 }}
                         >
-                            {project.description}
+                            {project.summary}
                         </motion.p>
 
                         {/* Tech Stack */}
@@ -268,6 +270,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                                     +{project.techStack.length - 4}
                                 </motion.span>
                             )}
+                        </div>
                         </div>
 
                         {/* CTA always at bottom */}
