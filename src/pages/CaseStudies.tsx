@@ -87,33 +87,30 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen">
       <AdvancedHeader />
-      <main>
-        <section id="case-studies" className="py-32 bg-background relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="flex flex-col gap-y-20">
-              <div className="relative z-10 flex flex-col items-center justify-center">
-                {/* <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
-                  CASE STUDIES
-                </span> */}
-                <div className="inline-flex items-center px-4 py-2 bg-black rounded-full glass mb-8 animate-fade-in">
-                  <LiquidButton className="z-10 -translate-x-1/2 -translate-y-1/2">
-                    CASE STUDIES
-                  </LiquidButton>
-                </div>
-                <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
-                  Client Projects
-                </h2>
-              </div>
+      <main className="max-w-7xl mx-auto px-8 pt-24">
+        {/* Section Title */}
+        <div className="mb-16 text-center">
+          <h2 className="text-5xl font-extrabold tracking-tight text-foreground">
+            <span className="relative inline-block">
+              <span className="relative z-10">Case Studies</span>
+              <span className="absolute left-0 bottom-2 w-full h-[6px] bg-gradient-to-r from-neutral-800 via-neutral-600 to-neutral-800 rounded-md opacity-30" />
+            </span>
+          </h2>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+            A curated collection of projects showcasing modern design and engineering solutions.
+          </p>
+        </div>
 
-              {items.map((item) => (
-                <div key={item.id} className="flex-shrink-0 w-full">
-                  <ProjectCard project={item} />
-                </div>
-              ))}
+        {/* Grid of Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 items-stretch">
+          {items.map((project) => (
+            <div key={project.id} className="flex">
+              <ProjectCard project={project} />
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
       </main>
+
       <div className="mt-10">
         <Footer />
       </div>
