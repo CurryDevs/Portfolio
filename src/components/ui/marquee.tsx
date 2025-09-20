@@ -40,9 +40,11 @@ export function Marquee({
                             "flex shrink-0 justify-around [gap:var(--gap)]",
                             {
                                 "animate-marquee flex-row": !vertical,
-                                "animate-marquee-vertical flex-col": vertical,
+                                // Upward vertical
+                                "animate-marquee-vertical flex-col": vertical && !reverse,
+                                // Downward vertical
+                                "animate-marquee-vertical-reverse flex-col": vertical && reverse,
                                 "group-hover:[animation-play-state:paused]": pauseOnHover,
-                                "[animation-direction:reverse]": reverse,
                             }
                         )}
                     >
