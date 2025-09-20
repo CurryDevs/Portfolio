@@ -89,9 +89,6 @@
         "cta": "Need a modern landing page for your service? Let's talk."
       },
       "TechStack": {
-        "mobile": [],
-        "backend": [],
-        "devops": [],
         "frontend": [
           {
             "name": "React 18",
@@ -112,6 +109,22 @@
           {
             "name": "PWA",
             "icon": "MdInstallMobile"
+          },
+          {
+            "name": "HTML5",
+            "icon": "SiHtml5"
+          },
+          {
+            "name": "CSS3",
+            "icon": "SiCss3"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "SiJavascript"
+          },
+          {
+            "name": "Vercel",
+            "icon": "SiVercel"
           }
         ],
         "mobile": [
@@ -125,40 +138,10 @@
           }
         ],
         "backend": [
-          {
-            "name": "Node.js",
-            "icon": "FaNodeJs"
-          },
-          {
-            "name": "Express",
-            "icon": "SiExpress"
-          },
-          {
-            "name": "PostgreSQL",
-            "icon": "SiPostgresql"
-          },
-          {
-            "name": "Redis",
-            "icon": "SiRedis"
-          }
+          
         ],
         "devops": [
-          {
-            "name": "AWS",
-            "icon": "FaAws"
-          },
-          {
-            "name": "Docker",
-            "icon": "FaDocker"
-          },
-          {
-            "name": "Kubernetes",
-            "icon": "SiKubernetes"
-          },
-          {
-            "name": "CloudFront",
-            "icon": "SiAmazonwebservices"
-          }
+          
         ],
         "tools": [
           {
@@ -182,10 +165,6 @@
           {
             "name": "OAuth 2.0",
             "icon": "SiAuth0"
-          },
-          {
-            "name": "JWT",
-            "icon": "SiJsonwebtokens"
           },
           {
             "name": "SSL/TLS",
@@ -360,53 +339,32 @@
           {
             "name": "PWA",
             "icon": "MdInstallMobile"
+          }, 
+          {
+            "name": "HTML5",
+            "icon": "SiHtml5"
+          },
+          {
+            "name": "CSS3",
+            "icon": "SiCss3"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "SiJavascript"
+          },
+          {
+            "name": "Vercel",
+            "icon": "SiVercel"
           }
         ],
         "mobile": [
-          {
-            "name": "React Native",
-            "icon": "SiReact"
-          },
-          {
-            "name": "Expo",
-            "icon": "SiExpo"
-          }
+          
         ],
         "backend": [
-          {
-            "name": "Node.js",
-            "icon": "FaNodeJs"
-          },
-          {
-            "name": "Express",
-            "icon": "SiExpress"
-          },
-          {
-            "name": "PostgreSQL",
-            "icon": "SiPostgresql"
-          },
-          {
-            "name": "Redis",
-            "icon": "SiRedis"
-          }
+         
         ],
         "devops": [
-          {
-            "name": "AWS",
-            "icon": "FaAws"
-          },
-          {
-            "name": "Docker",
-            "icon": "FaDocker"
-          },
-          {
-            "name": "Kubernetes",
-            "icon": "SiKubernetes"
-          },
-          {
-            "name": "CloudFront",
-            "icon": "SiAmazonwebservices"
-          }
+          
         ],
         "tools": [
           {
@@ -615,6 +573,30 @@
           {
             "name": "PWA",
             "icon": "MdInstallMobile"
+          },
+          {
+            "name": "HTML5",
+            "icon": "SiHtml5"
+          },
+          {
+            "name": "CSS3",
+            "icon": "SiCss3"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "SiJavascript"
+          },
+          {
+            "name": "Vercel",
+            "icon": "SiVercel"
+          },
+          {
+            "name": "MDX",
+            "icon": "SiMdx"
+          },
+          {
+            "name": "Astro",
+            "icon": "SiAstro"
           }
         ],
         "mobile": [
@@ -625,42 +607,6 @@
           {
             "name": "Expo",
             "icon": "SiExpo"
-          }
-        ],
-        "backend": [
-          {
-            "name": "Node.js",
-            "icon": "FaNodeJs"
-          },
-          {
-            "name": "Express",
-            "icon": "SiExpress"
-          },
-          {
-            "name": "PostgreSQL",
-            "icon": "SiPostgresql"
-          },
-          {
-            "name": "Redis",
-            "icon": "SiRedis"
-          }
-        ],
-        "devops": [
-          {
-            "name": "AWS",
-            "icon": "FaAws"
-          },
-          {
-            "name": "Docker",
-            "icon": "FaDocker"
-          },
-          {
-            "name": "Kubernetes",
-            "icon": "SiKubernetes"
-          },
-          {
-            "name": "CloudFront",
-            "icon": "SiAmazonwebservices"
           }
         ],
         "tools": [
