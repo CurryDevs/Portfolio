@@ -42,16 +42,16 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="mb-18 py-12 sm:py-16 md:py-20 md:scale-[0.9] max-[678px]:scale-[0.85]">
-      <div className="mb-8 relative z-10 flex flex-col items-center justify-center mb-0 sm:mb-8 md:mb-12">
+    <section id="contact" className="mb-18 py-12 sm:py-16 md:py-20">
+      <div className="relative z-10 flex flex-col items-center justify-center mb-0 min-[678px]:mb-8 md:mb-12">
         <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
           STILL
         </span>
-        <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+        <h2 className="min-[678px]:mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
           Got any Doubts?
         </h2>
       </div>
-      <div className="container-custom px-4 sm:px-6">
+      <div className="container-custom px-4 sm:px-6 md:scale-[0.9] max-[678px]:scale-[0.85]">
         <div className="mx-auto max-w-5xl">
           <ContactCard
             title="Contact Us"

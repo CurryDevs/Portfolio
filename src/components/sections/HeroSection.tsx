@@ -39,7 +39,7 @@ export function HeroSection() {
 
   const openCalendlyInNewTab = () => {
     // Open Calendly in a new tab
-    window.open("https://calendly.com/currydevs/30min", "_blank");
+    window.open("https://cal.com/currydevs/30min", "_blank");
   };
 
   useEffect(() => {

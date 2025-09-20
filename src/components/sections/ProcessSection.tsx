@@ -74,7 +74,7 @@ const processData: Omit<ProcessStep, "status" | "phase" | "progress">[] = [
 
 export function ProcessSection() {
   const openCalendlyInNewTab = () => {
-    window.open("https://calendly.com/currydevs/30min", "_blank");
+    window.open("https://cal.com/currydevs/30min", "_blank");
   };
 
   // Animation variants for rolled paper effect
