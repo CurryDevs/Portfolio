@@ -12,11 +12,8 @@
         "cta": [
           {
             "label": "View Live Project",
-            "url": "https://interlynk.vercel.app/"
-          },
-          {
-            "label": "Explore Process",
-            "url": "#process"
+            "url": "https://interlynk.vercel.app/",
+            "preview": "/case-study/desktop-view/interlynk/header.png"
           }
         ]
       },
@@ -260,11 +257,8 @@
         "cta": [
           {
             "label": "View Live Project",
-            "url": "https://brevixtask.vercel.app/"
-          },
-          {
-            "label": "Explore Process",
-            "url": "#process"
+            "url": "https://brevixtask.vercel.app/",
+            "preview": "/case-study/desktop-view/brevix/header.png"
           }
         ]
       },
@@ -515,11 +509,8 @@
         "cta": [
           {
             "label": "View Live Project",
-            "url": "https://torque-craft.vercel.app/"
-          },
-          {
-            "label": "Explore Process",
-            "url": "#process"
+            "url": "https://torque-craft.vercel.app/",
+            "preview": "/case-study/desktop-view/torque/header.png"
           }
         ]
       },

@@ -7,7 +7,6 @@ import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
 
 import { useLocation, useParams } from "react-router-dom";
 import data from "@/data/projects.json";
-import { useEffect } from "react";
 
 export type SectionLink = {
   name: string;

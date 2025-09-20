@@ -1,19 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { LampContainer } from "@/components/ui/lamp";
+import { LinkPreview } from "@/components/ui/link-preview";
 
 type HeroSectionProps = {
   category: string;
   headline: { h1: string; h2: string };
   subtitle: string;
-  cta: { label: string; url: string }[];
+  cta: { label: string; url: string; preview: string }[];
 };
 
-const HeroSection = ({ category, headline, subtitle, cta }: HeroSectionProps) => {
-
-
+const HeroSection = ({
+  category,
+  headline,
+  subtitle,
+  cta,
+}: HeroSectionProps) => {
   return (
     <LampContainer>
-      <div id="project-overview" className="text-center px-6 max-w-6xl mx-auto pt-[14rem]">
+      <div
+        id="project-overview"
+        className="text-center px-6 max-w-6xl mx-auto pt-[14rem]"
+      >
         {/* Project Category */}
 
         {/* <div className="inline-flex items-center px-4 py-2 bg-black rounded-full glass mb-8 animate-fade-in">
@@ -21,7 +28,10 @@ const HeroSection = ({ category, headline, subtitle, cta }: HeroSectionProps) =>
         </div> */}
 
         {/* Main Headline */}
-        <h1 className="text-hero my-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <h1
+          className="text-hero my-10 animate-fade-in"
+          style={{ animationDelay: "0.2s" }}
+        >
           <span className="block text-neutral-800 dark:text-neutral-200 text-xl min-[460px]:text-2xl sm:text-3xl font-normal mb-4">
             {headline.h1}
           </span>
@@ -31,26 +41,30 @@ const HeroSection = ({ category, headline, subtitle, cta }: HeroSectionProps) =>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-sm min-[460px]:text-lg sm:text-xl text-body-large text-white max-w-3xl mx-auto mb-12 mt-18 sm:mt-24  animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <p
+          className="text-sm min-[460px]:text-lg sm:text-xl text-body-large text-white max-w-3xl mx-auto mb-12 mt-18 sm:mt-24  animate-fade-in"
+          style={{ animationDelay: "0.4s" }}
+        >
           {subtitle}
         </p>
 
         {/* Single CTA Button */}
         {cta[0] && (
-          <a
-            href={cta[0].url}
-            target={cta[0].url.startsWith("http") ? "_blank" : undefined}
+          <LinkPreview
+            isStatic={true}
+            imageSrc={cta[0].preview}
+            url={cta[0].url}
+            className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
           >
-            <Button
-              size="lg"
-              variant="default"
-              className="group px-8 py-4 text-sm min-[460px]:text-lg sm:text-xl font-semibold hover-lift max-[460px]:w-40 "
-            >
-              {cta[0].label}
-            </Button>
-          </a>
+              <Button
+                size="lg"
+                variant="default"
+                className="group px-8 py-4 text-sm min-[460px]:text-base font-semibold hover-lift max-[460px]:w-40 "
+              >
+                {cta[0].label}
+              </Button>
+          </LinkPreview>
         )}
-
       </div>
     </LampContainer>
   );
