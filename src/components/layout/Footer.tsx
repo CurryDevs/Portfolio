@@ -40,14 +40,14 @@ const Footer = ({ sectionLinks }: { sectionLinks?: SectionLink[] }) => {
 
             <div className="flex  flex-col gap-4 items-center space-y-1 [@media(min-width:800px)]:flex-row  md:justify-between md:space-y-0">
                 <AnimationContainer delay={0.2} className="mt-0 md:mt-0">
-                    <a href="/" className="flex items-center">
+                    <Link to="/" className="flex items-center">
                         <img
                             src={CurryDevsLogo}
                             alt="CurryDevs Logo"
                             className="h-24 w-auto object-cover hover:scale-105 transition-transform duration-300"
                             style={{ clipPath: 'inset(15% 0 15% 0)' }}
                         />
-                    </a>
+                    </Link>
                 </AnimationContainer>
 
                 <AnimationContainer className="w-full md:w-auto">

@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 // import SmoothScrolling from "@/hooks/smooth-scrolling";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import Index from "./pages/Index";
 import CaseStudy from "./pages/CaseStudy";
 import CaseStudies from "./pages/CaseStudies";
@@ -17,13 +17,21 @@ const App = () => {
   // Initialize smooth scrolling for the entire app
 
   // Scroll to top on route change
-  function ScrollToTop() {
-    const { pathname } = useLocation();
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [pathname]);
-    return null;
-  }
+
+function ScrollToTop() {
+  const { key } = useLocation();
+  
+  useLayoutEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant"
+    });
+  }, [key]);
+  
+  return null;
+}
+
 
   return (
     // <SmoothScrolling>

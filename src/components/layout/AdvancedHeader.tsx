@@ -40,13 +40,13 @@ function Navbar() {
                 >
                     <div className="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-1">
                         <div className="flex w-full justify-between lg:w-auto">
-                            <a
-                                href="/"
+                            <Link
+                                to="/"
                                 aria-label="home"
                                 className="flex items-center space-x-2 cursor-pointer"
                             >
                                 <Logo />
-                            </a>
+                            </Link>
 
                             <button
                                 onClick={() => setMenuState(!menuState)}

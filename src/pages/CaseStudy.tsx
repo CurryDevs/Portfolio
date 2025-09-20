@@ -17,14 +17,14 @@ export type SectionLink = {
 const CaseStudy = ({ scrollTo }: { scrollTo?: string }) => {
   const location = useLocation();
 
-  useEffect(() => {
-    if (scrollTo) {
-      const el = document.getElementById(scrollTo);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [scrollTo, location]);
+  // useEffect(() => {
+  //   if (scrollTo) {
+  //     const el = document.getElementById(scrollTo);
+  //     if (el) {
+  //       el.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }
+  // }, [scrollTo, location]);
   const { id } = useParams();
   const project = data.find((item) => item.id === id);
 
