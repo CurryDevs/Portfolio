@@ -4,7 +4,7 @@ import TechStack from "@/components/case-study/TechStack";
 import Gallery from "@/components/case-study/Gallery";
 import Footer from "@/components/layout/Footer";
 import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
-
+import { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import data from "@/data/projects.json";
 
@@ -16,14 +16,15 @@ export type SectionLink = {
 const CaseStudy = ({ scrollTo }: { scrollTo?: string }) => {
   const location = useLocation();
 
-  // useEffect(() => {
-  //   if (scrollTo) {
-  //     const el = document.getElementById(scrollTo);
-  //     if (el) {
-  //       el.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //   }
-  // }, [scrollTo, location]);
+  useEffect(() => {
+    if (scrollTo) {
+      const el = document.getElementById(scrollTo);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [scrollTo, location]);
+
   const { id } = useParams();
   const project = data.find((item) => item.id === id);
 

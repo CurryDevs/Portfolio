@@ -21,12 +21,6 @@ const HeroSection = ({
         id="project-overview"
         className="text-center px-6 max-w-6xl mx-auto pt-[14rem]"
       >
-        {/* Project Category */}
-
-        {/* <div className="inline-flex items-center px-4 py-2 bg-black rounded-full glass mb-8 animate-fade-in">
-          <span className="text-sm font-thin text-white dark:text-neutral-200">{category}</span>
-        </div> */}
-
         {/* Main Headline */}
         <h1
           className="text-hero my-10 animate-fade-in"
@@ -56,13 +50,13 @@ const HeroSection = ({
             url={cta[0].url}
             className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
           >
-              <Button
-                size="lg"
-                variant="default"
-                className="group px-8 py-4 text-sm min-[460px]:text-base font-semibold hover-lift max-[460px]:w-40 "
-              >
-                {cta[0].label}
-              </Button>
+            <Button
+              size="lg"
+              variant="default"
+              className="group px-8 py-4 text-sm min-[460px]:text-base font-semibold hover-lift max-[460px]:w-40 "
+            >
+              {cta[0].label}
+            </Button>
           </LinkPreview>
         )}
       </div>

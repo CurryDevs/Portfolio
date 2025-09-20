@@ -1,7 +1,6 @@
 import { AdvancedHeader } from "@/components/layout/AdvancedHeader";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import Footer from "@/components/layout/Footer";
-import { useEffect, useState } from "react";
 import { ProjectCard } from "@/components/layout/ProjectCardSingle";
 import projects from "@/data/caseStudy.json";
 
@@ -21,32 +20,6 @@ interface ProjectsProps {
 
 const CaseStudies = ({ items: propItems = projects }: ProjectsProps) => {
   const items = propItems || projects;
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsPerView, setItemsPerView] = useState(1); // Always 1 per row for now
-
-  // Handle responsive behavior
-  useEffect(() => {
-    const handleResize = () => {
-      // Keep 1 item per row for all screen sizes
-      setItemsPerView(1);
-
-      // Reset index on resize to avoid empty spaces
-      setCurrentIndex(0);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const handleCardClick = (e: React.MouseEvent, itemId: string) => {
-    e.preventDefault();
-    window.location.href = "/case-studies";
-  };
 
   return (
     <div className="min-h-screen">

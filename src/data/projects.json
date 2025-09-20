@@ -44,47 +44,6 @@
           "A simple layout with plenty of space to breathe"
         ]
       },
-      "Results": {
-        "summary": "The design successfully created a strong and attractive first impression for the Interlynk brand.",
-        "resultCompany": "We delivered a foundation that helps Interlynk stand out and attract users.",
-        "metrics": [
-          {
-            "icon": "TrendingUp",
-            "label": "Design Modernity",
-            "value": 100,
-            "suffix": "%",
-            "description": "A fresh, up-to-date look that users trust"
-          },
-          {
-            "icon": "Users",
-            "label": "Clarity Score",
-            "value": 95,
-            "suffix": "%",
-            "description": "Visitors instantly understand what the product does"
-          },
-          {
-            "icon": "Clock",
-            "label": "Load Time",
-            "value": 98,
-            "suffix": "%",
-            "description": "High performance score for a fast user experience"
-          },
-          {
-            "icon": "Star",
-            "label": "Mobile Responsiveness",
-            "value": 100,
-            "suffix": "%",
-            "description": "Flawless experience on all phone and tablet sizes"
-          }
-        ],
-        "achievements": [
-          "Created a memorable and unique brand identity",
-          "Built a fully responsive site for all devices",
-          "Delivered clean, maintainable code for future updates",
-          "Completed the project on time and within budget"
-        ],
-        "cta": "Need a modern landing page for your service? Let's talk."
-      },
       "TechStack": {
         "frontend": [
           {
@@ -268,51 +227,7 @@
           "A strong call-to-action to start using the service"
         ]
       },
-      "Results": {
-        "summary": "The design effectively communicates professionalism and builds instant trust with potential users.",
-        "resultCompany": "We built a solid digital storefront for Brevix to attract its first customers.",
-        "metrics": [
-          {
-            "icon": "TrendingUp",
-            "label": "Professional Appeal",
-            "value": 100,
-            "suffix": "%",
-            "description": "Design inspires confidence and trust in the service"
-          },
-          {
-            "icon": "Users",
-            "label": "Message Clarity",
-            "value": 90,
-            "suffix": "%",
-            "description": "Users immediately get the product's purpose"
-          },
-          {
-            "icon": "Clock",
-            "label": "Development Speed",
-            "value": 100,
-            "suffix": "%",
-            "description": "Project delivered ahead of schedule"
-          },
-          {
-            "icon": "Star",
-            "label": "Code Quality",
-            "value": 100,
-            "suffix": "%",
-            "description": "Clean, well-structured code for easy scaling"
-          }
-        ],
-        "achievements": [
-          "Established a strong and professional brand identity",
-          "Created a clear path for users to sign up and learn more",
-          "Built a fully responsive and fast-loading application",
-          "Provided a perfect template for future content and features"
-        ],
-        "cta": "Want a professional landing page for your tool? Get in touch."
-      },
       "TechStack": {
-        "mobile": [],
-        "backend": [],
-        "devops": [],
         "frontend": [
           {
             "name": "React 18",
@@ -499,49 +414,7 @@
           "Sections built to highlight featured products and categories"
         ]
       },
-      "Results": {
-        "summary": "The design successfully captures the energy and premium quality of the Torque Craft brand.",
-        "resultCompany": "We built an immersive online experience that gets car enthusiasts excited.",
-        "metrics": [
-          {
-            "icon": "TrendingUp",
-            "label": "Brand Impact",
-            "value": 100,
-            "suffix": "%",
-            "description": "Design perfectly matches the high-performance brand vibe"
-          },
-          {
-            "icon": "Users",
-            "label": "Visitor Engagement",
-            "value": 85,
-            "suffix": "%",
-            "description": "Users spend more time exploring the dramatic design"
-          },
-          {
-            "icon": "Clock",
-            "label": "Animation Performance",
-            "value": 95,
-            "suffix": "%",
-            "description": "Smooth animations that don't slow down the site"
-          },
-          {
-            "icon": "Star",
-            "label": "Visual Appeal",
-            "value": 100,
-            "suffix": "%",
-            "description": "A memorable and striking design that stands out"
-          }
-        ],
-        "achievements": [
-          "Developed a unique dark-themed aesthetic that fits the niche",
-          "Implemented engaging animations for a dynamic user experience",
-          "Structured content to effectively showcase product categories",
-          "Delivered a complete and ready-to-use landing page"
-        ],
-        "cta": "Need a powerful website for your brand? Start a conversation."
-      },
       "TechStack": {
-        "mobile": [],
         "backend": [],
         "devops": [],
         "frontend": [

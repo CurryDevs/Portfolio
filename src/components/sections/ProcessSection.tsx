@@ -1,13 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import {
   ArrowRight,
-  CheckCircle2,
-  Circle,
-  Clock,
   Lightbulb,
   Code,
   Rocket,

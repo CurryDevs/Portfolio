@@ -157,17 +157,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                             transition={{ duration: 0.1, ease: "easeInOut" }}
                         />
 
-                        {/* Dynamic Overlay */}
-                        {/* <motion.div
-                            className="absolute inset-0"
-                            animate={{
-                                background: isHovered
-                                    ? ''
-                                    : 'linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%)'
-                            }}
-                            transition={{ duration: 0.5 }}
-                        /> */}
-
                         {/* Floating Corner Element */}
                         <motion.div
                             className="absolute top-4 right-4"

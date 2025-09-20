@@ -24,6 +24,7 @@ const Index = ({ scrollTo }: { scrollTo?: string }) => {
       }
     }
   }, [scrollTo, location]);
+  
   const projectData = [
     {
       id: 1,

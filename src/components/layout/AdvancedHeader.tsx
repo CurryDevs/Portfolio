@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Menu, X, Linkedin } from 'lucide-react'; // Add Linkedin icon from lucide-react
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import CurryDevsLogo from '@/assets/CurryDevs_Transparent.png';
 import { StartProjectModal } from '@/components/ui/start-project-modal';
