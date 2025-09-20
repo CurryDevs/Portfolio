@@ -252,6 +252,7 @@ export function TestimonialsSection() {
                 <Marquee
                   vertical
                   key={i}
+                  reverse={i === 1}
                   className={cn({
                     "[--duration:60s]": i === 1,
                     "[--duration:30s]": i === 2,

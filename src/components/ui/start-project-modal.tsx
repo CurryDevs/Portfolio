@@ -4,7 +4,7 @@ import { Phone } from "lucide-react";
 export function StartProjectModal() {
     const openCalendlyInNewTab = () => {
         // Open Calendly in a new tab
-        window.open('https://calendly.com/currydevs/30min', '_blank');
+        window.open('https://cal.com/currydevs/30min', '_blank');
     };
 
     return (
