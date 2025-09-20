@@ -182,7 +182,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     </div>
 
                     {/* Content Section with Micro-animations */}
-                    <div className="p-8 space-y-6">
+                    <div className="p-4 min-[440px]:p-8 space-y-6">
                         {/* Header with Staggered Animation */}
                         <motion.div
                             className="space-y-2"

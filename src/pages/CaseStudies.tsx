@@ -52,32 +52,16 @@ const CaseStudies = ({ items: propItems = projects }: ProjectsProps) => {
     <div className="min-h-screen">
       <AdvancedHeader />
       <main className="max-w-7xl mx-auto px-8 pt-24">
-        {/* LIQUIDD BTN */}
-        {/* <div className="relative z-10 flex flex-col items-center justify-center">
-          <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
-            CASE STUDIES
-          </span>
+        {/* Section Title */}
+        <div className="relative z-10 flex flex-col items-center justify-center mt-12 mb-20 sm:mb-28">
           <div className="inline-flex items-center px-4 py-2 bg-black rounded-full glass mb-8 animate-fade-in">
-            <LiquidButton className="z-10 -translate-x-1/2 -translate-y-1/2">
+            <LiquidButton className="max-sm:scale-[0.8] max-md:scale-[0.9] z-10 absolute left-5 top-2 -translate-x-1/2 -translate-y-1/2">
               CASE STUDIES
             </LiquidButton>
           </div>
-          <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
-            Client Projects
+          <h2 className="text-center text-4xl min-[400px]:text-5xl  font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+            Our Client Projects
           </h2>
-        </div> */}
-        {/* Section Title */}
-        <div className="mb-16 text-center">
-          <h2 className="text-5xl font-extrabold tracking-tight text-foreground">
-            <span className="relative inline-block">
-              <span className="relative z-10">Case Studies</span>
-              <span className="absolute left-0 bottom-2 w-full h-[6px] bg-gradient-to-r from-neutral-800 via-neutral-600 to-neutral-800 rounded-md opacity-30" />
-            </span>
-          </h2>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            A curated collection of projects showcasing modern design and
-            engineering solutions.
-          </p>
         </div>
 
         {/* Grid of Cards */}
