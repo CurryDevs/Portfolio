@@ -137,10 +137,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
                     {/* Image Section with Advanced Effects */}
                     <div className="relative aspect-[16/10] overflow-hidden">
-                        {/* Shimmer Loading */}
+                        {/* Skeleton Loader (matches gallery style) */}
                         {!imageLoaded && (
-                            <div className="absolute inset-0 bg-muted animate-pulse">
-                                <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-foreground/5 to-transparent" />
+                            <div className="absolute inset-0 bg-gray-300 animate-pulse flex items-center justify-center">
+                                <div className="w-2/3 h-2/3 bg-gray-200 rounded-lg" />
                             </div>
                         )}
 

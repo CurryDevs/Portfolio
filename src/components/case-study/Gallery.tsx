@@ -17,6 +17,16 @@ type GalleryProps = {
 };
 
 const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
+  // Skeleton loading state for images
+  const [imageLoaded, setImageLoaded] = useState(Array(desktop.length).fill(false));
+
+  const handleImageLoad = (idx: number) => {
+    setImageLoaded(prev => {
+      const updated = [...prev];
+      updated[idx] = true;
+      return updated;
+    });
+  };
   // Detect mobile device (simple check)
   const [isMobile, setIsMobile] = useState(false);
   React.useEffect(() => {
@@ -160,7 +170,18 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
               >
                 {/* Image Container */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-surface">
-                  <img src={image.url} alt={image.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                  {/* Skeleton Loader for top image */}
+                  {!imageLoaded[index] && (
+                    <div className="absolute inset-0 bg-gray-300 animate-pulse flex items-center justify-center">
+                      <div className="w-2/3 h-2/3 bg-gray-200 rounded-lg" />
+                    </div>
+                  )}
+                  <img
+                    src={image.url}
+                    alt={image.title}
+                    className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 ${!imageLoaded[index] ? 'opacity-0' : 'opacity-100'}`}
+                    onLoad={() => handleImageLoad(index)}
+                  />
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-accent/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
