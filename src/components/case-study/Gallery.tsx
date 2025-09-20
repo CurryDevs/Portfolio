@@ -17,6 +17,16 @@ type GalleryProps = {
 };
 
 const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
+  // Detect mobile device (simple check)
+  const [isMobile, setIsMobile] = useState(false);
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [viewMode, setViewMode] = useState<"desktop" | "mobile" | "full">(
     "full"
@@ -119,6 +129,26 @@ const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
         {/* Gallery Grid or Full Preview */}
         {viewMode === "full" ? (
           <FullPreview livePreview={livePreview} />
+        ) : isMobile ? (
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 px-2 pb-6 hide-scrollbar">
+            {desktop.map((image, index) => (
+              <div
+                key={image.id}
+                className="min-w-[85vw] max-w-[90vw] snap-center rounded-xl neumorphic hover-lift cursor-pointer animate-scale-in transition-transform duration-300"
+                style={{ animationDelay: `${0.1 * index}s` }}
+                onClick={() => openLightbox(index)}
+              >
+                <div className="relative aspect-[4/3] overflow-hidden bg-surface rounded-xl">
+                  <img src={image.url} alt={image.title} className="w-full h-full object-cover" />
+                  {/* Category Badge, overlay, etc. can be added here */}
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-text-primary mb-2">{image.title}</h3>
+                  <p className="text-text-secondary text-sm">{image.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         ) : (
           <div className="grid grid-cols-1 min-[461px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-5 md:gap-8 px-3 xs:px-4 sm:px-0">
             {desktop.map((image, index) => (
