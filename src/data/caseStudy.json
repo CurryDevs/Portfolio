@@ -2,39 +2,45 @@
     {
         "id": "interlynk",
         "title": "InterLynk",
-        "client": "Design System",
+        "client": "FinTech & Security",
         "techStack": [
             "React",
             "TypeScript",
-            "Tailwind CSS"
+            "Tailwind CSS",
+            "Framer Motion",
+            "Google Analytics"
         ],
-        "summary": "Create stunning user interfaces with our comprehensive design system.",
+        "summary": "A clean and engaging landing page designed for a modern link-in-bio and digital business card service.",
         "url": "https://interlynk.vercel.app/",
         "image": "/case-study/desktop-view/interlynk/header.png"
     },
     {
         "id": "brevix",
         "title": "Brevix",
+        "client": "Business Operations",
         "techStack": [
             "Python",
             "TensorFlow",
-            "OpenCV"
+            "OpenCV",
+            "Figma",
+            "Hotjar"
         ],
-        "client": "AI Solutions",
-        "summary": "Powerful image recognition and processing capabilities that allow AI systems to analyze & understand information from the world.",
+        "summary": "A sharp and professional landing page for a modern URL shortening service, focusing on trust and utility.",
         "url": "https://brevixtask.vercel.app/",
         "image": "/case-study/desktop-view/brevix/header.png"
     },
     {
         "id": "torque-craft",
         "title": "Torque Craft",
+        "client": "Automotive",
         "techStack": [
             "Python",
             "Scikit-learn",
-            "Keras"
+            "Keras",
+            "Mixpanel",
+            "SSL/TLS"
         ],
-        "client": "Data Analytics",
-        "summary": "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",
+        "summary": "A powerful and dynamic landing page for a premium automotive parts and accessories brand.",
         "url": "https://torque-craft.vercel.app/",
         "image": "/case-study/desktop-view/torque/header.png"
     },

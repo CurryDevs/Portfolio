@@ -93,16 +93,13 @@ const FAQSection: React.FC = () => {
         </h2>
         <span className="absolute -top-[350px] left-[50%] z-0 h-[500px] w-[600px] -translate-x-[50%] rounded-full bg-gradient-to-r from-primary/10 to-primary/5 blur-3xl" />
       </div>
-      <motion.div
-        className="mx-auto mt-12 max-w-3xl"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
+      <div className="mx-auto mt-12 max-w-3xl">
         {faqData.map((faq, index) => (
           <motion.div
             key={index}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
             variants={itemVariants}
             whileHover={{
               scale: 1.02,
@@ -112,7 +109,7 @@ const FAQSection: React.FC = () => {
             <FAQItem question={faq.question} answer={faq.answer} />
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };
