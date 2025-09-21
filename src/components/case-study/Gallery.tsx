@@ -11,12 +11,11 @@ import React from "react";
 import FullPreview from "./FullPreview";
 
 type GalleryProps = {
-  caseStudy: string;
   livePreview: string;
-  desktop: { id: number; title: string; description: string; url: string; category: string; }[];
+  desktop: { id: number; title: string; description: string; alt: string; url: string; category: string; }[];
 };
 
-const Gallery = ({ caseStudy, livePreview, desktop }: GalleryProps) => {
+const Gallery = ({ livePreview, desktop }: GalleryProps) => {
   // Skeleton loading state for images
   const [imageLoaded, setImageLoaded] = useState(Array(desktop.length).fill(false));
 

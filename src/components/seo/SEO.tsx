@@ -53,7 +53,7 @@ export const SEO: React.FC<SEOProps> = ({
             name: "CurryDevs",
             logo: {
               "@type": "ImageObject",
-              url: `${process.env.REACT_APP_SITE_URL || "https://currydevs.com"}/logo.png`,
+              url: "https://currydevs.com/logo.png",
             },
           },
         }

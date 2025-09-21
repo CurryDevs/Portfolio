@@ -1,14 +1,19 @@
 [
   {
     "id": "interlynk",
+    "title": "InterLynk — FinTech Web App",
+    "tags": ["FinTech", "UI/UX Design", "React", "Tailwind CSS", "Landing Page", "Digital Business Card"],
+    "canonical": "https://currydevs.com/case-studies/interlynk",
+    "publishedTime": "2024-06-01T00:00:00Z",
+    "modifiedTime": "2024-06-15T00:00:00Z",
     "components": {
       "HeroSection": {
         "category": "UI/UX Design",
         "headline": {
           "h1": "Modern Design for a",
-          "h2": "Interlynk"
+          "h2": "FinTech Solution — InterLynk"
         },
-        "subtitle": "A sleek fintech landing page with secure payments, smart spending, and innovative financial tools.",
+        "subtitle": "InterLynk is a sleek fintech landing page with secure payments, smart spending, and innovative digital business card tools.",
         "cta": [
           {
             "label": "View Live Project",
@@ -18,12 +23,12 @@
         ]
       },
       "ProjectDetails": {
-        "title": "Interlynk",
+        "title": "InterLynk",
         "headline": "Empowering Your Finances with Smart Tools",
         "summary": "Designed a modern frontend for InterLynk — a fintech platform offering secure payments, smart spending, and innovative financial solutions for individuals and businesses.",
         "client": {
           "name": "InterLynk",
-          "description": "A fintech startup dedicated to redefining personal and business finance with secure, scalable, and user-friendly tools."
+          "description": "A fintech startup redefining personal and business finance with secure, scalable, and user-friendly tools."
         },
         "duration": {
           "length": "4 Weeks",
@@ -45,147 +50,51 @@
         ]
       },
       "TechStack": {
-        "frontend": [
-          {
-            "name": "React 18",
-            "icon": "SiReact"
-          },
-          {
-            "name": "TypeScript",
-            "icon": "SiTypescript"
-          },
-          {
-            "name": "Tailwind CSS",
-            "icon": "SiTailwindcss"
-          },
-          {
-            "name": "Framer Motion",
-            "icon": "SiFramer"
-          },
-          {
-            "name": "PWA",
-            "icon": "MdInstallMobile"
-          },
-          {
-            "name": "HTML5",
-            "icon": "SiHtml5"
-          },
-          {
-            "name": "CSS3",
-            "icon": "SiCss3"
-          },
-          {
-            "name": "JavaScript",
-            "icon": "SiJavascript"
-          },
-          {
-            "name": "Vercel",
-            "icon": "SiVercel"
-          }
-        ],
-        "mobile": [
-          {
-            "name": "React Native",
-            "icon": "SiReact"
-          },
-          {
-            "name": "Expo",
-            "icon": "SiExpo"
-          }
-        ],
+        "mobile": [],
         "backend": [],
         "devops": [],
+        "frontend": [
+          { "name": "React 18", "icon": "SiReact" },
+          { "name": "TypeScript", "icon": "SiTypescript" },
+          { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
+          { "name": "Framer Motion", "icon": "SiFramer" }
+        ],
         "tools": [
-          {
-            "name": "Figma",
-            "icon": "FaFigma"
-          },
-          {
-            "name": "Google Analytics",
-            "icon": "SiGoogleanalytics"
-          },
-          {
-            "name": "Mixpanel",
-            "icon": "SiMixpanel"
-          },
-          {
-            "name": "Hotjar",
-            "icon": "SiHotjar"
-          }
+          { "name": "Figma", "icon": "FaFigma" },
+          { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
+          { "name": "Mixpanel", "icon": "SiMixpanel" }
         ],
         "security": [
-          {
-            "name": "OAuth 2.0",
-            "icon": "SiAuth0"
-          },
-          {
-            "name": "SSL/TLS",
-            "icon": "SiSst"
-          },
-          {
-            "name": "Rate Limiting",
-            "icon": "MdSpeed"
-          }
+          { "name": "OAuth 2.0", "icon": "SiAuth0" },
+          { "name": "SSL/TLS", "icon": "SiSst" }
         ]
       },
       "Gallery": {
-        "caseStudy": "",
         "livePreview": "/case-study/full-preview/interlynk.jpeg",
         "desktop": [
-          {
-            "id": 1,
-            "title": "Homepage Design",
-            "description": "Clean, modern landing page with improved navigation and hero section",
-            "url": "/case-study/desktop-view/interlynk/header.png",
-            "category": "Homepage"
-          },
-          {
-            "id": 2,
-            "title": "About Us",
-            "description": "Intuitive product browsing with advanced filtering and search",
-            "url": "/case-study/desktop-view/interlynk/aboutUs.png",
-            "category": "Catalog"
-          },
-          {
-            "id": 3,
-            "title": "Features Overview ",
-            "description": "Streamlined 2-step checkout with progress indicators",
-            "url": "/case-study/desktop-view/interlynk/features.png",
-            "category": "Checkout"
-          },
-          {
-            "id": 4,
-            "title": "Services",
-            "description": "Personalized user experience with order history and preferences",
-            "url": "/case-study/desktop-view/interlynk/services.png",
-            "category": "Account"
-          },
-          {
-            "id": 5,
-            "title": "Benefits",
-            "description": "Native mobile experience with offline capabilities",
-            "url": "/case-study/desktop-view/interlynk/benefits.png",
-            "category": "Mobile"
-          },
-          {
-            "id": 6,
-            "title": "Footer",
-            "description": "Native mobile experience with offline capabilities",
-            "url": "/case-study/desktop-view/interlynk/footer.png",
-            "category": "Mobile"
-          }
+          { "id": 1, "title": "Homepage Design", "description": "Clean, modern landing page", "url": "/case-study/desktop-view/interlynk/header.png", "alt": "InterLynk homepage screenshot", "category": "Homepage" },
+          { "id": 2, "title": "About Us", "description": "Intuitive product browsing", "url": "/case-study/desktop-view/interlynk/aboutUs.png", "alt": "InterLynk about section screenshot", "category": "About" },
+          { "id": 3, "title": "Features Overview", "description": "Streamlined feature section for payments and tools", "url": "/case-study/desktop-view/interlynk/features.png", "alt": "InterLynk features section screenshot", "category": "Features" },
+          { "id": 4, "title": "Services", "description": "Personalized user experience with order history and preferences", "url": "/case-study/desktop-view/interlynk/services.png", "alt": "InterLynk services section screenshot", "category": "Services" },
+          { "id": 5, "title": "Benefits", "description": "Highlighting main benefits for users", "url": "/case-study/desktop-view/interlynk/benefits.png", "alt": "InterLynk benefits section screenshot", "category": "Benefits" },
+          { "id": 6, "title": "Footer", "description": "Footer with navigation and contact info", "url": "/case-study/desktop-view/interlynk/footer.png", "alt": "InterLynk footer screenshot", "category": "Footer" }
         ]
       }
     }
   },
   {
     "id": "brevix",
+    "title": "Brevix — Business Operations Platform",
+    "tags": ["Business Operations", "SaaS", "NextJS", "TypeScript", "Framer Motion", "Material UI", "URL Shortening"],
+    "canonical": "https://currydevs.com/case-studies/brevix",
+    "publishedTime": "2024-05-01T00:00:00Z",
+    "modifiedTime": "2024-05-15T00:00:00Z",
     "components": {
       "HeroSection": {
         "category": "UI/UX Design",
         "headline": {
           "h1": "Elevating the Brand for",
-          "h2": "Brevix"
+          "h2": "Brevix — Modern Business Operations"
         },
         "subtitle": "Brevix streamlines business operations with smart task management, powerful analytics, and scalable solutions.",
         "cta": [
@@ -202,7 +111,7 @@
         "summary": "Built a professional and scalable frontend for Brevix — a business operations platform designed to streamline daily tasks, empower data-driven decisions, and help startups grow with confidence.",
         "client": {
           "name": "Brevix",
-          "description": "An innovative SaaS platform offering intuitive task management, advanced analytics, and scalable solutions for startups and enterprises looking to optimize operations."
+          "description": "An innovative SaaS platform offering intuitive task management, advanced analytics, and scalable solutions for startups and enterprises."
         },
         "duration": {
           "length": "3 Weeks",
@@ -224,149 +133,51 @@
         ]
       },
       "TechStack": {
-        "frontend": [
-          {
-            "name": "React 18",
-            "icon": "SiReact"
-          },
-          {
-            "name": "TypeScript",
-            "icon": "SiTypescript"
-          },
-          {
-            "name": "Tailwind CSS",
-            "icon": "SiTailwindcss"
-          },
-          {
-            "name": "Framer Motion",
-            "icon": "SiFramer"
-          },
-          {
-            "name": "PWA",
-            "icon": "MdInstallMobile"
-          },
-          {
-            "name": "HTML5",
-            "icon": "SiHtml5"
-          },
-          {
-            "name": "CSS3",
-            "icon": "SiCss3"
-          },
-          {
-            "name": "JavaScript",
-            "icon": "SiJavascript"
-          },
-          {
-            "name": "Vercel",
-            "icon": "SiVercel"
-          }
-        ],
         "mobile": [],
         "backend": [],
         "devops": [],
+        "frontend": [
+          { "name": "React 18", "icon": "SiReact" },
+          { "name": "TypeScript", "icon": "SiTypescript" },
+          { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
+          { "name": "Framer Motion", "icon": "SiFramer" }
+        ],
         "tools": [
-          {
-            "name": "Figma",
-            "icon": "FaFigma"
-          },
-          {
-            "name": "Google Analytics",
-            "icon": "SiGoogleanalytics"
-          },
-          {
-            "name": "Mixpanel",
-            "icon": "SiMixpanel"
-          },
-          {
-            "name": "Hotjar",
-            "icon": "SiHotjar"
-          }
+          { "name": "Figma", "icon": "FaFigma" },
+          { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
+          { "name": "Mixpanel", "icon": "SiMixpanel" }
         ],
         "security": [
-          {
-            "name": "OAuth 2.0",
-            "icon": "SiAuth0"
-          },
-          {
-            "name": "JWT",
-            "icon": "SiJsonwebtokens"
-          },
-          {
-            "name": "SSL/TLS",
-            "icon": "SiSst"
-          },
-          {
-            "name": "Rate Limiting",
-            "icon": "MdSpeed"
-          }
+          { "name": "OAuth 2.0", "icon": "SiAuth0" },
+          { "name": "JWT", "icon": "SiJsonwebtokens" },
+          { "name": "SSL/TLS", "icon": "SiSst" }
         ]
       },
       "Gallery": {
-        "caseStudy": "",
         "livePreview": "/case-study/full-preview/brevix.jpeg",
         "desktop": [
-          {
-            "id": 1,
-            "title": "Homepage Design",
-            "description": "Clean, modern landing page with improved navigation and hero section",
-            "url": "/case-study/desktop-view/brevix/header.png",
-            "category": "Homepage"
-          },
-          {
-            "id": 2,
-            "title": "Benefits",
-            "description": "Intuitive product browsing with advanced filtering and search",
-            "url": "/case-study/desktop-view/brevix/benefits.png",
-            "category": "Catalog"
-          },
-          {
-            "id": 3,
-            "title": "Features Overvie",
-            "description": "Streamlined 2-step checkout with progress indicators",
-            "url": "/case-study/desktop-view/brevix/features.png",
-            "category": "Features"
-          },
-          {
-            "id": 4,
-            "title": "Extended Features",
-            "description": "Streamlined 2-step checkout with progress indicators",
-            "url": "/case-study/desktop-view/brevix/features2.png",
-            "category": "Features"
-          },
-          {
-            "id": 5,
-            "title": "Results",
-            "description": "Native mobile experience with offline capabilities",
-            "url": "/case-study/desktop-view/brevix/result.png",
-            "category": "Results"
-          },
-          {
-            "id": 6,
-            "title": "FAQ Section",
-            "description": "Native mobile experience with offline capabilities",
-            "url": "/case-study/desktop-view/brevix/faq.png",
-            "category": "FAQ"
-          },
-          {
-            "id": 7,
-            "title": "CTA + Footer",
-            "description": "Native mobile experience with offline capabilities",
-            "url": "/case-study/desktop-view/brevix/ctaFooter.png",
-            "category": "Footer"
-          }
+          { "id": 1, "title": "Homepage Design", "description": "Clean, modern landing page with improved navigation and hero section", "url": "/case-study/desktop-view/brevix/header.png", "alt": "Brevix homepage screenshot", "category": "Homepage" },
+          { "id": 2, "title": "Features", "description": "Overview of task management and analytics features", "url": "/case-study/desktop-view/brevix/features.png", "alt": "Brevix features screenshot", "category": "Features" },
+          { "id": 3, "title": "Benefits", "description": "Highlighting main benefits for users", "url": "/case-study/desktop-view/brevix/benefits.png", "alt": "Brevix benefits screenshot", "category": "Benefits" },
+          { "id": 4, "title": "FAQ Section", "description": "Answers to common questions", "url": "/case-study/desktop-view/brevix/faq.png", "alt": "Brevix FAQ screenshot", "category": "FAQ" },
+          { "id": 5, "title": "CTA + Footer", "description": "Clear call-to-action and footer information", "url": "/case-study/desktop-view/brevix/ctaFooter.png", "alt": "Brevix footer screenshot", "category": "Footer" }
         ]
       }
     }
   },
   {
     "id": "torque-craft",
+    "title": "Torque Craft — Automotive & Hardware",
+    "tags": ["Automotive", "E-Commerce", "UI/UX Design", "React", "Tailwind CSS", "Car Parts", "Tools", "Hardware"],
+    "canonical": "https://currydevs.com/case-studies/torque-craft",
+    "publishedTime": "2024-04-01T00:00:00Z",
+    "modifiedTime": "2024-04-15T00:00:00Z",
     "components": {
       "HeroSection": {
         "category": "UI/UX Design",
         "headline": {
           "h1": "High-Octane Design for",
-          "h2": "Torque Craft"
+          "h2": "Torque Craft — Automotive & Hardware"
         },
         "subtitle": "Torque Craft delivers premium automotive parts and durable hardware tools, built for performance and trusted by professionals.",
         "cta": [
@@ -391,7 +202,7 @@
         },
         "timeline": {
           "timeframe": "Q1 2024",
-          "description": "From concept to final implementation, focusing on a immersive user experience."
+          "description": "From concept to final implementation, focusing on an immersive user experience."
         },
         "challenge": [
           "Creating a design that feels powerful and premium",
@@ -405,189 +216,36 @@
         ]
       },
       "TechStack": {
+        "mobile": [],
         "backend": [],
         "devops": [],
         "frontend": [
-          {
-            "name": "React 18",
-            "icon": "SiReact"
-          },
-          {
-            "name": "TypeScript",
-            "icon": "SiTypescript"
-          },
-          {
-            "name": "Tailwind CSS",
-            "icon": "SiTailwindcss"
-          },
-          {
-            "name": "Framer Motion",
-            "icon": "SiFramer"
-          },
-          {
-            "name": "PWA",
-            "icon": "MdInstallMobile"
-          },
-          {
-            "name": "HTML5",
-            "icon": "SiHtml5"
-          },
-          {
-            "name": "CSS3",
-            "icon": "SiCss3"
-          },
-          {
-            "name": "JavaScript",
-            "icon": "SiJavascript"
-          },
-          {
-            "name": "Vercel",
-            "icon": "SiVercel"
-          },
-          {
-            "name": "MDX",
-            "icon": "SiMdx"
-          },
-          {
-            "name": "Astro",
-            "icon": "SiAstro"
-          }
-        ],
-        "mobile": [
-          {
-            "name": "React Native",
-            "icon": "SiReact"
-          },
-          {
-            "name": "Expo",
-            "icon": "SiExpo"
-          }
+          { "name": "React 18", "icon": "SiReact" },
+          { "name": "TypeScript", "icon": "SiTypescript" },
+          { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
+          { "name": "Framer Motion", "icon": "SiFramer" }
         ],
         "tools": [
-          {
-            "name": "Figma",
-            "icon": "FaFigma"
-          },
-          {
-            "name": "Google Analytics",
-            "icon": "SiGoogleanalytics"
-          },
-          {
-            "name": "Mixpanel",
-            "icon": "SiMixpanel"
-          },
-          {
-            "name": "Hotjar",
-            "icon": "SiHotjar"
-          }
+          { "name": "Figma", "icon": "FaFigma" },
+          { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
+          { "name": "Mixpanel", "icon": "SiMixpanel" }
         ],
         "security": [
-          {
-            "name": "OAuth 2.0",
-            "icon": "SiAuth0"
-          },
-          {
-            "name": "JWT",
-            "icon": "SiJsonwebtokens"
-          },
-          {
-            "name": "SSL/TLS",
-            "icon": "SiSst"
-          },
-          {
-            "name": "Rate Limiting",
-            "icon": "MdSpeed"
-          }
+          { "name": "OAuth 2.0", "icon": "SiAuth0" },
+          { "name": "JWT", "icon": "SiJsonwebtokens" },
+          { "name": "SSL/TLS", "icon": "SiSst" }
         ]
       },
       "Gallery": {
-        "caseStudy": "",
         "livePreview": "/case-study/full-preview/torque.jpeg",
         "desktop": [
-          {
-            "id": 1,
-            "title": "Homepage Design",
-            "description": "Clean, modern landing page with improved navigation, hero section, and brand-focused visuals.",
-            "url": "/case-study/desktop-view/torque/header.png",
-            "category": "Homepage"
-          },
-          {
-            "id": 2,
-            "title": "Insights",
-            "description": "Engaging insights section highlighting key industry updates and product knowledge.",
-            "url": "/case-study/desktop-view/torque/insights.png",
-            "category": "Insights"
-          },
-          {
-            "id": 3,
-            "title": "Products",
-            "description": "Well-structured product listing page with clear categorization and filters.",
-            "url": "/case-study/desktop-view/torque/product.png",
-            "category": "Products"
-          },
-          {
-            "id": 4,
-            "title": "Product Specification",
-            "description": "Detailed product specification layout providing technical details in a structured format.",
-            "url": "/case-study/desktop-view/torque/blog.png",
-            "category": "Product Details"
-          },
-          {
-            "id": 5,
-            "title": "Product Description",
-            "description": "Comprehensive product description page with visuals, features, and benefits.",
-            "url": "/case-study/desktop-view/torque/result.png",
-            "category": "Product Details"
-          },
-          {
-            "id": 6,
-            "title": "Single Product Section",
-            "description": "Dedicated single product view with clear call-to-actions and focused design.",
-            "url": "/case-study/desktop-view/torque/singleProduct.png",
-            "category": "Product Details"
-          },
-          {
-            "id": 7,
-            "title": "BluePrint Section",
-            "description": "Showcasing the blueprint or process flow with diagrams and structured design.",
-            "url": "/case-study/desktop-view/torque/blueprints.png",
-            "category": "Process"
-          },
-          {
-            "id": 8,
-            "title": "Blogs",
-            "description": "Well-organized blog section with featured posts, categories, and modern typography.",
-            "url": "/case-study/desktop-view/torque/blog.png",
-            "category": "Blogs"
-          },
-          {
-            "id": 9,
-            "title": "Services Section",
-            "description": "Clear and attractive services layout highlighting offerings and value propositions.",
-            "url": "/case-study/desktop-view/torque/services.png",
-            "category": "Services"
-          },
-          {
-            "id": 10,
-            "title": "Contact Us",
-            "description": "User-friendly contact page with forms, details, and location information.",
-            "url": "/case-study/desktop-view/torque/contact.png",
-            "category": "Contact"
-          },
-          {
-            "id": 11,
-            "title": "Result Section",
-            "description": "Impactful results section showcasing outcomes, metrics, and success stories.",
-            "url": "/case-study/desktop-view/torque/result.png",
-            "category": "Results"
-          },
-          {
-            "id": 12,
-            "title": "Footer",
-            "description": "Clean footer design with navigation, social links, and quick access to resources.",
-            "url": "/case-study/desktop-view/torque/footer.png",
-            "category": "Footer"
-          }
+          { "id": 1, "title": "Homepage Design", "description": "Clean, modern landing page", "url": "/case-study/desktop-view/torque/header.png", "alt": "Torque Craft homepage screenshot", "category": "Homepage" },
+          { "id": 2, "title": "Products Overview", "description": "Highlighting automotive products and accessories", "url": "/case-study/desktop-view/torque/product.png", "alt": "Torque Craft products screenshot", "category": "Products" },
+          { "id": 3, "title": "Product Details", "description": "Detailed specifications and benefits for products", "url": "/case-study/desktop-view/torque/singleProduct.png", "alt": "Torque Craft single product screenshot", "category": "Product Details" },
+          { "id": 4, "title": "Blueprint Section", "description": "Process and workflow illustrations", "url": "/case-study/desktop-view/torque/blueprints.png", "alt": "Torque Craft blueprint screenshot", "category": "Process" },
+          { "id": 5, "title": "Blogs", "description": "Engaging blogs related to automotive and tools", "url": "/case-study/desktop-view/torque/blog.png", "alt": "Torque Craft blogs screenshot", "category": "Blogs" },
+          { "id": 6, "title": "Services Section", "description": "Services overview for customers", "url": "/case-study/desktop-view/torque/services.png", "alt": "Torque Craft services screenshot", "category": "Services" },
+          { "id": 7, "title": "Footer", "description": "Footer with navigation and social links", "url": "/case-study/desktop-view/torque/footer.png", "alt": "Torque Craft footer screenshot", "category": "Footer" }
         ]
       }
     }
