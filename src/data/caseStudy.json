@@ -1,63 +1,60 @@
 [
-    {
-        "id": "interlynk",
-        "title": "InterLynk",
-        "client": "FinTech & Security",
-        "techStack": [
-            "React",
-            "JavaScript",
-            "Tailwind CSS",
-            "Google Analytics",
-            "Figma",
-            ""
-        ],
-          "summary": "Empowering your finance with seamless link-in-bio and digital business card solutions. InterLynk bridges finance and technology, offering secure, innovative tools designed to meet the evolving needs of modern professionals.",
-        "url": "https://interlynk.vercel.app/",
-        "image": "/case-study/desktop-view/interlynk/header.png"
-    },
-    {
-        "id": "brevix",
-        "title": "Brevix",
-        "client": "Business Operations",
-        "techStack": [
-            "NextJS",
-            "TypeScript",
-            "Framer Motion",
-            "Material UI",
-            "ThreeJS",
-            ""
-        ],
-          "summary": "Simplify business operations with Brevix — a modern URL shortening platform built for reliability and scalability. From intuitive task management to data-driven insights, Brevix helps businesses stay efficient in today’s competitive landscape.",
-        "url": "https://brevixtask.vercel.app/",
-        "image": "/case-study/desktop-view/brevix/header.png"
-    },
-    {
-        "id": "torque-craft",
-        "title": "Torque Craft",
-        "client": "Automotive",
-        "techStack": [
-            "Astro",
-            "Mdx",
-            "MixPanel",
-            "TypeScript",
-            "SCSS",
-            ""
-        ],
-          "summary": "Equip your projects with Torque Craft — delivering top-quality automotive parts and precision hardware tools. Designed for performance and durability, Torque Craft powers every project with trusted craftsmanship and innovation.",
-        "url": "https://torque-craft.vercel.app/",
-        "image": "/case-study/desktop-view/torque/header.png"
-    },
-    {
-        "id": "item-4",
-        "title": "Predictive Analytics",
-        "techStack": [
-            "R",
-            "Python",
-            "SQL"
-        ],
-        "client": "Business Intelligence",
-        "summary": "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
-        "url": "#",
-        "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80&sat=-100"
-    }
+  {
+    "id": "interlynk",
+    "title": "InterLynk",
+    "client": "FinTech & Security",
+    "techStack": [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Google Analytics",
+      "Figma"
+    ],
+    "summary": "InterLynk is a modern FinTech web application built with React and Tailwind CSS. It combines secure digital business cards with link-in-bio functionality, providing professionals a scalable and responsive platform. This project highlights CurryDevs’ expertise in finance-focused web development with performance, security, and SEO optimization in mind.",
+    "url": "https://interlynk.vercel.app/",
+    "image": "/case-study/desktop-view/interlynk/header.png"
+  },
+  {
+    "id": "brevix",
+    "title": "Brevix",
+    "client": "Business Operations",
+    "techStack": [
+      "NextJS",
+      "TypeScript",
+      "Framer Motion",
+      "Material UI",
+      "ThreeJS"
+    ],
+    "summary": "Brevix is a scalable business operations platform developed using Next.js and TypeScript. It offers URL-shortening, task management, and real-time insights, optimized for enterprise workflows. CurryDevs delivered a high-performance, responsive, and modern SaaS solution that streamlines business operations efficiently.",
+    "url": "https://brevixtask.vercel.app/",
+    "image": "/case-study/desktop-view/brevix/header.png"
+  },
+  {
+    "id": "torque-craft",
+    "title": "Torque Craft",
+    "client": "Automotive",
+    "techStack": [
+      "Astro",
+      "Mdx",
+      "MixPanel",
+      "TypeScript",
+      "SCSS"
+    ],
+    "summary": "Torque Craft is an automotive web platform built with Astro and TypeScript. Designed for speed, scalability, and SEO, it provides a modern, responsive interface for automotive parts and tools. This project demonstrates CurryDevs’ ability to craft industry-specific digital solutions with high performance and precision design.",
+    "url": "https://torque-craft.vercel.app/",
+    "image": "/case-study/desktop-view/torque/header.png"
+  },
+  {
+    "id": "predictive-analytics",
+    "title": "Predictive Analytics",
+    "client": "Business Intelligence",
+    "techStack": [
+      "R",
+      "Python",
+      "SQL"
+    ],
+    "summary": "Predictive Analytics is a business intelligence solution built with R and Python. It provides advanced forecasting and data-driven insights to help companies make smarter decisions. CurryDevs ensured the platform is scalable, high-performance, and optimized for responsive data visualization and analytical workflows.",
+    "url": "#",
+    "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80&sat=-100"
+  }
 ]

@@ -12,6 +12,7 @@ import { Code, Palette, Rocket } from "lucide-react";
 import FAQSection from "@/components/sections/FAQSection";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Index = ({ scrollTo }: { scrollTo?: string }) => {
   const location = useLocation();
@@ -53,7 +54,35 @@ const Index = ({ scrollTo }: { scrollTo?: string }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-brand-bg">
+    <>
+      <Helmet>
+        <title>CurryDevs | Web Development Agency</title>
+        <meta
+          name="description"
+          content="CurryDevs builds modern, high-performance websites and apps with React, TypeScript & Tailwind. Minimalist design, smooth interactions, and fast delivery."
+        />
+        <link rel="canonical" href="https://currydevs.com/" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="CurryDevs | Web Development Agency" />
+        <meta
+          property="og:description"
+          content="We craft fast, elegant web experiences. Modern frontend, solid backend, and a product-focused approach."
+        />
+        <meta property="og:url" content="https://currydevs.com/" />
+        <meta property="og:image" content="https://currydevs.com/og-image.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CurryDevs | Web Development Agency" />
+        <meta
+          name="twitter:description"
+          content="CurryDevs builds modern, high-performance websites and apps with React, TypeScript & Tailwind."
+        />
+        <meta name="twitter:image" content="https://currydevs.com/og-image.jpg" />
+      </Helmet>
+      <div className="min-h-screen bg-brand-bg">
       <AdvancedHeader />
       <main>
         <HeroSection />
@@ -70,6 +99,7 @@ const Index = ({ scrollTo }: { scrollTo?: string }) => {
         <Footer />
       </div>
     </div>
+    </>
   );
 };
 

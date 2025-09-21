@@ -2,30 +2,97 @@
 <html lang="en">
 
 <head>
+  <!-- ✅ Basic setup -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CurryDevs — Web Development Agency</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+  <!-- ✅ Primary SEO -->
+  <title>CurryDevs | Web Development & Design Agency</title>
   <meta name="description"
-    content="CurryDevs builds modern, high-performance websites and web apps with a minimalist aesthetic and smooth interactions. Your idea, our code." />
+    content="CurryDevs builds high-performance websites and apps using React, TypeScript & Tailwind. Minimalist design, smooth interactions, and a product-focused mindset." />
   <meta name="author" content="CurryDevs" />
-  <link rel="icon" href="/lovable-uploads/4174400b-20de-478e-91e0-f33a242fbecf.png" type="image/png">
+  <link rel="canonical" href="https://currydevs.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="CurryDevs, CurryDev, web development, web design, React agency, TypeScript, Tailwind, frontend developer India, web apps" />
 
-  <meta property="og:title" content="CurryDevs — Web Development Agency" />
-  <meta property="og:description"
-    content="We craft fast, elegant web experiences. Modern frontend, solid backend, and a product mindset." />
+  <!-- ✅ Favicons -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- ✅ Open Graph (Facebook / LinkedIn / WhatsApp / Slack / Telegram) -->
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/lovable-uploads/4174400b-20de-478e-91e0-f33a242fbecf.png" />
+  <meta property="og:title" content="CurryDevs | Web Development & Design Agency" />
+  <meta property="og:description"
+    content="We craft fast, elegant web experiences. Modern frontend, solid backend, and a product-focused approach." />
+  <meta property="og:url" content="https://currydevs.com/" />
+  <meta property="og:site_name" content="CurryDevs" />
+  <!-- ⚡ Replace with a full 1200x630px image for previews -->
+  <meta property="og:image" content="https://currydevs.com/og-image.jpg" />
+  <meta property="og:image:alt" content="CurryDevs Web Development Agency" />
 
+  <!-- ✅ Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@currydevs" />
-  <meta name="twitter:image" content="/lovable-uploads/4174400b-20de-478e-91e0-f33a242fbecf.png" />
-  <!-- Google tag (gtag.js) -->
+  <meta name="twitter:title" content="CurryDevs | Web Development & Design Agency" />
+  <meta name="twitter:description"
+    content="CurryDevs builds modern, high-performance websites with React, TypeScript & Tailwind." />
+  <meta name="twitter:image" content="https://currydevs.com/og-image.jpg" />
+
+  <!-- ✅ Extra social sharing (WhatsApp, Telegram read OG tags; we’re covered already) -->
+
+  <!-- ✅ Structured Data (JSON-LD Organization + Website) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CurryDevs",
+      "url": "https://currydevs.com",
+      "logo": "https://currydevs.com/logo.png",
+      "sameAs": [
+        "https://twitter.com/currydevs",
+        "https://www.linkedin.com/company/currydevs"
+      ],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hello@currydevs.com",
+        "url": "https://currydevs.com/contact"
+      }]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://currydevs.com/",
+      "name": "CurryDevs",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://currydevs.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+  <!-- ✅ Performance hints (optional) -->
+  <!-- Preload fonts -->
+  <!-- <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin> -->
+  <!-- Preconnect to CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- ✅ Google Analytics (already added) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPZDB1ZQVQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-KPZDB1ZQVQ');
   </script>
 </head>
