@@ -9,9 +9,11 @@ interface ProjectCardProps {
   summary: string;
   url: string;
   image: string;
+  imageLoaded?: boolean;
+  onImageLoad?: () => void;
 }
 
-const ProjectCard = ({ id, title, summary, url, image }: ProjectCardProps) => {
+const ProjectCard = ({ id, title, summary, url, image, imageLoaded = true, onImageLoad }: ProjectCardProps) => {
   return (
     <Link
       to={`/case-studies/${id}`}
@@ -21,10 +23,17 @@ const ProjectCard = ({ id, title, summary, url, image }: ProjectCardProps) => {
         <div className="flex aspect-[3/2] overflow-clip rounded-xl">
           <div className="flex-1">
             <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
+              {/* Skeleton Loader - same as Gallery component */}
+              {!imageLoaded && (
+                <div className="absolute inset-0 bg-gray-300 animate-pulse flex items-center justify-center">
+                  <div className="w-2/3 h-2/3 bg-gray-200 rounded-lg" />
+                </div>
+              )}
               <img
                 src={image}
                 alt={title}
-                className="h-full w-full object-cover object-center"
+                className={`h-full w-full object-cover object-center transition-opacity duration-300 ${!imageLoaded ? 'opacity-0' : 'opacity-100'}`}
+                onLoad={onImageLoad}
               />
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -51,6 +51,35 @@ const faqData: FAQItemType[] = [
   },
 ];
 
+// Container animation variants for staggered children
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, // Each child appears 0.1s after the previous
+      delayChildren: 0.2, // Start animations after 0.2s
+    },
+  },
+};
+
+// Individual FAQ item animation variants
+const itemVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94] as const, // Custom smooth easing
+    },
+  },
+};
 
 const FAQSection: React.FC = () => {
   return (
@@ -64,13 +93,26 @@ const FAQSection: React.FC = () => {
         </h2>
         <span className="absolute -top-[350px] left-[50%] z-0 h-[500px] w-[600px] -translate-x-[50%] rounded-full bg-gradient-to-r from-primary/10 to-primary/5 blur-3xl" />
       </div>
-      <div className="mx-auto mt-12 max-w-3xl">
-        <AnimatePresence>
-          {faqData.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
-          ))}
-        </AnimatePresence>
-      </div>
+      <motion.div
+        className="mx-auto mt-12 max-w-3xl"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        {faqData.map((faq, index) => (
+          <motion.div
+            key={index}
+            variants={itemVariants}
+            whileHover={{
+              scale: 1.02,
+              transition: { duration: 0.2 }
+            }}
+          >
+            <FAQItem question={faq.question} answer={faq.answer} />
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 };
@@ -82,13 +124,13 @@ const FAQItem: React.FC<FAQItemType> = ({ question, answer }) => {
     <motion.div
       animate={isOpen ? "open" : "closed"}
       className={cn(
-        "rounded-xl border transition-colors mb-2"
-        // isOpen ? "bg-muted/50" : "bg-card"
+        "rounded-xl border transition-all duration-300 mb-2 hover:shadow-md hover:border-primary/20",
+        isOpen ? "bg-muted/30 border-primary/30" : "bg-card/50 backdrop-blur-sm"
       )}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between gap-4 p-4 text-left"
+        className="flex w-full items-center justify-between gap-4 p-4 text-left hover:bg-muted/20 transition-colors duration-200 rounded-xl"
       >
         <span
           className={cn(
@@ -100,15 +142,22 @@ const FAQItem: React.FC<FAQItemType> = ({ question, answer }) => {
         </span>
         <motion.span
           variants={{
-            open: { rotate: "45deg" },
-            closed: { rotate: "0deg" },
+            open: {
+              rotate: "45deg",
+              scale: 1.1,
+            },
+            closed: {
+              rotate: "0deg",
+              scale: 1,
+            },
           }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="flex-shrink-0"
         >
           <Plus
             className={cn(
-              "h-5 w-5 transition-colors",
-              isOpen ? "text-foreground" : "text-muted-foreground"
+              "h-5 w-5 transition-colors duration-200",
+              isOpen ? "text-primary" : "text-muted-foreground"
             )}
           />
         </motion.span>
@@ -118,11 +167,23 @@ const FAQItem: React.FC<FAQItemType> = ({ question, answer }) => {
         animate={{
           height: isOpen ? "auto" : "0px",
           marginBottom: isOpen ? "16px" : "0px",
+          opacity: isOpen ? 1 : 0,
         }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{
+          duration: 0.4,
+          ease: [0.25, 0.46, 0.45, 0.94],
+          opacity: { duration: 0.3 }
+        }}
         className="overflow-hidden px-4"
       >
-        <p className="text-muted-foreground text-xs xs:text-sm sm:text-md">{answer}</p>
+        <motion.p
+          initial={{ y: -10 }}
+          animate={{ y: isOpen ? 0 : -10 }}
+          transition={{ duration: 0.3, delay: isOpen ? 0.1 : 0 }}
+          className="text-muted-foreground text-xs xs:text-sm sm:text-md leading-relaxed"
+        >
+          {answer}
+        </motion.p>
       </motion.div>
     </motion.div>
   );
