@@ -5,12 +5,13 @@
         "client": "FinTech & Security",
         "techStack": [
             "React",
-            "TypeScript",
+            "JavaScript",
             "Tailwind CSS",
-            "Framer Motion",
-            "Google Analytics"
+            "Google Analytics",
+            "Figma",
+            ""
         ],
-        "summary": "A clean and engaging landing page designed for a modern link-in-bio and digital business card service.",
+          "summary": "Empowering your finance with seamless link-in-bio and digital business card solutions. InterLynk bridges finance and technology, offering secure, innovative tools designed to meet the evolving needs of modern professionals.",
         "url": "https://interlynk.vercel.app/",
         "image": "/case-study/desktop-view/interlynk/header.png"
     },
@@ -19,13 +20,14 @@
         "title": "Brevix",
         "client": "Business Operations",
         "techStack": [
-            "Python",
-            "TensorFlow",
-            "OpenCV",
-            "Figma",
-            "Hotjar"
+            "NextJS",
+            "TypeScript",
+            "Framer Motion",
+            "Material UI",
+            "ThreeJS",
+            ""
         ],
-        "summary": "A sharp and professional landing page for a modern URL shortening service, focusing on trust and utility.",
+          "summary": "Simplify business operations with Brevix — a modern URL shortening platform built for reliability and scalability. From intuitive task management to data-driven insights, Brevix helps businesses stay efficient in today’s competitive landscape.",
         "url": "https://brevixtask.vercel.app/",
         "image": "/case-study/desktop-view/brevix/header.png"
     },
@@ -34,13 +36,14 @@
         "title": "Torque Craft",
         "client": "Automotive",
         "techStack": [
-            "Python",
-            "Scikit-learn",
-            "Keras",
-            "Mixpanel",
-            "SSL/TLS"
+            "Astro",
+            "Mdx",
+            "MixPanel",
+            "TypeScript",
+            "SCSS",
+            ""
         ],
-        "summary": "A powerful and dynamic landing page for a premium automotive parts and accessories brand.",
+          "summary": "Equip your projects with Torque Craft — delivering top-quality automotive parts and precision hardware tools. Designed for performance and durability, Torque Craft powers every project with trusted craftsmanship and innovation.",
         "url": "https://torque-craft.vercel.app/",
         "image": "/case-study/desktop-view/torque/header.png"
     },

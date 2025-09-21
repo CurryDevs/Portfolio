@@ -223,7 +223,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
                         {/* Tech Stack */}
                         <div className="flex flex-wrap gap-2">
-                            {project.techStack.slice(0, 4).map((tech, index) => (
+                            {project.techStack.slice(0, 5).map((tech, index) => (
                                 <motion.span
                                     key={tech}
                                     className="px-3 py-1 text-xs font-mono uppercase tracking-wide text-foreground/70 border border-foreground/20 bg-background/50 hover:bg-foreground hover:text-background transition-all duration-300"
@@ -243,14 +243,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                                     {tech}
                                 </motion.span>
                             ))}
-                            {project.techStack.length > 4 && (
+                            {project.techStack.length > 5 && (
                                 <motion.span
                                     className="px-3 py-1 text-xs text-muted-foreground"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.7 }}
                                 >
-                                    +{project.techStack.length - 4}
+                                    +{project.techStack.length - 5}
                                 </motion.span>
                             )}
                         </div>
