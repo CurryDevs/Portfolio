@@ -715,3 +715,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none; /* hides scrollbar */
+}
