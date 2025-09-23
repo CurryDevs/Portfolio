@@ -57,12 +57,18 @@
           { "name": "React 18", "icon": "SiReact" },
           { "name": "TypeScript", "icon": "SiTypescript" },
           { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-          { "name": "Framer Motion", "icon": "SiFramer" }
+          { "name": "Framer Motion", "icon": "SiFramer" },
+          { "name": "PWA",   "icon": "MdInstallMobile"},
+          { "name": "HTML5", "icon": "SiHtml5"}, 
+          { "name": "CSS3",  "icon": "SiCss3"},
+          { "name": "JavaScript", "icon": "SiJavascript"},
+          { "name": "Vercel", "icon": "SiVercel"}
         ],
         "tools": [
           { "name": "Figma", "icon": "FaFigma" },
           { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
-          { "name": "Mixpanel", "icon": "SiMixpanel" }
+          { "name": "Mixpanel", "icon": "SiMixpanel" }, 
+          { "name": "Hotjar", "icon": "SiHotjar"}
         ],
         "security": [
           { "name": "OAuth 2.0", "icon": "SiAuth0" },
@@ -140,27 +146,76 @@
           { "name": "React 18", "icon": "SiReact" },
           { "name": "TypeScript", "icon": "SiTypescript" },
           { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-          { "name": "Framer Motion", "icon": "SiFramer" }
+          { "name": "Framer Motion", "icon": "SiFramer" },
+          { "name": "PWA",   "icon": "MdInstallMobile"},
+          { "name": "HTML5", "icon": "SiHtml5"}, 
+          { "name": "CSS3",  "icon": "SiCss3"},
+          { "name": "JavaScript", "icon": "SiJavascript"},
+          { "name": "Vercel", "icon": "SiVercel"}
         ],
         "tools": [
           { "name": "Figma", "icon": "FaFigma" },
           { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
-          { "name": "Mixpanel", "icon": "SiMixpanel" }
+          { "name": "Mixpanel", "icon": "SiMixpanel" },
+          { "name": "Hotjar", "icon": "SiHotjar"}
         ],
         "security": [
           { "name": "OAuth 2.0", "icon": "SiAuth0" },
-          { "name": "JWT", "icon": "SiJsonwebtokens" },
           { "name": "SSL/TLS", "icon": "SiSst" }
         ]
       },
       "Gallery": {
         "livePreview": "/case-study/full-preview/brevix.jpeg",
         "desktop": [
-          { "id": 1, "title": "Homepage Design", "description": "Clean, modern landing page with improved navigation and hero section", "url": "/case-study/desktop-view/brevix/header.png", "alt": "Brevix homepage screenshot", "category": "Homepage" },
-          { "id": 2, "title": "Features", "description": "Overview of task management and analytics features", "url": "/case-study/desktop-view/brevix/features.png", "alt": "Brevix features screenshot", "category": "Features" },
-          { "id": 3, "title": "Benefits", "description": "Highlighting main benefits for users", "url": "/case-study/desktop-view/brevix/benefits.png", "alt": "Brevix benefits screenshot", "category": "Benefits" },
-          { "id": 4, "title": "FAQ Section", "description": "Answers to common questions", "url": "/case-study/desktop-view/brevix/faq.png", "alt": "Brevix FAQ screenshot", "category": "FAQ" },
-          { "id": 5, "title": "CTA + Footer", "description": "Clear call-to-action and footer information", "url": "/case-study/desktop-view/brevix/ctaFooter.png", "alt": "Brevix footer screenshot", "category": "Footer" }
+          {
+            "id": 1,
+            "title": "Homepage Design",
+            "description": "Clean, modern landing page with improved navigation and hero section",
+            "url": "/case-study/desktop-view/brevix/header.png",
+            "category": "Homepage"
+          },
+          {
+            "id": 2,
+            "title": "Benefits",
+            "description": "Intuitive product browsing with advanced filtering and search",
+            "url": "/case-study/desktop-view/brevix/benefits.png",
+            "category": "Catalog"
+          },
+          {
+            "id": 3,
+            "title": "Features Overvie",
+            "description": "Streamlined 2-step checkout with progress indicators",
+            "url": "/case-study/desktop-view/brevix/features.png",
+            "category": "Features"
+          },
+          {
+            "id": 4,
+            "title": "Extended Features",
+            "description": "Streamlined 2-step checkout with progress indicators",
+            "url": "/case-study/desktop-view/brevix/features2.png",
+            "category": "Features"
+          },
+          {
+            "id": 5,
+            "title": "Results",
+            "description": "Native mobile experience with offline capabilities",
+            "url": "/case-study/desktop-view/brevix/result.png",
+            "category": "Results"
+          },
+          {
+            "id": 6,
+            "title": "FAQ Section",
+            "description": "Native mobile experience with offline capabilities",
+            "url": "/case-study/desktop-view/brevix/faq.png",
+            "category": "FAQ"
+          },
+          {
+            "id": 7,
+            "title": "CTA + Footer",
+            "description": "Native mobile experience with offline capabilities",
+            "url": "/case-study/desktop-view/brevix/ctaFooter.png",
+            "category": "Footer"
+          }
         ]
       }
     }
@@ -216,19 +271,30 @@
         ]
       },
       "TechStack": {
-        "mobile": [],
+        "mobile": [
+          { "name": "Expo", "icon": "SiExpo"},
+          { "name": "React Native", "icon": "SiReact"}
+        ],
         "backend": [],
         "devops": [],
         "frontend": [
           { "name": "React 18", "icon": "SiReact" },
           { "name": "TypeScript", "icon": "SiTypescript" },
           { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-          { "name": "Framer Motion", "icon": "SiFramer" }
+          { "name": "Framer Motion", "icon": "SiFramer" },
+          { "name": "PWA",   "icon": "MdInstallMobile"},
+          { "name": "HTML5", "icon": "SiHtml5"}, 
+          { "name": "CSS3",  "icon": "SiCss3"},
+          { "name": "JavaScript", "icon": "SiJavascript"},
+          { "name": "Vercel", "icon": "SiVercel"},
+          { "name": "MDX", "icon": "SiMdx"},
+          { "name": "Astro", "icon": "SiAstro"}
         ],
         "tools": [
           { "name": "Figma", "icon": "FaFigma" },
           { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
-          { "name": "Mixpanel", "icon": "SiMixpanel" }
+          { "name": "Mixpanel", "icon": "SiMixpanel" },
+          { "name": "Hotjar", "icon": "SiHotjar"}
         ],
         "security": [
           { "name": "OAuth 2.0", "icon": "SiAuth0" },
@@ -239,13 +305,90 @@
       "Gallery": {
         "livePreview": "/case-study/full-preview/torque.jpeg",
         "desktop": [
-          { "id": 1, "title": "Homepage Design", "description": "Clean, modern landing page", "url": "/case-study/desktop-view/torque/header.png", "alt": "Torque Craft homepage screenshot", "category": "Homepage" },
-          { "id": 2, "title": "Products Overview", "description": "Highlighting automotive products and accessories", "url": "/case-study/desktop-view/torque/product.png", "alt": "Torque Craft products screenshot", "category": "Products" },
-          { "id": 3, "title": "Product Details", "description": "Detailed specifications and benefits for products", "url": "/case-study/desktop-view/torque/singleProduct.png", "alt": "Torque Craft single product screenshot", "category": "Product Details" },
-          { "id": 4, "title": "Blueprint Section", "description": "Process and workflow illustrations", "url": "/case-study/desktop-view/torque/blueprints.png", "alt": "Torque Craft blueprint screenshot", "category": "Process" },
-          { "id": 5, "title": "Blogs", "description": "Engaging blogs related to automotive and tools", "url": "/case-study/desktop-view/torque/blog.png", "alt": "Torque Craft blogs screenshot", "category": "Blogs" },
-          { "id": 6, "title": "Services Section", "description": "Services overview for customers", "url": "/case-study/desktop-view/torque/services.png", "alt": "Torque Craft services screenshot", "category": "Services" },
-          { "id": 7, "title": "Footer", "description": "Footer with navigation and social links", "url": "/case-study/desktop-view/torque/footer.png", "alt": "Torque Craft footer screenshot", "category": "Footer" }
+          {
+            "id": 1,
+            "title": "Homepage Design",
+            "description": "Clean, modern landing page with improved navigation, hero section, and brand-focused visuals.",
+            "url": "/case-study/desktop-view/torque/header.png",
+            "category": "Homepage"
+          },
+          {
+            "id": 2,
+            "title": "Insights",
+            "description": "Engaging insights section highlighting key industry updates and product knowledge.",
+            "url": "/case-study/desktop-view/torque/insights.png",
+            "category": "Insights"
+          },
+          {
+            "id": 3,
+            "title": "Products",
+            "description": "Well-structured product listing page with clear categorization and filters.",
+            "url": "/case-study/desktop-view/torque/product.png",
+            "category": "Products"
+          },
+          {
+            "id": 4,
+            "title": "Product Specification",
+            "description": "Detailed product specification layout providing technical details in a structured format.",
+            "url": "/case-study/desktop-view/torque/blog.png",
+            "category": "Product Details"
+          },
+          {
+            "id": 5,
+            "title": "Product Description",
+            "description": "Comprehensive product description page with visuals, features, and benefits.",
+            "url": "/case-study/desktop-view/torque/result.png",
+            "category": "Product Details"
+          },
+          {
+            "id": 6,
+            "title": "Single Product Section",
+            "description": "Dedicated single product view with clear call-to-actions and focused design.",
+            "url": "/case-study/desktop-view/torque/singleProduct.png",
+            "category": "Product Details"
+          },
+          {
+            "id": 7,
+            "title": "BluePrint Section",
+            "description": "Showcasing the blueprint or process flow with diagrams and structured design.",
+            "url": "/case-study/desktop-view/torque/blueprints.png",
+            "category": "Process"
+          },
+          {
+            "id": 8,
+            "title": "Blogs",
+            "description": "Well-organized blog section with featured posts, categories, and modern typography.",
+            "url": "/case-study/desktop-view/torque/blog.png",
+            "category": "Blogs"
+          },
+          {
+            "id": 9,
+            "title": "Services Section",
+            "description": "Clear and attractive services layout highlighting offerings and value propositions.",
+            "url": "/case-study/desktop-view/torque/services.png",
+            "category": "Services"
+          },
+          {
+            "id": 10,
+            "title": "Contact Us",
+            "description": "User-friendly contact page with forms, details, and location information.",
+            "url": "/case-study/desktop-view/torque/contact.png",
+            "category": "Contact"
+          },
+          {
+            "id": 11,
+            "title": "Result Section",
+            "description": "Impactful results section showcasing outcomes, metrics, and success stories.",
+            "url": "/case-study/desktop-view/torque/result.png",
+            "category": "Results"
+          },
+          {
+            "id": 12,
+            "title": "Footer",
+            "description": "Clean footer design with navigation, social links, and quick access to resources.",
+            "url": "/case-study/desktop-view/torque/footer.png",
+            "category": "Footer"
+          }
         ]
       }
     }
