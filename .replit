@@ -1,6 +1,13 @@
 modules = ["nodejs-20", "web"]
+
+run = "npm run dev"
+
 [agent]
 expertMode = true
+
 [nix]
 channel = "stable-25_05"
-run = "npm run dev"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
