@@ -77,6 +77,7 @@
       },
       "Gallery": {
         "livePreview": "/case-study/full-preview/interlynk.jpeg",
+        "mobile":"https://interlynk.vercel.app/",
         "desktop": [
           { "id": 1, "title": "Homepage Design", "description": "Clean, modern landing page", "url": "/case-study/desktop-view/interlynk/header.png", "alt": "InterLynk homepage screenshot", "category": "Homepage" },
           { "id": 2, "title": "About Us", "description": "Intuitive product browsing", "url": "/case-study/desktop-view/interlynk/aboutUs.png", "alt": "InterLynk about section screenshot", "category": "About" },
@@ -166,6 +167,7 @@
       },
       "Gallery": {
         "livePreview": "/case-study/full-preview/brevix.jpeg",
+        "mobile":"https://brevixtask.vercel.app/",
         "desktop": [
           {
             "id": 1,
@@ -304,6 +306,7 @@
       },
       "Gallery": {
         "livePreview": "/case-study/full-preview/torque.jpeg",
+        "mobile":"https://torque-craft.vercel.app/",
         "desktop": [
           {
             "id": 1,
