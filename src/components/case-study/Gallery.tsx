@@ -102,17 +102,7 @@ const Gallery = ({ livePreview, desktop ,mobile}: GalleryProps) => {
             className="inline-flex flex-wrap items-center p-0.5 sm:p-1 rounded-full neumorphic-inset animate-fade-in gap-0.5 sm:gap-1"
             style={{ animationDelay: "0.4s" }}
           >
-            <button
-              onClick={() => setViewMode("full")}
-              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === "full"
-                ? "bg-accent text-accentCS-foreground shadow-sm"
-                : "text-text-secondary hover:text-text-primary"
-                }`}
-              style={{ minWidth: "0", minHeight: "0" }}
-            >
-              <Maximize2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
-              Full Preview
-            </button>
+
             <button
               onClick={() => setViewMode("desktop")}
               className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === "desktop"
@@ -123,6 +113,17 @@ const Gallery = ({ livePreview, desktop ,mobile}: GalleryProps) => {
             >
               <Monitor className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
               Desktop
+            </button>
+            <button
+              onClick={() => setViewMode("full")}
+              className={`flex items-center px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all text-xs sm:text-sm font-medium leading-tight ${viewMode === "full"
+                ? "bg-accent text-accentCS-foreground shadow-sm"
+                : "text-text-secondary hover:text-text-primary"
+                }`}
+              style={{ minWidth: "0", minHeight: "0" }}
+            >
+              <Maximize2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
+              Full Preview
             </button>
             <button
               onClick={() => setViewMode("mobile")}

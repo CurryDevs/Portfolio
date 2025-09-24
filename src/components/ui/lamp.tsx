@@ -44,6 +44,10 @@ export const LampContainer = ({
                 "relative flex max-h-screen flex-col items-center justify-center overflow-hidden bg-black w-full rounded-md z-0",
                 className
             )}
+            style={{
+                maskImage: "linear-gradient(to bottom, black 90%, transparent 100%)",
+                WebkitMaskImage: "linear-gradient(to bottom, black 90%, transparent 100%)",
+            }}
         >
             <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 mt-[35rem] ">
                 <motion.div
