@@ -4,13 +4,12 @@ import { LinkPreview } from "@/components/ui/link-preview";
 
 type HeroSectionProps = {
   category: string;
-  headline: { h1: string; h2: string };
+  headline: { h1: string; h2: string; h3: string };
   subtitle: string;
   cta: { label: string; url: string; preview: string }[];
 };
 
 const HeroSection = ({
-  category,
   headline,
   subtitle,
   cta,
@@ -31,6 +30,10 @@ const HeroSection = ({
           </span>
           <span className="text-6xl min-[500px]:text-8xl md:text-10xl lg:text-12xl bg-gradient-to-r from-neutral-800 via-white to-neutral-800 bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto] dark:from-neutral-200 dark:via-white dark:to-neutral-200">
             {headline.h2}
+          </span>
+          <br></br>
+          <span className="hidden min-[1125px]:inline text-6xl min-[500px]:text-8xl md:text-10xl lg:text-12xl bg-gradient-to-r from-neutral-800 via-white to-neutral-800 bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto] dark:from-neutral-200 dark:via-white dark:to-neutral-200">
+            {headline.h3}
           </span>
         </h1>
 

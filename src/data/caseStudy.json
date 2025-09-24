@@ -8,7 +8,8 @@
       "JavaScript",
       "Tailwind CSS",
       "Google Analytics",
-      "Figma"
+      "Figma",
+      ""
     ],
     "summary": "InterLynk is a modern FinTech web application built with React and Tailwind CSS. It combines secure digital business cards with link-in-bio functionality, providing professionals a scalable and responsive platform. This project highlights CurryDevs’ expertise in finance-focused web development with performance, security, and SEO optimization in mind.",
     "url": "https://interlynk.vercel.app/",
@@ -23,7 +24,8 @@
       "TypeScript",
       "Framer Motion",
       "Material UI",
-      "ThreeJS"
+      "ThreeJS",
+      ""
     ],
     "summary": "Brevix is a scalable business operations platform developed using Next.js and TypeScript. It offers URL-shortening, task management, and real-time insights, optimized for enterprise workflows. CurryDevs delivered a high-performance, responsive, and modern SaaS solution that streamlines business operations efficiently.",
     "url": "https://brevixtask.vercel.app/",
@@ -38,7 +40,8 @@
       "Mdx",
       "MixPanel",
       "TypeScript",
-      "SCSS"
+      "SCSS",
+      ""
     ],
     "summary": "Torque Craft is an automotive web platform built with Astro and TypeScript. Designed for speed, scalability, and SEO, it provides a modern, responsive interface for automotive parts and tools. This project demonstrates CurryDevs’ ability to craft industry-specific digital solutions with high performance and precision design.",
     "url": "https://torque-craft.vercel.app/",
@@ -51,7 +54,10 @@
     "techStack": [
       "R",
       "Python",
-      "SQL"
+      "SQL",
+      "Panda",
+      "Flask",
+      ""
     ],
     "summary": "Predictive Analytics is a business intelligence solution built with R and Python. It provides advanced forecasting and data-driven insights to help companies make smarter decisions. CurryDevs ensured the platform is scalable, high-performance, and optimized for responsive data visualization and analytical workflows.",
     "url": "#",

@@ -1,7 +1,7 @@
 [
   {
     "id": "interlynk",
-    "title": "InterLynk — FinTech Web App",
+    "title": "InterLynk - FinTech Web App",
     "tags": ["FinTech", "UI/UX Design", "React", "Tailwind CSS", "Landing Page", "Digital Business Card"],
     "canonical": "https://currydevs.com/case-studies/interlynk",
     "publishedTime": "2024-06-01T00:00:00Z",
@@ -11,7 +11,8 @@
         "category": "UI/UX Design",
         "headline": {
           "h1": "Modern Design for a",
-          "h2": "FinTech Solution — InterLynk"
+          "h2": "InterLynk",
+          "h3": "FinTech Solution"
         },
         "subtitle": "InterLynk is a sleek fintech landing page with secure payments, smart spending, and innovative digital business card tools.",
         "cta": [
@@ -101,7 +102,8 @@
         "category": "UI/UX Design",
         "headline": {
           "h1": "Elevating the Brand for",
-          "h2": "Brevix — Modern Business Operations"
+          "h2": "Brevix",
+          "h3": "Business Operations"
         },
         "subtitle": "Brevix streamlines business operations with smart task management, powerful analytics, and scalable solutions.",
         "cta": [
@@ -234,7 +236,8 @@
         "category": "UI/UX Design",
         "headline": {
           "h1": "High-Octane Design for",
-          "h2": "Torque Craft — Automotive & Hardware"
+          "h2": "Torque Craft",
+          "h3": "Automotive & Hardware"
         },
         "subtitle": "Torque Craft delivers premium automotive parts and durable hardware tools, built for performance and trusted by professionals.",
         "cta": [
