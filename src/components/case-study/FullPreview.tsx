@@ -20,7 +20,7 @@ const FullPreview = ({ livePreview }: FullPreviewProps) => {
     return (
         <div className="w-full flex flex-col items-center justify-center animate-fade-in">
             {/* Screenshot Preview */}
-            <div className="relative w-full max-w-5xl rounded-3xl overflow-hidden shadow-2xl border-4 border-accent/40 bg-surface-elevated mb-8">
+            <div className="relative w-full max-w-6xl rounded-3xl overflow-hidden shadow-2xl border-4 border-accent/40 bg-surface-elevated mb-8">
                 {/* Skeleton Loading */}
                 {isLoading && (
                     <div className="w-full h-96 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse">

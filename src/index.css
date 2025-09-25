@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -714,6 +713,124 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/*
+ iPhone Frame Animations */
+@keyframes phone-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.5), 0 0 60px rgba(59, 130, 246, 0.2);
+  }
+}
+
+@keyframes status-bar-fade {
+
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes dynamic-island-pulse {
+
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.02);
+  }
+}
+
+/* iPhone Frame Utility Classes */
+.phone-glow {
+  animation: phone-glow 3s ease-in-out infinite;
+}
+
+.status-bar-fade {
+  animation: status-bar-fade 2s ease-in-out infinite;
+}
+
+.dynamic-island-pulse {
+  animation: dynamic-island-pulse 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar for iPhone Frame */
+.iphone-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.6) transparent;
+}
+
+.iphone-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.iphone-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.iphone-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.6);
+  border-radius: 2px;
+}
+
+.iphone-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+/* Hide scrollbar for mobile gallery */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Floating card animations */
+@keyframes float-left {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-10px) translateX(-5px);
+  }
+}
+
+@keyframes float-right {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-8px) translateX(5px);
+  }
+}
+
+.float-left {
+  animation: float-left 6s ease-in-out infinite;
+}
+
+.float-right {
+  animation: float-right 6s ease-in-out infinite;
+  animation-delay: 3s;
 }
 
 /* Chrome, Edge, Safari */
