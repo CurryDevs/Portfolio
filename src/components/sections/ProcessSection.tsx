@@ -215,7 +215,7 @@ export function ProcessSection() {
             </motion.span>
             <motion.h2
               variants={staggerItem}
-              className="mb-0 sm:mb-8 text-center text-2xl sm:text-5xl md:text-6xl font-bold text-gray-100"
+              className="mb-0 sm:mb-8 text-center text-4xl sm:text-5xl md:text-6xl font-bold text-gray-100"
             >
               What our Client Experiences
             </motion.h2>
@@ -243,7 +243,7 @@ export function ProcessSection() {
                   className="relative"
                 >
                   {/* Clickable header */}
-                  <div 
+                  <div
                     className="flex items-center justify-between p-4 cursor-pointer"
                     onClick={() => toggleStep(index)}
                   >
@@ -260,7 +260,7 @@ export function ProcessSection() {
                         </p>
                       </div>
                     </div>
-                    
+
                     <motion.div
                       variants={iconRotateVariants}
                       animate={expandedStep === index ? "expanded" : "collapsed"}
@@ -290,7 +290,7 @@ export function ProcessSection() {
                           </div>
                           <span className="text-xs text-gray-300 font-medium">Key Tasks</span>
                         </div>
-                        
+
                         <ul className="space-y-2">
                           {step.tasks.map((task, taskIndex) => (
                             <motion.li
@@ -312,7 +312,7 @@ export function ProcessSection() {
                           <span>{(index + 1) * 25}% complete</span>
                         </div>
                         <div className="mt-1 w-full bg-gray-800 rounded-full h-1.5">
-                          <div 
+                          <div
                             className="bg-gradient-to-r from-primary to-primary/60 h-1.5 rounded-full transition-all duration-500"
                             style={{ width: `${(index + 1) * 25}%` }}
                           />
