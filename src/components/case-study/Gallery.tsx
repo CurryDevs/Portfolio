@@ -153,8 +153,8 @@ const Gallery = ({ livePreview, desktop ,mobile}: GalleryProps) => {
                 <div
                   className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[3rem] p-2 shadow-2xl"
                   style={{
-                    width: '280px',
-                    height: '600px',
+                    width: '273px',
+                    height: '572px',
                   }}
                 >
                   {/* Dynamic Island */}
