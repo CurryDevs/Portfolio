@@ -73,7 +73,7 @@ const LineProgress: React.FC<{
 };
 
 const ProjectFeatureSection = ({
-  collapseDelay = 5000,
+  collapseDelay = 8500,
   ltr = false,
   linePosition = "left",
   data = [],

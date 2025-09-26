@@ -36,10 +36,10 @@ export function ContactCard({
             )}
             {...props}
         >
-            <PlusIcon className="absolute -top-3 -left-3 h-6 w-6 text-white bg-black" />
-            <PlusIcon className="absolute -top-3 -right-3 h-6 w-6 text-white bg-black" />
-            <PlusIcon className="absolute -bottom-3 -left-3 h-6 w-6 text-white bg-black" />
-            <PlusIcon className="absolute -right-3 -bottom-3 h-6 w-6 text-white bg-black" />
+            <PlusIcon className="absolute -top-3 -left-3 h-6 w-6 text-white/30 bg-black" />
+            <PlusIcon className="absolute -top-3 -right-3 h-6 w-6 text-white/30 bg-black" />
+            <PlusIcon className="absolute -bottom-3 -left-3 h-6 w-6 text-white/30 bg-black" />
+            <PlusIcon className="absolute -right-3 -bottom-3 h-6 w-6 text-white/30 bg-black" />
 
             <div className="flex flex-col justify-between col-span-1 md:col-span-1 lg:col-span-2">
                 <div className="relative h-full space-y-3 sm:space-y-4 px-4 py-6 sm:px-6 sm:py-8 md:p-8">
