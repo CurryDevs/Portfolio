@@ -153,8 +153,8 @@ const Gallery = ({ livePreview, desktop ,mobile}: GalleryProps) => {
                 <div
                   className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[3rem] p-2 shadow-2xl"
                   style={{
-                    width: '280px',
-                    height: '600px',
+                    width: '273px',
+                    height: '572px',
                   }}
                 >
                   {/* Dynamic Island */}
@@ -216,7 +216,7 @@ const Gallery = ({ livePreview, desktop ,mobile}: GalleryProps) => {
                             border: 'none',
                             borderRadius: '0',
                             position: 'absolute',
-                            left: '-80px',
+                            left: '-87px',
                             transform: 'scale(0.6)', // scale down to fit inside 280×600 frame
                             transformOrigin: 'top center',
                             overflow: 'hidden',

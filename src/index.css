@@ -832,3 +832,13 @@
   animation: float-right 6s ease-in-out infinite;
   animation-delay: 3s;
 }
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none; /* hides scrollbar */
+}

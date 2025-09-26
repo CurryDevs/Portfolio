@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/ui/animatedText";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import { Link } from "react-router-dom";
 
 const people = [
   {
@@ -79,18 +80,20 @@ export function HeroSection() {
             templates and component packs.
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col min-[240px]:flex-row gap-4 justify-center items-center animate-scale-in stagger-3">
-            <Button className="bg-black text-white border border-white hover:bg-white hover:text-black hover:border-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5">
-              Projects
-            </Button>
-            <Button
-              onClick={openCalendlyInNewTab}
-              className="bg-white text-black border border-black hover:bg-black hover:text-white hover:border-white max-[375px]:px-8 max-[410px]:px-4 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5"
-            >
-              {isSmallScreen ? "Book a Call" : "Book a Call with Currydevs"}
-            </Button>
-          </div>
+            {/* CTAs */}
+            <div className="flex flex-col min-[240px]:flex-row gap-4 justify-center items-center animate-scale-in stagger-3">
+              <Link to= "/case-studies">
+                <Button className="bg-black text-white border border-white hover:bg-white hover:text-black hover:border-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5">
+                  Projects
+                </Button>
+              </Link>
+              <Button
+                onClick={openCalendlyInNewTab}
+                className="bg-white text-black border border-black hover:bg-black hover:text-white hover:border-white max-[375px]:px-8 max-[410px]:px-4 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5"
+              >
+                {isSmallScreen ? "Book a Call" : "Book a Call with Currydevs"}
+              </Button>
+            </div>
 
           {/* Trust indicators */}
           <div className="space-y-6 animate-fade-in stagger-4">
