@@ -197,7 +197,7 @@ export function ProcessSection() {
   };
 
   return (
-    <section id="process" className="py-8 sm:py-20 md:py-24 lg:py-32 relative overflow-hidden">
+    <section id="process" className="py-24 lg:py-32 relative overflow-hidden">
       <div className="container-custom">
         <motion.div
           initial="hidden"
@@ -215,7 +215,7 @@ export function ProcessSection() {
             </motion.span>
             <motion.h2
               variants={staggerItem}
-              className="mb-0 sm:mb-8 text-center text-4xl sm:text-5xl md:text-6xl font-bold text-gray-100"
+              className="mb-0 sm:mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold text-gray-100"
             >
               What our Client Experiences
             </motion.h2>
