@@ -92,8 +92,8 @@ const iPhone15ProMaxFrame: React.FC<iPhone15ProMaxFrameProps> = ({
                 <div
                     className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[3rem] p-2 shadow-2xl"
                     style={{
-                        width: '280px',
-                        height: '600px',
+                        width: '264px',
+                        height: '560px',
                     }}
                 >
                     {/* Dynamic Island */}
