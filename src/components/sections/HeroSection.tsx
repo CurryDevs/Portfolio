@@ -55,7 +55,7 @@ export function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/hero-bg2.png')",
+        backgroundImage: "url('/hero-bg1.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -65,7 +65,7 @@ export function HeroSection() {
       }}
     >
       {/* Optional overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="relative z-10 container-custom text-center py-20 pt-40 max-[600px]:pt-32">
         <div className="max-w-4xl mx-auto space-y-12">
