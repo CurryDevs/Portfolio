@@ -401,5 +401,142 @@
         ]
       }
     }
+  },
+
+  {
+  "id": "wrlds",
+  "title": "Wrlds — Immersive Digital Experiences Platform",
+  "tags": ["Immersive Tech", "NextJS", "TypeScript", "Framer Motion", "TailwindCSS", "PWA", "UI/UX Design"],
+  "canonical": "https://currydevs.com/case-studies/wrlds",
+  "curryPreview": "https://currydevs.com/seo-images/curry-wrlds.png",
+  "publishedTime": "2025-09-01T00:00:00Z",
+  "modifiedTime": "2025-09-28T00:00:00Z",
+  "components": {
+    "HeroSection": {
+      "category": "UI/UX Design",
+      "headline": {
+        "h1": "Building Immersive Experiences for",
+        "h2": "Wrlds",
+        "h3": "Digital Innovation"
+      },
+      "subtitle": "Wrlds is an immersive platform that blends design, interactivity, and storytelling to deliver unique digital experiences that engage and inspire audiences.",
+      "cta": [
+        {
+          "label": "View Live Project",
+          "url": "https://wrlds.vercel.app/",
+          "preview": "/case-study/desktop-view/wrlds/header.png"
+        }
+      ]
+    },
+    "ProjectDetails": {
+      "title": "Wrlds",
+      "headline": "Creating an Immersive Web Platform for Next-Gen Experiences",
+      "summary": "Designed and developed Wrlds — a visually striking and interactive platform showcasing immersive digital experiences. Focused on smooth animations, storytelling-driven UI, and responsiveness across devices to captivate users.",
+      "client": {
+        "name": "Wrlds",
+        "description": "A creative platform focused on delivering immersive, interactive, and storytelling-driven digital experiences that connect brands with audiences in meaningful ways."
+      },
+      "duration": {
+        "length": "4 Weeks",
+        "description": "Completed design and development in just four weeks, ensuring a refined, animated, and production-ready experience."
+      },
+      "timeline": {
+        "timeframe": "Q3 2025",
+        "description": "Executed in a focused design & development sprint to craft a highly engaging and modern immersive web experience."
+      },
+      "challenge": [
+        "Creating immersive animations without performance bottlenecks",
+        "Maintaining responsiveness across devices while using heavy visuals",
+        "Balancing storytelling and usability within a modern design system"
+      ],
+      "solution": [
+        "Leveraged Framer Motion for fluid transitions and interactive elements",
+        "Built a PWA-first responsive layout optimized for mobile and desktop",
+        "Structured content in clear sections (Hero, Features, WhyWrlds, Projects, Blog, Contact) to guide user flow"
+      ]
+    },
+    "TechStack": {
+      "mobile": [],
+      "backend": [],
+      "devops": [],
+      "frontend": [
+        { "name": "React 18", "icon": "SiReact" },
+        { "name": "Next.js 14", "icon": "SiNextdotjs" },
+        { "name": "TypeScript", "icon": "SiTypescript" },
+        { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
+        { "name": "Framer Motion", "icon": "SiFramer" },
+        { "name": "PWA", "icon": "MdInstallMobile" },
+        { "name": "HTML5", "icon": "SiHtml5" },
+        { "name": "CSS3", "icon": "SiCss3" },
+        { "name": "JavaScript", "icon": "SiJavascript" },
+        { "name": "Vercel", "icon": "SiVercel" }
+      ],
+      "tools": [
+        { "name": "Figma", "icon": "FaFigma" },
+        { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
+        { "name": "Mixpanel", "icon": "SiMixpanel" },
+        { "name": "Hotjar", "icon": "SiHotjar" }
+      ],
+      "security": [
+        { "name": "OAuth 2.0", "icon": "SiAuth0" },
+        { "name": "SSL/TLS", "icon": "SiSst" }
+      ]
+    },
+    "Gallery": {
+      "livePreview": "/case-study/full-preview/wrlds.jpeg",
+      "mobile": "https://wrlds.vercel.app/",
+      "desktop": [
+        {
+          "id": 1,
+          "title": "Homepage Design",
+          "description": "Immersive landing page with video background, gradient overlays, and animated hero content",
+          "url": "/case-study/desktop-view/wrlds/header.png",
+          "category": "Homepage"
+        },
+        {
+          "id": 2,
+          "title": "Features Section",
+          "description": "Interactive features with hover animations and layered visuals to engage users",
+          "url": "/case-study/desktop-view/wrlds/features.png",
+          "category": "Features"
+        },
+        {
+          "id": 3,
+          "title": "Why Wrlds",
+          "description": "Highlighting platform value through animated counters and storytelling-driven design",
+          "url": "/case-study/desktop-view/wrlds/whywrlds.png",
+          "category": "About"
+        },
+        {
+          "id": 4,
+          "title": "Projects Showcase",
+          "description": "Dynamic projects grid with smooth hover states and scroll-based transitions",
+          "url": "/case-study/desktop-view/wrlds/projects.png",
+          "category": "Projects"
+        },
+        {
+          "id": 5,
+          "title": "Blog Preview",
+          "description": "Clean and modern blog preview section with cards and hover animations",
+          "url": "/case-study/desktop-view/wrlds/blog.png",
+          "category": "Blog"
+        },
+        {
+          "id": 6,
+          "title": "Contact Section",
+          "description": "Streamlined contact section with smooth scroll navigation and clear CTAs",
+          "url": "/case-study/desktop-view/wrlds/contact.png",
+          "category": "Contact"
+        },
+        {
+          "id": 7,
+          "title": "Footer",
+          "description": "Minimal, modern footer design with links and brand consistency",
+          "url": "/case-study/desktop-view/wrlds/footer.png",
+          "category": "Footer"
+        }
+      ]
+    }
+  }
   }
 ]
