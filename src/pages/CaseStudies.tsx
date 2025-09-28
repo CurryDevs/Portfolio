@@ -3,7 +3,7 @@ import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import Footer from "@/components/layout/Footer";
 import { ProjectCard } from "@/components/layout/ProjectCardSingle";
 import projects from "@/data/caseStudy.json";
-import { Helmet } from "react-helmet-async";
+import SEO from "@/components/seo/SEO";
 
 interface GalleryItem {
   id: string;
@@ -30,61 +30,42 @@ const CaseStudies = ({ items: propItems = projects }: ProjectsProps) => {
 
   return (
     <div className="min-h-screen">
-      <Helmet>
-        {/* Basic SEO */}
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="canonical" href={canonicalUrl} />
-
-        {/* Open Graph (Facebook, LinkedIn, WhatsApp) */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta
-          property="og:image"
-          content="https://currydevs.com/og/case-studies-cover.jpg"
-        />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
-        <meta
-          name="twitter:image"
-          content="https://currydevs.com/og/case-studies-cover.jpg"
-        />
-
-        {/* Schema.org JSON-LD */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: pageTitle,
-            description: pageDescription,
-            url: canonicalUrl,
-            isPartOf: {
-              "@type": "WebSite",
-              url: "https://currydevs.com",
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        url={canonicalUrl}
+        image="https://currydevs.com/seo-images/case-studies.png"
+        twitterImage="https://currydevs.com/seo-images/twitter-image.png"
+        type="website"
+        tags={["case studies", "portfolio", "web development projects", "React projects", "TypeScript projects"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: pageTitle,
+          description: pageDescription,
+          url: canonicalUrl,
+          isPartOf: {
+            "@type": "WebSite",
+            url: "https://currydevs.com",
+            name: "CurryDevs",
+          },
+          mainEntity: items.map((project) => ({
+            "@type": "CreativeWork",
+            "@id": `https://currydevs.com/case-studies/${project.id}`,
+            name: project.title,
+            description: project.summary,
+            url: `https://currydevs.com/case-studies/${project.id}`,
+            image: `https://currydevs.com${project.image}`,
+            author: {
+              "@type": "Organization",
               name: "CurryDevs",
             },
-            mainEntity: items.map((project) => ({
-              "@type": "CreativeWork",
-              "@id": `https://currydevs.com/case-studies/${project.id}`,
-              name: project.title,
-              description: project.summary,
-              url: `https://currydevs.com/case-studies/${project.id}`,
-              image: `https://currydevs.com${project.image}`,
-              author: {
-                "@type": "Organization",
-                name: "CurryDevs",
-              },
-              about: project.client,
-              keywords: project.techStack.filter(Boolean),
-            })),
-          })}
-        </script>
-      </Helmet>
+            about: project.client,
+            keywords: project.techStack.filter(Boolean),
+          })),
+        }}
+      />
+      
       <AdvancedHeader />
       <main className="max-w-7xl mx-auto px-8 pt-24">
         {/* Section Title */}

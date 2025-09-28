@@ -52,7 +52,8 @@ const CaseStudy = ({ scrollTo }: { scrollTo?: string }) => {
         title={`${project.title} | CurryDevs`}
         description={project.components.ProjectDetails.summary}
         url={project.canonical}
-        image={project.components.Gallery.livePreview}
+        image={project.curryPreview}
+        twitterImage="https://currydevs.com/seo-images/twitter-image.png"
         type="article"
         publishedTime={project.publishedTime}
         modifiedTime={project.modifiedTime}
@@ -87,7 +88,6 @@ const CaseStudy = ({ scrollTo }: { scrollTo?: string }) => {
           <li>{project.title}</li>
         </ol>
       </nav>
-
 
       <main>
         <HeroSection {...project.components.HeroSection} />

@@ -1,44 +1,51 @@
-// src/components/seo/SEO.tsx
-import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export type SEOProps = {
+interface BreadcrumbItem {
+  position: number;
+  name: string;
+  item: string;
+}
+
+interface SEOProps {
   title: string;
   description: string;
-  url?: string;
-  image?: string;
-  type?: "website" | "article" | "project";
-  publishedTime?: string; // ISO date
-  modifiedTime?: string; // ISO date
-  author?: string;
-  tags?: string[];
+  url: string;
   canonical?: string;
-  jsonLd?: object | null;
-  breadcrumbs?: { position: number; name: string; item: string }[];
-};
+  image?: string;
+  twitterImage?: string;
+  type?: string;
+  tags?: string[];
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  jsonLd?: Record<string, any>;
+}
 
-export const SEO: React.FC<SEOProps> = ({
+const SEO = ({
   title,
   description,
   url,
+  canonical,
   image,
+  twitterImage,
   type = "website",
+  tags,
   publishedTime,
   modifiedTime,
   author,
-  tags,
-  canonical,
-  jsonLd,
   breadcrumbs,
-}) => {
+  jsonLd,
+}: SEOProps) => {
   const canonicalUrl = canonical || url;
+
   // Article JSON-LD (when type === article and publishedTime present)
   const articleLd =
     type === "article" && publishedTime
       ? {
           "@context": "https://schema.org",
           "@type": "Article",
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
             "@id": canonicalUrl || url,
           },
@@ -47,7 +54,9 @@ export const SEO: React.FC<SEOProps> = ({
           image: image ? [image] : undefined,
           datePublished: publishedTime,
           dateModified: modifiedTime || publishedTime,
-          author: author ? { "@type": "Person", name: author } : { "@type": "Organization", name: "CurryDevs" },
+          author: author
+            ? { "@type": "Person", name: author }
+            : { "@type": "Organization", name: "CurryDevs" },
           publisher: {
             "@type": "Organization",
             name: "CurryDevs",
@@ -59,6 +68,7 @@ export const SEO: React.FC<SEOProps> = ({
         }
       : null;
 
+  // Breadcrumb JSON-LD
   const breadcrumbLd =
     breadcrumbs && breadcrumbs.length
       ? {
@@ -75,31 +85,46 @@ export const SEO: React.FC<SEOProps> = ({
 
   return (
     <Helmet>
+      {/* Primary Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <meta name="keywords" content={tags?.join(", ")} />
+      <link rel="canonical" href={canonicalUrl} />
 
-      {/* Open Graph */}
-      <meta property="og:type" content={type === "article" ? "article" : "website"} />
-      {title && <meta property="og:title" content={title} />}
-      {description && <meta property="og:description" content={description} />}
-      {url && <meta property="og:url" content={url} />}
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={canonicalUrl} />
       {image && <meta property="og:image" content={image} />}
       {image && <meta property="og:image:alt" content={title} />}
+      {image && <meta property="og:image:width" content="1200" />}
+      {image && <meta property="og:image:height" content="630" />}
+      <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      {title && <meta name="twitter:title" content={title} />}
-      {description && <meta name="twitter:description" content={description} />}
-      {image && <meta name="twitter:image" content={image} />}
-
-      {/* Tags (optional) */}
-      {tags && tags.length > 0 && <meta name="keywords" content={tags.join(", ")} />}
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {twitterImage && <meta name="twitter:image" content={twitterImage} />}
+      {twitterImage && <meta name="twitter:image:alt" content={title} />}
 
       {/* JSON-LD */}
-      {articleLd && <script type="application/ld+json">{JSON.stringify(articleLd)}</script>}
-      {breadcrumbLd && <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>}
-      {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
+      {jsonLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
+      )}
+      {articleLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(articleLd)}
+        </script>
+      )}
+      {breadcrumbLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbLd)}
+        </script>
+      )}
     </Helmet>
   );
 };

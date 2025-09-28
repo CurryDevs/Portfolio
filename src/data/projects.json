@@ -4,6 +4,7 @@
     "title": "InterLynk - FinTech Web App",
     "tags": ["FinTech", "UI/UX Design", "React", "Tailwind CSS", "Landing Page", "Digital Business Card"],
     "canonical": "https://currydevs.com/case-studies/interlynk",
+    "curryPreview": "https://currydevs.com/seo-images/curry-interlynk.png",
     "publishedTime": "2024-06-01T00:00:00Z",
     "modifiedTime": "2024-06-15T00:00:00Z",
     "components": {
@@ -95,6 +96,7 @@
     "title": "Brevix — Business Operations Platform",
     "tags": ["Business Operations", "SaaS", "NextJS", "TypeScript", "Framer Motion", "Material UI", "URL Shortening"],
     "canonical": "https://currydevs.com/case-studies/brevix",
+    "curryPreview": "https://currydevs.com/seo-images/curry-brevix.png",
     "publishedTime": "2024-05-01T00:00:00Z",
     "modifiedTime": "2024-05-15T00:00:00Z",
     "components": {
@@ -229,6 +231,7 @@
     "title": "Torque Craft — Automotive & Hardware",
     "tags": ["Automotive", "E-Commerce", "UI/UX Design", "React", "Tailwind CSS", "Car Parts", "Tools", "Hardware"],
     "canonical": "https://currydevs.com/case-studies/torque-craft",
+    "curryPreview": "https://currydevs.com/seo-images/curry-torque.png",
     "publishedTime": "2024-04-01T00:00:00Z",
     "modifiedTime": "2024-04-15T00:00:00Z",
     "components": {
