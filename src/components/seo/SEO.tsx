@@ -1,51 +1,58 @@
+// src/components/seo/SEO.tsx
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-interface BreadcrumbItem {
-  position: number;
-  name: string;
-  item: string;
-}
-
-interface SEOProps {
+export type SEOProps = {
   title: string;
   description: string;
-  url: string;
-  canonical?: string;
+  url?: string;
   image?: string;
-  twitterImage?: string;
-  type?: string;
-  tags?: string[];
-  publishedTime?: string;
-  modifiedTime?: string;
+  twitterImage?: string; // Separate Twitter image
+  type?: "website" | "article" | "project";
+  publishedTime?: string; // ISO date
+  modifiedTime?: string; // ISO date
   author?: string;
-  breadcrumbs?: BreadcrumbItem[];
-  jsonLd?: Record<string, any>;
-}
+  tags?: string[];
+  canonical?: string;
+  jsonLd?: object | null;
+  breadcrumbs?: { position: number; name: string; item: string }[];
+  noindex?: boolean;
+  nofollow?: boolean;
+};
 
-const SEO = ({
+export const SEO: React.FC<SEOProps> = ({
   title,
   description,
   url,
-  canonical,
   image,
   twitterImage,
   type = "website",
-  tags,
   publishedTime,
   modifiedTime,
   author,
-  breadcrumbs,
+  tags,
+  canonical,
   jsonLd,
-}: SEOProps) => {
+  breadcrumbs,
+  noindex = false,
+  nofollow = false,
+}) => {
   const canonicalUrl = canonical || url;
-
+  const finalTwitterImage = twitterImage || image;
+  
+  // Robots meta
+  const robots = [];
+  if (noindex) robots.push('noindex');
+  if (nofollow) robots.push('nofollow');
+  if (robots.length === 0) robots.push('index', 'follow');
+  
   // Article JSON-LD (when type === article and publishedTime present)
   const articleLd =
     type === "article" && publishedTime
       ? {
           "@context": "https://schema.org",
           "@type": "Article",
-          mainEntityOfPage: {
+          "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": canonicalUrl || url,
           },
@@ -54,9 +61,7 @@ const SEO = ({
           image: image ? [image] : undefined,
           datePublished: publishedTime,
           dateModified: modifiedTime || publishedTime,
-          author: author
-            ? { "@type": "Person", name: author }
-            : { "@type": "Organization", name: "CurryDevs" },
+          author: author ? { "@type": "Person", name: author } : { "@type": "Organization", name: "CurryDevs" },
           publisher: {
             "@type": "Organization",
             name: "CurryDevs",
@@ -68,7 +73,6 @@ const SEO = ({
         }
       : null;
 
-  // Breadcrumb JSON-LD
   const breadcrumbLd =
     breadcrumbs && breadcrumbs.length
       ? {
@@ -85,46 +89,53 @@ const SEO = ({
 
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
+      {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={tags?.join(", ")} />
-      <link rel="canonical" href={canonicalUrl} />
+      <meta name="robots" content={robots.join(', ')} />
+      
+      {/* Canonical */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonicalUrl} />
+      {/* Open Graph */}
+      <meta property="og:type" content={type === "article" ? "article" : "website"} />
+      {title && <meta property="og:title" content={title} />}
+      {description && <meta property="og:description" content={description} />}
+      {url && <meta property="og:url" content={url} />}
       {image && <meta property="og:image" content={image} />}
       {image && <meta property="og:image:alt" content={title} />}
-      {image && <meta property="og:image:width" content="1200" />}
-      {image && <meta property="og:image:height" content="630" />}
+      <meta property="og:site_name" content="CurryDevs" />
       <meta property="og:locale" content="en_US" />
-
+      
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      {twitterImage && <meta name="twitter:image" content={twitterImage} />}
-      {twitterImage && <meta name="twitter:image:alt" content={title} />}
+      <meta name="twitter:card" content={finalTwitterImage} />
+      <meta name="twitter:site" content="@currydevs" />
+      <meta name="twitter:creator" content="@currydevs" />
+      {title && <meta name="twitter:title" content={title} />}
+      {description && <meta name="twitter:description" content={description} />}
+      {finalTwitterImage && <meta name="twitter:image" content={finalTwitterImage} />}
+      {finalTwitterImage && <meta name="twitter:image:alt" content={title} />}
+
+      {/* Additional Meta Tags */}
+      {author && <meta name="author" content={author} />}
+      {tags && tags.length > 0 && <meta name="keywords" content={tags.join(", ")} />}
+      
+      {/* Article Specific */}
+      {type === "article" && publishedTime && (
+        <>
+          <meta property="article:published_time" content={publishedTime} />
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {author && <meta property="article:author" content={author} />}
+          {tags && tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
 
       {/* JSON-LD */}
-      {jsonLd && (
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
-        </script>
-      )}
-      {articleLd && (
-        <script type="application/ld+json">
-          {JSON.stringify(articleLd)}
-        </script>
-      )}
-      {breadcrumbLd && (
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbLd)}
-        </script>
-      )}
+      {articleLd && <script type="application/ld+json">{JSON.stringify(articleLd)}</script>}
+      {breadcrumbLd && <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>}
+      {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
     </Helmet>
   );
 };
