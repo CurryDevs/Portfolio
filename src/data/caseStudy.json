@@ -48,19 +48,19 @@
     "image": "/case-study/desktop-view/torque/header.png"
   },
   {
-    "id": "predictive-analytics",
-    "title": "Predictive Analytics",
-    "client": "Business Intelligence",
+    "id": "wrlds",
+    "title": "Wrlds",
+    "client": "IOT Products",
     "techStack": [
-      "R",
-      "Python",
-      "SQL",
-      "Panda",
-      "Flask",
+      "TypeScript",
+      "NextJS",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Zod",
       ""
     ],
-    "summary": "Predictive Analytics is a business intelligence solution built with R and Python. It provides advanced forecasting and data-driven insights to help companies make smarter decisions. CurryDevs ensured the platform is scalable, high-performance, and optimized for responsive data visualization and analytical workflows.",
+    "summary": "Turning Visions Into Connected Reality. 7+ years building IoT products that combine hardware engineering, software & AI, and production scale.",
     "url": "#",
-    "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80&sat=-100"
+    "image": "/case-study/desktop-view/wrlds/header.png"
   }
 ]

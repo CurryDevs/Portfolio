@@ -2,7 +2,14 @@
   {
     "id": "interlynk",
     "title": "InterLynk - FinTech Web App",
-    "tags": ["FinTech", "UI/UX Design", "React", "Tailwind CSS", "Landing Page", "Digital Business Card"],
+    "tags": [
+      "FinTech",
+      "UI/UX Design",
+      "React",
+      "Tailwind CSS",
+      "Landing Page",
+      "Digital Business Card"
+    ],
     "canonical": "https://currydevs.com/case-studies/interlynk",
     "curryPreview": "https://currydevs.com/seo-images/curry-interlynk.png",
     "publishedTime": "2024-06-01T00:00:00Z",
@@ -56,37 +63,124 @@
         "backend": [],
         "devops": [],
         "frontend": [
-          { "name": "React 18", "icon": "SiReact" },
-          { "name": "TypeScript", "icon": "SiTypescript" },
-          { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-          { "name": "Framer Motion", "icon": "SiFramer" },
-          { "name": "PWA",   "icon": "MdInstallMobile"},
-          { "name": "HTML5", "icon": "SiHtml5"}, 
-          { "name": "CSS3",  "icon": "SiCss3"},
-          { "name": "JavaScript", "icon": "SiJavascript"},
-          { "name": "Vercel", "icon": "SiVercel"}
+          {
+            "name": "React 18",
+            "icon": "SiReact"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "SiTypescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "SiTailwindcss"
+          },
+          {
+            "name": "Framer Motion",
+            "icon": "SiFramer"
+          },
+          {
+            "name": "PWA",
+            "icon": "MdInstallMobile"
+          },
+          {
+            "name": "HTML5",
+            "icon": "SiHtml5"
+          },
+          {
+            "name": "CSS3",
+            "icon": "SiCss3"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "SiJavascript"
+          },
+          {
+            "name": "Vercel",
+            "icon": "SiVercel"
+          }
         ],
         "tools": [
-          { "name": "Figma", "icon": "FaFigma" },
-          { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
-          { "name": "Mixpanel", "icon": "SiMixpanel" }, 
-          { "name": "Hotjar", "icon": "SiHotjar"}
+          {
+            "name": "Figma",
+            "icon": "FaFigma"
+          },
+          {
+            "name": "Google Analytics",
+            "icon": "SiGoogleanalytics"
+          },
+          {
+            "name": "Mixpanel",
+            "icon": "SiMixpanel"
+          },
+          {
+            "name": "Hotjar",
+            "icon": "SiHotjar"
+          }
         ],
         "security": [
-          { "name": "OAuth 2.0", "icon": "SiAuth0" },
-          { "name": "SSL/TLS", "icon": "SiSst" }
+          {
+            "name": "OAuth 2.0",
+            "icon": "SiAuth0"
+          },
+          {
+            "name": "SSL/TLS",
+            "icon": "SiSst"
+          }
         ]
       },
       "Gallery": {
         "livePreview": "/case-study/full-preview/interlynk.jpeg",
-        "mobile":"https://interlynk.vercel.app/",
+        "mobile": "https://interlynk.vercel.app/",
         "desktop": [
-          { "id": 1, "title": "Homepage Design", "description": "Clean, modern landing page", "url": "/case-study/desktop-view/interlynk/header.png", "alt": "InterLynk homepage screenshot", "category": "Homepage" },
-          { "id": 2, "title": "About Us", "description": "Intuitive product browsing", "url": "/case-study/desktop-view/interlynk/aboutUs.png", "alt": "InterLynk about section screenshot", "category": "About" },
-          { "id": 3, "title": "Features Overview", "description": "Streamlined feature section for payments and tools", "url": "/case-study/desktop-view/interlynk/features.png", "alt": "InterLynk features section screenshot", "category": "Features" },
-          { "id": 4, "title": "Services", "description": "Personalized user experience with order history and preferences", "url": "/case-study/desktop-view/interlynk/services.png", "alt": "InterLynk services section screenshot", "category": "Services" },
-          { "id": 5, "title": "Benefits", "description": "Highlighting main benefits for users", "url": "/case-study/desktop-view/interlynk/benefits.png", "alt": "InterLynk benefits section screenshot", "category": "Benefits" },
-          { "id": 6, "title": "Footer", "description": "Footer with navigation and contact info", "url": "/case-study/desktop-view/interlynk/footer.png", "alt": "InterLynk footer screenshot", "category": "Footer" }
+          {
+            "id": 1,
+            "title": "Homepage Design",
+            "description": "Clean, modern landing page",
+            "url": "/case-study/desktop-view/interlynk/header.png",
+            "alt": "InterLynk homepage screenshot",
+            "category": "Homepage"
+          },
+          {
+            "id": 2,
+            "title": "About Us",
+            "description": "Intuitive product browsing",
+            "url": "/case-study/desktop-view/interlynk/aboutUs.png",
+            "alt": "InterLynk about section screenshot",
+            "category": "About"
+          },
+          {
+            "id": 3,
+            "title": "Features Overview",
+            "description": "Streamlined feature section for payments and tools",
+            "url": "/case-study/desktop-view/interlynk/features.png",
+            "alt": "InterLynk features section screenshot",
+            "category": "Features"
+          },
+          {
+            "id": 4,
+            "title": "Services",
+            "description": "Personalized user experience with order history and preferences",
+            "url": "/case-study/desktop-view/interlynk/services.png",
+            "alt": "InterLynk services section screenshot",
+            "category": "Services"
+          },
+          {
+            "id": 5,
+            "title": "Benefits",
+            "description": "Highlighting main benefits for users",
+            "url": "/case-study/desktop-view/interlynk/benefits.png",
+            "alt": "InterLynk benefits section screenshot",
+            "category": "Benefits"
+          },
+          {
+            "id": 6,
+            "title": "Footer",
+            "description": "Footer with navigation and contact info",
+            "url": "/case-study/desktop-view/interlynk/footer.png",
+            "alt": "InterLynk footer screenshot",
+            "category": "Footer"
+          }
         ]
       }
     }
@@ -94,7 +188,15 @@
   {
     "id": "brevix",
     "title": "Brevix — Business Operations Platform",
-    "tags": ["Business Operations", "SaaS", "NextJS", "TypeScript", "Framer Motion", "Material UI", "URL Shortening"],
+    "tags": [
+      "Business Operations",
+      "SaaS",
+      "NextJS",
+      "TypeScript",
+      "Framer Motion",
+      "Material UI",
+      "URL Shortening"
+    ],
     "canonical": "https://currydevs.com/case-studies/brevix",
     "curryPreview": "https://currydevs.com/seo-images/curry-brevix.png",
     "publishedTime": "2024-05-01T00:00:00Z",
@@ -148,30 +250,75 @@
         "backend": [],
         "devops": [],
         "frontend": [
-          { "name": "React 18", "icon": "SiReact" },
-          { "name": "TypeScript", "icon": "SiTypescript" },
-          { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-          { "name": "Framer Motion", "icon": "SiFramer" },
-          { "name": "PWA",   "icon": "MdInstallMobile"},
-          { "name": "HTML5", "icon": "SiHtml5"}, 
-          { "name": "CSS3",  "icon": "SiCss3"},
-          { "name": "JavaScript", "icon": "SiJavascript"},
-          { "name": "Vercel", "icon": "SiVercel"}
+          {
+            "name": "React 18",
+            "icon": "SiReact"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "SiTypescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "SiTailwindcss"
+          },
+          {
+            "name": "Framer Motion",
+            "icon": "SiFramer"
+          },
+          {
+            "name": "PWA",
+            "icon": "MdInstallMobile"
+          },
+          {
+            "name": "HTML5",
+            "icon": "SiHtml5"
+          },
+          {
+            "name": "CSS3",
+            "icon": "SiCss3"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "SiJavascript"
+          },
+          {
+            "name": "Vercel",
+            "icon": "SiVercel"
+          }
         ],
         "tools": [
-          { "name": "Figma", "icon": "FaFigma" },
-          { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
-          { "name": "Mixpanel", "icon": "SiMixpanel" },
-          { "name": "Hotjar", "icon": "SiHotjar"}
+          {
+            "name": "Figma",
+            "icon": "FaFigma"
+          },
+          {
+            "name": "Google Analytics",
+            "icon": "SiGoogleanalytics"
+          },
+          {
+            "name": "Mixpanel",
+            "icon": "SiMixpanel"
+          },
+          {
+            "name": "Hotjar",
+            "icon": "SiHotjar"
+          }
         ],
         "security": [
-          { "name": "OAuth 2.0", "icon": "SiAuth0" },
-          { "name": "SSL/TLS", "icon": "SiSst" }
+          {
+            "name": "OAuth 2.0",
+            "icon": "SiAuth0"
+          },
+          {
+            "name": "SSL/TLS",
+            "icon": "SiSst"
+          }
         ]
       },
       "Gallery": {
         "livePreview": "/case-study/full-preview/brevix.jpeg",
-        "mobile":"https://brevixtask.vercel.app/",
+        "mobile": "https://brevixtask.vercel.app/",
         "desktop": [
           {
             "id": 1,
@@ -229,7 +376,16 @@
   {
     "id": "torque-craft",
     "title": "Torque Craft — Automotive & Hardware",
-    "tags": ["Automotive", "E-Commerce", "UI/UX Design", "React", "Tailwind CSS", "Car Parts", "Tools", "Hardware"],
+    "tags": [
+      "Automotive",
+      "E-Commerce",
+      "UI/UX Design",
+      "React",
+      "Tailwind CSS",
+      "Car Parts",
+      "Tools",
+      "Hardware"
+    ],
     "canonical": "https://currydevs.com/case-studies/torque-craft",
     "curryPreview": "https://currydevs.com/seo-images/curry-torque.png",
     "publishedTime": "2024-04-01T00:00:00Z",
@@ -280,39 +436,99 @@
       },
       "TechStack": {
         "mobile": [
-          { "name": "Expo", "icon": "SiExpo"},
-          { "name": "React Native", "icon": "SiReact"}
+          {
+            "name": "Expo",
+            "icon": "SiExpo"
+          },
+          {
+            "name": "React Native",
+            "icon": "SiReact"
+          }
         ],
         "backend": [],
         "devops": [],
         "frontend": [
-          { "name": "React 18", "icon": "SiReact" },
-          { "name": "TypeScript", "icon": "SiTypescript" },
-          { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-          { "name": "Framer Motion", "icon": "SiFramer" },
-          { "name": "PWA",   "icon": "MdInstallMobile"},
-          { "name": "HTML5", "icon": "SiHtml5"}, 
-          { "name": "CSS3",  "icon": "SiCss3"},
-          { "name": "JavaScript", "icon": "SiJavascript"},
-          { "name": "Vercel", "icon": "SiVercel"},
-          { "name": "MDX", "icon": "SiMdx"},
-          { "name": "Astro", "icon": "SiAstro"}
+          {
+            "name": "React 18",
+            "icon": "SiReact"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "SiTypescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "SiTailwindcss"
+          },
+          {
+            "name": "Framer Motion",
+            "icon": "SiFramer"
+          },
+          {
+            "name": "PWA",
+            "icon": "MdInstallMobile"
+          },
+          {
+            "name": "HTML5",
+            "icon": "SiHtml5"
+          },
+          {
+            "name": "CSS3",
+            "icon": "SiCss3"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "SiJavascript"
+          },
+          {
+            "name": "Vercel",
+            "icon": "SiVercel"
+          },
+          {
+            "name": "MDX",
+            "icon": "SiMdx"
+          },
+          {
+            "name": "Astro",
+            "icon": "SiAstro"
+          }
         ],
         "tools": [
-          { "name": "Figma", "icon": "FaFigma" },
-          { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
-          { "name": "Mixpanel", "icon": "SiMixpanel" },
-          { "name": "Hotjar", "icon": "SiHotjar"}
+          {
+            "name": "Figma",
+            "icon": "FaFigma"
+          },
+          {
+            "name": "Google Analytics",
+            "icon": "SiGoogleanalytics"
+          },
+          {
+            "name": "Mixpanel",
+            "icon": "SiMixpanel"
+          },
+          {
+            "name": "Hotjar",
+            "icon": "SiHotjar"
+          }
         ],
         "security": [
-          { "name": "OAuth 2.0", "icon": "SiAuth0" },
-          { "name": "JWT", "icon": "SiJsonwebtokens" },
-          { "name": "SSL/TLS", "icon": "SiSst" }
+          {
+            "name": "OAuth 2.0",
+            "icon": "SiAuth0"
+          },
+          {
+            "name": "JWT",
+            "icon": "SiJsonwebtokens"
+          },
+          {
+            "name": "SSL/TLS",
+            "icon": "SiSst"
+          }
         ]
       },
       "Gallery": {
         "livePreview": "/case-study/full-preview/torque.jpeg",
-        "mobile":"https://torque-craft.vercel.app/",
+        "mobile": "https://torque-craft.vercel.app/",
         "desktop": [
           {
             "id": 1,
@@ -402,141 +618,238 @@
       }
     }
   },
-
   {
-  "id": "wrlds",
-  "title": "Wrlds — Immersive Digital Experiences Platform",
-  "tags": ["Immersive Tech", "NextJS", "TypeScript", "Framer Motion", "TailwindCSS", "PWA", "UI/UX Design"],
-  "canonical": "https://currydevs.com/case-studies/wrlds",
-  "curryPreview": "https://currydevs.com/seo-images/curry-wrlds.png",
-  "publishedTime": "2025-09-01T00:00:00Z",
-  "modifiedTime": "2025-09-28T00:00:00Z",
-  "components": {
-    "HeroSection": {
-      "category": "UI/UX Design",
-      "headline": {
-        "h1": "Building Immersive Experiences for",
-        "h2": "Wrlds",
-        "h3": "Digital Innovation"
+    "id": "wrlds",
+    "title": "Wrlds — Immersive Digital Experiences Platform",
+    "tags": [
+      "Immersive Tech",
+      "NextJS",
+      "TypeScript",
+      "Framer Motion",
+      "TailwindCSS",
+      "PWA",
+      "UI/UX Design"
+    ],
+    "canonical": "https://currydevs.com/case-studies/wrlds",
+    "curryPreview": "https://currydevs.com/seo-images/curry-wrlds.png",
+    "publishedTime": "2025-09-01T00:00:00Z",
+    "modifiedTime": "2025-09-28T00:00:00Z",
+    "components": {
+      "HeroSection": {
+        "category": "UI/UX Design",
+        "headline": {
+          "h1": "Building Immersive Experiences for",
+          "h2": "Wrlds",
+          "h3": "Digital Innovation"
+        },
+        "subtitle": "Wrlds is an immersive platform that blends design, interactivity, and storytelling to deliver unique digital experiences that engage and inspire audiences.",
+        "cta": [
+          {
+            "label": "View Live Project",
+            "url": "https://wrlds.vercel.app/",
+            "preview": "/case-study/desktop-view/wrlds/header.png"
+          }
+        ]
       },
-      "subtitle": "Wrlds is an immersive platform that blends design, interactivity, and storytelling to deliver unique digital experiences that engage and inspire audiences.",
-      "cta": [
-        {
-          "label": "View Live Project",
-          "url": "https://wrlds.vercel.app/",
-          "preview": "/case-study/desktop-view/wrlds/header.png"
-        }
-      ]
-    },
-    "ProjectDetails": {
-      "title": "Wrlds",
-      "headline": "Creating an Immersive Web Platform for Next-Gen Experiences",
-      "summary": "Designed and developed Wrlds — a visually striking and interactive platform showcasing immersive digital experiences. Focused on smooth animations, storytelling-driven UI, and responsiveness across devices to captivate users.",
-      "client": {
-        "name": "Wrlds",
-        "description": "A creative platform focused on delivering immersive, interactive, and storytelling-driven digital experiences that connect brands with audiences in meaningful ways."
+      "ProjectDetails": {
+        "title": "Wrlds",
+        "headline": "Creating an Immersive Web Platform for Next-Gen Experiences",
+        "summary": "Designed and developed Wrlds — a visually striking and interactive platform showcasing immersive digital experiences. Focused on smooth animations, storytelling-driven UI, and responsiveness across devices to captivate users.",
+        "client": {
+          "name": "Wrlds",
+          "description": "A creative platform focused on delivering immersive, interactive, and storytelling-driven digital experiences that connect brands with audiences in meaningful ways."
+        },
+        "duration": {
+          "length": "4 Weeks",
+          "description": "Completed design and development in just four weeks, ensuring a refined, animated, and production-ready experience."
+        },
+        "timeline": {
+          "timeframe": "Q3 2025",
+          "description": "Executed in a focused design & development sprint to craft a highly engaging and modern immersive web experience."
+        },
+        "challenge": [
+          "Creating immersive animations without performance bottlenecks",
+          "Maintaining responsiveness across devices while using heavy visuals",
+          "Balancing storytelling and usability within a modern design system"
+        ],
+        "solution": [
+          "Leveraged Framer Motion for fluid transitions and interactive elements",
+          "Built a PWA-first responsive layout optimized for mobile and desktop",
+          "Structured content in clear sections (Hero, Features, WhyWrlds, Projects, Blog, Contact) to guide user flow"
+        ]
       },
-      "duration": {
-        "length": "4 Weeks",
-        "description": "Completed design and development in just four weeks, ensuring a refined, animated, and production-ready experience."
+      "TechStack": {
+        "mobile": [],
+        "backend": [],
+        "devops": [],
+        "frontend": [
+          {
+            "name": "React 18",
+            "icon": "SiReact"
+          },
+          {
+            "name": "Next.js 14",
+            "icon": "SiNextdotjs"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "SiTypescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "SiTailwindcss"
+          },
+          {
+            "name": "Framer Motion",
+            "icon": "SiFramer"
+          },
+          {
+            "name": "PWA",
+            "icon": "MdInstallMobile"
+          },
+          {
+            "name": "HTML5",
+            "icon": "SiHtml5"
+          },
+          {
+            "name": "CSS3",
+            "icon": "SiCss3"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "SiJavascript"
+          },
+          {
+            "name": "Vercel",
+            "icon": "SiVercel"
+          }
+        ],
+        "tools": [
+          {
+            "name": "Figma",
+            "icon": "FaFigma"
+          },
+          {
+            "name": "Google Analytics",
+            "icon": "SiGoogleanalytics"
+          },
+          {
+            "name": "Mixpanel",
+            "icon": "SiMixpanel"
+          },
+          {
+            "name": "Hotjar",
+            "icon": "SiHotjar"
+          }
+        ],
+        "security": [
+          {
+            "name": "OAuth 2.0",
+            "icon": "SiAuth0"
+          },
+          {
+            "name": "SSL/TLS",
+            "icon": "SiSst"
+          }
+        ]
       },
-      "timeline": {
-        "timeframe": "Q3 2025",
-        "description": "Executed in a focused design & development sprint to craft a highly engaging and modern immersive web experience."
-      },
-      "challenge": [
-        "Creating immersive animations without performance bottlenecks",
-        "Maintaining responsiveness across devices while using heavy visuals",
-        "Balancing storytelling and usability within a modern design system"
-      ],
-      "solution": [
-        "Leveraged Framer Motion for fluid transitions and interactive elements",
-        "Built a PWA-first responsive layout optimized for mobile and desktop",
-        "Structured content in clear sections (Hero, Features, WhyWrlds, Projects, Blog, Contact) to guide user flow"
-      ]
-    },
-    "TechStack": {
-      "mobile": [],
-      "backend": [],
-      "devops": [],
-      "frontend": [
-        { "name": "React 18", "icon": "SiReact" },
-        { "name": "Next.js 14", "icon": "SiNextdotjs" },
-        { "name": "TypeScript", "icon": "SiTypescript" },
-        { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
-        { "name": "Framer Motion", "icon": "SiFramer" },
-        { "name": "PWA", "icon": "MdInstallMobile" },
-        { "name": "HTML5", "icon": "SiHtml5" },
-        { "name": "CSS3", "icon": "SiCss3" },
-        { "name": "JavaScript", "icon": "SiJavascript" },
-        { "name": "Vercel", "icon": "SiVercel" }
-      ],
-      "tools": [
-        { "name": "Figma", "icon": "FaFigma" },
-        { "name": "Google Analytics", "icon": "SiGoogleanalytics" },
-        { "name": "Mixpanel", "icon": "SiMixpanel" },
-        { "name": "Hotjar", "icon": "SiHotjar" }
-      ],
-      "security": [
-        { "name": "OAuth 2.0", "icon": "SiAuth0" },
-        { "name": "SSL/TLS", "icon": "SiSst" }
-      ]
-    },
-    "Gallery": {
-      "livePreview": "/case-study/full-preview/wrlds.jpeg",
-      "mobile": "https://wrlds.vercel.app/",
-      "desktop": [
-        {
-          "id": 1,
-          "title": "Homepage Design",
-          "description": "Immersive landing page with video background, gradient overlays, and animated hero content",
-          "url": "/case-study/desktop-view/wrlds/header.png",
-          "category": "Homepage"
-        },
-        {
-          "id": 2,
-          "title": "Features Section",
-          "description": "Interactive features with hover animations and layered visuals to engage users",
-          "url": "/case-study/desktop-view/wrlds/features.png",
-          "category": "Features"
-        },
-        {
-          "id": 3,
-          "title": "Why Wrlds",
-          "description": "Highlighting platform value through animated counters and storytelling-driven design",
-          "url": "/case-study/desktop-view/wrlds/whywrlds.png",
-          "category": "About"
-        },
-        {
-          "id": 4,
-          "title": "Projects Showcase",
-          "description": "Dynamic projects grid with smooth hover states and scroll-based transitions",
-          "url": "/case-study/desktop-view/wrlds/projects.png",
-          "category": "Projects"
-        },
-        {
-          "id": 5,
-          "title": "Blog Preview",
-          "description": "Clean and modern blog preview section with cards and hover animations",
-          "url": "/case-study/desktop-view/wrlds/blog.png",
-          "category": "Blog"
-        },
-        {
-          "id": 6,
-          "title": "Contact Section",
-          "description": "Streamlined contact section with smooth scroll navigation and clear CTAs",
-          "url": "/case-study/desktop-view/wrlds/contact.png",
-          "category": "Contact"
-        },
-        {
-          "id": 7,
-          "title": "Footer",
-          "description": "Minimal, modern footer design with links and brand consistency",
-          "url": "/case-study/desktop-view/wrlds/footer.png",
-          "category": "Footer"
-        }
-      ]
+      "Gallery": {
+        "livePreview": "/case-study/full-preview/wrlds.jpeg",
+        "mobile": "https://wrldss.vercel.app/",
+        "desktop": [
+          {
+            "id": 1,
+            "title": "Homepage Header",
+            "description": "Immersive landing page with video background, gradient overlays, and animated hero content",
+            "url": "/case-study/desktop-view/wrlds/header.png",
+            "category": "Homepage"
+          },
+          {
+            "id": 2,
+            "title": "Services Section",
+            "description": "Comprehensive services overview with interactive elements and clear value proposition",
+            "url": "/case-study/desktop-view/wrlds/services.png",
+            "category": "Services"
+          },
+          {
+            "id": 3,
+            "title": "Applications Section",
+            "description": "Interactive features with hover animations and layered visuals to engage users",
+            "url": "/case-study/desktop-view/wrlds/applications.png",
+            "category": "Features"
+          },
+          {
+            "id": 4,
+            "title": "Process Flow",
+            "description": "Step-by-step process visualization with intuitive design and clear progression",
+            "url": "/case-study/desktop-view/wrlds/process.png",
+            "category": "Process"
+          },
+          {
+            "id": 5,
+            "title": "Technology Stack",
+            "description": "Modern technology showcase highlighting the platform's technical capabilities",
+            "url": "/case-study/desktop-view/wrlds/technology.png",
+            "category": "Technology"
+          },
+          {
+            "id": 6,
+            "title": "Why Wrlds",
+            "description": "Highlighting platform value through animated counters and storytelling-driven design",
+            "url": "/case-study/desktop-view/wrlds/whyUs.png",
+            "category": "About"
+          },
+          {
+            "id": 7,
+            "title": "Platform Overview",
+            "description": "Comprehensive platform features and capabilities with interactive elements",
+            "url": "/case-study/desktop-view/wrlds/platforms.png",
+            "category": "Platform"
+          },
+          {
+            "id": 8,
+            "title": "Projects Showcase",
+            "description": "Dynamic projects grid with smooth hover states and scroll-based transitions",
+            "url": "/case-study/desktop-view/wrlds/case-studies.png",
+            "category": "Projects"
+          },
+          {
+            "id": 9,
+            "title": "Roadmap Section",
+            "description": "Future development timeline with milestones and progress indicators",
+            "url": "/case-study/desktop-view/wrlds/roadmap.png",
+            "category": "Roadmap"
+          },
+          {
+            "id": 10,
+            "title": "News & Updates",
+            "description": "Latest company news and announcements in a clean, organized layout",
+            "url": "/case-study/desktop-view/wrlds/news.png",
+            "category": "News"
+          },
+          {
+            "id": 11,
+            "title": "Blogs Preview",
+            "description": "Clean and modern blog preview section with cards and hover animations",
+            "url": "/case-study/desktop-view/wrlds/blogs.png",
+            "category": "Blogs"
+          },
+          {
+            "id": 12,
+            "title": "Contact Section",
+            "description": "Streamlined contact section with smooth scroll navigation and clear CTAs",
+            "url": "/case-study/desktop-view/wrlds/contact.png",
+            "category": "Contact"
+          },
+          {
+            "id": 13,
+            "title": "Footer",
+            "description": "Minimal, modern footer design with links and brand consistency",
+            "url": "/case-study/desktop-view/wrlds/footer.png",
+            "category": "Footer"
+          }
+        ]
+      }
     }
-  }
   }
 ]
