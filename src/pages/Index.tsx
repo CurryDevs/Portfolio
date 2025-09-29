@@ -10,21 +10,24 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Code, Palette, Rocket } from "lucide-react";
 import FAQSection from "@/components/sections/FAQSection";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import SEO from "@/components/seo/SEO";
 
 const Index = ({ scrollTo }: { scrollTo?: string }) => {
   const location = useLocation();
 
-  useEffect(() => {
-    if (scrollTo) {
-      const el = document.getElementById(scrollTo);
-      if (el) {
+  useLayoutEffect(() => {
+  if (scrollTo) {
+    const el = document.getElementById(scrollTo);
+    if (el) {
+      requestAnimationFrame(() => {
         el.scrollIntoView({ behavior: "smooth" });
-      }
+      });
     }
-  }, [scrollTo, location]);
+  }
+}, [scrollTo, location]);
+
   
   const projectData = [
     {
