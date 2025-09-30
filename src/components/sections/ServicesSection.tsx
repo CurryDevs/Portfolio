@@ -205,11 +205,79 @@ function ServicesSection() {
           Digital Solutions
         </h2>
       </div>
-      <BentoGrid className="lg:grid-rows-3">
-        {features.map((feature) => (
-          <BentoCard key={feature.name} {...feature} />
+      {/* Desktop/Tablet Grid */}
+      <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+        {features.map((feature, idx) => (
+          <div
+            key={feature.name}
+            className={cn(
+              "relative flex flex-col justify-between rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black group transition-transform duration-300 hover:-translate-y-1 hover:shadow-3xl min-h-[200px] p-0",
+              "backdrop-blur-md",
+              "md:min-h-[220px] lg:min-h-[240px]",
+              feature.className
+            )}
+          >
+            {/* Modern glassy corner blob for theme accent */}
+            <div className="absolute top-0 right-0 w-16 h-16 bg-primary/30 rounded-bl-3xl blur-xl opacity-40" />
+            <div className="absolute bottom-0 left-0 w-12 h-12 bg-primary/20 rounded-tr-3xl blur-xl opacity-30" />
+            <div className="relative z-10 flex flex-col gap-2 px-6 pt-7 pb-2 items-center">
+              <div className="flex items-center justify-center mb-2">
+                <feature.Icon className="h-11 w-11 text-primary drop-shadow-lg transition-transform duration-300 group-hover:scale-110" />
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-white mb-1 text-center">{feature.name}</h3>
+              <p className="text-xs md:text-sm text-neutral-300 text-center mb-2 line-clamp-3">{feature.description}</p>
+            </div>
+            <div className="relative z-10 flex justify-center pb-4">
+              <Button variant="secondary" asChild size="sm" className="pointer-events-auto rounded-full px-5 py-2 text-xs md:text-sm active:scale-95 transition-transform duration-150">
+                <a href={feature.href} className="flex items-center gap-2">
+                  {feature.cta}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+            {/* Subtle hover overlay with more curve */}
+            <div className="absolute inset-0 z-20 pointer-events-none transition-all duration-300 group-hover:bg-primary/10 rounded-3xl" />
+          </div>
         ))}
-      </BentoGrid>
+      </div>
+
+      {/* Mobile Touch UI: Swipeable Carousel */}
+      <div className="sm:hidden w-full overflow-x-auto pb-2">
+        <div className="flex gap-4 px-1 snap-x snap-mandatory">
+          {features.map((feature, idx) => (
+            <div
+              key={feature.name}
+              className={cn(
+                "relative flex flex-col justify-between rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black min-w-[85vw] max-w-[90vw] snap-center touch-pan-x active:scale-[0.98] transition-transform duration-150",
+                "backdrop-blur-md",
+                "min-h-[180px]",
+                feature.className
+              )}
+            >
+              {/* Mobile glassy accent */}
+              <div className="absolute top-0 right-0 w-12 h-12 bg-primary/30 rounded-bl-2xl blur-xl opacity-40" />
+              <div className="absolute bottom-0 left-0 w-8 h-8 bg-primary/20 rounded-tr-2xl blur-xl opacity-30" />
+              <div className="relative z-10 flex flex-col gap-2 px-4 pt-6 pb-2 items-center">
+                <div className="flex items-center justify-center mb-2">
+                  <feature.Icon className="h-9 w-9 text-primary drop-shadow-lg" />
+                </div>
+                <h3 className="text-base font-bold text-white mb-1 text-center">{feature.name}</h3>
+                <p className="text-xs text-neutral-300 text-center mb-2 line-clamp-3">{feature.description}</p>
+              </div>
+              <div className="relative z-10 flex justify-center pb-3">
+                <Button variant="secondary" asChild size="sm" className="pointer-events-auto rounded-full px-4 py-2 text-xs active:scale-95 transition-transform duration-150">
+                  <a href={feature.href} className="flex items-center gap-2">
+                    {feature.cta}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+              {/* Subtle hover overlay with more curve */}
+              <div className="absolute inset-0 z-20 pointer-events-none transition-all duration-300 group-hover:bg-primary/10 rounded-2xl" />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
