@@ -102,10 +102,10 @@ export const BentoGridItem = ({
   return (
     <motion.div
       whileHover={{ scale: 1.02, y: -5 }}
-      whileTap={{ scale: 0.98 }}
+      whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl p-4 transition-all duration-300 hover:shadow-2xl hover:shadow-black/30 cursor-pointer touch-manipulation",
+        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl p-4 transition-all duration-300 md:hover:shadow-2xl md:hover:shadow-black/30 cursor-pointer touch-manipulation active:scale-95 md:active:scale-100",
         "bg-gradient-to-br from-black via-primary/10 to-black border border-white/5 backdrop-blur-md",
         className
       )}
@@ -148,7 +148,7 @@ const SkeletonMobile = () => {
         y: -5,
         transition: { duration: 0.3, repeat: Infinity, repeatType: "reverse" }
       }}
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center space-y-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center space-y-2 md:hover:animate-pulse"
     >
       <div className="w-16 h-28 bg-black rounded-lg border-2 border-white/20 relative overflow-hidden">
         <div className="w-full h-full bg-black rounded-md m-0.5 relative">
@@ -181,7 +181,7 @@ const SkeletonWeb = () => {
         y: -5,
         transition: { duration: 0.4 },
       }}
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center relative overflow-hidden p-4"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center relative overflow-hidden p-4 md:hover:scale-105"
     >
       <div className="w-full max-w-40 bg-black rounded-lg border border-white/20 overflow-hidden">
         <div className="bg-black px-3 py-2 flex items-center space-x-2">
@@ -218,7 +218,7 @@ const SkeletonBackend = () => {
         y: -8,
         transition: { duration: 0.4 },
       }}
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center space-y-4"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center space-y-4 md:hover:scale-110"
     >
       <div className="bg-black border border-white/20 rounded-lg p-4 flex flex-col items-center justify-center space-y-2">
         <Server className="h-12 w-12 text-white" />
@@ -243,7 +243,7 @@ const SkeletonEcommerce = () => {
     <motion.div
       initial="initial"
       whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-row space-x-2 p-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-row space-x-2 p-2 md:hover:scale-105"
     >
       <motion.div
         variants={{
@@ -284,7 +284,7 @@ const SkeletonDesignSystem = () => {
         scale: 1.02,
         transition: { duration: 0.3 },
       }}
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center p-4 relative"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center p-4 relative md:hover:scale-105"
     >
       <div className="grid grid-cols-3 gap-2 w-full max-w-32">
         <div className="bg-black border border-white/20 rounded-md p-2 flex items-center justify-center">
@@ -393,13 +393,13 @@ function ServicesSection() {
       </div>
 
       {/* Mobile Touch-Optimized Carousel */}
-      <div className="sm:hidden w-full overflow-x-auto pb-4">
-        <div className="flex gap-4 px-1 snap-x snap-mandatory">
+      <div className="sm:hidden w-full overflow-x-auto pb-4 scrollbar-hide">
+        <div className="flex gap-4 px-2 snap-x snap-mandatory">
           {services.map((service) => (
             <motion.div
               key={service.title}
               whileTap={{ scale: 0.95 }}
-              className="relative flex flex-col justify-between rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black min-w-[85vw] max-w-[90vw] snap-center touch-pan-x backdrop-blur-md min-h-[320px] p-4"
+              className="relative flex flex-col justify-between rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black min-w-[85vw] max-w-[90vw] snap-center touch-pan-x backdrop-blur-md min-h-[280px] p-4 active:scale-95 transition-transform duration-150"
             >
               {/* Mobile glassy accent */}
               <div className="absolute top-0 right-0 w-12 h-12 bg-primary/30 rounded-bl-2xl blur-xl opacity-40" />
@@ -431,8 +431,8 @@ function ServicesSection() {
                 </Button>
               </div>
 
-              {/* Subtle hover overlay */}
-              <div className="absolute inset-0 z-20 pointer-events-none transition-all duration-300 group-hover:bg-primary/10 rounded-2xl" />
+              {/* Subtle hover overlay - desktop only */}
+              <div className="absolute inset-0 z-20 pointer-events-none transition-all duration-300 md:group-hover:bg-primary/10 rounded-2xl" />
             </motion.div>
           ))}
         </div>
