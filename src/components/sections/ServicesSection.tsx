@@ -362,6 +362,38 @@ const services = [
 ];
 
 function ServicesSection() {
+  // Add CSS styles to document head
+  React.useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      @keyframes scale-in {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .animate-scale-in {
+        animation: scale-in 0.5s ease-out forwards;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
     <div id="services" className="container mx-auto px-4 py-16">
       <div className="relative z-10 flex flex-col items-center justify-center mb-12">
@@ -392,13 +424,14 @@ function ServicesSection() {
       </div>
 
       {/* Mobile Touch-Optimized Carousel */}
-      <div className="sm:hidden w-full overflow-x-auto pb-4 scrollbar-hide touch-pan-x">
-        <div className="flex gap-4 px-2 snap-x snap-mandatory touch-auto">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="relative flex flex-col justify-between rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black min-w-[85vw] max-w-[90vw] snap-center backdrop-blur-md min-h-[280px] p-4"
-            >
+      <div className="sm:hidden flex overflow-x-auto snap-x snap-mandatory gap-4 px-2 pb-6 hide-scrollbar">
+        {services.map((service, index) => (
+          <div
+            key={service.title}
+            className="min-w-[85vw] max-w-[90vw] snap-center rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black backdrop-blur-md animate-scale-in transition-transform duration-300"
+            style={{ animationDelay: `${0.1 * index}s` }}
+          >
+            <div className="relative flex flex-col justify-between min-h-[280px] p-4">
               {/* Mobile glassy accent */}
               <div className="absolute top-0 right-0 w-12 h-12 bg-primary/30 rounded-bl-2xl blur-xl opacity-40" />
               <div className="absolute bottom-0 left-0 w-8 h-8 bg-primary/20 rounded-tr-2xl blur-xl opacity-30" />
@@ -432,8 +465,8 @@ function ServicesSection() {
               {/* Subtle hover overlay - desktop only */}
               <div className="absolute inset-0 z-20 pointer-events-none transition-all duration-300 md:group-hover:bg-primary/10 rounded-2xl" />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
