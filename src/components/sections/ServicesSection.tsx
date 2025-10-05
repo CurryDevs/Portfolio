@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
-import { ArrowRight } from "lucide-react";
 import * as React from "react";
+import { ArrowRight } from "lucide-react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
+import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 import {
@@ -11,7 +11,7 @@ import {
   ShoppingCart,
   Settings,
   Layers,
-  Shield,
+  Server,
 } from "lucide-react";
 
 const buttonVariants = cva(
@@ -63,17 +63,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
-const BentoGrid = ({
-  children,
+export const BentoGrid = ({
   className,
+  children,
 }: {
-  children: ReactNode;
   className?: string;
+  children?: React.ReactNode;
 }) => {
   return (
     <div
       className={cn(
-        "grid w-full auto-rows-[14rem] sm:auto-rows-[18rem] md:auto-rows-[22rem] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4",
+        "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3",
         className
       )}
     >
@@ -82,199 +82,358 @@ const BentoGrid = ({
   );
 };
 
-const BentoCard = ({
-  name,
+export const BentoGridItem = ({
   className,
-  background,
-  Icon,
+  title,
   description,
+  header,
+  icon,
   href,
   cta,
 }: {
-  name: string;
-  className?: string; // Make className optional as it's not always provided in features
-  background: ReactNode;
-  Icon: React.ElementType; // Use React.ElementType for component props
-  description: string;
-  href: string;
-  cta: string;
-}) => (
-  <div
-    key={name}
-    className={cn(
-      "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl",
-      // dark styles (now default)
-      "bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
-      className
-    )}
-  >
-    <div>{background}</div>
-    <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-      <Icon className="h-12 w-12 origin-left transform-gpu text-white transition-all duration-300 ease-in-out group-hover:scale-75" />
-      <h3 className="text-xl font-semibold text-white">{name}</h3>
-      <p className="max-w-lg text-sm text-neutral-300">{description}</p>
-    </div>
-
-    <div
+  className?: string;
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  header?: React.ReactNode;
+  icon?: React.ReactNode;
+  href?: string;
+  cta?: string;
+}) => {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.02, y: -5 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.2, ease: "easeInOut" }}
       className={cn(
-        "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl p-4 transition-all duration-300 hover:shadow-2xl hover:shadow-black/30 cursor-pointer touch-manipulation",
+        "bg-gradient-to-br from-black via-primary/10 to-black border border-white/5 backdrop-blur-md",
+        className
       )}
     >
-      <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
-        <a href={href}>
-          {cta}
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </a>
-      </Button>
-    </div>
-    <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-white/[.03]" />
-  </div>
-);
+      <div className="flex-1 flex flex-col">
+        {header}
+        <div className="transition duration-200 group-hover/bento:translate-x-2 mt-auto">
+          <div className="flex items-center gap-2 mb-2">
+            {icon}
+            <div className="font-sans font-bold text-white text-lg">{title}</div>
+          </div>
+          <div className="font-sans text-sm font-normal text-gray-300 mb-4">
+            {description}
+          </div>
+          {href && cta && (
+            <Button
+              variant="secondary"
+              asChild
+              size="sm"
+              className="pointer-events-auto rounded-full px-4 py-2 text-xs active:scale-95 transition-transform duration-150 w-fit"
+            >
+              <a href={href} className="flex items-center gap-2">
+                {cta}
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
-const features = [
+// Animated skeleton components for each service
+const SkeletonMobile = () => {
+  return (
+    <motion.div
+      initial={{ y: 0 }}
+      whileHover={{
+        y: -5,
+        transition: { duration: 0.3, repeat: Infinity, repeatType: "reverse" }
+      }}
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center space-y-2"
+    >
+      <div className="w-16 h-28 bg-black rounded-lg border-2 border-white/20 relative overflow-hidden">
+        <div className="w-full h-full bg-black rounded-md m-0.5 relative">
+          <div className="flex justify-between items-center px-2 py-1">
+            <div className="flex space-x-1">
+              <div className="w-1 h-1 bg-gray-400 rounded-full animate-pulse" />
+              <div className="w-1 h-1 bg-gray-400 rounded-full animate-pulse" />
+              <div className="w-1 h-1 bg-gray-400 rounded-full animate-pulse" />
+            </div>
+            <div className="w-4 h-1 bg-gray-500 rounded-full" />
+          </div>
+          <div className="px-2 py-1 space-y-1">
+            <div className="w-full h-1 bg-gray-600 rounded animate-pulse" />
+            <div className="w-3/4 h-1 bg-gray-600 rounded animate-pulse" />
+            <div className="w-1/2 h-1 bg-gray-600 rounded animate-pulse" />
+          </div>
+        </div>
+        <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-gray-500 rounded-full" />
+      </div>
+    </motion.div>
+  );
+};
+
+const SkeletonWeb = () => {
+  return (
+    <motion.div
+      initial={{ scale: 1, y: 0 }}
+      whileHover={{
+        scale: 1.05,
+        y: -5,
+        transition: { duration: 0.4 },
+      }}
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center relative overflow-hidden p-4"
+    >
+      <div className="w-full max-w-40 bg-black rounded-lg border border-white/20 overflow-hidden">
+        <div className="bg-black px-3 py-2 flex items-center space-x-2">
+          <div className="flex space-x-1">
+            <div className="w-2 h-2 bg-gray-500 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-gray-600 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-gray-700 rounded-full animate-pulse" />
+          </div>
+          <div className="flex-1 bg-gray-800 rounded px-2 py-0.5">
+            <div className="w-16 h-1 bg-gray-500 rounded animate-pulse" />
+          </div>
+        </div>
+        <div className="p-3 space-y-2">
+          <div className="space-y-1">
+            <div className="flex items-center space-x-1">
+              <div className="w-1 h-1 bg-gray-500 rounded-full animate-pulse" />
+              <div className="w-8 h-1 bg-gray-600 rounded animate-pulse" />
+            </div>
+            <div className="w-full h-1 bg-gray-600 rounded animate-pulse" />
+            <div className="w-3/4 h-1 bg-gray-600 rounded animate-pulse" />
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+const SkeletonBackend = () => {
+  return (
+    <motion.div
+      initial={{ scale: 1, y: 0 }}
+      whileHover={{
+        scale: 1.1,
+        y: -8,
+        transition: { duration: 0.4 },
+      }}
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center space-y-4"
+    >
+      <div className="bg-black border border-white/20 rounded-lg p-4 flex flex-col items-center justify-center space-y-2">
+        <Server className="h-12 w-12 text-white" />
+        <div className="flex space-x-2">
+          <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse" />
+          <div
+            className="w-2 h-2 bg-gray-500 rounded-full animate-pulse"
+            style={{ animationDelay: "0.2s" }}
+          />
+          <div
+            className="w-2 h-2 bg-gray-600 rounded-full animate-pulse"
+            style={{ animationDelay: "0.4s" }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+const SkeletonEcommerce = () => {
+  return (
+    <motion.div
+      initial="initial"
+      whileHover="hover"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-row space-x-2 p-2"
+    >
+      <motion.div
+        variants={{
+          initial: { x: 20, rotate: -5 },
+          hover: { x: 0, rotate: 0 },
+        }}
+        className="h-full w-1/3 rounded-2xl bg-black p-4 border border-white/20 flex flex-col items-center justify-center"
+      >
+        <div className="w-8 h-8 bg-gradient-to-r from-gray-600 to-gray-500 rounded" />
+        <p className="text-xs text-center font-semibold text-white mt-2">Product</p>
+        <p className="border border-white/30 bg-gray-900 text-white text-xs rounded-full px-2 py-0.5 mt-2">$99</p>
+      </motion.div>
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-black p-4 border border-white/20 flex flex-col items-center justify-center">
+        <ShoppingCart className="w-8 h-8 text-gray-400" />
+        <p className="text-xs text-center font-semibold text-white mt-2">Cart</p>
+        <p className="border border-white/30 bg-gray-900 text-white text-xs rounded-full px-2 py-0.5 mt-2">2 items</p>
+      </motion.div>
+      <motion.div
+        variants={{
+          initial: { x: -20, rotate: 5 },
+          hover: { x: 0, rotate: 0 },
+        }}
+        className="h-full w-1/3 rounded-2xl bg-black p-4 border border-white/20 flex flex-col items-center justify-center"
+      >
+        <div className="w-8 h-8 bg-gradient-to-r from-gray-600 to-gray-500 rounded" />
+        <p className="text-xs text-center font-semibold text-white mt-2">Order</p>
+        <p className="border border-white/30 bg-gray-900 text-white text-xs rounded-full px-2 py-0.5 mt-2">Complete</p>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+const SkeletonDesignSystem = () => {
+  return (
+    <motion.div
+      initial={{ scale: 1 }}
+      whileHover={{
+        scale: 1.02,
+        transition: { duration: 0.3 },
+      }}
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center p-4 relative"
+    >
+      <div className="grid grid-cols-3 gap-2 w-full max-w-32">
+        <div className="bg-black border border-white/20 rounded-md p-2 flex items-center justify-center">
+          <div className="w-4 h-2 bg-gray-600 rounded-sm animate-pulse" />
+        </div>
+        <div className="bg-black border border-white/20 rounded-md p-2 flex items-center justify-center">
+          <div className="w-4 h-1 bg-gray-600 rounded-full animate-pulse" />
+        </div>
+        <div className="bg-black border border-white/20 rounded-md p-2 flex flex-col items-center justify-center space-y-1">
+          <div className="w-3 h-1 bg-gray-600 rounded-full animate-pulse" />
+          <div className="w-2 h-0.5 bg-gray-700 rounded-full animate-pulse" />
+        </div>
+        <div className="bg-black border border-white/20 rounded-md p-2 flex items-center justify-center">
+          <div className="w-4 h-2 bg-gray-700 rounded-full relative">
+            <div className="w-1.5 h-1.5 bg-gray-500 rounded-full absolute right-0.5 top-0.5 animate-pulse" />
+          </div>
+        </div>
+        <div className="bg-black border border-white/20 rounded-md p-2 flex items-center justify-center">
+          <div className="w-3 h-3 bg-gradient-to-br from-gray-600 to-gray-700 rounded-full animate-pulse" />
+        </div>
+        <div className="bg-black border border-white/20 rounded-md p-2 flex items-center justify-center">
+          <div className="w-3 h-1.5 bg-gray-600 rounded-full animate-pulse" />
+        </div>
+      </div>
+      <div className="mt-3 text-xs text-primary/60 font-medium tracking-wide">COMPONENTS</div>
+    </motion.div>
+  );
+};
+
+const services = [
   {
-    Icon: Globe,
-    name: "Web Development",
-    description:
-      "Custom websites and web applications built with modern technologies for optimal performance and user experience.",
+    title: "Mobile Applications",
+    description: "Native and cross-platform mobile apps that deliver seamless experiences across iOS and Android devices.",
+    header: <SkeletonMobile />,
+    className: "md:col-span-1",
+    icon: <Smartphone className="h-5 w-5 text-primary" />,
     href: "/",
     cta: "Learn More",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
   },
   {
-    Icon: Smartphone,
-    name: "Mobile Applications",
-    description:
-      "Native and cross-platform mobile apps that deliver seamless experiences across iOS and Android devices.",
+    title: "Web Development",
+    description: "Custom websites and web applications built with modern technologies for optimal performance and user experience.",
+    header: <SkeletonWeb />,
+    className: "md:col-span-1",
+    icon: <Globe className="h-5 w-5 text-primary" />,
     href: "/",
     cta: "Learn More",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
   },
   {
-    Icon: ShoppingCart,
-    name: "E-commerce Solutions",
-    description:
-      "Complete online stores with payment integration, inventory management.",
+    title: "Backend Development",
+    description: "Scalable server-side solutions with robust APIs, database design, and cloud infrastructure.",
+    header: <SkeletonBackend />,
+    className: "md:col-span-1",
+    icon: <Settings className="h-5 w-5 text-primary" />,
     href: "/",
     cta: "Learn More",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
   },
   {
-    Icon: Settings,
-    name: "Backend Development",
-    description:
-      "Scalable server-side solutions with robust APIs, database design, and cloud infrastructure.",
+    title: "E-commerce Solutions",
+    description: "Complete online stores with payment integration, inventory management, and seamless checkout experiences.",
+    header: <SkeletonEcommerce />,
+    className: "md:col-span-2",
+    icon: <ShoppingCart className="h-5 w-5 text-primary" />,
     href: "/",
     cta: "Learn More",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
   },
   {
-    Icon: Layers,
-    name: "Design Systems",
-    description:
-      "Comprehensive design systems and UI component libraries that ensure consistency.",
+    title: "Design Systems",
+    description: "Comprehensive design systems and UI component libraries that ensure consistency across all platforms.",
+    header: <SkeletonDesignSystem />,
+    className: "md:col-span-1",
+    icon: <Layers className="h-5 w-5 text-primary" />,
     href: "/",
     cta: "Learn More",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-3",
-  },
-  {
-    Icon: Shield,
-    name: "DevOps & Security",
-    description:
-      "Secure deployment pipelines, monitoring, and infrastructure management for reliable applications.",
-    href: "/",
-    cta: "Learn More",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-3 lg:row-end-4",
   },
 ];
 
 function ServicesSection() {
   return (
-    <div id="services" className="container mx-auto px-4">
-      <div className="relative z-10 flex flex-col items-center justify-center mb-0 sm:mb-12">
+    <div id="services" className="container mx-auto px-4 py-16">
+      <div className="relative z-10 flex flex-col items-center justify-center mb-12">
         <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
           OUR SERVICES
         </span>
-        <h2 className="mb-16 sm:mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+        <h2 className="mb-8 sm:mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent leading-tight pb-2">
           Digital Solutions
         </h2>
       </div>
-      {/* Desktop/Tablet Grid */}
-      <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-        {features.map((feature, idx) => (
-          <div
-            key={feature.name}
-            className={cn(
-              "relative flex flex-col justify-between rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black group transition-transform duration-300 hover:-translate-y-1 hover:shadow-3xl min-h-[200px] p-0",
-              "backdrop-blur-md",
-              "md:min-h-[220px] lg:min-h-[240px]",
-              feature.className
-            )}
-          >
-            {/* Modern glassy corner blob for theme accent */}
-            <div className="absolute top-0 right-0 w-16 h-16 bg-primary/30 rounded-bl-3xl blur-xl opacity-40" />
-            <div className="absolute bottom-0 left-0 w-12 h-12 bg-primary/20 rounded-tr-3xl blur-xl opacity-30" />
-            <div className="relative z-10 flex flex-col gap-2 px-6 pt-7 pb-2 items-center">
-              <div className="flex items-center justify-center mb-2">
-                <feature.Icon className="h-11 w-11 text-primary drop-shadow-lg transition-transform duration-300 group-hover:scale-110" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-white mb-1 text-center">{feature.name}</h3>
-              <p className="text-xs md:text-sm text-neutral-300 text-center mb-2 line-clamp-3">{feature.description}</p>
-            </div>
-            <div className="relative z-10 flex justify-center pb-4">
-              <Button variant="secondary" asChild size="sm" className="pointer-events-auto rounded-full px-5 py-2 text-xs md:text-sm active:scale-95 transition-transform duration-150">
-                <a href={feature.href} className="flex items-center gap-2">
-                  {feature.cta}
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-            {/* Subtle hover overlay with more curve */}
-            <div className="absolute inset-0 z-20 pointer-events-none transition-all duration-300 group-hover:bg-primary/10 rounded-3xl" />
-          </div>
-        ))}
+
+      {/* Desktop/Tablet Bento Grid */}
+      <div className="hidden sm:block">
+        <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[20rem]">
+          {services.map((service, i) => (
+            <BentoGridItem
+              key={i}
+              title={service.title}
+              description={service.description}
+              header={service.header}
+              className={cn("[&>p:text-lg]", service.className)}
+              icon={service.icon}
+              href={service.href}
+              cta={service.cta}
+            />
+          ))}
+        </BentoGrid>
       </div>
 
-      {/* Mobile Touch UI: Swipeable Carousel */}
-      <div className="sm:hidden w-full overflow-x-auto pb-2">
+      {/* Mobile Touch-Optimized Carousel */}
+      <div className="sm:hidden w-full overflow-x-auto pb-4">
         <div className="flex gap-4 px-1 snap-x snap-mandatory">
-          {features.map((feature, idx) => (
-            <div
-              key={feature.name}
-              className={cn(
-                "relative flex flex-col justify-between rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black min-w-[85vw] max-w-[90vw] snap-center touch-pan-x active:scale-[0.98] transition-transform duration-150",
-                "backdrop-blur-md",
-                "min-h-[180px]",
-                feature.className
-              )}
+          {services.map((service) => (
+            <motion.div
+              key={service.title}
+              whileTap={{ scale: 0.95 }}
+              className="relative flex flex-col justify-between rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black min-w-[85vw] max-w-[90vw] snap-center touch-pan-x backdrop-blur-md min-h-[320px] p-4"
             >
               {/* Mobile glassy accent */}
               <div className="absolute top-0 right-0 w-12 h-12 bg-primary/30 rounded-bl-2xl blur-xl opacity-40" />
               <div className="absolute bottom-0 left-0 w-8 h-8 bg-primary/20 rounded-tr-2xl blur-xl opacity-30" />
-              <div className="relative z-10 flex flex-col gap-2 px-4 pt-6 pb-2 items-center">
-                <div className="flex items-center justify-center mb-2">
-                  <feature.Icon className="h-9 w-9 text-primary drop-shadow-lg" />
-                </div>
-                <h3 className="text-base font-bold text-white mb-1 text-center">{feature.name}</h3>
-                <p className="text-xs text-neutral-300 text-center mb-2 line-clamp-3">{feature.description}</p>
+
+              {/* Header Animation */}
+              <div className="flex-1 flex items-center justify-center mb-4">
+                {service.header}
               </div>
-              <div className="relative z-10 flex justify-center pb-3">
-                <Button variant="secondary" asChild size="sm" className="pointer-events-auto rounded-full px-4 py-2 text-xs active:scale-95 transition-transform duration-150">
-                  <a href={feature.href} className="flex items-center gap-2">
-                    {feature.cta}
+
+              {/* Content */}
+              <div className="relative z-10 flex flex-col gap-2 items-center text-center">
+                <div className="flex items-center justify-center mb-2">
+                  {service.icon}
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+                <p className="text-sm text-neutral-300 mb-4 line-clamp-3">{service.description}</p>
+
+                <Button
+                  variant="secondary"
+                  asChild
+                  size="sm"
+                  className="pointer-events-auto rounded-full px-4 py-2 text-xs active:scale-95 transition-transform duration-150"
+                >
+                  <a href={service.href} className="flex items-center gap-2">
+                    {service.cta}
                     <ArrowRight className="h-4 w-4" />
                   </a>
                 </Button>
               </div>
-              {/* Subtle hover overlay with more curve */}
+
+              {/* Subtle hover overlay */}
               <div className="absolute inset-0 z-20 pointer-events-none transition-all duration-300 group-hover:bg-primary/10 rounded-2xl" />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
