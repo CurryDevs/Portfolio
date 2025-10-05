@@ -393,13 +393,13 @@ function ServicesSection() {
       </div>
 
       {/* Mobile Touch-Optimized Carousel */}
-      <div className="sm:hidden w-full overflow-x-auto pb-4 scrollbar-hide">
-        <div className="flex gap-4 px-2 snap-x snap-mandatory">
+      <div className="sm:hidden w-full overflow-x-auto pb-4 scrollbar-hide touch-pan-x">
+        <div className="flex gap-4 px-2 snap-x snap-mandatory touch-auto">
           {services.map((service) => (
             <motion.div
               key={service.title}
               whileTap={{ scale: 0.95 }}
-              className="relative flex flex-col justify-between rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black min-w-[85vw] max-w-[90vw] snap-center touch-pan-x backdrop-blur-md min-h-[280px] p-4 active:scale-95 transition-transform duration-150"
+              className="relative flex flex-col justify-between rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black min-w-[85vw] max-w-[90vw] snap-center backdrop-blur-md min-h-[280px] p-4 active:scale-95 transition-transform duration-150"
             >
               {/* Mobile glassy accent */}
               <div className="absolute top-0 right-0 w-12 h-12 bg-primary/30 rounded-bl-2xl blur-xl opacity-40" />
