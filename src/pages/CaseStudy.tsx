@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import projects from "@/data/projects.json";
 import SEO from "@/components/seo/SEO";
+import CTASection from "@/components/case-study/CTASection";
 
 export type SectionLink = {
   name: string;
@@ -94,6 +95,7 @@ const CaseStudy = ({ scrollTo }: { scrollTo?: string }) => {
         <ProjectDetails {...project.components.ProjectDetails} />
         <TechStack techStack={project.components.TechStack} />
         <Gallery {...project.components.Gallery} />
+        <CTASection/>
       </main>
 
       <div className="mt-10">
