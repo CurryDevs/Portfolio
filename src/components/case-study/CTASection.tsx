@@ -9,13 +9,13 @@ const CTASection = () => {
 
   return (
     <section className="min-h-screen bg-background flex items-center justify-center px-6 py-20 lg:px-20">
-      <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-lg:flex max-lg:flex-col max-lg:items-center">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-8"
+          className="space-y-8 max-lg:flex max-lg:opacity-100 max-lg:transform-none max-lg:flex-col max-lg:items-center"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ const CTASection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl"
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl max-lg:opacity-100 max-lg:transform-none max-lg:text-center"
           >
             Let's collaborate on your next project. From web development to
             mobile apps, we create digital solutions that make an impact.
@@ -65,7 +65,7 @@ const CTASection = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="flex justify-center lg:justify-end"
+          className="flex justify-center"
         >
           <motion.div
             animate={{ y: [0, -10, 0] }}
