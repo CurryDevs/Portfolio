@@ -50,7 +50,7 @@ const Footer = ({ sectionLinks }: { sectionLinks?: SectionLink[] }) => {
                     </Link>
                 </AnimationContainer>
 
-                <AnimationContainer className="w-full md:w-auto gap-[3.4rem]">
+                <AnimationContainer className="w-full md:w-auto ml-[3.4rem]">
                     <nav className="flex flex-wrap justify-center gap-4 text-center md:justify-end">
                         {(sectionLinks && sectionLinks.length > 0 ? sectionLinks : defaultFooterLink).map((item) => (
                             <Link
