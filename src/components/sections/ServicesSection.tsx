@@ -1,31 +1,21 @@
 import * as React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Globe, Smartphone, ShoppingCart, Settings, Layers, Server } from "lucide-react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
-import {
-  Globe,
-  Smartphone,
-  ShoppingCart,
-  Settings,
-  Layers,
-  Server,
-} from "lucide-react";
 
+/* ---------------------- Button ---------------------- */
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },
@@ -45,7 +35,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-  VariantProps<typeof buttonVariants> {
+    VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 
@@ -53,16 +43,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
+      // eslint-disable-next-line jsx-a11y/aria-role
+      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
     );
   }
 );
 Button.displayName = "Button";
 
+/* ---------------------- BentoGrid + Item (non-motion) ---------------------- */
 export const BentoGrid = ({
   className,
   children,
@@ -82,6 +70,7 @@ export const BentoGrid = ({
   );
 };
 
+/* BentoGridItem: plain DOM element (we animate wrapper externally) */
 export const BentoGridItem = ({
   className,
   title,
@@ -100,11 +89,9 @@ export const BentoGridItem = ({
   cta?: string;
 }) => {
   return (
-    <motion.div
-      whileHover={{ scale: 1.02, y: -5 }}
-      transition={{ duration: 0.2, ease: "easeInOut" }}
+    <div
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl p-4 transition-all duration-300 md:hover:shadow-2xl md:hover:shadow-black/30 cursor-pointer",
+        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl p-4 transition-all duration-300 hover:shadow-2xl hover:shadow-black/30 cursor-pointer",
         "bg-gradient-to-br from-black via-primary/10 to-black border border-white/5 backdrop-blur-md",
         className
       )}
@@ -134,21 +121,15 @@ export const BentoGridItem = ({
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
-// Animated skeleton components for each service
+/* ---------------------- Skeletons (unchanged, full definitions) ---------------------- */
+
 const SkeletonMobile = () => {
   return (
-    <motion.div
-      initial={{ y: 0 }}
-      whileHover={{
-        y: -5,
-        transition: { duration: 0.3, repeat: Infinity, repeatType: "reverse" }
-      }}
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center space-y-2 md:hover:animate-pulse"
-    >
+    <div className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center space-y-2 md:hover:animate-pulse">
       <div className="w-16 h-28 bg-black rounded-lg border-2 border-white/20 relative overflow-hidden">
         <div className="w-full h-full bg-black rounded-md m-0.5 relative">
           <div className="flex justify-between items-center px-2 py-1">
@@ -167,21 +148,13 @@ const SkeletonMobile = () => {
         </div>
         <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-gray-500 rounded-full" />
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const SkeletonWeb = () => {
   return (
-    <motion.div
-      initial={{ scale: 1, y: 0 }}
-      whileHover={{
-        scale: 1.05,
-        y: -5,
-        transition: { duration: 0.4 },
-      }}
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center relative overflow-hidden p-4 md:hover:scale-105"
-    >
+    <div className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center relative overflow-hidden p-4">
       <div className="w-full max-w-40 bg-black rounded-lg border border-white/20 overflow-hidden">
         <div className="bg-black px-3 py-2 flex items-center space-x-2">
           <div className="flex space-x-1">
@@ -204,87 +177,50 @@ const SkeletonWeb = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const SkeletonBackend = () => {
   return (
-    <motion.div
-      initial={{ scale: 1, y: 0 }}
-      whileHover={{
-        scale: 1.1,
-        y: -8,
-        transition: { duration: 0.4 },
-      }}
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center space-y-4 md:hover:scale-110"
-    >
+    <div className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center space-y-4">
       <div className="bg-black border border-white/20 rounded-lg p-4 flex flex-col items-center justify-center space-y-2">
         <Server className="h-12 w-12 text-white" />
         <div className="flex space-x-2">
           <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse" />
-          <div
-            className="w-2 h-2 bg-gray-500 rounded-full animate-pulse"
-            style={{ animationDelay: "0.2s" }}
-          />
-          <div
-            className="w-2 h-2 bg-gray-600 rounded-full animate-pulse"
-            style={{ animationDelay: "0.4s" }}
-          />
+          <div className="w-2 h-2 bg-gray-500 rounded-full animate-pulse" style={{ animationDelay: "0.2s" }} />
+          <div className="w-2 h-2 bg-gray-600 rounded-full animate-pulse" style={{ animationDelay: "0.4s" }} />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const SkeletonEcommerce = () => {
   return (
-    <motion.div
-      initial="initial"
-      whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-row space-x-2 p-2 md:hover:scale-105"
-    >
-      <motion.div
-        variants={{
-          initial: { x: 20, rotate: -5 },
-          hover: { x: 0, rotate: 0 },
-        }}
-        className="h-full w-1/3 rounded-2xl bg-black p-4 border border-white/20 flex flex-col items-center justify-center"
-      >
+    <div className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-row space-x-2 p-2">
+      <div className="h-full w-1/3 rounded-2xl bg-black p-4 border border-white/20 flex flex-col items-center justify-center">
         <div className="w-8 h-8 bg-gradient-to-r from-gray-600 to-gray-500 rounded" />
         <p className="text-xs text-center font-semibold text-white mt-2">Product</p>
         <p className="border border-white/30 bg-gray-900 text-white text-xs rounded-full px-2 py-0.5 mt-2">$99</p>
-      </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-black p-4 border border-white/20 flex flex-col items-center justify-center">
+      </div>
+      <div className="h-full relative z-20 w-1/3 rounded-2xl bg-black p-4 border border-white/20 flex flex-col items-center justify-center">
         <ShoppingCart className="w-8 h-8 text-gray-400" />
         <p className="text-xs text-center font-semibold text-white mt-2">Cart</p>
         <p className="border border-white/30 bg-gray-900 text-white text-xs rounded-full px-2 py-0.5 mt-2">2 items</p>
-      </motion.div>
-      <motion.div
-        variants={{
-          initial: { x: -20, rotate: 5 },
-          hover: { x: 0, rotate: 0 },
-        }}
-        className="h-full w-1/3 rounded-2xl bg-black p-4 border border-white/20 flex flex-col items-center justify-center"
-      >
+      </div>
+      <div className="h-full w-1/3 rounded-2xl bg-black p-4 border border-white/20 flex flex-col items-center justify-center">
         <div className="w-8 h-8 bg-gradient-to-r from-gray-600 to-gray-500 rounded" />
         <p className="text-xs text-center font-semibold text-white mt-2">Order</p>
         <p className="border border-white/30 bg-gray-900 text-white text-xs rounded-full px-2 py-0.5 mt-2">Complete</p>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
 const SkeletonDesignSystem = () => {
   return (
-    <motion.div
-      initial={{ scale: 1 }}
-      whileHover={{
-        scale: 1.02,
-        transition: { duration: 0.3 },
-      }}
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center p-4 relative md:hover:scale-105"
-    >
+    <div className="flex flex-1 w-full h-full min-h-[6rem] bg-transparent flex-col items-center justify-center p-4 relative">
       <div className="grid grid-cols-3 gap-2 w-full max-w-32">
         <div className="bg-black border border-white/20 rounded-md p-2 flex items-center justify-center">
           <div className="w-4 h-2 bg-gray-600 rounded-sm animate-pulse" />
@@ -309,10 +245,11 @@ const SkeletonDesignSystem = () => {
         </div>
       </div>
       <div className="mt-3 text-xs text-primary/60 font-medium tracking-wide">COMPONENTS</div>
-    </motion.div>
+    </div>
   );
 };
 
+/* ---------------------- Services Data ---------------------- */
 const services = [
   {
     title: "Mobile Applications",
@@ -361,36 +298,37 @@ const services = [
   },
 ];
 
+/* ---------------------- Animation Variants ---------------------- */
+const revealVariant = {
+  hidden: { opacity: 0, y: 30, scale: 0.98 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      delay: i * 0.12,
+      duration: 0.55,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  }),
+};
+
+/* ---------------------- ServicesSection ---------------------- */
 function ServicesSection() {
-  // Add CSS styles to document head
+  // small style insert for hiding scrollbars + a scale-in for mobile list
   React.useEffect(() => {
-    const style = document.createElement('style');
+    const style = document.createElement("style");
+    style.id = "services-section-style";
     style.textContent = `
-      .hide-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      .hide-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      @keyframes scale-in {
-        from {
-          opacity: 0;
-          transform: scale(0.9);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-      .animate-scale-in {
-        animation: scale-in 0.5s ease-out forwards;
-      }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      @keyframes scale-in { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+      .animate-scale-in { animation: scale-in 0.45s ease-out both; }
     `;
     document.head.appendChild(style);
-
     return () => {
-      document.head.removeChild(style);
+      const el = document.getElementById("services-section-style");
+      if (el) el.remove();
     };
   }, []);
 
@@ -400,61 +338,69 @@ function ServicesSection() {
         <span className="mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-sm sm:text-base md:text-xl text-transparent">
           OUR SERVICES
         </span>
-        <h2 className="mb-8 sm:mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent leading-tight pb-2">
+        <h2 className="mb-8 text-center text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent leading-tight pb-2">
           Digital Solutions
         </h2>
       </div>
 
-      {/* Desktop/Tablet Bento Grid */}
+      {/* ---------- Desktop Bento Grid (staggered reveal) ---------- */}
       <div className="hidden sm:block">
         <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[20rem]">
           {services.map((service, i) => (
-            <BentoGridItem
-              key={i}
-              title={service.title}
-              description={service.description}
-              header={service.header}
-              className={cn("[&>p:text-lg]", service.className)}
-              icon={service.icon}
-              href={service.href}
-              cta={service.cta}
-            />
+            <motion.div
+              key={service.title}
+              className={cn(service.className)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={revealVariant}
+              custom={i}
+              whileHover={{ y: -6, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 220, damping: 18 }}
+            >
+              <BentoGridItem
+                title={service.title}
+                description={service.description}
+                header={service.header}
+                className="h-full"
+                icon={service.icon}
+                href={service.href}
+                cta={service.cta}
+              />
+            </motion.div>
           ))}
         </BentoGrid>
       </div>
 
-      {/* Mobile Touch-Optimized Carousel */}
+      {/* ---------- Mobile Carousel (staggered, animate on enter) ---------- */}
       <div className="sm:hidden flex overflow-x-auto snap-x snap-mandatory gap-4 px-2 pb-6 hide-scrollbar">
-        {services.map((service, index) => (
-          <div
+        {services.map((service, i) => (
+          <motion.div
             key={service.title}
-            className="min-w-[85vw] max-w-[90vw] snap-center rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black backdrop-blur-md animate-scale-in transition-transform duration-300"
-            style={{ animationDelay: `${0.1 * index}s` }}
+            className="min-w-[85vw] max-w-[90vw] snap-center rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-gradient-to-br from-black via-primary/20 to-black backdrop-blur-md transition-transform duration-300 animate-scale-in"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={revealVariant}
+            custom={i}
+            whileHover={{ y: -6, scale: 1.01 }}
+            transition={{ type: "spring", stiffness: 220, damping: 18 }}
+            style={{ animationDelay: `${0.05 * i}s` }}
           >
             <div className="relative flex flex-col justify-between min-h-[280px] p-4">
-              {/* Mobile glassy accent */}
-              <div className="absolute top-0 right-0 w-12 h-12 bg-primary/30 rounded-bl-2xl blur-xl opacity-40" />
-              <div className="absolute bottom-0 left-0 w-8 h-8 bg-primary/20 rounded-tr-2xl blur-xl opacity-30" />
+              <div className="absolute top-0 right-0 w-12 h-12 bg-primary/30 rounded-bl-2xl blur-xl opacity-40 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-8 h-8 bg-primary/20 rounded-tr-2xl blur-xl opacity-30 pointer-events-none" />
 
-              {/* Header Animation */}
               <div className="flex-1 flex items-center justify-center mb-4">
                 {service.header}
               </div>
 
-              {/* Content */}
               <div className="relative z-10 flex flex-col gap-2 items-center text-center">
-                <div className="flex items-center justify-center mb-2">
-                  {service.icon}
-                </div>
+                <div className="flex items-center justify-center mb-2">{service.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
                 <p className="text-sm text-neutral-300 mb-4 line-clamp-3">{service.description}</p>
 
-                <Button
-                  variant="secondary"
-                  asChild
-                  size="sm"
-                  className="pointer-events-auto rounded-full px-4 py-2 text-xs"
-                >
+                <Button variant="secondary" asChild size="sm" className="pointer-events-auto rounded-full px-4 py-2 text-xs">
                   <a href={service.href} className="flex items-center gap-2">
                     {service.cta}
                     <ArrowRight className="h-4 w-4" />
@@ -462,10 +408,9 @@ function ServicesSection() {
                 </Button>
               </div>
 
-              {/* Subtle hover overlay - desktop only */}
-              <div className="absolute inset-0 z-20 pointer-events-none transition-all duration-300 md:group-hover:bg-primary/10 rounded-2xl" />
+              <div className="absolute inset-0 z-20 pointer-events-none transition-all duration-300 rounded-2xl" />
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
